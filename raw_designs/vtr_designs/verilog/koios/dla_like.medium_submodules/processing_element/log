@@ -1,0 +1,48 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v
+# synth_design -part xc7z020clg484-3 -top processing_element -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top processing_element -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 161223 
+WARNING: [Synth 8-2611] redeclaration of ansi port resulta is not allowed [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1376]
+WARNING: [Synth 8-2611] redeclaration of ansi port resulta is not allowed [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1432]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1511.035 ; gain = 37.395 ; free physical = 223063 ; free virtual = 289498
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'processing_element' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dot_product_16_8_30_4' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1235]
+INFO: [Synth 8-6157] synthesizing module 'dsp_block_16_8_false' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1398]
+INFO: [Synth 8-6155] done synthesizing module 'dsp_block_16_8_false' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1398]
+INFO: [Synth 8-6157] synthesizing module 'dsp_block_16_8_true' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1342]
+INFO: [Synth 8-6155] done synthesizing module 'dsp_block_16_8_true' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1342]
+WARNING: [Synth 8-6014] Unused sequential element f_pipeline_0_1_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1282]
+WARNING: [Synth 8-6014] Unused sequential element w_pipeline_0_1_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1283]
+WARNING: [Synth 8-6014] Unused sequential element f_pipeline_1_1_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1284]
+WARNING: [Synth 8-6014] Unused sequential element w_pipeline_1_1_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1285]
+INFO: [Synth 8-6155] done synthesizing module 'dot_product_16_8_30_4' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1235]
+INFO: [Synth 8-6157] synthesizing module 'accumulator_24_30_4' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1191]
+INFO: [Synth 8-6155] done synthesizing module 'accumulator_24_30_4' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1191]
+INFO: [Synth 8-6157] synthesizing module 'weight_cache_2048_8_0_weight_init_00' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:1146]
+INFO: [Synth 8-6157] synthesizing module 'dual_port_ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:650]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_ram' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/dla_like.medium_submodules/processing_element.v:650]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1541.160 ; gain = 67.520 ; free physical = 223070 ; free virtual = 289505
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 6 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 01:50:21 2022...

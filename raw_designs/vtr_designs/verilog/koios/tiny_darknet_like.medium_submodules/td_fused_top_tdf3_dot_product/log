@@ -1,0 +1,49 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v
+# synth_design -part xc7z020clg484-3 -top td_fused_top_tdf3_dot_product -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top td_fused_top_tdf3_dot_product -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 39620 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.535 ; gain = 25.895 ; free physical = 245702 ; free virtual = 312936
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_tdf3_dot_product' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:15]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state10 bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_hmul_16ns_16ns_16_5_max_dsp_1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:460]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_ap_hmul_3_max_dsp_16' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:528]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_16' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:562]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_PrepModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:799]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_PrepModule' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:799]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_ExecuteModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:749]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_ExecuteModule' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:749]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_NormalizeModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:724]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_NormalizeModule' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:724]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_RoundModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:683]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_RoundModule' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:683]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_16' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_tdf3_dot_product.v:562]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1546.285 ; gain = 70.645 ; free physical = 245695 ; free virtual = 312929
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 08:38:01 2022...

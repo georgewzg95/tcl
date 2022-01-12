@@ -1,0 +1,2250 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v
+# synth_design -part xc7z020clg484-3 -top eltwise_layer -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top eltwise_layer -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 106647 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.535 ; gain = 26.895 ; free physical = 218340 ; free virtual = 284799
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'eltwise_layer' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:100]
+INFO: [Synth 8-6157] synthesizing module 'ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1103]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'ram_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "ram_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ram' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1103]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:709]
+INFO: [Synth 8-6157] synthesizing module 'eltwise_cu' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1182]
+INFO: [Synth 8-6157] synthesizing module 'input_logic' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1399]
+INFO: [Synth 8-6155] done synthesizing module 'input_logic' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1399]
+INFO: [Synth 8-6157] synthesizing module 'output_logic' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1339]
+INFO: [Synth 8-6155] done synthesizing module 'output_logic' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1339]
+INFO: [Synth 8-6157] synthesizing module 'pe_array' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1572]
+INFO: [Synth 8-6157] synthesizing module 'processing_element' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1615]
+INFO: [Synth 8-6157] synthesizing module 'seq_mul' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1650]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_16' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1803]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_PrepModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1933]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_PrepModule' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1933]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_ExecuteModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2002]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_ExecuteModule' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2002]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_NormalizeModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_NormalizeModule' (6#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2053]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_RoundModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2087]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_RoundModule' (7#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2087]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_16' (8#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1803]
+INFO: [Synth 8-6155] done synthesizing module 'seq_mul' (9#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1650]
+INFO: [Synth 8-6157] synthesizing module 'seq_add' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1697]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2141]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_PrealignModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2444]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_PrealignModule' (10#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2444]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_AlignModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2508]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_AlignModule' (11#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2508]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_AlignShift1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2561]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_AlignShift1' (12#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2561]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_AlignShift2' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2640]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_AlignShift2' (13#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2640]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_ExecutionModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2684]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_ExecutionModule' (14#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2684]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_NormalizeModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_NormalizeModule' (15#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2729]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_NormalizeShift1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2789]
+WARNING: [Synth 8-324] index -1 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -2 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -3 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -4 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -5 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -6 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -7 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -8 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -9 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -10 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -11 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -12 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -13 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -14 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -15 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -16 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2815]
+WARNING: [Synth 8-324] index -1 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -2 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -3 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -4 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -5 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -6 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -7 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -8 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -9 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -10 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -11 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -12 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -13 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -14 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -15 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -16 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2817]
+WARNING: [Synth 8-324] index -1 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -2 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -3 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -4 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -5 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -6 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -7 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -8 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -9 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -10 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -11 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -12 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -13 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -14 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -15 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+WARNING: [Synth 8-324] index -16 out of range [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2819]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_NormalizeShift1' (16#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2789]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_NormalizeShift2' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2849]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_NormalizeShift2' (17#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2849]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_RoundModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2904]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_RoundModule' (18#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2904]
+INFO: [Synth 8-6157] synthesizing module 'FPAddSub_ExceptionModule' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2976]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub_ExceptionModule' (19#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2976]
+INFO: [Synth 8-6155] done synthesizing module 'FPAddSub' (20#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2141]
+INFO: [Synth 8-6155] done synthesizing module 'seq_add' (21#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1697]
+INFO: [Synth 8-6157] synthesizing module 'seq_sub' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1745]
+INFO: [Synth 8-6155] done synthesizing module 'seq_sub' (22#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1745]
+WARNING: [Synth 8-3848] Net out_sub in module/entity processing_element does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1633]
+INFO: [Synth 8-6155] done synthesizing module 'processing_element' (23#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1615]
+INFO: [Synth 8-6155] done synthesizing module 'pe_array' (24#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1572]
+INFO: [Synth 8-6155] done synthesizing module 'eltwise_cu' (25#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1182]
+INFO: [Synth 8-6155] done synthesizing module 'eltwise_layer' (26#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:100]
+WARNING: [Synth 8-3331] design FPMult_RoundModule has unconnected port RoundE[8]
+WARNING: [Synth 8-3331] design FPMult_RoundModule has unconnected port RoundEP[8]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[6]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[5]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[4]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[3]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[2]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[1]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port a[0]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[16]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[15]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[14]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[13]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[12]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[11]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[10]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[9]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[8]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[7]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[6]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[5]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[4]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[3]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[2]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[1]
+WARNING: [Synth 8-3331] design FPMult_ExecuteModule has unconnected port b[0]
+WARNING: [Synth 8-3331] design FPMult_PrepModule has unconnected port clk
+WARNING: [Synth 8-3331] design FPMult_PrepModule has unconnected port rst
+WARNING: [Synth 8-3331] design output_logic has unconnected port done_eltwise_op
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1843.645 ; gain = 369.004 ; free physical = 217878 ; free virtual = 284337
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1843.645 ; gain = 369.004 ; free physical = 217893 ; free virtual = 284357
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1851.641 ; gain = 377.000 ; free physical = 217893 ; free virtual = 284357
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-4471] merging register 'b_mem_access_reg' into 'a_mem_access_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1524]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2716]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'eltwise_layer'
+INFO: [Synth 8-802] inferred FSM for state register 'state_apb_reg' in module 'eltwise_layer'
+INFO: [Synth 8-5546] ROM "bram_addr_a_0_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_2_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_4_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_1_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_3_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_5_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_0_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_1_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_2_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_3_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_4_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_5_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_0_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_1_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_2_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_3_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_4_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_c_5_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "address_mat_a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "address_mat_b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "address_mat_c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "validity_mask_a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "validity_mask_b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iterations" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_dummy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_apb" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'Lvl2_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:2813]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                             0000
+                  iSTATE |                               01 |                             0001
+                 iSTATE0 |                               10 |                             1010
+                 iSTATE1 |                               11 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'eltwise_layer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_apb_reg' using encoding 'sequential' in module 'eltwise_layer'
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:328]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:329]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:330]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:335]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:336]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:337]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:342]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:343]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:344]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:349]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:350]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:351]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:356]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:357]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:358]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:363]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:364]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:365]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:370]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:371]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:372]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:377]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:378]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:379]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:384]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:385]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:386]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:391]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:392]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:393]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:398]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:399]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:400]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:405]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:406]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:407]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:412]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:413]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:414]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:419]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:420]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:421]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:426]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:427]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:428]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:433]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:434]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:435]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:440]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:441]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:442]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_c_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:447]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_c_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:448]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_c_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:449]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:14 ; elapsed = 00:02:50 . Memory (MB): peak = 2273.992 ; gain = 799.352 ; free physical = 218017 ; free virtual = 284558
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |ram__GBM0          |           1|     45568|
+|2     |ram__GBM1          |           1|     29184|
+|3     |ram__GBM2          |           1|     22882|
+|4     |ram__GBM3          |           1|     36670|
+|5     |ram__GBM4          |           1|     35999|
+|6     |ram__GBM5          |           1|     51585|
+|7     |ram__GBM6          |           1|     52925|
+|8     |ram__GBM7          |           1|     25258|
+|9     |muxpart_ram        |           1|     16368|
+|10    |muxpart__8194_ram  |           1|     16368|
+|11    |muxpart__8193_ram  |           1|     16368|
+|12    |ram__GBM11         |           1|     57000|
+|13    |ram__GBM12         |           1|     33655|
+|14    |muxpart__8198_ram  |           1|     16368|
+|15    |muxpart__8197_ram  |           1|     16368|
+|16    |ram__GBM15         |           1|     48988|
+|17    |ram__GBM16         |           1|     16359|
+|18    |ram__GBM17         |           1|     67773|
+|19    |ram__GBM18         |           1|     45568|
+|20    |ram__GBM19         |           1|     29184|
+|21    |eltwise_cu         |           6|      9778|
+|22    |eltwise_layer__GC0 |           1|      5042|
++------+-------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 48    
+	   2 Input     11 Bit       Adders := 54    
+	   2 Input     10 Bit       Adders := 18    
+	   3 Input      9 Bit       Adders := 120   
+	   2 Input      9 Bit       Adders := 96    
+	   2 Input      8 Bit       Adders := 72    
+	   3 Input      8 Bit       Adders := 96    
++---XORs : 
+	   2 Input      1 Bit         XORs := 120   
+	   3 Input      1 Bit         XORs := 48    
++---Registers : 
+	               64 Bit    Registers := 42    
+	               56 Bit    Registers := 24    
+	               54 Bit    Registers := 48    
+	               41 Bit    Registers := 24    
+	               40 Bit    Registers := 48    
+	               39 Bit    Registers := 48    
+	               36 Bit    Registers := 48    
+	               32 Bit    Registers := 27    
+	               23 Bit    Registers := 24    
+	               21 Bit    Registers := 24    
+	               16 Bit    Registers := 18648 
+	               10 Bit    Registers := 21    
+	                8 Bit    Registers := 18    
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input  16384 Bit        Muxes := 72    
+	   2 Input     64 Bit        Muxes := 7     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 48    
+	   4 Input     17 Bit        Muxes := 144   
+	   2 Input     16 Bit        Muxes := 147810
+	   2 Input     10 Bit        Muxes := 18    
+	   2 Input      9 Bit        Muxes := 48    
+	   2 Input      8 Bit        Muxes := 240   
+	   4 Input      8 Bit        Muxes := 48    
+	   2 Input      7 Bit        Muxes := 192   
+	  13 Input      4 Bit        Muxes := 48    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 140   
+	   4 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 12    
+	  19 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module eltwise_layer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	               10 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 7     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 26    
+	   3 Input      1 Bit        Muxes := 12    
+	  19 Input      1 Bit        Muxes := 18    
+Module ram 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               16 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input  16384 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 8209  
+Module input_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module output_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPMult_ExecuteModule__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_NormalizeModule__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+Module FPMult_RoundModule__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_16__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               56 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+Module seq_mul__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_add__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_sub__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module processing_element__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module FPMult_ExecuteModule__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_NormalizeModule__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+Module FPMult_RoundModule__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_16__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               56 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+Module seq_mul__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_add__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_sub__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module processing_element__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module FPMult_ExecuteModule__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_NormalizeModule__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+Module FPMult_RoundModule__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_16__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               56 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+Module seq_mul__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_add__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_sub__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module processing_element__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module FPMult_ExecuteModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_NormalizeModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+Module FPMult_RoundModule 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+Module FPMult_16 
+Detailed RTL Component Info : 
++---Registers : 
+	               56 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+Module seq_mul 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_add 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module FPAddSub_PrealignModule__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
+Module FPAddSub_AlignModule__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+Module FPAddSub_AlignShift1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module FPAddSub_AlignShift2__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module FPAddSub_ExecutionModule__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub_NormalizeModule__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+Module FPAddSub_NormalizeShift1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 3     
+Module FPAddSub_NormalizeShift2__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      9 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module FPAddSub_RoundModule__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FPAddSub__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               54 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               39 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module seq_sub 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+Module processing_element 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module eltwise_cu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'u_mul/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1665]
+INFO: [Synth 8-4471] merging register 'u_mul/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1666]
+INFO: [Synth 8-4471] merging register 'u_sub/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1760]
+INFO: [Synth 8-4471] merging register 'u_sub/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1761]
+INFO: [Synth 8-4471] merging register 'u_mul/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1665]
+INFO: [Synth 8-4471] merging register 'u_mul/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1666]
+INFO: [Synth 8-4471] merging register 'u_sub/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1760]
+INFO: [Synth 8-4471] merging register 'u_sub/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1761]
+INFO: [Synth 8-4471] merging register 'u_mul/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1665]
+INFO: [Synth 8-4471] merging register 'u_mul/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1666]
+INFO: [Synth 8-4471] merging register 'u_sub/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1760]
+INFO: [Synth 8-4471] merging register 'u_sub/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1761]
+INFO: [Synth 8-4471] merging register 'u_mul/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1665]
+INFO: [Synth 8-4471] merging register 'u_mul/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1666]
+INFO: [Synth 8-4471] merging register 'u_sub/a_flopped_reg[15:0]' into 'u_add/a_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1760]
+INFO: [Synth 8-4471] merging register 'u_sub/b_flopped_reg[15:0]' into 'u_add/b_flopped_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1761]
+INFO: [Synth 8-5546] ROM "address_mat_a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "address_mat_b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "address_mat_c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "validity_mask_a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "validity_mask_b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iterations" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_dummy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[7]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[23]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[45]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[24]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[46]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[8]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[25]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[47]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[9]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[26]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[48]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[10]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[33]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[27]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[49]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[11]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[34]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[28]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[50]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[12]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[35]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[29]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[51]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[13]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[36]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[30]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[52]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[14]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[37]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[22]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[44]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[0]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[21]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[43]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[1]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[20]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[42]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[2]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[19]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[41]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[3]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[18]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[40]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[5]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[17]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[39]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[4]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[16]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[38]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[6]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[15]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe0/u_mul/u_FPMult/pipe_0_reg[31]' (FDR) to 'eltwise_cu:/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[7]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[23]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[45]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[24]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[46]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[8]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[25]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[47]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[9]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[26]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[48]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[10]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[33]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[27]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[49]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[11]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[34]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[28]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[50]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[12]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[35]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[29]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[51]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[13]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[36]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[30]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[52]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[14]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[37]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[22]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[44]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[0]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[21]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[43]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[1]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[20]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[42]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[2]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[19]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[41]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[3]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[18]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[40]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[5]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[17]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[39]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[4]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[16]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[38]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[6]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[15]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe1/u_mul/u_FPMult/pipe_0_reg[31]' (FDR) to 'eltwise_cu:/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[7]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[23]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[45]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[24]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[46]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[8]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[25]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[47]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[9]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[26]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[48]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[10]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[33]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[27]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[49]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[11]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[34]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[28]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[50]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[12]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[35]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[29]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[51]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[13]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[36]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[30]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[52]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[14]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[37]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[22]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[44]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[0]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[21]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[43]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[1]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[20]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[42]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[2]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[19]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[41]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[3]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[18]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[40]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[5]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[17]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[39]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[4]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[16]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[38]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[6]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[15]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe2/u_mul/u_FPMult/pipe_0_reg[31]' (FDR) to 'eltwise_cu:/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe3/u_mul/u_FPMult/pipe_0_reg[7]' (FDR) to 'eltwise_cu:/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe3/u_mul/u_FPMult/pipe_0_reg[23]' (FDR) to 'eltwise_cu:/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_1_reg[45]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe3/u_mul/u_FPMult/pipe_0_reg[24]' (FDR) to 'eltwise_cu:/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_1_reg[46]'
+INFO: [Synth 8-3886] merging instance 'eltwise_cu:/u_pe_array/pe3/u_mul/u_FPMult/pipe_0_reg[8]' (FDR) to 'eltwise_cu:/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_1_reg[31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe0/\u_mul/u_FPMult/pipe_3_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe1/\u_mul/u_FPMult/pipe_3_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe2/\u_mul/u_FPMult/pipe_3_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe3/\u_mul/u_FPMult/pipe_3_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe0/\u_sub/u_FPAddSub2/pipe_5_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe1/\u_sub/u_FPAddSub2/pipe_5_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_5_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eltwise_cu:/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_5_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_add/b_flopped_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_add/b_flopped_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_3_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_3_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_3_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_mul/u_FPMult/pipe_1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_3_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_mul/u_FPMult/pipe_1_reg[36] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_1_reg[6] )
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[11]) is unused and will be removed from module processing_element__5.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[2]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[1]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[0]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[11]) is unused and will be removed from module processing_element__5.
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[11]) is unused and will be removed from module processing_element__4.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[2]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[1]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[0]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[11]) is unused and will be removed from module processing_element__4.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_5_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_5_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_5_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_5_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_8_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_8_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[16]) is unused and will be removed from module processing_element__5.
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[14]) is unused and will be removed from module processing_element__5.
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[16]) is unused and will be removed from module processing_element__5.
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[14]) is unused and will be removed from module processing_element__5.
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[16]) is unused and will be removed from module processing_element__4.
+WARNING: [Synth 8-3332] Sequential element (u_add/u_FPAddSub/NormalizeShift1/Lvl2_reg[14]) is unused and will be removed from module processing_element__4.
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[16]) is unused and will be removed from module processing_element__4.
+WARNING: [Synth 8-3332] Sequential element (u_sub/u_FPAddSub2/NormalizeShift1/Lvl2_reg[14]) is unused and will be removed from module processing_element__4.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe2/\u_sub/u_FPAddSub2/pipe_8_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_eltwise_cu_5/u_pe_array/pe3/\u_sub/u_FPAddSub2/pipe_8_reg[4] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:07:17 ; elapsed = 00:08:27 . Memory (MB): peak = 3139.801 ; gain = 1665.160 ; free physical = 214044 ; free virtual = 280743
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |ram__GBM0          |          18|     75222|
+|2     |ram__GBM1          |          18|      9404|
+|3     |ram__GBM2          |          18|     54831|
+|4     |ram__GBM3          |          18|     16955|
+|5     |ram__GBM4          |          18|     16609|
+|6     |ram__GBM5          |          18|     45985|
+|7     |ram__GBM6          |          18|     48488|
+|8     |ram__GBM7          |          18|     24393|
+|9     |muxpart_ram        |          18|     16368|
+|10    |muxpart__8194_ram  |          18|     16368|
+|11    |muxpart__8193_ram  |          18|     16368|
+|12    |ram__GBM11         |          18|     57000|
+|13    |ram__GBM12         |          18|     33574|
+|14    |muxpart__8198_ram  |          18|     16368|
+|15    |muxpart__8197_ram  |          18|     16368|
+|16    |ram__GBM15         |          18|     77869|
+|17    |ram__GBM16         |          18|      7596|
+|18    |ram__GBM17         |          18|     67773|
+|19    |ram__GBM18         |          18|     75220|
+|20    |ram__GBM19         |          18|      9382|
+|21    |eltwise_cu         |           5|      6211|
+|22    |eltwise_layer__GC0 |           1|      3999|
+|23    |eltwise_cu__1      |           1|      3641|
++------+-------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[11]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[10]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[9]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[8]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[6]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[5]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[4]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe2/u_add/sum_out_temp_reg_reg[3]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[11]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[10]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[9]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[8]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[6]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[5]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[4]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_eltwise_cu_5/u_pe_array/pe3/u_add/sum_out_temp_reg_reg[3]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:08:09 ; elapsed = 00:09:21 . Memory (MB): peak = 3236.363 ; gain = 1761.723 ; free physical = 214435 ; free virtual = 281171
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |ram__GBM0          |          18|     75222|
+|2     |ram__GBM1          |          18|      9404|
+|3     |ram__GBM2          |          18|     54831|
+|4     |ram__GBM3          |          18|     16955|
+|5     |ram__GBM4          |          18|     16609|
+|6     |ram__GBM5          |          18|     45985|
+|7     |ram__GBM6          |          18|     48488|
+|8     |ram__GBM7          |          10|     24329|
+|9     |muxpart_ram        |          18|     16368|
+|10    |muxpart__8194_ram  |          12|     16368|
+|11    |muxpart__8193_ram  |          18|     16368|
+|12    |ram__GBM11         |          18|     57000|
+|13    |ram__GBM12         |          18|     33574|
+|14    |muxpart__8198_ram  |          18|     16368|
+|15    |muxpart__8197_ram  |          18|     16368|
+|16    |ram__GBM15         |          12|     14639|
+|17    |ram__GBM16         |          12|      5120|
+|18    |ram__GBM17         |          12|     33915|
+|19    |eltwise_cu         |           5|      6211|
+|20    |eltwise_layer__GC0 |           1|      3999|
+|21    |eltwise_cu__1      |           1|      3533|
+|22    |ram__GBM7__1       |           2|      7767|
+|23    |ram__GBM7__2       |           5|      7961|
+|24    |ram__GBM7__3       |           1|      7800|
+|25    |ram__GBM18__1      |           6|     75220|
+|26    |ram__GBM15__1      |           5|     77869|
+|27    |ram__GBM15__2      |           1|     69833|
+|28    |ram__GBM19__1      |           6|      9382|
+|29    |ram__GBM17__1      |           5|     67773|
+|30    |ram__GBM17__2      |           1|     51141|
+|31    |ram__GBM16__1      |           5|      7596|
+|32    |ram__GBM16__2      |           1|      7739|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4765] Removing register instance (\u_pe_array/pe2/u_sub/sub_out_temp_reg_reg[7] ) from module (eltwise_cu__1) as it is equivalent to (\u_pe_array/pe2/u_add/sum_out_temp_reg_reg[7] ) and driving same net [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+INFO: [Synth 8-4765] Removing register instance (\u_pe_array/pe3/u_sub/sub_out_temp_reg_reg[7] ) from module (eltwise_cu__1) as it is equivalent to (\u_pe_array/pe3/u_add/sum_out_temp_reg_reg[7] ) and driving same net [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:15:19 ; elapsed = 00:16:47 . Memory (MB): peak = 6483.789 ; gain = 5009.148 ; free physical = 222738 ; free virtual = 289726
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |ram__GBM0          |          18|     16838|
+|2     |ram__GBM1          |           1|      8469|
+|3     |ram__GBM2          |          18|     16472|
+|4     |ram__GBM3          |          18|     11894|
+|5     |ram__GBM4          |          18|     12114|
+|6     |ram__GBM5          |          18|     15496|
+|7     |ram__GBM6          |          18|     23452|
+|8     |ram__GBM7          |          10|     11458|
+|9     |muxpart_ram        |          18|      7632|
+|10    |muxpart__8194_ram  |          12|      7632|
+|11    |muxpart__8193_ram  |          18|      7632|
+|12    |ram__GBM11         |          18|     18000|
+|13    |ram__GBM12         |          18|     15581|
+|14    |muxpart__8198_ram  |          18|      7632|
+|15    |muxpart__8197_ram  |          18|      7632|
+|16    |ram__GBM15         |          12|      4749|
+|17    |ram__GBM16         |           1|      2453|
+|18    |ram__GBM17         |          12|     10024|
+|19    |eltwise_cu         |           1|      3729|
+|20    |eltwise_layer__GC0 |           1|      2519|
+|21    |eltwise_cu__1      |           1|      1977|
+|22    |ram__GBM7__1       |           1|      3724|
+|23    |ram__GBM7__2       |           1|      3761|
+|24    |ram__GBM7__3       |           1|      3724|
+|25    |ram__GBM18__1      |           6|     16838|
+|26    |ram__GBM15__1      |           5|     16865|
+|27    |ram__GBM15__2      |           1|     16865|
+|28    |ram__GBM19__1      |           1|      8462|
+|29    |ram__GBM17__1      |           5|     22590|
+|30    |ram__GBM17__2      |           1|     22590|
+|31    |ram__GBM16__1      |           1|      4943|
+|32    |ram__GBM16__2      |           1|      4943|
+|33    |ram__GBM1__1       |           1|      8469|
+|34    |ram__GBM16__3      |           1|      2453|
+|35    |ram__GBM1__2       |           1|      8469|
+|36    |ram__GBM16__4      |           1|      2453|
+|37    |ram__GBM1__3       |           1|      8469|
+|38    |ram__GBM16__5      |           1|      2453|
+|39    |ram__GBM1__4       |           1|      8469|
+|40    |ram__GBM16__6      |           1|      2453|
+|41    |ram__GBM1__5       |           1|      8469|
+|42    |ram__GBM16__7      |           1|      2453|
+|43    |ram__GBM1__6       |           1|      8469|
+|44    |ram__GBM7__4       |           1|      3724|
+|45    |ram__GBM16__8      |           1|      2453|
+|46    |ram__GBM1__7       |           1|      8469|
+|47    |ram__GBM16__9      |           1|      2453|
+|48    |ram__GBM1__8       |           1|      8469|
+|49    |ram__GBM16__10     |           1|      2453|
+|50    |ram__GBM1__9       |           1|      8469|
+|51    |ram__GBM16__11     |           1|      2453|
+|52    |ram__GBM1__10      |           1|      8469|
+|53    |ram__GBM16__12     |           1|      2453|
+|54    |ram__GBM1__11      |           1|      8469|
+|55    |ram__GBM16__13     |           1|      2453|
+|56    |ram__GBM1__12      |           1|      8469|
+|57    |ram__GBM1__13      |           1|      8469|
+|58    |ram__GBM7__5       |           1|      3761|
+|59    |ram__GBM16__14     |           1|      4943|
+|60    |ram__GBM19__2      |           1|      8462|
+|61    |ram__GBM1__14      |           1|      8469|
+|62    |ram__GBM7__6       |           1|      3761|
+|63    |ram__GBM16__15     |           1|      4943|
+|64    |ram__GBM19__3      |           1|      8462|
+|65    |ram__GBM1__15      |           1|      8469|
+|66    |ram__GBM7__7       |           1|      3761|
+|67    |ram__GBM16__16     |           1|      4943|
+|68    |ram__GBM19__4      |           1|      8462|
+|69    |ram__GBM1__16      |           1|      8469|
+|70    |ram__GBM7__8       |           1|      3761|
+|71    |ram__GBM16__17     |           1|      4943|
+|72    |ram__GBM19__5      |           1|      8462|
+|73    |ram__GBM1__17      |           1|      8469|
+|74    |ram__GBM19__6      |           1|      8462|
+|75    |eltwise_cu__2      |           1|      3729|
+|76    |eltwise_cu__3      |           1|      3729|
+|77    |eltwise_cu__4      |           1|      3729|
+|78    |eltwise_cu__5      |           1|      3729|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:34:32 ; elapsed = 00:36:56 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 215776 ; free virtual = 283419
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[15] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[15] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[14] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[14] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[13] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[13] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[12] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[12] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[11] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[11]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[11] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[11]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[10] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[10]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[10] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[10]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[9] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[9]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[9] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[9]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[8] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[8]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[8] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[8]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[7] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[7]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[7] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[7]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[6] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[6]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[6] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[6]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[5] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[5]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[5] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[5]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[4] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[4]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[4] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[4]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[3] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[3]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[3] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[3]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[2] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[2]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[2] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[2]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[1] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[1]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[1] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[1]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[0] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_sub/sub_out_temp_reg_reg[0]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe0/out_sum[0] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe0/u_add/sum_out_temp_reg_reg[0]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[15] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_sub/sub_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[15] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_add/sum_out_temp_reg_reg[15]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[14] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_sub/sub_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[14] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_add/sum_out_temp_reg_reg[14]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[13] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_sub/sub_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[13] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_add/sum_out_temp_reg_reg[13]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[12] with 1st driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_sub/sub_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1780]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_eltwise_cu_0/u_pe_array/pe1/out_sum[12] with 2nd driver pin 'u_eltwise_cu_0/u_pe_array/pe1/u_add/sum_out_temp_reg_reg[12]/Q' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/eltwise_layer.v:1729]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|      352|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:34:58 ; elapsed = 00:37:23 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 215833 ; free virtual = 283476
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:37:39 ; elapsed = 00:40:09 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 213918 ; free virtual = 281695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:37:55 ; elapsed = 00:40:26 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 213946 ; free virtual = 281671
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 02:14:59 ; elapsed = 02:18:37 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 239862 ; free virtual = 306850
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 02:15:14 ; elapsed = 02:18:53 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 240381 ; free virtual = 307367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+----------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+----------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe2/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe2/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe3/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_0/u_pe_array/pe3/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe2/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe2/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe3/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_1/u_pe_array/pe3/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe2/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe2/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe3/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_2/u_pe_array/pe3/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe2/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe2/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe3/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_3/u_pe_array/pe3/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe2/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe2/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe2/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe3/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe3/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_4/u_pe_array/pe3/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe0/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe0/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe0/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe1/u_add/u_FPAddSub/pipe_8_reg[33]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe1/u_sub/u_FPAddSub2/pipe_8_reg[33] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|eltwise_layer | u_eltwise_cu_5/u_pe_array/pe1/u_mul/u_FPMult/pipe_4_reg[20]    | 3      | 8     | NO           | NO                 | NO                | 8      | 0       | 
++--------------+----------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+--------+
+|      |Cell   |Count   |
++------+-------+--------+
+|1     |CARRY4 |     838|
+|2     |LUT1   |     267|
+|3     |LUT2   |   14392|
+|4     |LUT3   |  264623|
+|5     |LUT4   |   87682|
+|6     |LUT5   |  694259|
+|7     |LUT6   | 1766865|
+|8     |MUXF7  |  283008|
+|9     |MUXF8  |  141440|
+|10    |SRL16E |     220|
+|11    |FDRE   |  305752|
+|12    |FDSE   |       8|
+|13    |LD     |    4382|
++------+-------+--------+
+
+Report Instance Areas: 
++------+----------------------------+-----------------------------+--------+
+|      |Instance                    |Module                       |Cells   |
++------+----------------------------+-----------------------------+--------+
+|1     |top                         |                             | 3563736|
+|2     |  matrix_A_0                |ram                          |   82528|
+|3     |  matrix_A_2                |ram_1                        |   82528|
+|4     |  matrix_A_4                |ram_3                        |   82528|
+|5     |  matrix_A_3                |ram_2                        |   82528|
+|6     |  matrix_A_5                |ram_4                        |   73264|
+|7     |  matrix_C_0                |ram_11                       |   62240|
+|8     |  matrix_C_1                |ram_12                       |   62240|
+|9     |  matrix_C_2                |ram_13                       |   62240|
+|10    |  matrix_C_4                |ram_15                       |   62240|
+|11    |  matrix_A_1                |ram_0                        |   82720|
+|12    |  matrix_B_0                |ram_5                        |   82592|
+|13    |  matrix_B_1                |ram_6                        |   82656|
+|14    |  matrix_B_2                |ram_7                        |   82592|
+|15    |  matrix_B_3                |ram_8                        |   82592|
+|16    |  matrix_B_4                |ram_9                        |   82592|
+|17    |  matrix_B_5                |ram_10                       |   73424|
+|18    |  matrix_C_3                |ram_14                       |   62304|
+|19    |  matrix_C_5                |ram_16                       |   62332|
+|20    |  u_eltwise_cu_0            |eltwise_cu                   |  371646|
+|21    |    u_input_logic           |input_logic_329              |  215345|
+|22    |    u_output_logic          |output_logic_330             |  153002|
+|23    |    u_pe_array              |pe_array_331                 |    3237|
+|24    |      pe0                   |processing_element_332       |     810|
+|25    |        u_add               |seq_add_384                  |     253|
+|26    |          u_FPAddSub        |FPAddSub_395                 |     188|
+|27    |            ExecutionModule |FPAddSub_ExecutionModule_396 |       3|
+|28    |            NormalizeShift1 |FPAddSub_NormalizeShift1_397 |      34|
+|29    |            NormalizeShift2 |FPAddSub_NormalizeShift2_398 |      28|
+|30    |            PrealignModule  |FPAddSub_PrealignModule_399  |       4|
+|31    |        u_mul               |seq_mul_385                  |     121|
+|32    |          u_FPMult          |FPMult_16_391                |     105|
+|33    |            ExecuteModule   |FPMult_ExecuteModule_392     |       9|
+|34    |            NormalizeModule |FPMult_NormalizeModule_393   |       8|
+|35    |            PrepModule      |FPMult_PrepModule_394        |      22|
+|36    |        u_sub               |seq_sub_386                  |     420|
+|37    |          u_FPAddSub2       |FPAddSub_387                 |     404|
+|38    |            ExecutionModule |FPAddSub_ExecutionModule_388 |       3|
+|39    |            NormalizeShift1 |FPAddSub_NormalizeShift1_389 |      34|
+|40    |            NormalizeShift2 |FPAddSub_NormalizeShift2_390 |      28|
+|41    |      pe1                   |processing_element_333       |     809|
+|42    |        u_add               |seq_add_368                  |     252|
+|43    |          u_FPAddSub        |FPAddSub_379                 |     188|
+|44    |            ExecutionModule |FPAddSub_ExecutionModule_380 |       3|
+|45    |            NormalizeShift1 |FPAddSub_NormalizeShift1_381 |      34|
+|46    |            NormalizeShift2 |FPAddSub_NormalizeShift2_382 |      28|
+|47    |            PrealignModule  |FPAddSub_PrealignModule_383  |       4|
+|48    |        u_mul               |seq_mul_369                  |     121|
+|49    |          u_FPMult          |FPMult_16_375                |     105|
+|50    |            ExecuteModule   |FPMult_ExecuteModule_376     |       9|
+|51    |            NormalizeModule |FPMult_NormalizeModule_377   |       8|
+|52    |            PrepModule      |FPMult_PrepModule_378        |      22|
+|53    |        u_sub               |seq_sub_370                  |     420|
+|54    |          u_FPAddSub2       |FPAddSub_371                 |     404|
+|55    |            ExecutionModule |FPAddSub_ExecutionModule_372 |       3|
+|56    |            NormalizeShift1 |FPAddSub_NormalizeShift1_373 |      34|
+|57    |            NormalizeShift2 |FPAddSub_NormalizeShift2_374 |      28|
+|58    |      pe2                   |processing_element_334       |     809|
+|59    |        u_add               |seq_add_352                  |     252|
+|60    |          u_FPAddSub        |FPAddSub_363                 |     188|
+|61    |            ExecutionModule |FPAddSub_ExecutionModule_364 |       3|
+|62    |            NormalizeShift1 |FPAddSub_NormalizeShift1_365 |      34|
+|63    |            NormalizeShift2 |FPAddSub_NormalizeShift2_366 |      28|
+|64    |            PrealignModule  |FPAddSub_PrealignModule_367  |       4|
+|65    |        u_mul               |seq_mul_353                  |     121|
+|66    |          u_FPMult          |FPMult_16_359                |     105|
+|67    |            ExecuteModule   |FPMult_ExecuteModule_360     |       9|
+|68    |            NormalizeModule |FPMult_NormalizeModule_361   |       8|
+|69    |            PrepModule      |FPMult_PrepModule_362        |      22|
+|70    |        u_sub               |seq_sub_354                  |     420|
+|71    |          u_FPAddSub2       |FPAddSub_355                 |     404|
+|72    |            ExecutionModule |FPAddSub_ExecutionModule_356 |       3|
+|73    |            NormalizeShift1 |FPAddSub_NormalizeShift1_357 |      34|
+|74    |            NormalizeShift2 |FPAddSub_NormalizeShift2_358 |      28|
+|75    |      pe3                   |processing_element_335       |     809|
+|76    |        u_add               |seq_add_336                  |     252|
+|77    |          u_FPAddSub        |FPAddSub_347                 |     188|
+|78    |            ExecutionModule |FPAddSub_ExecutionModule_348 |       3|
+|79    |            NormalizeShift1 |FPAddSub_NormalizeShift1_349 |      34|
+|80    |            NormalizeShift2 |FPAddSub_NormalizeShift2_350 |      28|
+|81    |            PrealignModule  |FPAddSub_PrealignModule_351  |       4|
+|82    |        u_mul               |seq_mul_337                  |     121|
+|83    |          u_FPMult          |FPMult_16_343                |     105|
+|84    |            ExecuteModule   |FPMult_ExecuteModule_344     |       9|
+|85    |            NormalizeModule |FPMult_NormalizeModule_345   |       8|
+|86    |            PrepModule      |FPMult_PrepModule_346        |      22|
+|87    |        u_sub               |seq_sub_338                  |     420|
+|88    |          u_FPAddSub2       |FPAddSub_339                 |     404|
+|89    |            ExecutionModule |FPAddSub_ExecutionModule_340 |       3|
+|90    |            NormalizeShift1 |FPAddSub_NormalizeShift1_341 |      34|
+|91    |            NormalizeShift2 |FPAddSub_NormalizeShift2_342 |      28|
+|92    |  u_eltwise_cu_1            |eltwise_cu_17                |  371640|
+|93    |    u_input_logic           |input_logic_258              |  215344|
+|94    |    u_output_logic          |output_logic_259             |  153003|
+|95    |    u_pe_array              |pe_array_260                 |    3236|
+|96    |      pe0                   |processing_element_261       |     809|
+|97    |        u_add               |seq_add_313                  |     252|
+|98    |          u_FPAddSub        |FPAddSub_324                 |     188|
+|99    |            ExecutionModule |FPAddSub_ExecutionModule_325 |       3|
+|100   |            NormalizeShift1 |FPAddSub_NormalizeShift1_326 |      34|
+|101   |            NormalizeShift2 |FPAddSub_NormalizeShift2_327 |      28|
+|102   |            PrealignModule  |FPAddSub_PrealignModule_328  |       4|
+|103   |        u_mul               |seq_mul_314                  |     121|
+|104   |          u_FPMult          |FPMult_16_320                |     105|
+|105   |            ExecuteModule   |FPMult_ExecuteModule_321     |       9|
+|106   |            NormalizeModule |FPMult_NormalizeModule_322   |       8|
+|107   |            PrepModule      |FPMult_PrepModule_323        |      22|
+|108   |        u_sub               |seq_sub_315                  |     420|
+|109   |          u_FPAddSub2       |FPAddSub_316                 |     404|
+|110   |            ExecutionModule |FPAddSub_ExecutionModule_317 |       3|
+|111   |            NormalizeShift1 |FPAddSub_NormalizeShift1_318 |      34|
+|112   |            NormalizeShift2 |FPAddSub_NormalizeShift2_319 |      28|
+|113   |      pe1                   |processing_element_262       |     809|
+|114   |        u_add               |seq_add_297                  |     252|
+|115   |          u_FPAddSub        |FPAddSub_308                 |     188|
+|116   |            ExecutionModule |FPAddSub_ExecutionModule_309 |       3|
+|117   |            NormalizeShift1 |FPAddSub_NormalizeShift1_310 |      34|
+|118   |            NormalizeShift2 |FPAddSub_NormalizeShift2_311 |      28|
+|119   |            PrealignModule  |FPAddSub_PrealignModule_312  |       4|
+|120   |        u_mul               |seq_mul_298                  |     121|
+|121   |          u_FPMult          |FPMult_16_304                |     105|
+|122   |            ExecuteModule   |FPMult_ExecuteModule_305     |       9|
+|123   |            NormalizeModule |FPMult_NormalizeModule_306   |       8|
+|124   |            PrepModule      |FPMult_PrepModule_307        |      22|
+|125   |        u_sub               |seq_sub_299                  |     420|
+|126   |          u_FPAddSub2       |FPAddSub_300                 |     404|
+|127   |            ExecutionModule |FPAddSub_ExecutionModule_301 |       3|
+|128   |            NormalizeShift1 |FPAddSub_NormalizeShift1_302 |      34|
+|129   |            NormalizeShift2 |FPAddSub_NormalizeShift2_303 |      28|
+|130   |      pe2                   |processing_element_263       |     809|
+|131   |        u_add               |seq_add_281                  |     252|
+|132   |          u_FPAddSub        |FPAddSub_292                 |     188|
+|133   |            ExecutionModule |FPAddSub_ExecutionModule_293 |       3|
+|134   |            NormalizeShift1 |FPAddSub_NormalizeShift1_294 |      34|
+|135   |            NormalizeShift2 |FPAddSub_NormalizeShift2_295 |      28|
+|136   |            PrealignModule  |FPAddSub_PrealignModule_296  |       4|
+|137   |        u_mul               |seq_mul_282                  |     121|
+|138   |          u_FPMult          |FPMult_16_288                |     105|
+|139   |            ExecuteModule   |FPMult_ExecuteModule_289     |       9|
+|140   |            NormalizeModule |FPMult_NormalizeModule_290   |       8|
+|141   |            PrepModule      |FPMult_PrepModule_291        |      22|
+|142   |        u_sub               |seq_sub_283                  |     420|
+|143   |          u_FPAddSub2       |FPAddSub_284                 |     404|
+|144   |            ExecutionModule |FPAddSub_ExecutionModule_285 |       3|
+|145   |            NormalizeShift1 |FPAddSub_NormalizeShift1_286 |      34|
+|146   |            NormalizeShift2 |FPAddSub_NormalizeShift2_287 |      28|
+|147   |      pe3                   |processing_element_264       |     809|
+|148   |        u_add               |seq_add_265                  |     252|
+|149   |          u_FPAddSub        |FPAddSub_276                 |     188|
+|150   |            ExecutionModule |FPAddSub_ExecutionModule_277 |       3|
+|151   |            NormalizeShift1 |FPAddSub_NormalizeShift1_278 |      34|
+|152   |            NormalizeShift2 |FPAddSub_NormalizeShift2_279 |      28|
+|153   |            PrealignModule  |FPAddSub_PrealignModule_280  |       4|
+|154   |        u_mul               |seq_mul_266                  |     121|
+|155   |          u_FPMult          |FPMult_16_272                |     105|
+|156   |            ExecuteModule   |FPMult_ExecuteModule_273     |       9|
+|157   |            NormalizeModule |FPMult_NormalizeModule_274   |       8|
+|158   |            PrepModule      |FPMult_PrepModule_275        |      22|
+|159   |        u_sub               |seq_sub_267                  |     420|
+|160   |          u_FPAddSub2       |FPAddSub_268                 |     404|
+|161   |            ExecutionModule |FPAddSub_ExecutionModule_269 |       3|
+|162   |            NormalizeShift1 |FPAddSub_NormalizeShift1_270 |      34|
+|163   |            NormalizeShift2 |FPAddSub_NormalizeShift2_271 |      28|
+|164   |  u_eltwise_cu_2            |eltwise_cu_18                |  371639|
+|165   |    u_input_logic           |input_logic_187              |  215344|
+|166   |    u_output_logic          |output_logic_188             |  153002|
+|167   |    u_pe_array              |pe_array_189                 |    3236|
+|168   |      pe0                   |processing_element_190       |     809|
+|169   |        u_add               |seq_add_242                  |     252|
+|170   |          u_FPAddSub        |FPAddSub_253                 |     188|
+|171   |            ExecutionModule |FPAddSub_ExecutionModule_254 |       3|
+|172   |            NormalizeShift1 |FPAddSub_NormalizeShift1_255 |      34|
+|173   |            NormalizeShift2 |FPAddSub_NormalizeShift2_256 |      28|
+|174   |            PrealignModule  |FPAddSub_PrealignModule_257  |       4|
+|175   |        u_mul               |seq_mul_243                  |     121|
+|176   |          u_FPMult          |FPMult_16_249                |     105|
+|177   |            ExecuteModule   |FPMult_ExecuteModule_250     |       9|
+|178   |            NormalizeModule |FPMult_NormalizeModule_251   |       8|
+|179   |            PrepModule      |FPMult_PrepModule_252        |      22|
+|180   |        u_sub               |seq_sub_244                  |     420|
+|181   |          u_FPAddSub2       |FPAddSub_245                 |     404|
+|182   |            ExecutionModule |FPAddSub_ExecutionModule_246 |       3|
+|183   |            NormalizeShift1 |FPAddSub_NormalizeShift1_247 |      34|
+|184   |            NormalizeShift2 |FPAddSub_NormalizeShift2_248 |      28|
+|185   |      pe1                   |processing_element_191       |     809|
+|186   |        u_add               |seq_add_226                  |     252|
+|187   |          u_FPAddSub        |FPAddSub_237                 |     188|
+|188   |            ExecutionModule |FPAddSub_ExecutionModule_238 |       3|
+|189   |            NormalizeShift1 |FPAddSub_NormalizeShift1_239 |      34|
+|190   |            NormalizeShift2 |FPAddSub_NormalizeShift2_240 |      28|
+|191   |            PrealignModule  |FPAddSub_PrealignModule_241  |       4|
+|192   |        u_mul               |seq_mul_227                  |     121|
+|193   |          u_FPMult          |FPMult_16_233                |     105|
+|194   |            ExecuteModule   |FPMult_ExecuteModule_234     |       9|
+|195   |            NormalizeModule |FPMult_NormalizeModule_235   |       8|
+|196   |            PrepModule      |FPMult_PrepModule_236        |      22|
+|197   |        u_sub               |seq_sub_228                  |     420|
+|198   |          u_FPAddSub2       |FPAddSub_229                 |     404|
+|199   |            ExecutionModule |FPAddSub_ExecutionModule_230 |       3|
+|200   |            NormalizeShift1 |FPAddSub_NormalizeShift1_231 |      34|
+|201   |            NormalizeShift2 |FPAddSub_NormalizeShift2_232 |      28|
+|202   |      pe2                   |processing_element_192       |     809|
+|203   |        u_add               |seq_add_210                  |     252|
+|204   |          u_FPAddSub        |FPAddSub_221                 |     188|
+|205   |            ExecutionModule |FPAddSub_ExecutionModule_222 |       3|
+|206   |            NormalizeShift1 |FPAddSub_NormalizeShift1_223 |      34|
+|207   |            NormalizeShift2 |FPAddSub_NormalizeShift2_224 |      28|
+|208   |            PrealignModule  |FPAddSub_PrealignModule_225  |       4|
+|209   |        u_mul               |seq_mul_211                  |     121|
+|210   |          u_FPMult          |FPMult_16_217                |     105|
+|211   |            ExecuteModule   |FPMult_ExecuteModule_218     |       9|
+|212   |            NormalizeModule |FPMult_NormalizeModule_219   |       8|
+|213   |            PrepModule      |FPMult_PrepModule_220        |      22|
+|214   |        u_sub               |seq_sub_212                  |     420|
+|215   |          u_FPAddSub2       |FPAddSub_213                 |     404|
+|216   |            ExecutionModule |FPAddSub_ExecutionModule_214 |       3|
+|217   |            NormalizeShift1 |FPAddSub_NormalizeShift1_215 |      34|
+|218   |            NormalizeShift2 |FPAddSub_NormalizeShift2_216 |      28|
+|219   |      pe3                   |processing_element_193       |     809|
+|220   |        u_add               |seq_add_194                  |     252|
+|221   |          u_FPAddSub        |FPAddSub_205                 |     188|
+|222   |            ExecutionModule |FPAddSub_ExecutionModule_206 |       3|
+|223   |            NormalizeShift1 |FPAddSub_NormalizeShift1_207 |      34|
+|224   |            NormalizeShift2 |FPAddSub_NormalizeShift2_208 |      28|
+|225   |            PrealignModule  |FPAddSub_PrealignModule_209  |       4|
+|226   |        u_mul               |seq_mul_195                  |     121|
+|227   |          u_FPMult          |FPMult_16_201                |     105|
+|228   |            ExecuteModule   |FPMult_ExecuteModule_202     |       9|
+|229   |            NormalizeModule |FPMult_NormalizeModule_203   |       8|
+|230   |            PrepModule      |FPMult_PrepModule_204        |      22|
+|231   |        u_sub               |seq_sub_196                  |     420|
+|232   |          u_FPAddSub2       |FPAddSub_197                 |     404|
+|233   |            ExecutionModule |FPAddSub_ExecutionModule_198 |       3|
+|234   |            NormalizeShift1 |FPAddSub_NormalizeShift1_199 |      34|
+|235   |            NormalizeShift2 |FPAddSub_NormalizeShift2_200 |      28|
+|236   |  u_eltwise_cu_3            |eltwise_cu_19                |  371638|
+|237   |    u_input_logic           |input_logic_116              |  215343|
+|238   |    u_output_logic          |output_logic_117             |  153002|
+|239   |    u_pe_array              |pe_array_118                 |    3236|
+|240   |      pe0                   |processing_element_119       |     809|
+|241   |        u_add               |seq_add_171                  |     252|
+|242   |          u_FPAddSub        |FPAddSub_182                 |     188|
+|243   |            ExecutionModule |FPAddSub_ExecutionModule_183 |       3|
+|244   |            NormalizeShift1 |FPAddSub_NormalizeShift1_184 |      34|
+|245   |            NormalizeShift2 |FPAddSub_NormalizeShift2_185 |      28|
+|246   |            PrealignModule  |FPAddSub_PrealignModule_186  |       4|
+|247   |        u_mul               |seq_mul_172                  |     121|
+|248   |          u_FPMult          |FPMult_16_178                |     105|
+|249   |            ExecuteModule   |FPMult_ExecuteModule_179     |       9|
+|250   |            NormalizeModule |FPMult_NormalizeModule_180   |       8|
+|251   |            PrepModule      |FPMult_PrepModule_181        |      22|
+|252   |        u_sub               |seq_sub_173                  |     420|
+|253   |          u_FPAddSub2       |FPAddSub_174                 |     404|
+|254   |            ExecutionModule |FPAddSub_ExecutionModule_175 |       3|
+|255   |            NormalizeShift1 |FPAddSub_NormalizeShift1_176 |      34|
+|256   |            NormalizeShift2 |FPAddSub_NormalizeShift2_177 |      28|
+|257   |      pe1                   |processing_element_120       |     809|
+|258   |        u_add               |seq_add_155                  |     252|
+|259   |          u_FPAddSub        |FPAddSub_166                 |     188|
+|260   |            ExecutionModule |FPAddSub_ExecutionModule_167 |       3|
+|261   |            NormalizeShift1 |FPAddSub_NormalizeShift1_168 |      34|
+|262   |            NormalizeShift2 |FPAddSub_NormalizeShift2_169 |      28|
+|263   |            PrealignModule  |FPAddSub_PrealignModule_170  |       4|
+|264   |        u_mul               |seq_mul_156                  |     121|
+|265   |          u_FPMult          |FPMult_16_162                |     105|
+|266   |            ExecuteModule   |FPMult_ExecuteModule_163     |       9|
+|267   |            NormalizeModule |FPMult_NormalizeModule_164   |       8|
+|268   |            PrepModule      |FPMult_PrepModule_165        |      22|
+|269   |        u_sub               |seq_sub_157                  |     420|
+|270   |          u_FPAddSub2       |FPAddSub_158                 |     404|
+|271   |            ExecutionModule |FPAddSub_ExecutionModule_159 |       3|
+|272   |            NormalizeShift1 |FPAddSub_NormalizeShift1_160 |      34|
+|273   |            NormalizeShift2 |FPAddSub_NormalizeShift2_161 |      28|
+|274   |      pe2                   |processing_element_121       |     809|
+|275   |        u_add               |seq_add_139                  |     252|
+|276   |          u_FPAddSub        |FPAddSub_150                 |     188|
+|277   |            ExecutionModule |FPAddSub_ExecutionModule_151 |       3|
+|278   |            NormalizeShift1 |FPAddSub_NormalizeShift1_152 |      34|
+|279   |            NormalizeShift2 |FPAddSub_NormalizeShift2_153 |      28|
+|280   |            PrealignModule  |FPAddSub_PrealignModule_154  |       4|
+|281   |        u_mul               |seq_mul_140                  |     121|
+|282   |          u_FPMult          |FPMult_16_146                |     105|
+|283   |            ExecuteModule   |FPMult_ExecuteModule_147     |       9|
+|284   |            NormalizeModule |FPMult_NormalizeModule_148   |       8|
+|285   |            PrepModule      |FPMult_PrepModule_149        |      22|
+|286   |        u_sub               |seq_sub_141                  |     420|
+|287   |          u_FPAddSub2       |FPAddSub_142                 |     404|
+|288   |            ExecutionModule |FPAddSub_ExecutionModule_143 |       3|
+|289   |            NormalizeShift1 |FPAddSub_NormalizeShift1_144 |      34|
+|290   |            NormalizeShift2 |FPAddSub_NormalizeShift2_145 |      28|
+|291   |      pe3                   |processing_element_122       |     809|
+|292   |        u_add               |seq_add_123                  |     252|
+|293   |          u_FPAddSub        |FPAddSub_134                 |     188|
+|294   |            ExecutionModule |FPAddSub_ExecutionModule_135 |       3|
+|295   |            NormalizeShift1 |FPAddSub_NormalizeShift1_136 |      34|
+|296   |            NormalizeShift2 |FPAddSub_NormalizeShift2_137 |      28|
+|297   |            PrealignModule  |FPAddSub_PrealignModule_138  |       4|
+|298   |        u_mul               |seq_mul_124                  |     121|
+|299   |          u_FPMult          |FPMult_16_130                |     105|
+|300   |            ExecuteModule   |FPMult_ExecuteModule_131     |       9|
+|301   |            NormalizeModule |FPMult_NormalizeModule_132   |       8|
+|302   |            PrepModule      |FPMult_PrepModule_133        |      22|
+|303   |        u_sub               |seq_sub_125                  |     420|
+|304   |          u_FPAddSub2       |FPAddSub_126                 |     404|
+|305   |            ExecutionModule |FPAddSub_ExecutionModule_127 |       3|
+|306   |            NormalizeShift1 |FPAddSub_NormalizeShift1_128 |      34|
+|307   |            NormalizeShift2 |FPAddSub_NormalizeShift2_129 |      28|
+|308   |  u_eltwise_cu_4            |eltwise_cu_20                |  371640|
+|309   |    u_input_logic           |input_logic_45               |  215343|
+|310   |    u_output_logic          |output_logic_46              |  153002|
+|311   |    u_pe_array              |pe_array_47                  |    3236|
+|312   |      pe0                   |processing_element_48        |     809|
+|313   |        u_add               |seq_add_100                  |     252|
+|314   |          u_FPAddSub        |FPAddSub_111                 |     188|
+|315   |            ExecutionModule |FPAddSub_ExecutionModule_112 |       3|
+|316   |            NormalizeShift1 |FPAddSub_NormalizeShift1_113 |      34|
+|317   |            NormalizeShift2 |FPAddSub_NormalizeShift2_114 |      28|
+|318   |            PrealignModule  |FPAddSub_PrealignModule_115  |       4|
+|319   |        u_mul               |seq_mul_101                  |     121|
+|320   |          u_FPMult          |FPMult_16_107                |     105|
+|321   |            ExecuteModule   |FPMult_ExecuteModule_108     |       9|
+|322   |            NormalizeModule |FPMult_NormalizeModule_109   |       8|
+|323   |            PrepModule      |FPMult_PrepModule_110        |      22|
+|324   |        u_sub               |seq_sub_102                  |     420|
+|325   |          u_FPAddSub2       |FPAddSub_103                 |     404|
+|326   |            ExecutionModule |FPAddSub_ExecutionModule_104 |       3|
+|327   |            NormalizeShift1 |FPAddSub_NormalizeShift1_105 |      34|
+|328   |            NormalizeShift2 |FPAddSub_NormalizeShift2_106 |      28|
+|329   |      pe1                   |processing_element_49        |     809|
+|330   |        u_add               |seq_add_84                   |     252|
+|331   |          u_FPAddSub        |FPAddSub_95                  |     188|
+|332   |            ExecutionModule |FPAddSub_ExecutionModule_96  |       3|
+|333   |            NormalizeShift1 |FPAddSub_NormalizeShift1_97  |      34|
+|334   |            NormalizeShift2 |FPAddSub_NormalizeShift2_98  |      28|
+|335   |            PrealignModule  |FPAddSub_PrealignModule_99   |       4|
+|336   |        u_mul               |seq_mul_85                   |     121|
+|337   |          u_FPMult          |FPMult_16_91                 |     105|
+|338   |            ExecuteModule   |FPMult_ExecuteModule_92      |       9|
+|339   |            NormalizeModule |FPMult_NormalizeModule_93    |       8|
+|340   |            PrepModule      |FPMult_PrepModule_94         |      22|
+|341   |        u_sub               |seq_sub_86                   |     420|
+|342   |          u_FPAddSub2       |FPAddSub_87                  |     404|
+|343   |            ExecutionModule |FPAddSub_ExecutionModule_88  |       3|
+|344   |            NormalizeShift1 |FPAddSub_NormalizeShift1_89  |      34|
+|345   |            NormalizeShift2 |FPAddSub_NormalizeShift2_90  |      28|
+|346   |      pe2                   |processing_element_50        |     809|
+|347   |        u_add               |seq_add_68                   |     252|
+|348   |          u_FPAddSub        |FPAddSub_79                  |     188|
+|349   |            ExecutionModule |FPAddSub_ExecutionModule_80  |       3|
+|350   |            NormalizeShift1 |FPAddSub_NormalizeShift1_81  |      34|
+|351   |            NormalizeShift2 |FPAddSub_NormalizeShift2_82  |      28|
+|352   |            PrealignModule  |FPAddSub_PrealignModule_83   |       4|
+|353   |        u_mul               |seq_mul_69                   |     121|
+|354   |          u_FPMult          |FPMult_16_75                 |     105|
+|355   |            ExecuteModule   |FPMult_ExecuteModule_76      |       9|
+|356   |            NormalizeModule |FPMult_NormalizeModule_77    |       8|
+|357   |            PrepModule      |FPMult_PrepModule_78         |      22|
+|358   |        u_sub               |seq_sub_70                   |     420|
+|359   |          u_FPAddSub2       |FPAddSub_71                  |     404|
+|360   |            ExecutionModule |FPAddSub_ExecutionModule_72  |       3|
+|361   |            NormalizeShift1 |FPAddSub_NormalizeShift1_73  |      34|
+|362   |            NormalizeShift2 |FPAddSub_NormalizeShift2_74  |      28|
+|363   |      pe3                   |processing_element_51        |     809|
+|364   |        u_add               |seq_add_52                   |     252|
+|365   |          u_FPAddSub        |FPAddSub_63                  |     188|
+|366   |            ExecutionModule |FPAddSub_ExecutionModule_64  |       3|
+|367   |            NormalizeShift1 |FPAddSub_NormalizeShift1_65  |      34|
+|368   |            NormalizeShift2 |FPAddSub_NormalizeShift2_66  |      28|
+|369   |            PrealignModule  |FPAddSub_PrealignModule_67   |       4|
+|370   |        u_mul               |seq_mul_53                   |     121|
+|371   |          u_FPMult          |FPMult_16_59                 |     105|
+|372   |            ExecuteModule   |FPMult_ExecuteModule_60      |       9|
+|373   |            NormalizeModule |FPMult_NormalizeModule_61    |       8|
+|374   |            PrepModule      |FPMult_PrepModule_62         |      22|
+|375   |        u_sub               |seq_sub_54                   |     420|
+|376   |          u_FPAddSub2       |FPAddSub_55                  |     404|
+|377   |            ExecutionModule |FPAddSub_ExecutionModule_56  |       3|
+|378   |            NormalizeShift1 |FPAddSub_NormalizeShift1_57  |      34|
+|379   |            NormalizeShift2 |FPAddSub_NormalizeShift2_58  |      28|
+|380   |  u_eltwise_cu_5            |eltwise_cu_21                |  355206|
+|381   |    u_input_logic           |input_logic                  |  218081|
+|382   |    u_output_logic          |output_logic                 |  135435|
+|383   |    u_pe_array              |pe_array                     |    1631|
+|384   |      pe0                   |processing_element           |     805|
+|385   |        u_add               |seq_add_29                   |     250|
+|386   |          u_FPAddSub        |FPAddSub_40                  |     186|
+|387   |            ExecutionModule |FPAddSub_ExecutionModule_41  |       3|
+|388   |            NormalizeShift1 |FPAddSub_NormalizeShift1_42  |      33|
+|389   |            NormalizeShift2 |FPAddSub_NormalizeShift2_43  |      28|
+|390   |            PrealignModule  |FPAddSub_PrealignModule_44   |       4|
+|391   |        u_mul               |seq_mul_30                   |     121|
+|392   |          u_FPMult          |FPMult_16_36                 |     105|
+|393   |            ExecuteModule   |FPMult_ExecuteModule_37      |       9|
+|394   |            NormalizeModule |FPMult_NormalizeModule_38    |       8|
+|395   |            PrepModule      |FPMult_PrepModule_39         |      22|
+|396   |        u_sub               |seq_sub_31                   |     418|
+|397   |          u_FPAddSub2       |FPAddSub_32                  |     402|
+|398   |            ExecutionModule |FPAddSub_ExecutionModule_33  |       3|
+|399   |            NormalizeShift1 |FPAddSub_NormalizeShift1_34  |      33|
+|400   |            NormalizeShift2 |FPAddSub_NormalizeShift2_35  |      28|
+|401   |      pe1                   |processing_element_22        |     805|
+|402   |        u_add               |seq_add                      |     250|
+|403   |          u_FPAddSub        |FPAddSub_25                  |     186|
+|404   |            ExecutionModule |FPAddSub_ExecutionModule_26  |       3|
+|405   |            NormalizeShift1 |FPAddSub_NormalizeShift1_27  |      33|
+|406   |            NormalizeShift2 |FPAddSub_NormalizeShift2_28  |      28|
+|407   |            PrealignModule  |FPAddSub_PrealignModule      |       4|
+|408   |        u_mul               |seq_mul_24                   |     121|
+|409   |          u_FPMult          |FPMult_16                    |     105|
+|410   |            ExecuteModule   |FPMult_ExecuteModule         |       9|
+|411   |            NormalizeModule |FPMult_NormalizeModule       |       8|
+|412   |            PrepModule      |FPMult_PrepModule            |      22|
+|413   |        u_sub               |seq_sub                      |     418|
+|414   |          u_FPAddSub2       |FPAddSub                     |     402|
+|415   |            ExecutionModule |FPAddSub_ExecutionModule     |       3|
+|416   |            NormalizeShift1 |FPAddSub_NormalizeShift1     |      33|
+|417   |            NormalizeShift2 |FPAddSub_NormalizeShift2     |      28|
+|418   |      pe3                   |processing_element_23        |      21|
+|419   |        u_mul               |seq_mul                      |      21|
++------+----------------------------+-----------------------------+--------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 02:15:14 ; elapsed = 02:18:53 . Memory (MB): peak = 7146.957 ; gain = 5672.316 ; free physical = 240336 ; free virtual = 307323
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 794 critical warnings and 146 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 02:15:15 ; elapsed = 02:18:55 . Memory (MB): peak = 7150.863 ; gain = 5676.223 ; free physical = 244352 ; free virtual = 311339
+Synthesis Optimization Complete : Time (s): cpu = 02:15:15 ; elapsed = 02:18:55 . Memory (MB): peak = 7150.863 ; gain = 5676.223 ; free physical = 244503 ; free virtual = 311343
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 429668 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 9 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.72 . Memory (MB): peak = 8728.363 ; gain = 0.000 ; free physical = 239569 ; free virtual = 306442
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4382 instances were transformed.
+  LD => LDCE: 4382 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+271 Infos, 146 Warnings, 130 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 02:29:43 ; elapsed = 02:33:26 . Memory (MB): peak = 8728.363 ; gain = 7253.820 ; free physical = 242986 ; free virtual = 309856
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:08:13 ; elapsed = 00:02:19 . Memory (MB): peak = 11610.441 ; gain = 2882.078 ; free physical = 236422 ; free virtual = 303300
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk_mem]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name.
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.77 . Memory (MB): peak = 11610.441 ; gain = 0.000 ; free physical = 237738 ; free virtual = 304615
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 12418.523 ; gain = 0.000 ; free physical = 235419 ; free virtual = 302966
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:11:37 ; elapsed = 00:13:46 . Memory (MB): peak = 12464.422 ; gain = 853.980 ; free physical = 236003 ; free virtual = 303335
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[0]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[1]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[2]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[3]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[4]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[5]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[6]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[7]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk_mem" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:10:36 ; elapsed = 00:03:20 . Memory (MB): peak = 14002.465 ; gain = 1538.043 ; free physical = 233773 ; free virtual = 301111
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:29:57 ; elapsed = 00:17:16 . Memory (MB): peak = 15587.477 ; gain = 1585.012 ; free physical = 233632 ; free virtual = 301042
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Common 17-14] Message 'DRC MDRV-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Project 1-461] DRC finished with 352 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 15587.480 ; gain = 0.004 ; free physical = 233359 ; free virtual = 300770
+INFO: [Common 17-83] Releasing license: Implementation
+6 Infos, 0 Warnings, 0 Critical Warnings and 101 Errors encountered.
+opt_design failed
+opt_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 15587.480 ; gain = 0.004 ; free physical = 233359 ; free virtual = 300770
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+    while executing
+"opt_design"
+    (file "/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer/run_tcl.tcl" line 15)
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 05:10:47 2022...

@@ -1,0 +1,479 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 04:13:32 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_route_power.rpt
+| Design           : spmv
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 169.145      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 65.603       |
+| Device Static (mW)       | 103.542      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.0         |
+| Junction Temperature (C) | 27.0         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+------------+----------+-----------+-----------------+
+| On-Chip                  | Power (mW) | Used     | Available | Utilization (%) |
++--------------------------+------------+----------+-----------+-----------------+
+| Clocks                   |    34.435  |        3 |       --- |             --- |
+| Slice Logic              |    13.152  |    16400 |       --- |             --- |
+|   LUT as Logic           |    12.051  |     5503 |     53200 |           10.34 |
+|   Register               |     0.672  |     5693 |    106400 |            5.35 |
+|   LUT as Distributed RAM |     0.325  |     1408 |     17400 |            8.09 |
+|   CARRY4                 |     0.092  |      452 |     13300 |            3.40 |
+|   F7/F8 Muxes            |     0.012  |       92 |     53200 |            0.17 |
+|   Others                 |     0.000  |      628 |       --- |             --- |
+| Signals                  |    17.038  |     9773 |       --- |             --- |
+| Block RAM                |     0.978  |      0.5 |       140 |            0.36 |
+| Static Power             |   103.542  |          |           |                 |
+| Total                    |   169.145  |          |           |                 |
++--------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.073 |       0.066 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------+------------+
+| Name                | Power (mW) |
++---------------------+------------+
+| spmv                |    65.603  |
+|   Big_Channel_      |    38.937  |
+|     CH_0            |     1.272  |
+|       A0            |     0.695  |
+|       CH0           |     0.578  |
+|     CH_1            |     1.183  |
+|       A0            |     0.640  |
+|       CH0           |     0.543  |
+|     CH_10           |     1.170  |
+|       A0            |     0.626  |
+|       CH0           |     0.544  |
+|     CH_11           |     1.225  |
+|       A0            |     0.637  |
+|       CH0           |     0.588  |
+|     CH_12           |     1.253  |
+|       A0            |     0.690  |
+|       CH0           |     0.563  |
+|     CH_13           |     1.170  |
+|       A0            |     0.630  |
+|       CH0           |     0.540  |
+|     CH_14           |     1.229  |
+|       A0            |     0.635  |
+|       CH0           |     0.595  |
+|     CH_15           |     1.213  |
+|       A0            |     0.654  |
+|       CH0           |     0.560  |
+|     CH_16           |     1.198  |
+|       A0            |     0.635  |
+|       CH0           |     0.564  |
+|     CH_17           |     1.172  |
+|       A0            |     0.633  |
+|       CH0           |     0.539  |
+|     CH_18           |     1.188  |
+|       A0            |     0.634  |
+|       CH0           |     0.554  |
+|     CH_19           |     1.173  |
+|       A0            |     0.638  |
+|       CH0           |     0.535  |
+|     CH_2            |     1.175  |
+|       A0            |     0.627  |
+|       CH0           |     0.548  |
+|     CH_20           |     1.207  |
+|       A0            |     0.653  |
+|       CH0           |     0.554  |
+|     CH_21           |     1.249  |
+|       A0            |     0.672  |
+|       CH0           |     0.577  |
+|     CH_22           |     1.201  |
+|       A0            |     0.647  |
+|       CH0           |     0.555  |
+|     CH_23           |     1.224  |
+|       A0            |     0.667  |
+|       CH0           |     0.558  |
+|     CH_24           |     1.241  |
+|       A0            |     0.672  |
+|       CH0           |     0.568  |
+|     CH_25           |     1.210  |
+|       A0            |     0.680  |
+|       CH0           |     0.530  |
+|     CH_26           |     1.276  |
+|       A0            |     0.702  |
+|       CH0           |     0.574  |
+|     CH_27           |     1.493  |
+|       A0            |     0.952  |
+|       CH0           |     0.540  |
+|     CH_28           |     1.211  |
+|       A0            |     0.658  |
+|       CH0           |     0.553  |
+|     CH_29           |     1.214  |
+|       A0            |     0.659  |
+|       CH0           |     0.555  |
+|     CH_3            |     1.206  |
+|       A0            |     0.646  |
+|       CH0           |     0.560  |
+|     CH_30           |     1.185  |
+|       A0            |     0.665  |
+|       CH0           |     0.519  |
+|     CH_31           |     1.227  |
+|       A0            |     0.681  |
+|       CH0           |     0.546  |
+|     CH_4            |     1.190  |
+|       A0            |     0.628  |
+|       CH0           |     0.562  |
+|     CH_5            |     1.175  |
+|       A0            |     0.625  |
+|       CH0           |     0.550  |
+|     CH_6            |     1.206  |
+|       A0            |     0.644  |
+|       CH0           |     0.561  |
+|     CH_7            |     1.197  |
+|       A0            |     0.649  |
+|       CH0           |     0.548  |
+|     CH_8            |     1.182  |
+|       A0            |     0.639  |
+|       CH0           |     0.543  |
+|     CH_9            |     1.222  |
+|       A0            |     0.643  |
+|       CH0           |     0.578  |
+|   bvb               |     7.662  |
+|     fifo_bvb_0      |     0.177  |
+|       u0            |     0.057  |
+|     fifo_bvb_1      |     0.173  |
+|       u0            |     0.057  |
+|     fifo_bvb_10     |     0.173  |
+|       u0            |     0.057  |
+|     fifo_bvb_11     |     0.177  |
+|       u0            |     0.057  |
+|     fifo_bvb_12     |     0.184  |
+|       u0            |     0.057  |
+|     fifo_bvb_13     |     0.174  |
+|       u0            |     0.057  |
+|     fifo_bvb_14     |     0.180  |
+|       u0            |     0.057  |
+|     fifo_bvb_15     |     0.187  |
+|       u0            |     0.057  |
+|     fifo_bvb_16     |     0.175  |
+|       u0            |     0.057  |
+|     fifo_bvb_17     |     0.178  |
+|       u0            |     0.057  |
+|     fifo_bvb_18     |     0.185  |
+|       u0            |     0.057  |
+|     fifo_bvb_19     |     0.190  |
+|       u0            |     0.057  |
+|     fifo_bvb_2      |     0.181  |
+|       u0            |     0.057  |
+|     fifo_bvb_20     |     0.181  |
+|       u0            |     0.057  |
+|     fifo_bvb_21     |     0.187  |
+|       u0            |     0.057  |
+|     fifo_bvb_22     |     0.191  |
+|       u0            |     0.057  |
+|     fifo_bvb_23     |     0.183  |
+|       u0            |     0.057  |
+|     fifo_bvb_24     |     0.186  |
+|       u0            |     0.057  |
+|     fifo_bvb_25     |     0.179  |
+|       u0            |     0.057  |
+|     fifo_bvb_26     |     0.189  |
+|       u0            |     0.057  |
+|     fifo_bvb_27     |     0.194  |
+|       u0            |     0.057  |
+|     fifo_bvb_28     |     0.171  |
+|       u0            |     0.057  |
+|     fifo_bvb_29     |     0.182  |
+|       u0            |     0.057  |
+|     fifo_bvb_3      |     0.183  |
+|       u0            |     0.057  |
+|     fifo_bvb_30     |     0.190  |
+|       u0            |     0.057  |
+|     fifo_bvb_31     |     0.191  |
+|       u0            |     0.057  |
+|     fifo_bvb_4      |     0.191  |
+|       u0            |     0.057  |
+|     fifo_bvb_5      |     0.187  |
+|       u0            |     0.057  |
+|     fifo_bvb_6      |     0.175  |
+|       u0            |     0.057  |
+|     fifo_bvb_7      |     0.173  |
+|       u0            |     0.057  |
+|     fifo_bvb_8      |     0.185  |
+|       u0            |     0.057  |
+|     fifo_bvb_9      |     0.188  |
+|       u0            |     0.057  |
+|   fetcher           |    16.644  |
+|     fifo_col_id_0   |     0.050  |
+|     fifo_col_id_1   |     0.052  |
+|     fifo_col_id_10  |     0.063  |
+|     fifo_col_id_11  |     0.055  |
+|     fifo_col_id_12  |     0.045  |
+|     fifo_col_id_13  |     0.047  |
+|     fifo_col_id_14  |     0.050  |
+|     fifo_col_id_15  |     0.047  |
+|     fifo_col_id_16  |     0.044  |
+|     fifo_col_id_17  |     0.046  |
+|     fifo_col_id_18  |     0.041  |
+|     fifo_col_id_19  |     0.042  |
+|     fifo_col_id_2   |     0.045  |
+|     fifo_col_id_20  |     0.048  |
+|     fifo_col_id_21  |     0.199  |
+|     fifo_col_id_22  |     0.047  |
+|     fifo_col_id_23  |     0.048  |
+|     fifo_col_id_24  |     0.046  |
+|     fifo_col_id_25  |     0.047  |
+|     fifo_col_id_26  |     0.047  |
+|     fifo_col_id_27  |     0.046  |
+|     fifo_col_id_28  |     0.046  |
+|     fifo_col_id_29  |     0.051  |
+|     fifo_col_id_3   |     0.042  |
+|     fifo_col_id_30  |     0.052  |
+|     fifo_col_id_31  |     0.080  |
+|     fifo_col_id_4   |     0.043  |
+|     fifo_col_id_5   |     0.046  |
+|     fifo_col_id_6   |     0.047  |
+|     fifo_col_id_7   |     0.041  |
+|     fifo_col_id_8   |     0.047  |
+|     fifo_col_id_9   |     0.059  |
+|     fifo_mat_val_0  |     0.186  |
+|       u0            |     0.057  |
+|     fifo_mat_val_1  |     0.197  |
+|       u0            |     0.057  |
+|     fifo_mat_val_10 |     0.206  |
+|       u0            |     0.057  |
+|     fifo_mat_val_11 |     0.242  |
+|       u0            |     0.057  |
+|     fifo_mat_val_12 |     0.202  |
+|       u0            |     0.057  |
+|     fifo_mat_val_13 |     0.198  |
+|       u0            |     0.057  |
+|     fifo_mat_val_14 |     0.188  |
+|       u0            |     0.057  |
+|     fifo_mat_val_15 |     0.208  |
+|       u0            |     0.057  |
+|     fifo_mat_val_16 |     0.201  |
+|       u0            |     0.057  |
+|     fifo_mat_val_17 |     0.208  |
+|       u0            |     0.057  |
+|     fifo_mat_val_18 |     0.237  |
+|       u0            |     0.057  |
+|     fifo_mat_val_19 |     0.196  |
+|       u0            |     0.057  |
+|     fifo_mat_val_2  |     0.189  |
+|       u0            |     0.057  |
+|     fifo_mat_val_20 |     0.189  |
+|       u0            |     0.057  |
+|     fifo_mat_val_21 |     0.189  |
+|       u0            |     0.057  |
+|     fifo_mat_val_22 |     0.197  |
+|       u0            |     0.057  |
+|     fifo_mat_val_23 |     0.202  |
+|       u0            |     0.057  |
+|     fifo_mat_val_24 |     0.206  |
+|       u0            |     0.057  |
+|     fifo_mat_val_25 |     0.204  |
+|       u0            |     0.057  |
+|     fifo_mat_val_26 |     0.201  |
+|       u0            |     0.057  |
+|     fifo_mat_val_27 |     0.203  |
+|       u0            |     0.057  |
+|     fifo_mat_val_28 |     0.189  |
+|       u0            |     0.057  |
+|     fifo_mat_val_29 |     0.192  |
+|       u0            |     0.057  |
+|     fifo_mat_val_3  |     0.216  |
+|       u0            |     0.057  |
+|     fifo_mat_val_30 |     0.195  |
+|       u0            |     0.057  |
+|     fifo_mat_val_31 |     0.208  |
+|       u0            |     0.057  |
+|     fifo_mat_val_4  |     0.188  |
+|       u0            |     0.057  |
+|     fifo_mat_val_5  |     0.206  |
+|       u0            |     0.057  |
+|     fifo_mat_val_6  |     0.195  |
+|       u0            |     0.057  |
+|     fifo_mat_val_7  |     0.205  |
+|       u0            |     0.057  |
+|     fifo_mat_val_8  |     0.187  |
+|       u0            |     0.057  |
+|     fifo_mat_val_9  |     0.203  |
+|       u0            |     0.057  |
+|     fifo_row_id_0   |     0.208  |
+|       u0            |     0.057  |
+|     fifo_row_id_1   |     0.199  |
+|       u0            |     0.057  |
+|     fifo_row_id_10  |     0.184  |
+|       u0            |     0.057  |
+|     fifo_row_id_11  |     0.238  |
+|       u0            |     0.057  |
+|     fifo_row_id_12  |     0.188  |
+|       u0            |     0.057  |
+|     fifo_row_id_13  |     0.201  |
+|       u0            |     0.057  |
+|     fifo_row_id_14  |     0.192  |
+|       u0            |     0.057  |
+|     fifo_row_id_15  |     0.210  |
+|       u0            |     0.057  |
+|     fifo_row_id_16  |     0.190  |
+|       u0            |     0.057  |
+|     fifo_row_id_17  |     0.235  |
+|       u0            |     0.057  |
+|     fifo_row_id_18  |     0.216  |
+|       u0            |     0.057  |
+|     fifo_row_id_19  |     0.202  |
+|       u0            |     0.057  |
+|     fifo_row_id_2   |     0.200  |
+|       u0            |     0.057  |
+|     fifo_row_id_20  |     0.191  |
+|       u0            |     0.057  |
+|     fifo_row_id_21  |     0.203  |
+|       u0            |     0.057  |
+|     fifo_row_id_22  |     0.206  |
+|       u0            |     0.057  |
+|     fifo_row_id_23  |     0.208  |
+|       u0            |     0.057  |
+|     fifo_row_id_24  |     0.195  |
+|       u0            |     0.057  |
+|     fifo_row_id_25  |     0.219  |
+|       u0            |     0.057  |
+|     fifo_row_id_26  |     0.218  |
+|       u0            |     0.057  |
+|     fifo_row_id_27  |     0.207  |
+|       u0            |     0.057  |
+|     fifo_row_id_28  |     0.183  |
+|       u0            |     0.057  |
+|     fifo_row_id_29  |     0.217  |
+|       u0            |     0.057  |
+|     fifo_row_id_3   |     0.248  |
+|       u0            |     0.057  |
+|     fifo_row_id_30  |     0.197  |
+|       u0            |     0.057  |
+|     fifo_row_id_31  |     0.205  |
+|       u0            |     0.057  |
+|     fifo_row_id_4   |     0.198  |
+|       u0            |     0.057  |
+|     fifo_row_id_5   |     0.214  |
+|       u0            |     0.057  |
+|     fifo_row_id_6   |     0.198  |
+|       u0            |     0.057  |
+|     fifo_row_id_7   |     0.215  |
+|       u0            |     0.057  |
+|     fifo_row_id_8   |     0.194  |
+|       u0            |     0.057  |
+|     fifo_row_id_9   |     0.195  |
+|       u0            |     0.057  |
+|   write_mem         |     0.982  |
++---------------------+------------+
+
+

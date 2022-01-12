@@ -1,0 +1,301 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:32:11 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.large_submodules/C_LSTM_stage_3_18_10_64_2048_3_16_1/post_route_power.rpt
+| Design           : C_LSTM_stage_3_18_10_64_2048_3_16_1
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 404.802      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 297.690      |
+| Device Static (mW)       | 107.111      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 95.3         |
+| Junction Temperature (C) | 29.7         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |   107.119  |        3 |       --- |             --- |
+| Slice Logic             |    46.898  |    32978 |       --- |             --- |
+|   LUT as Logic          |    27.919  |     7893 |     53200 |           14.84 |
+|   CARRY4                |     8.040  |     2397 |     13300 |           18.02 |
+|   Register              |     6.799  |    20503 |    106400 |           19.27 |
+|   LUT as Shift Register |     4.139  |      312 |     17400 |            1.79 |
+|   Others                |     0.000  |      795 |       --- |             --- |
+| Signals                 |    82.809  |    25576 |       --- |             --- |
+| DSPs                    |    60.864  |      146 |       220 |           66.36 |
+| Static Power            |   107.111  |          |           |                 |
+| Total                   |   404.802  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.306 |       0.298 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------------------+------------+
+| Name                                                      | Power (mW) |
++-----------------------------------------------------------+------------+
+| C_LSTM_stage_3_18_10_64_2048_3_16_1                       |   297.690  |
+|   multiple_c_matrix_vec_mult_and_sum_18_10_16_1_3_64_inst |   291.605  |
+|     c_matrix_vec_mult_core_18_10_16_3_1_inst              |   109.176  |
+|       dft_16_top_18_inst                                  |    58.715  |
+|       elementwise_add_core_18_18_9_inst_0                 |     1.922  |
+|       elementwise_add_core_18_18_9_inst_1                 |     1.909  |
+|       elementwise_add_core_18_18_9_inst_2                 |     1.909  |
+|       elementwise_mult_core_18_1810_9_1_inst_0_imag_imag  |     2.121  |
+|       elementwise_mult_core_18_1810_9_1_inst_0_imag_real  |     2.164  |
+|       elementwise_mult_core_18_1810_9_1_inst_0_real_imag  |     2.114  |
+|       elementwise_mult_core_18_1810_9_1_inst_0_real_real  |     2.718  |
+|       elementwise_mult_core_18_1810_9_1_inst_1_imag_imag  |     2.121  |
+|       elementwise_mult_core_18_1810_9_1_inst_1_imag_real  |     2.121  |
+|       elementwise_mult_core_18_1810_9_1_inst_1_real_imag  |     2.114  |
+|       elementwise_mult_core_18_1810_9_1_inst_1_real_real  |     2.718  |
+|       elementwise_mult_core_18_1810_9_1_inst_2_imag_imag  |     2.121  |
+|       elementwise_mult_core_18_1810_9_1_inst_2_imag_real  |     2.121  |
+|       elementwise_mult_core_18_1810_9_1_inst_2_real_imag  |     2.114  |
+|       elementwise_mult_core_18_1810_9_1_inst_2_real_real  |     2.718  |
+|       elementwise_sub_core_18_18_9_inst_0                 |     2.288  |
+|       elementwise_sub_core_18_18_9_inst_1                 |     2.273  |
+|       elementwise_sub_core_18_18_9_inst_2                 |     2.273  |
+|     idft_16_top_18_inst_0                                 |    52.354  |
+|       codeBlock98050_18_inst                              |    38.784  |
+|       codeBlock99168_18_inst                              |    13.571  |
+|     idft_16_top_18_inst_1                                 |    52.468  |
+|       codeBlock98050_18_inst                              |    39.479  |
+|       codeBlock99168_18_inst                              |    12.989  |
+|     idft_16_top_18_inst_2                                 |    53.788  |
+|       codeBlock98050_18_inst                              |    40.697  |
+|       codeBlock99168_18_inst                              |    13.090  |
+|     shift_register_group_18_16_1_inst_imag_0              |     1.720  |
+|       shift_register_unit_18_1_inst_1                     |     0.129  |
+|       shift_register_unit_18_1_inst_10                    |     0.122  |
+|       shift_register_unit_18_1_inst_11                    |     0.124  |
+|       shift_register_unit_18_1_inst_12                    |     0.122  |
+|       shift_register_unit_18_1_inst_13                    |     0.122  |
+|       shift_register_unit_18_1_inst_14                    |     0.123  |
+|       shift_register_unit_18_1_inst_15                    |     0.125  |
+|       shift_register_unit_18_1_inst_2                     |     0.123  |
+|       shift_register_unit_18_1_inst_3                     |     0.119  |
+|       shift_register_unit_18_1_inst_4                     |     0.123  |
+|       shift_register_unit_18_1_inst_5                     |     0.123  |
+|       shift_register_unit_18_1_inst_6                     |     0.120  |
+|       shift_register_unit_18_1_inst_7                     |     0.124  |
+|       shift_register_unit_18_1_inst_9                     |     0.122  |
+|     shift_register_group_18_16_1_inst_imag_1              |     1.722  |
+|       shift_register_unit_18_1_inst_1                     |     0.124  |
+|       shift_register_unit_18_1_inst_10                    |     0.120  |
+|       shift_register_unit_18_1_inst_11                    |     0.126  |
+|       shift_register_unit_18_1_inst_12                    |     0.125  |
+|       shift_register_unit_18_1_inst_13                    |     0.124  |
+|       shift_register_unit_18_1_inst_14                    |     0.123  |
+|       shift_register_unit_18_1_inst_15                    |     0.122  |
+|       shift_register_unit_18_1_inst_2                     |     0.124  |
+|       shift_register_unit_18_1_inst_3                     |     0.124  |
+|       shift_register_unit_18_1_inst_4                     |     0.119  |
+|       shift_register_unit_18_1_inst_5                     |     0.121  |
+|       shift_register_unit_18_1_inst_6                     |     0.123  |
+|       shift_register_unit_18_1_inst_7                     |     0.126  |
+|       shift_register_unit_18_1_inst_9                     |     0.122  |
+|     shift_register_group_18_16_1_inst_imag_2              |     1.722  |
+|       shift_register_unit_18_1_inst_1                     |     0.128  |
+|       shift_register_unit_18_1_inst_10                    |     0.120  |
+|       shift_register_unit_18_1_inst_11                    |     0.124  |
+|       shift_register_unit_18_1_inst_12                    |     0.120  |
+|       shift_register_unit_18_1_inst_13                    |     0.124  |
+|       shift_register_unit_18_1_inst_14                    |     0.124  |
+|       shift_register_unit_18_1_inst_15                    |     0.123  |
+|       shift_register_unit_18_1_inst_2                     |     0.122  |
+|       shift_register_unit_18_1_inst_3                     |     0.122  |
+|       shift_register_unit_18_1_inst_4                     |     0.122  |
+|       shift_register_unit_18_1_inst_5                     |     0.123  |
+|       shift_register_unit_18_1_inst_6                     |     0.118  |
+|       shift_register_unit_18_1_inst_7                     |     0.121  |
+|       shift_register_unit_18_1_inst_9                     |     0.131  |
+|     shift_register_group_18_16_1_inst_real_0              |     1.961  |
+|       shift_register_unit_18_1_inst_0                     |     0.122  |
+|       shift_register_unit_18_1_inst_1                     |     0.125  |
+|       shift_register_unit_18_1_inst_10                    |     0.124  |
+|       shift_register_unit_18_1_inst_11                    |     0.119  |
+|       shift_register_unit_18_1_inst_12                    |     0.123  |
+|       shift_register_unit_18_1_inst_13                    |     0.124  |
+|       shift_register_unit_18_1_inst_14                    |     0.117  |
+|       shift_register_unit_18_1_inst_15                    |     0.126  |
+|       shift_register_unit_18_1_inst_2                     |     0.125  |
+|       shift_register_unit_18_1_inst_3                     |     0.119  |
+|       shift_register_unit_18_1_inst_4                     |     0.124  |
+|       shift_register_unit_18_1_inst_5                     |     0.125  |
+|       shift_register_unit_18_1_inst_6                     |     0.124  |
+|       shift_register_unit_18_1_inst_7                     |     0.121  |
+|       shift_register_unit_18_1_inst_8                     |     0.121  |
+|       shift_register_unit_18_1_inst_9                     |     0.123  |
+|     shift_register_group_18_16_1_inst_real_1              |     1.938  |
+|       shift_register_unit_18_1_inst_0                     |     0.119  |
+|       shift_register_unit_18_1_inst_1                     |     0.120  |
+|       shift_register_unit_18_1_inst_10                    |     0.125  |
+|       shift_register_unit_18_1_inst_11                    |     0.123  |
+|       shift_register_unit_18_1_inst_12                    |     0.122  |
+|       shift_register_unit_18_1_inst_13                    |     0.121  |
+|       shift_register_unit_18_1_inst_14                    |     0.122  |
+|       shift_register_unit_18_1_inst_15                    |     0.121  |
+|       shift_register_unit_18_1_inst_2                     |     0.121  |
+|       shift_register_unit_18_1_inst_3                     |     0.118  |
+|       shift_register_unit_18_1_inst_4                     |     0.123  |
+|       shift_register_unit_18_1_inst_5                     |     0.117  |
+|       shift_register_unit_18_1_inst_6                     |     0.122  |
+|       shift_register_unit_18_1_inst_7                     |     0.121  |
+|       shift_register_unit_18_1_inst_8                     |     0.121  |
+|       shift_register_unit_18_1_inst_9                     |     0.121  |
+|     shift_register_group_18_16_1_inst_real_2              |     1.960  |
+|       shift_register_unit_18_1_inst_0                     |     0.123  |
+|       shift_register_unit_18_1_inst_1                     |     0.123  |
+|       shift_register_unit_18_1_inst_10                    |     0.122  |
+|       shift_register_unit_18_1_inst_11                    |     0.124  |
+|       shift_register_unit_18_1_inst_12                    |     0.121  |
+|       shift_register_unit_18_1_inst_13                    |     0.119  |
+|       shift_register_unit_18_1_inst_14                    |     0.122  |
+|       shift_register_unit_18_1_inst_15                    |     0.122  |
+|       shift_register_unit_18_1_inst_2                     |     0.123  |
+|       shift_register_unit_18_1_inst_3                     |     0.127  |
+|       shift_register_unit_18_1_inst_4                     |     0.120  |
+|       shift_register_unit_18_1_inst_5                     |     0.123  |
+|       shift_register_unit_18_1_inst_6                     |     0.120  |
+|       shift_register_unit_18_1_inst_7                     |     0.124  |
+|       shift_register_unit_18_1_inst_8                     |     0.125  |
+|       shift_register_unit_18_1_inst_9                     |     0.123  |
+|     sum_complex_vector_unit_18_18_16_64_inst_0            |     3.580  |
+|     sum_complex_vector_unit_18_18_16_64_inst_1            |     3.573  |
+|     sum_complex_vector_unit_18_18_16_64_inst_2            |     3.565  |
+|   shift_register_group_18_16_3_mt_holder                  |     5.734  |
+|     shift_register_unit_18_3_inst_0                       |     0.357  |
+|     shift_register_unit_18_3_inst_1                       |     0.353  |
+|     shift_register_unit_18_3_inst_10                      |     0.360  |
+|     shift_register_unit_18_3_inst_11                      |     0.358  |
+|     shift_register_unit_18_3_inst_12                      |     0.359  |
+|     shift_register_unit_18_3_inst_13                      |     0.359  |
+|     shift_register_unit_18_3_inst_14                      |     0.357  |
+|     shift_register_unit_18_3_inst_15                      |     0.354  |
+|     shift_register_unit_18_3_inst_2                       |     0.358  |
+|     shift_register_unit_18_3_inst_3                       |     0.359  |
+|     shift_register_unit_18_3_inst_4                       |     0.359  |
+|     shift_register_unit_18_3_inst_5                       |     0.365  |
+|     shift_register_unit_18_3_inst_6                       |     0.361  |
+|     shift_register_unit_18_3_inst_7                       |     0.360  |
+|     shift_register_unit_18_3_inst_8                       |     0.357  |
+|     shift_register_unit_18_3_inst_9                       |     0.359  |
+|   shift_register_unit_18_3_valid_holder                   |     0.021  |
++-----------------------------------------------------------+------------+
+
+

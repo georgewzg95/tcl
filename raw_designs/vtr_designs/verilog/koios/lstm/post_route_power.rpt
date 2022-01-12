@@ -1,0 +1,453 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 03:24:02 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/lstm/post_route_power.rpt
+| Design           : top
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 228.484      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 124.047      |
+| Device Static (mW)       | 104.437      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 97.4         |
+| Junction Temperature (C) | 27.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    38.714  |        3 |       --- |             --- |
+| Slice Logic             |    39.620  |    22146 |       --- |             --- |
+|   LUT as Logic          |    36.105  |     8955 |     53200 |           16.83 |
+|   CARRY4                |     2.265  |     2922 |     13300 |           21.97 |
+|   Register              |     1.108  |     7041 |    106400 |            6.62 |
+|   LUT as Shift Register |     0.074  |        8 |     17400 |            0.05 |
+|   F7/F8 Muxes           |     0.070  |      160 |     53200 |            0.30 |
+|   Others                |     0.000  |     1090 |       --- |             --- |
+| Signals                 |    43.181  |    18683 |       --- |             --- |
+| Block RAM               |     1.375  |        1 |       140 |            0.71 |
+| DSPs                    |     1.157  |        1 |       220 |            0.45 |
+| Static Power            |   104.437  |          |           |                 |
+| Total                   |   228.484  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.132 |       0.124 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------+------------+
+| Name               | Power (mW) |
++--------------------+------------+
+| top                |   124.047  |
+|   Wi_mem           |     2.969  |
+|   Xi_mem           |     0.664  |
+|   lstm             |   100.956  |
+|     c_elmul        |     5.617  |
+|     c_gate_biasadd |     0.105  |
+|     c_gateaddh     |     1.401  |
+|     c_gateaddx     |     1.034  |
+|       Add_u49      |     0.026  |
+|       Add_u97      |     0.261  |
+|     c_gateh        |    10.822  |
+|       mult_u0      |     0.168  |
+|       mult_u1      |     0.150  |
+|       mult_u10     |     0.144  |
+|       mult_u11     |     0.149  |
+|       mult_u12     |     0.135  |
+|       mult_u13     |     0.146  |
+|       mult_u14     |     0.147  |
+|       mult_u15     |     0.133  |
+|       mult_u16     |     0.114  |
+|       mult_u17     |     0.141  |
+|       mult_u18     |     0.141  |
+|       mult_u19     |     0.156  |
+|       mult_u2      |     0.153  |
+|       mult_u20     |     0.138  |
+|       mult_u21     |     0.160  |
+|       mult_u22     |     0.147  |
+|       mult_u23     |     0.144  |
+|       mult_u24     |     0.151  |
+|       mult_u25     |     0.145  |
+|       mult_u26     |     0.160  |
+|       mult_u27     |     0.146  |
+|       mult_u28     |     0.134  |
+|       mult_u29     |     0.136  |
+|       mult_u3      |     0.156  |
+|       mult_u30     |     0.149  |
+|       mult_u31     |     0.158  |
+|       mult_u32     |     0.126  |
+|       mult_u33     |     0.138  |
+|       mult_u34     |     0.156  |
+|       mult_u35     |     0.126  |
+|       mult_u36     |     0.141  |
+|       mult_u37     |     0.136  |
+|       mult_u38     |     0.128  |
+|       mult_u39     |     0.133  |
+|       mult_u4      |     0.171  |
+|       mult_u40     |     0.159  |
+|       mult_u41     |     0.123  |
+|       mult_u42     |     0.156  |
+|       mult_u43     |     0.131  |
+|       mult_u44     |     0.169  |
+|       mult_u45     |     0.164  |
+|       mult_u46     |     0.149  |
+|       mult_u47     |     0.150  |
+|       mult_u48     |     0.172  |
+|       mult_u49     |     0.156  |
+|       mult_u5      |     0.166  |
+|       mult_u50     |     0.164  |
+|       mult_u51     |     0.185  |
+|       mult_u52     |     0.159  |
+|       mult_u53     |     0.158  |
+|       mult_u54     |     0.163  |
+|       mult_u55     |     0.164  |
+|       mult_u56     |     0.161  |
+|       mult_u57     |     0.156  |
+|       mult_u58     |     0.164  |
+|       mult_u59     |     0.163  |
+|       mult_u6      |     0.162  |
+|       mult_u60     |     0.166  |
+|       mult_u61     |     0.172  |
+|       mult_u62     |     0.159  |
+|       mult_u63     |     0.306  |
+|       mult_u7      |     0.164  |
+|       mult_u8      |     0.142  |
+|       mult_u9      |     0.135  |
+|     c_gatex        |     7.200  |
+|       mult_u99     |     7.200  |
+|     cf_gate_add    |     0.242  |
+|     f_elmul        |     3.139  |
+|     f_gate_biasadd |     0.137  |
+|     f_gateaddh     |     1.428  |
+|     f_gateaddx     |     1.174  |
+|       Add_u49      |     0.029  |
+|       Add_u97      |     0.306  |
+|     f_gateh        |     2.836  |
+|       mult_u0      |     0.045  |
+|       mult_u1      |     0.042  |
+|       mult_u10     |     0.032  |
+|       mult_u11     |     0.044  |
+|       mult_u12     |     0.036  |
+|       mult_u13     |     0.026  |
+|       mult_u14     |     0.042  |
+|       mult_u15     |     0.042  |
+|       mult_u16     |     0.025  |
+|       mult_u17     |     0.042  |
+|       mult_u18     |     0.023  |
+|       mult_u19     |     0.050  |
+|       mult_u2      |     0.025  |
+|       mult_u20     |     0.041  |
+|       mult_u21     |     0.055  |
+|       mult_u22     |     0.048  |
+|       mult_u23     |     0.056  |
+|       mult_u24     |     0.039  |
+|       mult_u25     |     0.032  |
+|       mult_u26     |     0.039  |
+|       mult_u27     |     0.036  |
+|       mult_u28     |     0.020  |
+|       mult_u29     |     0.037  |
+|       mult_u3      |     0.033  |
+|       mult_u30     |     0.049  |
+|       mult_u31     |     0.042  |
+|       mult_u32     |     0.047  |
+|       mult_u33     |     0.032  |
+|       mult_u34     |     0.032  |
+|       mult_u35     |     0.051  |
+|       mult_u36     |     0.026  |
+|       mult_u37     |     0.048  |
+|       mult_u38     |     0.036  |
+|       mult_u39     |     0.042  |
+|       mult_u4      |     0.036  |
+|       mult_u40     |     0.048  |
+|       mult_u41     |     0.020  |
+|       mult_u42     |     0.019  |
+|       mult_u43     |     0.049  |
+|       mult_u44     |     0.026  |
+|       mult_u45     |     0.044  |
+|       mult_u46     |     0.031  |
+|       mult_u47     |     0.050  |
+|       mult_u48     |     0.036  |
+|       mult_u49     |     0.047  |
+|       mult_u5      |     0.021  |
+|       mult_u50     |     0.033  |
+|       mult_u51     |     0.034  |
+|       mult_u52     |     0.033  |
+|       mult_u53     |     0.042  |
+|       mult_u54     |     0.043  |
+|       mult_u55     |     0.039  |
+|       mult_u56     |     0.058  |
+|       mult_u57     |     0.025  |
+|       mult_u58     |     0.042  |
+|       mult_u59     |     0.036  |
+|       mult_u6      |     0.033  |
+|       mult_u60     |     0.043  |
+|       mult_u61     |     0.025  |
+|       mult_u62     |     0.048  |
+|       mult_u63     |     0.304  |
+|       mult_u7      |     0.035  |
+|       mult_u8      |     0.042  |
+|       mult_u9      |     0.042  |
+|     f_gatex        |     1.709  |
+|       mult_u99     |     1.709  |
+|     h_elmul        |     6.233  |
+|     i_gate_biasadd |     0.143  |
+|     i_gateaddh     |     1.401  |
+|     i_gateaddx     |     0.950  |
+|       Add_u49      |     0.029  |
+|       Add_u97      |     0.221  |
+|     i_gateh        |     2.921  |
+|       mult_u0      |     0.056  |
+|       mult_u1      |     0.050  |
+|       mult_u10     |     0.026  |
+|       mult_u11     |     0.042  |
+|       mult_u12     |     0.045  |
+|       mult_u13     |     0.032  |
+|       mult_u14     |     0.033  |
+|       mult_u15     |     0.029  |
+|       mult_u16     |     0.038  |
+|       mult_u17     |     0.036  |
+|       mult_u18     |     0.049  |
+|       mult_u19     |     0.051  |
+|       mult_u2      |     0.019  |
+|       mult_u20     |     0.039  |
+|       mult_u21     |     0.030  |
+|       mult_u22     |     0.054  |
+|       mult_u23     |     0.029  |
+|       mult_u24     |     0.032  |
+|       mult_u25     |     0.033  |
+|       mult_u26     |     0.049  |
+|       mult_u27     |     0.039  |
+|       mult_u28     |     0.046  |
+|       mult_u29     |     0.027  |
+|       mult_u3      |     0.045  |
+|       mult_u30     |     0.045  |
+|       mult_u31     |     0.042  |
+|       mult_u32     |     0.023  |
+|       mult_u33     |     0.033  |
+|       mult_u34     |     0.032  |
+|       mult_u35     |     0.037  |
+|       mult_u36     |     0.042  |
+|       mult_u37     |     0.042  |
+|       mult_u38     |     0.036  |
+|       mult_u39     |     0.026  |
+|       mult_u4      |     0.043  |
+|       mult_u40     |     0.036  |
+|       mult_u41     |     0.039  |
+|       mult_u42     |     0.062  |
+|       mult_u43     |     0.027  |
+|       mult_u44     |     0.030  |
+|       mult_u45     |     0.050  |
+|       mult_u46     |     0.026  |
+|       mult_u47     |     0.054  |
+|       mult_u48     |     0.048  |
+|       mult_u49     |     0.043  |
+|       mult_u5      |     0.032  |
+|       mult_u50     |     0.029  |
+|       mult_u51     |     0.039  |
+|       mult_u52     |     0.047  |
+|       mult_u53     |     0.032  |
+|       mult_u54     |     0.036  |
+|       mult_u55     |     0.048  |
+|       mult_u56     |     0.039  |
+|       mult_u57     |     0.039  |
+|       mult_u58     |     0.052  |
+|       mult_u59     |     0.045  |
+|       mult_u6      |     0.032  |
+|       mult_u60     |     0.039  |
+|       mult_u61     |     0.048  |
+|       mult_u62     |     0.038  |
+|       mult_u63     |     0.289  |
+|       mult_u7      |     0.048  |
+|       mult_u8      |     0.039  |
+|       mult_u9      |     0.032  |
+|     i_gatex        |     7.021  |
+|       mult_u99     |     7.021  |
+|     o_gate_biasadd |     0.127  |
+|     o_gateaddh     |     1.401  |
+|     o_gateaddx     |     0.965  |
+|       Add_u49      |     0.029  |
+|       Add_u97      |     0.210  |
+|     o_gateh        |     2.750  |
+|       mult_u0      |     0.049  |
+|       mult_u1      |     0.027  |
+|       mult_u10     |     0.048  |
+|       mult_u11     |     0.026  |
+|       mult_u12     |     0.039  |
+|       mult_u13     |     0.026  |
+|       mult_u14     |     0.039  |
+|       mult_u15     |     0.031  |
+|       mult_u16     |     0.033  |
+|       mult_u17     |     0.027  |
+|       mult_u18     |     0.032  |
+|       mult_u19     |     0.054  |
+|       mult_u2      |     0.033  |
+|       mult_u20     |     0.043  |
+|       mult_u21     |     0.048  |
+|       mult_u22     |     0.025  |
+|       mult_u23     |     0.043  |
+|       mult_u24     |     0.027  |
+|       mult_u25     |     0.039  |
+|       mult_u26     |     0.027  |
+|       mult_u27     |     0.025  |
+|       mult_u28     |     0.044  |
+|       mult_u29     |     0.045  |
+|       mult_u3      |     0.045  |
+|       mult_u30     |     0.039  |
+|       mult_u31     |     0.057  |
+|       mult_u32     |     0.033  |
+|       mult_u33     |     0.033  |
+|       mult_u34     |     0.029  |
+|       mult_u35     |     0.039  |
+|       mult_u36     |     0.036  |
+|       mult_u37     |     0.044  |
+|       mult_u38     |     0.035  |
+|       mult_u39     |     0.051  |
+|       mult_u4      |     0.030  |
+|       mult_u40     |     0.042  |
+|       mult_u41     |     0.031  |
+|       mult_u42     |     0.033  |
+|       mult_u43     |     0.037  |
+|       mult_u44     |     0.033  |
+|       mult_u45     |     0.038  |
+|       mult_u46     |     0.032  |
+|       mult_u47     |     0.039  |
+|       mult_u48     |     0.026  |
+|       mult_u49     |     0.026  |
+|       mult_u5      |     0.039  |
+|       mult_u50     |     0.033  |
+|       mult_u51     |     0.039  |
+|       mult_u52     |     0.025  |
+|       mult_u53     |     0.047  |
+|       mult_u54     |     0.030  |
+|       mult_u55     |     0.039  |
+|       mult_u56     |     0.036  |
+|       mult_u57     |     0.045  |
+|       mult_u58     |     0.043  |
+|       mult_u59     |     0.033  |
+|       mult_u6      |     0.026  |
+|       mult_u60     |     0.042  |
+|       mult_u61     |     0.044  |
+|       mult_u62     |     0.025  |
+|       mult_u63     |     0.272  |
+|       mult_u7      |     0.062  |
+|       mult_u8      |     0.039  |
+|       mult_u9      |     0.040  |
+|     o_gatex        |     7.475  |
+|       mult_u99     |     7.475  |
+|     tan_c1         |     1.977  |
+|     tan_c2         |     2.053  |
++--------------------+------------+
+
+

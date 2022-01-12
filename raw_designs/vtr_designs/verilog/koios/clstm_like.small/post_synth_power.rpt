@@ -1,0 +1,572 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 00:31:29 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small/post_synth_power.rpt
+| Design           : C_LSTM_datapath
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 1666.027     |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 1532.538     |
+| Device Static (mW)       | 133.489      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 80.8         |
+| Junction Temperature (C) | 44.2         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |   328.949  |        3 |       --- |             --- |
+| Slice Logic             |   673.920  |   168118 |       --- |             --- |
+|   LUT as Logic          |   500.090  |    63081 |     53200 |          118.57 |
+|   CARRY4                |   110.245  |    17435 |     13300 |          131.09 |
+|   Register              |    38.610  |    69158 |    106400 |           65.00 |
+|   LUT as Shift Register |    24.973  |     3955 |     17400 |           22.73 |
+|   Others                |     0.000  |     2906 |       --- |             --- |
+| Signals                 |   451.872  |   117546 |       --- |             --- |
+| Block RAM               |    45.429  |       12 |       140 |            8.57 |
+| DSPs                    |    32.369  |      203 |       220 |           92.27 |
+| Static Power            |   133.489  |          |           |                 |
+| Total                   |  1666.028  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     1.546 |       1.531 |      0.015 |
+| Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.003 |       0.001 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.030 |       0.000 |      0.030 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------------------------------+------------+
+| Name                                                          | Power (mW) |
++---------------------------------------------------------------+------------+
+| C_LSTM_datapath                                               |  1532.539  |
+|   C_LSTM_stage_1_18_10_160_512_1_16_1_inst                    |   491.183  |
+|     forget_gate_mult                                          |   118.767  |
+|       multiple_c_matrix_vec_mult_and_sum_18_10_16_1_1_42_inst |   118.767  |
+|     input_gate_mult                                           |   118.774  |
+|       multiple_c_matrix_vec_mult_and_sum_18_10_16_1_1_42_inst |   118.774  |
+|     output_act_gate_mult                                      |   134.927  |
+|       multiple_c_matrix_vec_mult_and_sum_18_10_16_1_1_42_inst |   134.927  |
+|     output_gate_mult                                          |   118.715  |
+|       multiple_c_matrix_vec_mult_and_sum_18_10_16_1_1_42_inst |   118.715  |
+|   C_LSTM_stage_2_18_10_16_1_inst                              |   635.696  |
+|     elementwise_add_core_18_18_16_inst                        |    11.769  |
+|     elementwise_mult_core_18_18_10_16_1_ft_Ct_1_mult          |    38.806  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst0                |     1.970  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst10               |     1.965  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst12               |     1.966  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst14               |     1.965  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst2                |     2.088  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst4                |     1.966  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst6                |     4.022  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst8                |     6.080  |
+|       fp_rounding_unit_1_37_10_inst0                          |     0.923  |
+|       fp_rounding_unit_1_37_10_inst1                          |     0.914  |
+|       fp_rounding_unit_1_37_10_inst10                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst11                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst12                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst13                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst14                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst15                         |     0.914  |
+|       fp_rounding_unit_1_37_10_inst2                          |     0.922  |
+|       fp_rounding_unit_1_37_10_inst3                          |     0.914  |
+|       fp_rounding_unit_1_37_10_inst4                          |     0.914  |
+|       fp_rounding_unit_1_37_10_inst5                          |     0.914  |
+|       fp_rounding_unit_1_37_10_inst6                          |     0.914  |
+|       fp_rounding_unit_1_37_10_inst7                          |     0.921  |
+|       fp_rounding_unit_1_37_10_inst8                          |     0.921  |
+|       fp_rounding_unit_1_37_10_inst9                          |     0.921  |
+|     elementwise_mult_core_18_18_10_16_1_it_gt_mult            |    38.965  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst0                |     1.609  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst10               |     1.609  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst12               |     1.624  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst14               |     1.609  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst2                |     1.609  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst4                |     1.609  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst6                |     5.213  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst8                |     8.289  |
+|       fp_rounding_unit_1_37_10_inst0                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst1                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst10                         |     0.736  |
+|       fp_rounding_unit_1_37_10_inst11                         |     0.736  |
+|       fp_rounding_unit_1_37_10_inst12                         |     0.827  |
+|       fp_rounding_unit_1_37_10_inst13                         |     0.736  |
+|       fp_rounding_unit_1_37_10_inst14                         |     0.736  |
+|       fp_rounding_unit_1_37_10_inst15                         |     0.736  |
+|       fp_rounding_unit_1_37_10_inst2                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst3                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst4                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst5                          |     0.736  |
+|       fp_rounding_unit_1_37_10_inst6                          |     0.920  |
+|       fp_rounding_unit_1_37_10_inst7                          |     0.784  |
+|       fp_rounding_unit_1_37_10_inst8                          |     0.912  |
+|       fp_rounding_unit_1_37_10_inst9                          |     0.784  |
+|     elementwise_mult_core_18_18_10_16_1_ot_tanh_mult          |    46.238  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst0                |     2.073  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst10               |     2.110  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst12               |     2.120  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst14               |     2.067  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst2                |     2.076  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst4                |     2.073  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst6                |     5.750  |
+|       dsp_signed_mult_18x18_unit_18_18_1_inst8                |     9.412  |
+|       fp_rounding_unit_1_37_10_inst0                          |     0.924  |
+|       fp_rounding_unit_1_37_10_inst1                          |     0.918  |
+|       fp_rounding_unit_1_37_10_inst10                         |     0.919  |
+|       fp_rounding_unit_1_37_10_inst11                         |     0.919  |
+|       fp_rounding_unit_1_37_10_inst12                         |     0.920  |
+|       fp_rounding_unit_1_37_10_inst13                         |     0.921  |
+|       fp_rounding_unit_1_37_10_inst14                         |     0.915  |
+|       fp_rounding_unit_1_37_10_inst15                         |     0.915  |
+|       fp_rounding_unit_1_37_10_inst2                          |     0.918  |
+|       fp_rounding_unit_1_37_10_inst3                          |     0.915  |
+|       fp_rounding_unit_1_37_10_inst4                          |     0.915  |
+|       fp_rounding_unit_1_37_10_inst5                          |     0.918  |
+|       fp_rounding_unit_1_37_10_inst6                          |     0.918  |
+|       fp_rounding_unit_1_37_10_inst7                          |     0.921  |
+|       fp_rounding_unit_1_37_10_inst8                          |     0.921  |
+|       fp_rounding_unit_1_37_10_inst9                          |     0.916  |
+|     lstm_gate_18_10_16_1_forget                               |    97.926  |
+|       elementwise_add_core_18_18_16_add_1                     |     2.315  |
+|       elementwise_add_core_18_18_16_add_2                     |     8.927  |
+|       elementwise_mult_core_18_18_10_16_1_mult                |     3.836  |
+|       shift_register_group_18_16_10_Ct                        |     7.567  |
+|       sigmoid_core_18_18_10_32_1_inst_0                       |     4.746  |
+|       sigmoid_core_18_18_10_32_1_inst_1                       |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_10                      |     4.628  |
+|       sigmoid_core_18_18_10_32_1_inst_11                      |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_12                      |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_13                      |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_14                      |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_15                      |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_2                       |     4.773  |
+|       sigmoid_core_18_18_10_32_1_inst_3                       |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_4                       |     4.732  |
+|       sigmoid_core_18_18_10_32_1_inst_5                       |     4.627  |
+|       sigmoid_core_18_18_10_32_1_inst_6                       |     4.627  |
+|       sigmoid_core_18_18_10_32_1_inst_7                       |     4.604  |
+|       sigmoid_core_18_18_10_32_1_inst_8                       |     4.709  |
+|       sigmoid_core_18_18_10_32_1_inst_9                       |     4.709  |
+|     lstm_gate_18_10_16_1_input                                |   100.270  |
+|       elementwise_add_core_18_18_16_add_1                     |     2.315  |
+|       elementwise_add_core_18_18_16_add_2                     |     8.918  |
+|       elementwise_mult_core_18_18_10_16_1_mult                |     3.831  |
+|       shift_register_group_18_16_10_Ct                        |     7.567  |
+|       sigmoid_core_18_18_10_32_1_inst_0                       |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_1                       |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_10                      |     4.806  |
+|       sigmoid_core_18_18_10_32_1_inst_11                      |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_12                      |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_13                      |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_14                      |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_15                      |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_2                       |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_3                       |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_4                       |     4.911  |
+|       sigmoid_core_18_18_10_32_1_inst_5                       |     4.805  |
+|       sigmoid_core_18_18_10_32_1_inst_6                       |     4.917  |
+|       sigmoid_core_18_18_10_32_1_inst_7                       |     4.604  |
+|       sigmoid_core_18_18_10_32_1_inst_8                       |     4.692  |
+|       sigmoid_core_18_18_10_32_1_inst_9                       |     4.709  |
+|     lstm_gate_18_10_16_1_output                               |    95.027  |
+|       elementwise_add_core_18_18_16_add_1                     |     2.315  |
+|       elementwise_add_core_18_18_16_add_2                     |     8.918  |
+|       elementwise_mult_core_18_18_10_16_1_mult                |     3.831  |
+|       shift_register_group_18_16_10_Ct                        |     7.567  |
+|       sigmoid_core_18_18_10_32_1_inst_0                       |     4.559  |
+|       sigmoid_core_18_18_10_32_1_inst_1                       |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_10                      |     4.446  |
+|       sigmoid_core_18_18_10_32_1_inst_11                      |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_12                      |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_13                      |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_14                      |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_15                      |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_2                       |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_3                       |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_4                       |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_5                       |     4.445  |
+|       sigmoid_core_18_18_10_32_1_inst_6                       |     4.445  |
+|       sigmoid_core_18_18_10_32_1_inst_7                       |     4.445  |
+|       sigmoid_core_18_18_10_32_1_inst_8                       |     4.550  |
+|       sigmoid_core_18_18_10_32_1_inst_9                       |     4.550  |
+|     output_activation_18_10_16_1_inst                         |    77.413  |
+|       elementwise_add_core_18_18_16_inst                      |     3.067  |
+|       sigmoid_core_18_18_10_32_1_inst_0                       |     4.255  |
+|       sigmoid_core_18_18_10_32_1_inst_1                       |     4.255  |
+|       sigmoid_core_18_18_10_32_1_inst_10                      |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_11                      |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_12                      |     4.792  |
+|       sigmoid_core_18_18_10_32_1_inst_13                      |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_14                      |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_15                      |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_2                       |     4.255  |
+|       sigmoid_core_18_18_10_32_1_inst_3                       |     4.255  |
+|       sigmoid_core_18_18_10_32_1_inst_4                       |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_5                       |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_6                       |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_7                       |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_8                       |     4.776  |
+|       sigmoid_core_18_18_10_32_1_inst_9                       |     4.776  |
+|     shift_register_group_18_16_14_Ct                          |    10.269  |
+|       shift_register_unit_18_14_inst_0                        |     0.538  |
+|       shift_register_unit_18_14_inst_1                        |     0.539  |
+|       shift_register_unit_18_14_inst_10                       |     0.538  |
+|       shift_register_unit_18_14_inst_11                       |     0.538  |
+|       shift_register_unit_18_14_inst_12                       |     0.541  |
+|       shift_register_unit_18_14_inst_13                       |     0.539  |
+|       shift_register_unit_18_14_inst_14                       |     0.538  |
+|       shift_register_unit_18_14_inst_15                       |     0.779  |
+|       shift_register_unit_18_14_inst_2                        |     0.541  |
+|       shift_register_unit_18_14_inst_3                        |     0.538  |
+|       shift_register_unit_18_14_inst_4                        |     0.538  |
+|       shift_register_unit_18_14_inst_5                        |     0.539  |
+|       shift_register_unit_18_14_inst_6                        |     0.541  |
+|       shift_register_unit_18_14_inst_7                        |     1.009  |
+|       shift_register_unit_18_14_inst_8                        |     1.010  |
+|       shift_register_unit_18_14_inst_9                        |     0.999  |
+|     shift_register_group_18_16_18_Ct                          |     5.827  |
+|       shift_register_unit_18_18_inst_0                        |     0.532  |
+|       shift_register_unit_18_18_inst_1                        |     0.402  |
+|       shift_register_unit_18_18_inst_10                       |     0.402  |
+|       shift_register_unit_18_18_inst_11                       |     0.402  |
+|       shift_register_unit_18_18_inst_12                       |     0.402  |
+|       shift_register_unit_18_18_inst_13                       |     0.402  |
+|       shift_register_unit_18_18_inst_14                       |     0.402  |
+|       shift_register_unit_18_18_inst_15                       |     0.402  |
+|       shift_register_unit_18_18_inst_2                        |     0.402  |
+|       shift_register_unit_18_18_inst_3                        |     0.402  |
+|       shift_register_unit_18_18_inst_4                        |     0.402  |
+|       shift_register_unit_18_18_inst_5                        |     0.402  |
+|       shift_register_unit_18_18_inst_6                        |     0.402  |
+|       shift_register_unit_18_18_inst_7                        |     0.158  |
+|       shift_register_unit_18_18_inst_8                        |     0.158  |
+|       shift_register_unit_18_18_inst_9                        |     0.158  |
+|     shift_register_group_18_16_18_lstm_gate                   |     4.522  |
+|       shift_register_unit_18_18_inst_0                        |     0.329  |
+|       shift_register_unit_18_18_inst_1                        |     0.329  |
+|       shift_register_unit_18_18_inst_10                       |     0.329  |
+|       shift_register_unit_18_18_inst_11                       |     0.329  |
+|       shift_register_unit_18_18_inst_12                       |     0.329  |
+|       shift_register_unit_18_18_inst_13                       |     0.329  |
+|       shift_register_unit_18_18_inst_14                       |     0.329  |
+|       shift_register_unit_18_18_inst_15                       |     0.329  |
+|       shift_register_unit_18_18_inst_2                        |     0.329  |
+|       shift_register_unit_18_18_inst_3                        |     0.329  |
+|       shift_register_unit_18_18_inst_4                        |     0.329  |
+|       shift_register_unit_18_18_inst_5                        |     0.329  |
+|       shift_register_unit_18_18_inst_6                        |     0.329  |
+|       shift_register_unit_18_18_inst_7                        |     0.081  |
+|       shift_register_unit_18_18_inst_8                        |     0.081  |
+|       shift_register_unit_18_18_inst_9                        |     0.081  |
+|     shift_register_group_18_16_6_eltwisemult                  |     8.022  |
+|       shift_register_unit_18_6_inst_0                         |     0.577  |
+|       shift_register_unit_18_6_inst_1                         |     0.577  |
+|       shift_register_unit_18_6_inst_10                        |     0.577  |
+|       shift_register_unit_18_6_inst_11                        |     0.577  |
+|       shift_register_unit_18_6_inst_12                        |     0.593  |
+|       shift_register_unit_18_6_inst_13                        |     0.577  |
+|       shift_register_unit_18_6_inst_14                        |     0.577  |
+|       shift_register_unit_18_6_inst_15                        |     0.577  |
+|       shift_register_unit_18_6_inst_2                         |     0.577  |
+|       shift_register_unit_18_6_inst_3                         |     0.577  |
+|       shift_register_unit_18_6_inst_4                         |     0.577  |
+|       shift_register_unit_18_6_inst_5                         |     0.577  |
+|       shift_register_unit_18_6_inst_6                         |     0.577  |
+|       shift_register_unit_18_6_inst_7                         |     0.168  |
+|       shift_register_unit_18_6_inst_8                         |     0.168  |
+|       shift_register_unit_18_6_inst_9                         |     0.168  |
+|     tanh_core_18_18_10_32_1_inst_0                            |     5.136  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.041  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.711  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_1                            |     5.128  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.040  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.708  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_10                           |     5.511  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     2.667  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.913  |
+|       shift_register_unit_1_3_inst                            |     0.104  |
+|     tanh_core_18_18_10_32_1_inst_11                           |     5.511  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     2.667  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.913  |
+|       shift_register_unit_1_3_inst                            |     0.104  |
+|     tanh_core_18_18_10_32_1_inst_12                           |     5.564  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     2.666  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.937  |
+|       shift_register_unit_1_3_inst                            |     0.110  |
+|     tanh_core_18_18_10_32_1_inst_13                           |     5.526  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     2.667  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.926  |
+|       shift_register_unit_1_3_inst                            |     0.104  |
+|     tanh_core_18_18_10_32_1_inst_14                           |     5.123  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.041  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.702  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_15                           |     4.894  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.053  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.702  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_2                            |     5.155  |
+|       abs_unit_18_inst                                        |     0.866  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.043  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.719  |
+|       shift_register_unit_1_3_inst                            |     0.044  |
+|     tanh_core_18_18_10_32_1_inst_3                            |     5.123  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.041  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.702  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_4                            |     5.123  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.041  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.702  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_5                            |     5.128  |
+|       abs_unit_18_inst                                        |     0.865  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.040  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.708  |
+|       shift_register_unit_1_3_inst                            |     0.042  |
+|     tanh_core_18_18_10_32_1_inst_6                            |     5.155  |
+|       abs_unit_18_inst                                        |     0.866  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.043  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.719  |
+|       shift_register_unit_1_3_inst                            |     0.044  |
+|     tanh_core_18_18_10_32_1_inst_7                            |     4.464  |
+|       abs_unit_18_inst                                        |     0.713  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.056  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.463  |
+|       shift_register_unit_1_3_inst                            |     0.044  |
+|     tanh_core_18_18_10_32_1_inst_8                            |     4.464  |
+|       abs_unit_18_inst                                        |     0.713  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.056  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.464  |
+|       shift_register_unit_1_3_inst                            |     0.044  |
+|     tanh_core_18_18_10_32_1_inst_9                            |     4.451  |
+|       abs_unit_18_inst                                        |     0.712  |
+|       dsp_signed_mac_18_13_23_32_inst                         |     3.049  |
+|       fp_rounding_unit_1_32_11_inst                           |     0.460  |
+|       shift_register_unit_1_3_inst                            |     0.043  |
+|   C_LSTM_stage_3_18_10_64_2048_1_16_1_inst                    |   132.793  |
+|     multiple_c_matrix_vec_mult_and_sum_18_10_16_1_1_64_inst   |   128.144  |
+|       c_matrix_vec_mult_core_18_10_16_1_1_inst                |    63.544  |
+|       idft_16_top_18_inst_0                                   |    57.008  |
+|       shift_register_group_18_16_1_inst_imag_0                |     1.539  |
+|       shift_register_group_18_16_1_inst_real_0                |     1.742  |
+|       sum_complex_vector_unit_18_18_16_64_inst_0              |     2.941  |
+|     shift_register_group_18_16_3_mt_holder                    |     4.407  |
+|       shift_register_unit_18_3_inst_0                         |     0.275  |
+|       shift_register_unit_18_3_inst_1                         |     0.275  |
+|       shift_register_unit_18_3_inst_10                        |     0.275  |
+|       shift_register_unit_18_3_inst_11                        |     0.275  |
+|       shift_register_unit_18_3_inst_12                        |     0.275  |
+|       shift_register_unit_18_3_inst_13                        |     0.275  |
+|       shift_register_unit_18_3_inst_14                        |     0.275  |
+|       shift_register_unit_18_3_inst_15                        |     0.275  |
+|       shift_register_unit_18_3_inst_2                         |     0.275  |
+|       shift_register_unit_18_3_inst_3                         |     0.275  |
+|       shift_register_unit_18_3_inst_4                         |     0.275  |
+|       shift_register_unit_18_3_inst_5                         |     0.275  |
+|       shift_register_unit_18_3_inst_6                         |     0.275  |
+|       shift_register_unit_18_3_inst_7                         |     0.275  |
+|       shift_register_unit_18_3_inst_8                         |     0.275  |
+|       shift_register_unit_18_3_inst_9                         |     0.275  |
+|     shift_register_unit_18_3_valid_holder                     |     0.018  |
+|   pipelined_input_18_1_16_inst_Ct                             |     1.292  |
+|   pipelined_input_18_1_16_inst_Y                              |     1.028  |
+|   pipelined_input_18_1_16_inst_mt                             |     1.337  |
+|   shift_register_group_18_16_3_inst                           |     4.351  |
+|     shift_register_unit_18_3_inst_0                           |     0.272  |
+|     shift_register_unit_18_3_inst_1                           |     0.272  |
+|     shift_register_unit_18_3_inst_10                          |     0.272  |
+|     shift_register_unit_18_3_inst_11                          |     0.272  |
+|     shift_register_unit_18_3_inst_12                          |     0.272  |
+|     shift_register_unit_18_3_inst_13                          |     0.272  |
+|     shift_register_unit_18_3_inst_14                          |     0.272  |
+|     shift_register_unit_18_3_inst_15                          |     0.272  |
+|     shift_register_unit_18_3_inst_2                           |     0.272  |
+|     shift_register_unit_18_3_inst_3                           |     0.272  |
+|     shift_register_unit_18_3_inst_4                           |     0.272  |
+|     shift_register_unit_18_3_inst_5                           |     0.272  |
+|     shift_register_unit_18_3_inst_6                           |     0.272  |
+|     shift_register_unit_18_3_inst_7                           |     0.272  |
+|     shift_register_unit_18_3_inst_8                           |     0.272  |
+|     shift_register_unit_18_3_inst_9                           |     0.272  |
+|   shift_register_group_18_16_3_inst_Wc                        |     1.375  |
+|     shift_register_unit_18_3_inst_0                           |     0.172  |
+|     shift_register_unit_18_3_inst_1                           |     0.172  |
+|     shift_register_unit_18_3_inst_2                           |     0.172  |
+|     shift_register_unit_18_3_inst_3                           |     0.172  |
+|     shift_register_unit_18_3_inst_4                           |     0.172  |
+|     shift_register_unit_18_3_inst_5                           |     0.172  |
+|     shift_register_unit_18_3_inst_6                           |     0.172  |
+|     shift_register_unit_18_3_inst_7                           |     0.172  |
+|   shift_register_group_18_16_3_inst_Wf                        |     1.375  |
+|     shift_register_unit_18_3_inst_0                           |     0.172  |
+|     shift_register_unit_18_3_inst_1                           |     0.172  |
+|     shift_register_unit_18_3_inst_2                           |     0.172  |
+|     shift_register_unit_18_3_inst_3                           |     0.172  |
+|     shift_register_unit_18_3_inst_4                           |     0.172  |
+|     shift_register_unit_18_3_inst_5                           |     0.172  |
+|     shift_register_unit_18_3_inst_6                           |     0.172  |
+|     shift_register_unit_18_3_inst_7                           |     0.172  |
+|   shift_register_group_18_16_3_inst_Wi                        |     1.375  |
+|     shift_register_unit_18_3_inst_0                           |     0.172  |
+|     shift_register_unit_18_3_inst_1                           |     0.172  |
+|     shift_register_unit_18_3_inst_2                           |     0.172  |
+|     shift_register_unit_18_3_inst_3                           |     0.172  |
+|     shift_register_unit_18_3_inst_4                           |     0.172  |
+|     shift_register_unit_18_3_inst_5                           |     0.172  |
+|     shift_register_unit_18_3_inst_6                           |     0.172  |
+|     shift_register_unit_18_3_inst_7                           |     0.172  |
+|   shift_register_group_18_16_3_inst_Wo                        |     1.375  |
+|     shift_register_unit_18_3_inst_0                           |     0.172  |
+|     shift_register_unit_18_3_inst_1                           |     0.172  |
+|     shift_register_unit_18_3_inst_2                           |     0.172  |
+|     shift_register_unit_18_3_inst_3                           |     0.172  |
+|     shift_register_unit_18_3_inst_4                           |     0.172  |
+|     shift_register_unit_18_3_inst_5                           |     0.172  |
+|     shift_register_unit_18_3_inst_6                           |     0.172  |
+|     shift_register_unit_18_3_inst_7                           |     0.172  |
+|   shift_register_unit_1_3_inst                                |     0.026  |
+|   stage2_Ct_buffer_18_1_16_64_inst                            |    12.031  |
+|     counter_63_1_inst_in                                      |     0.087  |
+|     ram_288_0_64_inst_0                                       |    11.930  |
+|       u_dual_port_ram                                         |    11.930  |
+|   stage2_mt_buffer_18_1_16_64_32_inst                         |    14.224  |
+|     counter_30_1_inst_out_enough                              |     0.111  |
+|     counter_63_1_inst_in                                      |     0.089  |
+|     counter_63_1_inst_out_count                               |     0.188  |
+|     ram_288_0_64_inst                                         |    13.755  |
+|       u_dual_port_ram                                         |    13.755  |
+|     shift_register_unit_12_inst_is_buffer_full                |     0.009  |
+|     shift_register_unit_12_inst_valid1                        |     0.009  |
+|     shift_register_unit_12_inst_valid2                        |     0.018  |
+|   stage3_X_Y_buffer_18_16_1_10_32_64_inst                     |    22.007  |
+|     counter_41_1_32_inst                                      |     0.395  |
+|     counter_41_1_inst                                         |     0.247  |
+|     counter_63_1_inst_loop                                    |     0.090  |
+|     ram_288_0_42_inst                                         |    21.190  |
+|       u_dual_port_ram                                         |    21.190  |
+|     shift_register_unit_1_2_inst                              |     0.018  |
++---------------------------------------------------------------+------------+
+
+

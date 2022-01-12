@@ -1,0 +1,518 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:50:23 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.large_submodules/lstm_gate_18_10_48_1/post_route_power.rpt
+| Design           : lstm_gate_18_10_48_1
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 426.627      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 319.167      |
+| Device Static (mW)       | 107.460      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 95.1         |
+| Junction Temperature (C) | 29.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    85.786  |        3 |       --- |             --- |
+| Slice Logic             |    81.502  |    26127 |       --- |             --- |
+|   LUT as Logic          |    58.402  |     7634 |     53200 |           14.35 |
+|   Register              |    10.737  |    13852 |    106400 |           13.02 |
+|   CARRY4                |     7.653  |     1536 |     13300 |           11.55 |
+|   LUT as Shift Register |     4.710  |      866 |     17400 |            4.98 |
+|   Others                |     0.000  |      509 |       --- |             --- |
+| Signals                 |    87.634  |    20285 |       --- |             --- |
+| DSPs                    |    64.246  |       96 |       220 |           43.64 |
+| Static Power            |   107.460  |          |           |                 |
+| Total                   |   426.627  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.328 |       0.319 |      0.009 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------+------------+
+| Name                                          | Power (mW) |
++-----------------------------------------------+------------+
+| lstm_gate_18_10_48_1                          |   319.167  |
+|   elementwise_add_core_18_18_48_add_1         |    19.269  |
+|   elementwise_add_core_18_18_48_add_2         |    39.227  |
+|   elementwise_mult_core_18_18_10_48_1_mult    |   106.927  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst0  |     2.393  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst10 |     2.388  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst12 |     2.449  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst14 |     2.347  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst16 |     2.396  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst18 |     2.379  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst2  |     2.505  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst20 |     2.347  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst22 |     2.386  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst24 |     2.435  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst26 |     2.420  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst28 |     2.573  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst30 |     2.510  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst32 |     2.372  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst34 |     2.352  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst36 |     2.376  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst38 |     2.391  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst4  |     2.455  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst40 |     2.510  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst42 |     2.416  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst44 |     2.391  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst46 |     2.359  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst6  |     2.366  |
+|     dsp_signed_mult_18x18_unit_18_18_1_inst8  |     2.444  |
+|     fp_rounding_unit_1_37_10_inst0            |     0.883  |
+|     fp_rounding_unit_1_37_10_inst1            |     0.901  |
+|     fp_rounding_unit_1_37_10_inst10           |     0.875  |
+|     fp_rounding_unit_1_37_10_inst11           |     0.853  |
+|     fp_rounding_unit_1_37_10_inst12           |     0.892  |
+|     fp_rounding_unit_1_37_10_inst13           |     0.854  |
+|     fp_rounding_unit_1_37_10_inst14           |     0.865  |
+|     fp_rounding_unit_1_37_10_inst15           |     0.870  |
+|     fp_rounding_unit_1_37_10_inst16           |     0.883  |
+|     fp_rounding_unit_1_37_10_inst17           |     0.890  |
+|     fp_rounding_unit_1_37_10_inst18           |     0.903  |
+|     fp_rounding_unit_1_37_10_inst19           |     0.866  |
+|     fp_rounding_unit_1_37_10_inst2            |     0.893  |
+|     fp_rounding_unit_1_37_10_inst20           |     0.893  |
+|     fp_rounding_unit_1_37_10_inst21           |     0.897  |
+|     fp_rounding_unit_1_37_10_inst22           |     0.896  |
+|     fp_rounding_unit_1_37_10_inst23           |     0.882  |
+|     fp_rounding_unit_1_37_10_inst24           |     0.873  |
+|     fp_rounding_unit_1_37_10_inst25           |     0.873  |
+|     fp_rounding_unit_1_37_10_inst26           |     0.870  |
+|     fp_rounding_unit_1_37_10_inst27           |     0.887  |
+|     fp_rounding_unit_1_37_10_inst28           |     0.904  |
+|     fp_rounding_unit_1_37_10_inst29           |     0.887  |
+|     fp_rounding_unit_1_37_10_inst3            |     0.896  |
+|     fp_rounding_unit_1_37_10_inst30           |     0.914  |
+|     fp_rounding_unit_1_37_10_inst31           |     0.884  |
+|     fp_rounding_unit_1_37_10_inst32           |     0.853  |
+|     fp_rounding_unit_1_37_10_inst33           |     0.874  |
+|     fp_rounding_unit_1_37_10_inst34           |     0.891  |
+|     fp_rounding_unit_1_37_10_inst35           |     0.863  |
+|     fp_rounding_unit_1_37_10_inst36           |     0.879  |
+|     fp_rounding_unit_1_37_10_inst37           |     0.864  |
+|     fp_rounding_unit_1_37_10_inst38           |     0.892  |
+|     fp_rounding_unit_1_37_10_inst39           |     0.908  |
+|     fp_rounding_unit_1_37_10_inst4            |     0.881  |
+|     fp_rounding_unit_1_37_10_inst40           |     0.871  |
+|     fp_rounding_unit_1_37_10_inst41           |     0.887  |
+|     fp_rounding_unit_1_37_10_inst42           |     0.891  |
+|     fp_rounding_unit_1_37_10_inst43           |     0.893  |
+|     fp_rounding_unit_1_37_10_inst44           |     0.862  |
+|     fp_rounding_unit_1_37_10_inst45           |     0.875  |
+|     fp_rounding_unit_1_37_10_inst46           |     0.905  |
+|     fp_rounding_unit_1_37_10_inst47           |     0.856  |
+|     fp_rounding_unit_1_37_10_inst5            |     0.871  |
+|     fp_rounding_unit_1_37_10_inst6            |     0.879  |
+|     fp_rounding_unit_1_37_10_inst7            |     0.895  |
+|     fp_rounding_unit_1_37_10_inst8            |     0.854  |
+|     fp_rounding_unit_1_37_10_inst9            |     0.896  |
+|   shift_register_group_18_48_10_Ct            |    21.661  |
+|     shift_register_unit_18_18_inst_0          |     0.572  |
+|     shift_register_unit_18_18_inst_1          |     0.437  |
+|     shift_register_unit_18_18_inst_10         |     0.464  |
+|     shift_register_unit_18_18_inst_11         |     0.454  |
+|     shift_register_unit_18_18_inst_12         |     0.432  |
+|     shift_register_unit_18_18_inst_13         |     0.441  |
+|     shift_register_unit_18_18_inst_14         |     0.456  |
+|     shift_register_unit_18_18_inst_15         |     0.448  |
+|     shift_register_unit_18_18_inst_16         |     0.433  |
+|     shift_register_unit_18_18_inst_17         |     0.474  |
+|     shift_register_unit_18_18_inst_18         |     0.454  |
+|     shift_register_unit_18_18_inst_19         |     0.445  |
+|     shift_register_unit_18_18_inst_2          |     0.446  |
+|     shift_register_unit_18_18_inst_20         |     0.443  |
+|     shift_register_unit_18_18_inst_21         |     0.455  |
+|     shift_register_unit_18_18_inst_22         |     0.447  |
+|     shift_register_unit_18_18_inst_23         |     0.446  |
+|     shift_register_unit_18_18_inst_24         |     0.449  |
+|     shift_register_unit_18_18_inst_25         |     0.446  |
+|     shift_register_unit_18_18_inst_26         |     0.434  |
+|     shift_register_unit_18_18_inst_27         |     0.440  |
+|     shift_register_unit_18_18_inst_28         |     0.449  |
+|     shift_register_unit_18_18_inst_29         |     0.444  |
+|     shift_register_unit_18_18_inst_3          |     0.457  |
+|     shift_register_unit_18_18_inst_30         |     0.450  |
+|     shift_register_unit_18_18_inst_31         |     0.457  |
+|     shift_register_unit_18_18_inst_32         |     0.452  |
+|     shift_register_unit_18_18_inst_33         |     0.437  |
+|     shift_register_unit_18_18_inst_34         |     0.452  |
+|     shift_register_unit_18_18_inst_35         |     0.459  |
+|     shift_register_unit_18_18_inst_36         |     0.457  |
+|     shift_register_unit_18_18_inst_37         |     0.445  |
+|     shift_register_unit_18_18_inst_38         |     0.444  |
+|     shift_register_unit_18_18_inst_39         |     0.446  |
+|     shift_register_unit_18_18_inst_4          |     0.442  |
+|     shift_register_unit_18_18_inst_40         |     0.450  |
+|     shift_register_unit_18_18_inst_41         |     0.439  |
+|     shift_register_unit_18_18_inst_42         |     0.455  |
+|     shift_register_unit_18_18_inst_43         |     0.460  |
+|     shift_register_unit_18_18_inst_44         |     0.443  |
+|     shift_register_unit_18_18_inst_45         |     0.470  |
+|     shift_register_unit_18_18_inst_46         |     0.451  |
+|     shift_register_unit_18_18_inst_47         |     0.457  |
+|     shift_register_unit_18_18_inst_5          |     0.446  |
+|     shift_register_unit_18_18_inst_6          |     0.440  |
+|     shift_register_unit_18_18_inst_7          |     0.448  |
+|     shift_register_unit_18_18_inst_8          |     0.440  |
+|     shift_register_unit_18_18_inst_9          |     0.454  |
+|   sigmoid_core_18_18_10_32_1_inst_0           |     2.754  |
+|     abs_unit_18_inst                          |     0.667  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.894  |
+|     fp_rounding_unit_1_32_11_inst             |     0.761  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_1           |     2.836  |
+|     abs_unit_18_inst                          |     0.700  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.964  |
+|     fp_rounding_unit_1_32_11_inst             |     0.736  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_10          |     2.798  |
+|     abs_unit_18_inst                          |     0.660  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.957  |
+|     fp_rounding_unit_1_32_11_inst             |     0.745  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_11          |     2.748  |
+|     abs_unit_18_inst                          |     0.694  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.912  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_12          |     2.992  |
+|     abs_unit_18_inst                          |     0.725  |
+|     dsp_signed_mac_18_13_23_32_inst           |     1.113  |
+|     fp_rounding_unit_1_32_11_inst             |     0.731  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_13          |     2.739  |
+|     abs_unit_18_inst                          |     0.689  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.874  |
+|     fp_rounding_unit_1_32_11_inst             |     0.742  |
+|     shift_register_unit_1_3_inst              |     0.059  |
+|   sigmoid_core_18_18_10_32_1_inst_14          |     2.708  |
+|     abs_unit_18_inst                          |     0.668  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.877  |
+|     fp_rounding_unit_1_32_11_inst             |     0.725  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_15          |     2.695  |
+|     abs_unit_18_inst                          |     0.671  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.878  |
+|     fp_rounding_unit_1_32_11_inst             |     0.724  |
+|     shift_register_unit_1_3_inst              |     0.052  |
+|   sigmoid_core_18_18_10_32_1_inst_16          |     2.739  |
+|     abs_unit_18_inst                          |     0.656  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.927  |
+|     fp_rounding_unit_1_32_11_inst             |     0.734  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_17          |     2.655  |
+|     abs_unit_18_inst                          |     0.636  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.870  |
+|     fp_rounding_unit_1_32_11_inst             |     0.727  |
+|     shift_register_unit_1_3_inst              |     0.051  |
+|   sigmoid_core_18_18_10_32_1_inst_18          |     2.723  |
+|     abs_unit_18_inst                          |     0.683  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.908  |
+|     fp_rounding_unit_1_32_11_inst             |     0.715  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_19          |     2.700  |
+|     abs_unit_18_inst                          |     0.685  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.874  |
+|     fp_rounding_unit_1_32_11_inst             |     0.728  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_2           |     2.733  |
+|     abs_unit_18_inst                          |     0.692  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.893  |
+|     fp_rounding_unit_1_32_11_inst             |     0.714  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_20          |     2.751  |
+|     abs_unit_18_inst                          |     0.670  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.930  |
+|     fp_rounding_unit_1_32_11_inst             |     0.733  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_21          |     2.721  |
+|     abs_unit_18_inst                          |     0.679  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.938  |
+|     fp_rounding_unit_1_32_11_inst             |     0.708  |
+|     shift_register_unit_1_3_inst              |     0.050  |
+|   sigmoid_core_18_18_10_32_1_inst_22          |     2.778  |
+|     abs_unit_18_inst                          |     0.707  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.939  |
+|     fp_rounding_unit_1_32_11_inst             |     0.719  |
+|     shift_register_unit_1_3_inst              |     0.057  |
+|   sigmoid_core_18_18_10_32_1_inst_23          |     2.757  |
+|     abs_unit_18_inst                          |     0.679  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.902  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_24          |     2.723  |
+|     abs_unit_18_inst                          |     0.673  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.901  |
+|     fp_rounding_unit_1_32_11_inst             |     0.719  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_25          |     2.809  |
+|     abs_unit_18_inst                          |     0.749  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.917  |
+|     fp_rounding_unit_1_32_11_inst             |     0.714  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_26          |     2.776  |
+|     abs_unit_18_inst                          |     0.692  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.965  |
+|     fp_rounding_unit_1_32_11_inst             |     0.717  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_27          |     2.756  |
+|     abs_unit_18_inst                          |     0.650  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.962  |
+|     fp_rounding_unit_1_32_11_inst             |     0.727  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_28          |     2.827  |
+|     abs_unit_18_inst                          |     0.683  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.976  |
+|     fp_rounding_unit_1_32_11_inst             |     0.736  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_29          |     2.876  |
+|     abs_unit_18_inst                          |     0.679  |
+|     dsp_signed_mac_18_13_23_32_inst           |     1.056  |
+|     fp_rounding_unit_1_32_11_inst             |     0.720  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_3           |     2.793  |
+|     abs_unit_18_inst                          |     0.685  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.963  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.050  |
+|   sigmoid_core_18_18_10_32_1_inst_30          |     2.725  |
+|     abs_unit_18_inst                          |     0.695  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.883  |
+|     fp_rounding_unit_1_32_11_inst             |     0.723  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_31          |     2.933  |
+|     abs_unit_18_inst                          |     0.715  |
+|     dsp_signed_mac_18_13_23_32_inst           |     1.081  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_32          |     2.688  |
+|     abs_unit_18_inst                          |     0.620  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.893  |
+|     fp_rounding_unit_1_32_11_inst             |     0.739  |
+|     shift_register_unit_1_3_inst              |     0.054  |
+|   sigmoid_core_18_18_10_32_1_inst_33          |     2.758  |
+|     abs_unit_18_inst                          |     0.694  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.889  |
+|     fp_rounding_unit_1_32_11_inst             |     0.740  |
+|     shift_register_unit_1_3_inst              |     0.060  |
+|   sigmoid_core_18_18_10_32_1_inst_34          |     2.671  |
+|     abs_unit_18_inst                          |     0.668  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.857  |
+|     fp_rounding_unit_1_32_11_inst             |     0.729  |
+|     shift_register_unit_1_3_inst              |     0.057  |
+|   sigmoid_core_18_18_10_32_1_inst_35          |     2.734  |
+|     abs_unit_18_inst                          |     0.701  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.897  |
+|     fp_rounding_unit_1_32_11_inst             |     0.719  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_36          |     2.661  |
+|     abs_unit_18_inst                          |     0.645  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.870  |
+|     fp_rounding_unit_1_32_11_inst             |     0.724  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_37          |     2.675  |
+|     abs_unit_18_inst                          |     0.651  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.878  |
+|     fp_rounding_unit_1_32_11_inst             |     0.728  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_38          |     2.751  |
+|     abs_unit_18_inst                          |     0.683  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.927  |
+|     fp_rounding_unit_1_32_11_inst             |     0.719  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_39          |     2.674  |
+|     abs_unit_18_inst                          |     0.652  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.884  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.049  |
+|   sigmoid_core_18_18_10_32_1_inst_4           |     2.717  |
+|     abs_unit_18_inst                          |     0.662  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.895  |
+|     fp_rounding_unit_1_32_11_inst             |     0.739  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_40          |     2.782  |
+|     abs_unit_18_inst                          |     0.656  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.976  |
+|     fp_rounding_unit_1_32_11_inst             |     0.727  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_41          |     2.772  |
+|     abs_unit_18_inst                          |     0.646  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.954  |
+|     fp_rounding_unit_1_32_11_inst             |     0.747  |
+|     shift_register_unit_1_3_inst              |     0.057  |
+|   sigmoid_core_18_18_10_32_1_inst_42          |     2.779  |
+|     abs_unit_18_inst                          |     0.673  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.940  |
+|     fp_rounding_unit_1_32_11_inst             |     0.754  |
+|     shift_register_unit_1_3_inst              |     0.060  |
+|   sigmoid_core_18_18_10_32_1_inst_43          |     2.788  |
+|     abs_unit_18_inst                          |     0.688  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.898  |
+|     fp_rounding_unit_1_32_11_inst             |     0.726  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_44          |     2.709  |
+|     abs_unit_18_inst                          |     0.665  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.880  |
+|     fp_rounding_unit_1_32_11_inst             |     0.731  |
+|     shift_register_unit_1_3_inst              |     0.056  |
+|   sigmoid_core_18_18_10_32_1_inst_45          |     2.759  |
+|     abs_unit_18_inst                          |     0.696  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.906  |
+|     fp_rounding_unit_1_32_11_inst             |     0.717  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_46          |     2.716  |
+|     abs_unit_18_inst                          |     0.692  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.890  |
+|     fp_rounding_unit_1_32_11_inst             |     0.739  |
+|     shift_register_unit_1_3_inst              |     0.059  |
+|   sigmoid_core_18_18_10_32_1_inst_47          |     2.731  |
+|     abs_unit_18_inst                          |     0.709  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.859  |
+|     fp_rounding_unit_1_32_11_inst             |     0.747  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_5           |     2.788  |
+|     abs_unit_18_inst                          |     0.678  |
+|     dsp_signed_mac_18_13_23_32_inst           |     1.000  |
+|     fp_rounding_unit_1_32_11_inst             |     0.717  |
+|     shift_register_unit_1_3_inst              |     0.047  |
+|   sigmoid_core_18_18_10_32_1_inst_6           |     2.721  |
+|     abs_unit_18_inst                          |     0.651  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.900  |
+|     fp_rounding_unit_1_32_11_inst             |     0.730  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_7           |     2.684  |
+|     abs_unit_18_inst                          |     0.672  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.892  |
+|     fp_rounding_unit_1_32_11_inst             |     0.703  |
+|     shift_register_unit_1_3_inst              |     0.053  |
+|   sigmoid_core_18_18_10_32_1_inst_8           |     2.724  |
+|     abs_unit_18_inst                          |     0.672  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.894  |
+|     fp_rounding_unit_1_32_11_inst             |     0.745  |
+|     shift_register_unit_1_3_inst              |     0.055  |
+|   sigmoid_core_18_18_10_32_1_inst_9           |     2.756  |
+|     abs_unit_18_inst                          |     0.676  |
+|     dsp_signed_mac_18_13_23_32_inst           |     0.918  |
+|     fp_rounding_unit_1_32_11_inst             |     0.739  |
+|     shift_register_unit_1_3_inst              |     0.055  |
++-----------------------------------------------+------------+
+
+

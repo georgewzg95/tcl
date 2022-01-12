@@ -1,0 +1,217 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:14:05 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/attention_layer_submodules/vecmat_mul/post_synth_power.rpt
+| Design           : vecmat_mul
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 213.370      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 109.198      |
+| Device Static (mW)       | 104.172      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 97.5         |
+| Junction Temperature (C) | 27.5         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |     3.397  |        3 |       --- |             --- |
+| Slice Logic    |    18.313  |     5120 |       --- |             --- |
+|   LUT as Logic |    15.359  |     3776 |     53200 |            7.10 |
+|   CARRY4       |     2.882  |      768 |     13300 |            5.77 |
+|   Register     |     0.072  |      256 |    106400 |            0.24 |
+|   Others       |     0.000  |      256 |       --- |             --- |
+| Signals        |    17.799  |     6464 |       --- |             --- |
+| DSPs           |    69.689  |       64 |       220 |           29.09 |
+| Static Power   |   104.172  |          |           |                 |
+| Total          |   213.370  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.117 |       0.109 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------+------------+
+| Name       | Power (mW) |
++------------+------------+
+| vecmat_mul |   109.198  |
+|   mult_u0  |     1.706  |
+|   mult_u1  |     1.706  |
+|   mult_u10 |     1.706  |
+|   mult_u11 |     1.706  |
+|   mult_u12 |     1.706  |
+|   mult_u13 |     1.706  |
+|   mult_u14 |     1.706  |
+|   mult_u15 |     1.706  |
+|   mult_u16 |     1.706  |
+|   mult_u17 |     1.706  |
+|   mult_u18 |     1.706  |
+|   mult_u19 |     1.706  |
+|   mult_u2  |     1.706  |
+|   mult_u20 |     1.706  |
+|   mult_u21 |     1.706  |
+|   mult_u22 |     1.706  |
+|   mult_u23 |     1.706  |
+|   mult_u24 |     1.706  |
+|   mult_u25 |     1.706  |
+|   mult_u26 |     1.706  |
+|   mult_u27 |     1.706  |
+|   mult_u28 |     1.706  |
+|   mult_u29 |     1.706  |
+|   mult_u3  |     1.706  |
+|   mult_u30 |     1.706  |
+|   mult_u31 |     1.706  |
+|   mult_u32 |     1.706  |
+|   mult_u33 |     1.706  |
+|   mult_u34 |     1.706  |
+|   mult_u35 |     1.706  |
+|   mult_u36 |     1.706  |
+|   mult_u37 |     1.706  |
+|   mult_u38 |     1.706  |
+|   mult_u39 |     1.706  |
+|   mult_u4  |     1.706  |
+|   mult_u40 |     1.706  |
+|   mult_u41 |     1.706  |
+|   mult_u42 |     1.706  |
+|   mult_u43 |     1.706  |
+|   mult_u44 |     1.706  |
+|   mult_u45 |     1.706  |
+|   mult_u46 |     1.706  |
+|   mult_u47 |     1.706  |
+|   mult_u48 |     1.706  |
+|   mult_u49 |     1.706  |
+|   mult_u5  |     1.706  |
+|   mult_u50 |     1.706  |
+|   mult_u51 |     1.706  |
+|   mult_u52 |     1.706  |
+|   mult_u53 |     1.706  |
+|   mult_u54 |     1.706  |
+|   mult_u55 |     1.706  |
+|   mult_u56 |     1.706  |
+|   mult_u57 |     1.706  |
+|   mult_u58 |     1.706  |
+|   mult_u59 |     1.706  |
+|   mult_u6  |     1.706  |
+|   mult_u60 |     1.706  |
+|   mult_u61 |     1.706  |
+|   mult_u62 |     1.706  |
+|   mult_u63 |     1.706  |
+|   mult_u7  |     1.706  |
+|   mult_u8  |     1.706  |
+|   mult_u9  |     1.706  |
++------------+------------+
+
+

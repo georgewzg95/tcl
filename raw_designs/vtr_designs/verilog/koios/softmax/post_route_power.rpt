@@ -1,0 +1,293 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 03:57:29 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/softmax/post_route_power.rpt
+| Design           : softmax
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 233.338      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 128.546      |
+| Device Static (mW)       | 104.792      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 97.3         |
+| Junction Temperature (C) | 27.7         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    43.976  |        3 |       --- |             --- |
+| Slice Logic             |    30.431  |    19684 |       --- |             --- |
+|   LUT as Logic          |    27.372  |     7813 |     53200 |           14.69 |
+|   Register              |     1.710  |     8505 |    106400 |            7.99 |
+|   CARRY4                |     0.700  |      321 |     13300 |            2.41 |
+|   LUT as Shift Register |     0.650  |      120 |     17400 |            0.69 |
+|   Others                |     0.000  |      460 |       --- |             --- |
+| Signals                 |    27.831  |    14646 |       --- |             --- |
+| Block RAM               |    19.458  |        8 |       140 |            5.71 |
+| DSPs                    |     6.849  |       16 |       220 |            7.27 |
+| Static Power            |   104.792  |          |           |                 |
+| Total                   |   233.338  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.135 |       0.127 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.002 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                             |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | High       | User specified more than 95% of inputs                |                                                                                                                    |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                          |                                                                                                                    |
+|                             |            |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------+------------+
+| Name               | Power (mW) |
++--------------------+------------+
+| softmax            |   128.546  |
+|   log_sub          |    15.784  |
+|     sub0           |     2.827  |
+|       u_FPAddSub   |     2.827  |
+|     sub1           |     1.851  |
+|       u_FPAddSub   |     1.851  |
+|     sub2           |     1.836  |
+|       u_FPAddSub   |     1.836  |
+|     sub3           |     1.872  |
+|       u_FPAddSub   |     1.872  |
+|     sub4           |     1.899  |
+|       u_FPAddSub   |     1.899  |
+|     sub5           |     1.818  |
+|       u_FPAddSub   |     1.818  |
+|     sub6           |     1.866  |
+|       u_FPAddSub   |     1.866  |
+|     sub7           |     1.815  |
+|       u_FPAddSub   |     1.815  |
+|   mode1_max        |     3.843  |
+|     cmp0_stage0    |     0.122  |
+|       compare      |     0.122  |
+|     cmp0_stage1    |     0.283  |
+|       compare      |     0.283  |
+|     cmp0_stage2    |     0.336  |
+|       compare      |     0.336  |
+|     cmp0_stage3    |     0.046  |
+|       compare      |     0.046  |
+|     cmp1_stage2    |     0.331  |
+|       compare      |     0.331  |
+|     cmp1_stage3    |     0.046  |
+|       compare      |     0.046  |
+|     cmp2_stage3    |     0.047  |
+|       compare      |     0.047  |
+|     cmp3_stage3    |     0.048  |
+|       compare      |     0.048  |
+|   mode2_sub        |     9.120  |
+|     sub0           |     1.142  |
+|       u_FPAddSub   |     1.142  |
+|     sub1           |     1.129  |
+|       u_FPAddSub   |     1.129  |
+|     sub2           |     1.164  |
+|       u_FPAddSub   |     1.164  |
+|     sub3           |     1.121  |
+|       u_FPAddSub   |     1.121  |
+|     sub4           |     1.133  |
+|       u_FPAddSub   |     1.133  |
+|     sub5           |     1.148  |
+|       u_FPAddSub   |     1.148  |
+|     sub6           |     1.152  |
+|       u_FPAddSub   |     1.152  |
+|     sub7           |     1.131  |
+|       u_FPAddSub   |     1.131  |
+|   mode3_exp        |    26.147  |
+|     exp0           |     3.337  |
+|       fpmult       |     0.674  |
+|       fpsub        |     1.846  |
+|     exp1           |     3.266  |
+|       fpmult       |     0.675  |
+|       fpsub        |     1.832  |
+|     exp2           |     3.267  |
+|       fpmult       |     0.669  |
+|       fpsub        |     1.839  |
+|     exp3           |     3.251  |
+|       fpmult       |     0.698  |
+|       fpsub        |     1.789  |
+|     exp4           |     3.231  |
+|       fpmult       |     0.672  |
+|       fpsub        |     1.799  |
+|     exp5           |     3.214  |
+|       fpmult       |     0.673  |
+|       fpsub        |     1.784  |
+|     exp6           |     3.267  |
+|       fpmult       |     0.677  |
+|       fpsub        |     1.834  |
+|     exp7           |     3.315  |
+|       fpmult       |     0.673  |
+|       fpsub        |     1.881  |
+|   mode4_adder_tree |    13.737  |
+|     add0_stage0    |     1.655  |
+|       u_FPAddSub   |     1.655  |
+|     add0_stage1    |     1.539  |
+|       u_FPAddSub   |     1.539  |
+|     add0_stage2    |     1.505  |
+|       u_FPAddSub   |     1.505  |
+|     add0_stage3    |     1.682  |
+|       u_FPAddSub   |     1.682  |
+|     add1_stage2    |     1.485  |
+|       u_FPAddSub   |     1.485  |
+|     add1_stage3    |     1.686  |
+|       u_FPAddSub   |     1.686  |
+|     add2_stage3    |     1.664  |
+|       u_FPAddSub   |     1.664  |
+|     add3_stage3    |     1.633  |
+|       u_FPAddSub   |     1.633  |
+|   mode5_ln         |     1.375  |
+|     ln             |     1.375  |
+|       add          |     1.375  |
+|   mode7_exp        |    36.161  |
+|     exp0           |     4.492  |
+|       fpmult       |     1.333  |
+|       fpsub        |     0.748  |
+|     exp1           |     4.520  |
+|       fpmult       |     1.344  |
+|       fpsub        |     0.749  |
+|     exp2           |     4.594  |
+|       fpmult       |     1.386  |
+|       fpsub        |     0.746  |
+|     exp3           |     4.568  |
+|       fpmult       |     1.376  |
+|       fpsub        |     0.745  |
+|     exp4           |     4.489  |
+|       fpmult       |     1.341  |
+|       fpsub        |     0.744  |
+|     exp5           |     4.506  |
+|       fpmult       |     1.346  |
+|       fpsub        |     0.755  |
+|     exp6           |     4.506  |
+|       fpmult       |     1.345  |
+|       fpsub        |     0.746  |
+|     exp7           |     4.484  |
+|       fpmult       |     1.345  |
+|       fpsub        |     0.744  |
+|   pre_sub          |    14.066  |
+|     sub0           |     2.907  |
+|       u_FPAddSub   |     2.907  |
+|     sub1           |     1.626  |
+|       u_FPAddSub   |     1.626  |
+|     sub2           |     1.623  |
+|       u_FPAddSub   |     1.623  |
+|     sub3           |     1.594  |
+|       u_FPAddSub   |     1.594  |
+|     sub4           |     1.631  |
+|       u_FPAddSub   |     1.631  |
+|     sub5           |     1.585  |
+|       u_FPAddSub   |     1.585  |
+|     sub6           |     1.534  |
+|       u_FPAddSub   |     1.534  |
+|     sub7           |     1.566  |
+|       u_FPAddSub   |     1.566  |
++--------------------+------------+
+
+

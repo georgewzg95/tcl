@@ -1,0 +1,308 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Jan 11 22:32:46 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/LU8PEEng_submodules/DataTransferUnit/post_route_timing_summary.rpt
+| Design       : DataTransferUnit
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 360 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 361 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      5.607        0.000                      0                 1056        0.124        0.000                      0                 1056        4.230        0.000                       0                   541  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                 5.607        0.000                      0                 1056        0.124        0.000                      0                 1056        4.230        0.000                       0                   541  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.607ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.124ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.230ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.607ns  (required time - arrival time)
+  Source:                 cmd_store/status_cnt_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            raddress_store/ram_addr/ram_reg/ENARDEN
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.974ns  (logic 1.013ns (25.488%)  route 2.961ns (74.512%))
+  Logic Levels:           4  (LUT2=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=540, unset)          0.704     0.704    cmd_store/clk
+    SLICE_X58Y48         FDRE                                         r  cmd_store/status_cnt_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y48         FDRE (Prop_fdre_C_Q)         0.361     1.065 f  cmd_store/status_cnt_reg[2]/Q
+                         net (fo=6, routed)           0.527     1.592    cmd_store/ram_addr/ram_reg_3[2]
+    SLICE_X58Y48         LUT5 (Prop_lut5_I0_O)        0.202     1.794 r  cmd_store/ram_addr/ram_reg_i_5/O
+                         net (fo=4, routed)           1.010     2.805    wdata_store/ram_addr/not_stall0
+    SLICE_X51Y61         LUT6 (Prop_lut6_I4_O)        0.097     2.902 r  wdata_store/ram_addr/ram_addr3[4]_i_1/O
+                         net (fo=113, routed)         0.868     3.770    wdata_store/ram_addr/status_cnt_reg[3]
+    SLICE_X54Y65         LUT2 (Prop_lut2_I0_O)        0.114     3.884 r  wdata_store/ram_addr/ram_reg_i_2/O
+                         net (fo=6, routed)           0.328     4.212    raddress_store/ram_addr/E[0]
+    SLICE_X54Y67         LUT4 (Prop_lut4_I0_O)        0.239     4.451 r  raddress_store/ram_addr/ram_reg_ENARDEN_cooolgate_en_gate_33/O
+                         net (fo=1, routed)           0.228     4.678    raddress_store/ram_addr/ram_reg_ENARDEN_cooolgate_en_sig_24
+    RAMB18_X3Y26         RAMB18E1                                     r  raddress_store/ram_addr/ram_reg/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=540, unset)          0.669    10.669    raddress_store/ram_addr/clk
+    RAMB18_X3Y26         RAMB18E1                                     r  raddress_store/ram_addr/ram_reg/CLKARDCLK
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+    RAMB18_X3Y26         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ENARDEN)
+                                                     -0.348    10.285    raddress_store/ram_addr/ram_reg
+  -------------------------------------------------------------------
+                         required time                         10.285    
+                         arrival time                          -4.678    
+  -------------------------------------------------------------------
+                         slack                                  5.607    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.124ns  (arrival time - required time)
+  Source:                 mem_addr0_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            cmd_store/ram_addr/ram_reg/DIADI[9]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.387ns  (logic 0.128ns (33.053%)  route 0.259ns (66.947%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=540, unset)          0.411     0.411    clk
+    SLICE_X55Y61         FDRE                                         r  mem_addr0_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y61         FDRE (Prop_fdre_C_Q)         0.128     0.539 r  mem_addr0_reg[7]/Q
+                         net (fo=1, routed)           0.259     0.798    cmd_store/ram_addr/DIADI[9]
+    RAMB36_X3Y12         RAMB36E1                                     r  cmd_store/ram_addr/ram_reg/DIADI[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=540, unset)          0.432     0.432    cmd_store/ram_addr/clk
+    RAMB36_X3Y12         RAMB36E1                                     r  cmd_store/ram_addr/ram_reg/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X3Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[9])
+                                                      0.242     0.674    cmd_store/ram_addr/ram_reg
+  -------------------------------------------------------------------
+                         required time                         -0.674    
+                         arrival time                           0.798    
+  -------------------------------------------------------------------
+                         slack                                  0.124    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            1.962         10.000      8.038      RAMB18_X2Y30  wdata_store/ram_addr/ram_reg_7/CLKARDCLK
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.770         5.000       4.230      SLICE_X58Y64  read_req_reg_reg[2]_srl2___mem_addr3_reg_r/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.770         5.000       4.230      SLICE_X58Y64  read_req_reg_reg[2]_srl2___mem_addr3_reg_r/CLK
+
+
+

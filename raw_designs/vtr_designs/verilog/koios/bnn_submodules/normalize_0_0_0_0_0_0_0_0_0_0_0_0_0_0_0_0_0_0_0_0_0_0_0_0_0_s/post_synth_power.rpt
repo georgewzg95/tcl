@@ -1,0 +1,211 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:25:49 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/bnn_submodules/normalize_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_s/post_synth_power.rpt
+| Design           : normalize_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_s
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 153.024      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 49.736       |
+| Device Static (mW)       | 103.288      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.2         |
+| Junction Temperature (C) | 26.8         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |    10.225  |        3 |       --- |             --- |
+| Slice Logic    |     6.925  |     1645 |       --- |             --- |
+|   LUT as Logic |     5.202  |      549 |     53200 |            1.03 |
+|   CARRY4       |     1.150  |      142 |     13300 |            1.07 |
+|   Register     |     0.573  |      626 |    106400 |            0.59 |
+|   Others       |     0.000  |      118 |       --- |             --- |
+| Signals        |     9.084  |     1982 |       --- |             --- |
+| DSPs           |    23.503  |       29 |       220 |           13.18 |
+| Static Power   |   103.288  |          |           |                 |
+| Total          |   153.024  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.057 |       0.050 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | ap_clk |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------------------------------+------------+
+| Name                                                          | Power (mW) |
++---------------------------------------------------------------+------------+
+| normalize_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_s |    49.736  |
+|   myproject_mul_16s_10ns_26_2_0_U265                          |     1.189  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.189  |
+|   myproject_mul_16s_10ns_26_2_0_U266                          |     1.275  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.275  |
+|   myproject_mul_16s_10ns_26_2_0_U267                          |     1.231  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.231  |
+|   myproject_mul_16s_10ns_26_2_0_U268                          |     1.260  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.260  |
+|   myproject_mul_16s_10ns_26_2_0_U273                          |     1.290  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.290  |
+|   myproject_mul_16s_10ns_26_2_0_U280                          |     1.252  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.252  |
+|   myproject_mul_16s_10ns_26_2_0_U282                          |     1.221  |
+|     myproject_mul_16s_10ns_26_2_0_MulnS_4_U                   |     1.221  |
+|   myproject_mul_16s_9ns_25_2_0_U258                           |     1.255  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.255  |
+|   myproject_mul_16s_9ns_25_2_0_U259                           |     1.170  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.170  |
+|   myproject_mul_16s_9ns_25_2_0_U260                           |     1.324  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.324  |
+|   myproject_mul_16s_9ns_25_2_0_U261                           |     1.301  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.301  |
+|   myproject_mul_16s_9ns_25_2_0_U262                           |     1.332  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.332  |
+|   myproject_mul_16s_9ns_25_2_0_U263                           |     1.266  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.266  |
+|   myproject_mul_16s_9ns_25_2_0_U264                           |     1.297  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.297  |
+|   myproject_mul_16s_9ns_25_2_0_U269                           |     1.289  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.289  |
+|   myproject_mul_16s_9ns_25_2_0_U270                           |     1.313  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.313  |
+|   myproject_mul_16s_9ns_25_2_0_U271                           |     1.165  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.165  |
+|   myproject_mul_16s_9ns_25_2_0_U272                           |     1.332  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.332  |
+|   myproject_mul_16s_9ns_25_2_0_U274                           |     1.252  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.252  |
+|   myproject_mul_16s_9ns_25_2_0_U275                           |     1.054  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.054  |
+|   myproject_mul_16s_9ns_25_2_0_U276                           |     1.180  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.180  |
+|   myproject_mul_16s_9ns_25_2_0_U277                           |     1.144  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.144  |
+|   myproject_mul_16s_9ns_25_2_0_U278                           |     1.125  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.125  |
+|   myproject_mul_16s_9ns_25_2_0_U279                           |     1.148  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.148  |
+|   myproject_mul_16s_9ns_25_2_0_U281                           |     1.124  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.124  |
+|   myproject_mul_16s_9ns_25_2_0_U283                           |     1.210  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.210  |
+|   myproject_mul_16s_9ns_25_2_0_U284                           |     1.200  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.200  |
+|   myproject_mul_16s_9ns_25_2_0_U285                           |     1.255  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.255  |
+|   myproject_mul_16s_9ns_25_2_0_U286                           |     1.209  |
+|     myproject_mul_16s_9ns_25_2_0_MulnS_3_U                    |     1.209  |
++---------------------------------------------------------------+------------+
+
+

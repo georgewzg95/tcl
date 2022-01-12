@@ -1,0 +1,1743 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/conv_layer/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/conv_layer
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v
+# synth_design -part xc7z020clg484-3 -top conv -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top conv -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 289986 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.535 ; gain = 25.895 ; free physical = 244353 ; free virtual = 308867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:42]
+INFO: [Synth 8-6157] synthesizing module 'ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:1596]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'ram_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "ram_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ram' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:1596]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:980]
+INFO: [Synth 8-6157] synthesizing module 'matmul_4x4_systolic' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:1670]
+INFO: [Synth 8-6157] synthesizing module 'systolic_data_setup' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2177]
+INFO: [Synth 8-6155] done synthesizing module 'systolic_data_setup' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2177]
+INFO: [Synth 8-6157] synthesizing module 'output_logic' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2019]
+INFO: [Synth 8-6155] done synthesizing module 'output_logic' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2019]
+INFO: [Synth 8-6157] synthesizing module 'systolic_pe_matrix' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2425]
+INFO: [Synth 8-6157] synthesizing module 'processing_element' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2571]
+INFO: [Synth 8-6157] synthesizing module 'seq_mac' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2737]
+INFO: [Synth 8-6157] synthesizing module 'qmult' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2821]
+INFO: [Synth 8-6155] done synthesizing module 'qmult' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2821]
+INFO: [Synth 8-6157] synthesizing module 'qadd' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2831]
+INFO: [Synth 8-6155] done synthesizing module 'qadd' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2831]
+INFO: [Synth 8-6155] done synthesizing module 'seq_mac' (6#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2737]
+WARNING: [Synth 8-3848] Net flags in module/entity processing_element does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2593]
+INFO: [Synth 8-6155] done synthesizing module 'processing_element' (7#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2571]
+WARNING: [Synth 8-3848] Net matrixC03 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2472]
+WARNING: [Synth 8-3848] Net matrixC13 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2476]
+WARNING: [Synth 8-3848] Net matrixC23 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2480]
+WARNING: [Synth 8-3848] Net matrixC33 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2484]
+WARNING: [Synth 8-3848] Net a03to04 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2489]
+WARNING: [Synth 8-3848] Net a13to14 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2490]
+WARNING: [Synth 8-3848] Net a23to24 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2491]
+WARNING: [Synth 8-3848] Net a33to34 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2492]
+WARNING: [Synth 8-3848] Net b33to43 in module/entity systolic_pe_matrix does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2497]
+INFO: [Synth 8-6155] done synthesizing module 'systolic_pe_matrix' (8#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2425]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_4x4_systolic' (9#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:1670]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:976]
+INFO: [Synth 8-6155] done synthesizing module 'conv' (10#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:42]
+WARNING: [Synth 8-3331] design processing_element has unconnected port flags[3]
+WARNING: [Synth 8-3331] design processing_element has unconnected port flags[2]
+WARNING: [Synth 8-3331] design processing_element has unconnected port flags[1]
+WARNING: [Synth 8-3331] design processing_element has unconnected port flags[0]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[15]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[14]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[13]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[12]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[11]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[10]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[9]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[8]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[7]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[6]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[5]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[4]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[3]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[2]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[1]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC03[0]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[15]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[14]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[13]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[12]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[11]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[10]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[9]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[8]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[7]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[6]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[5]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[4]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[3]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[2]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[1]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC13[0]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[15]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[14]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[13]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[12]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[11]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[10]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[9]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[8]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[7]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[6]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[5]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[4]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[3]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[2]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[1]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC23[0]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[15]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[14]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[13]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[12]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[11]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[10]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[9]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[8]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[7]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[6]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[5]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[4]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[3]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[2]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[1]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port matrixC33[0]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[63]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[62]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[61]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[60]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[59]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[58]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[57]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[56]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[55]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[54]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[53]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[52]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[51]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[50]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[49]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[48]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[47]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[46]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[45]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[44]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[43]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[42]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[41]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[40]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[39]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[38]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[37]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[36]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[35]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[34]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[33]
+WARNING: [Synth 8-3331] design systolic_pe_matrix has unconnected port a_data_out[32]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1843.645 ; gain = 368.004 ; free physical = 244971 ; free virtual = 309485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1843.645 ; gain = 368.004 ; free physical = 244763 ; free virtual = 309281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1851.645 ; gain = 376.004 ; free physical = 244760 ; free virtual = 309278
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2255]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:2341]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:1789]
+INFO: [Synth 8-4471] merging register 'address_mat_b_0_reg[9:0]' into 'address_mat_a_0_reg[9:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:881]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_0_cols_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:887]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_0_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:888]
+INFO: [Synth 8-4471] merging register 'slice_1_op_reg[1:0]' into 'slice_0_op_reg[1:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:892]
+INFO: [Synth 8-4471] merging register 'start_mat_mul_1_reg' into 'start_mat_mul_0_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:893]
+INFO: [Synth 8-4471] merging register 'address_mat_c_1_reg[9:0]' into 'address_mat_c_0_reg[9:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:896]
+INFO: [Synth 8-4471] merging register 'address_stride_a_1_reg[15:0]' into 'address_stride_a_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:897]
+INFO: [Synth 8-4471] merging register 'address_stride_b_1_reg[15:0]' into 'address_stride_b_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:898]
+INFO: [Synth 8-4471] merging register 'address_stride_c_1_reg[15:0]' into 'address_stride_c_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:899]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_1_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:900]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_1_cols_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:901]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_1_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:902]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_1_cols_reg[3:0]' into 'validity_mask_b_0_cols_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:903]
+INFO: [Synth 8-4471] merging register 'slice_2_op_reg[1:0]' into 'slice_0_op_reg[1:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:906]
+INFO: [Synth 8-4471] merging register 'start_mat_mul_2_reg' into 'start_mat_mul_0_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:907]
+INFO: [Synth 8-4471] merging register 'address_mat_c_2_reg[9:0]' into 'address_mat_c_0_reg[9:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:910]
+INFO: [Synth 8-4471] merging register 'address_stride_a_2_reg[15:0]' into 'address_stride_a_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:911]
+INFO: [Synth 8-4471] merging register 'address_stride_b_2_reg[15:0]' into 'address_stride_b_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:912]
+INFO: [Synth 8-4471] merging register 'address_stride_c_2_reg[15:0]' into 'address_stride_c_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:913]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_2_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:914]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_2_cols_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:915]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_2_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:916]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_2_cols_reg[3:0]' into 'validity_mask_b_0_cols_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:917]
+INFO: [Synth 8-4471] merging register 'slice_3_op_reg[1:0]' into 'slice_0_op_reg[1:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:920]
+INFO: [Synth 8-4471] merging register 'start_mat_mul_3_reg' into 'start_mat_mul_0_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:921]
+INFO: [Synth 8-4471] merging register 'address_mat_c_3_reg[9:0]' into 'address_mat_c_0_reg[9:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:924]
+INFO: [Synth 8-4471] merging register 'address_stride_a_3_reg[15:0]' into 'address_stride_a_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:925]
+INFO: [Synth 8-4471] merging register 'address_stride_b_3_reg[15:0]' into 'address_stride_b_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:926]
+INFO: [Synth 8-4471] merging register 'address_stride_c_3_reg[15:0]' into 'address_stride_c_0_reg[15:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:927]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_3_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:928]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_3_cols_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:929]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_3_rows_reg[3:0]' into 'validity_mask_a_0_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:930]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_3_cols_reg[3:0]' into 'validity_mask_b_0_cols_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:931]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_4_cols_reg[3:0]' into 'validity_mask_a_4_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:943]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_4_rows_reg[3:0]' into 'validity_mask_a_4_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:944]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_5_cols_reg[3:0]' into 'validity_mask_a_5_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:957]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_5_rows_reg[3:0]' into 'validity_mask_a_5_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:958]
+INFO: [Synth 8-4471] merging register 'validity_mask_a_6_cols_reg[3:0]' into 'validity_mask_a_6_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:971]
+INFO: [Synth 8-4471] merging register 'validity_mask_b_6_rows_reg[3:0]' into 'validity_mask_a_6_rows_reg[3:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:972]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv'
+INFO: [Synth 8-5546] ROM "bram_addr_a_0_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_0_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_1_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_1_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_2_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_2_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_3_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_3_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_4_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_4_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_5_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_5_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_a_6_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram_addr_b_6_ext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "slice_0_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "start_mat_mul_0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "slice_4_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "start_mat_mul_4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "slice_5_op" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "start_mat_mul_5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "slice_6_op" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "start_mat_mul_6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                       0000000001 |                            00000
+                 iSTATE8 |                       0000000010 |                            00001
+                 iSTATE7 |                       0000000100 |                            00010
+                 iSTATE5 |                       0000001000 |                            00011
+                 iSTATE6 |                       0000010000 |                            00100
+                 iSTATE4 |                       0000100000 |                            00101
+                 iSTATE2 |                       0001000000 |                            00110
+                 iSTATE1 |                       0010000000 |                            00111
+                 iSTATE3 |                       0100000000 |                            01000
+                 iSTATE0 |                       1000000000 |                            01001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'conv'
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:465]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:466]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:467]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:473]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:474]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_0_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:475]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:481]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:482]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:483]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:489]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:490]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_1_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:491]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:497]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:498]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:499]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:505]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:506]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_2_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:507]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:513]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:514]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:515]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:521]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:522]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_3_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:523]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:529]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:530]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:531]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:537]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:538]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_4_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:539]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:545]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:546]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:547]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:553]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:554]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_5_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:555]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_a_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:561]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_a_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:562]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_a_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:563]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_addr_b_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:569]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_wdata_b_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:570]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_we_b_6_ext_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/conv_layer.v:571]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:10 ; elapsed = 00:02:45 . Memory (MB): peak = 2272.969 ; gain = 797.328 ; free physical = 242601 ; free virtual = 307137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |ram__GBM0           |           1|     45568|
+|2     |ram__GBM1           |           1|     29184|
+|3     |ram__GBM2           |           1|     22882|
+|4     |ram__GBM3           |           1|     36670|
+|5     |ram__GBM4           |           1|     35999|
+|6     |ram__GBM5           |           1|     51585|
+|7     |ram__GBM6           |           1|     52925|
+|8     |ram__GBM7           |           1|     25258|
+|9     |muxpart_ram         |           1|     16368|
+|10    |muxpart__8194_ram   |           1|     16368|
+|11    |muxpart__8193_ram   |           1|     16368|
+|12    |ram__GBM11          |           1|     57000|
+|13    |ram__GBM12          |           1|     33655|
+|14    |muxpart__8198_ram   |           1|     16368|
+|15    |muxpart__8197_ram   |           1|     16368|
+|16    |ram__GBM15          |           1|     48988|
+|17    |ram__GBM16          |           1|     16359|
+|18    |ram__GBM17          |           1|     67773|
+|19    |ram__GBM18          |           1|     45568|
+|20    |ram__GBM19          |           1|     29184|
+|21    |matmul_4x4_systolic |           7|      8126|
+|22    |conv__GC0           |           1|      3264|
++------+--------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 84    
+	   2 Input     11 Bit       Adders := 42    
+	   3 Input     10 Bit       Adders := 21    
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      9 Bit       Adders := 7     
+	   2 Input      8 Bit       Adders := 35    
+	   2 Input      7 Bit       Adders := 8     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 56    
+	               32 Bit    Registers := 168   
+	               16 Bit    Registers := 14852 
+	               10 Bit    Registers := 30    
+	                8 Bit    Registers := 22    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 8     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 40    
++---Muxes : 
+	   2 Input  16384 Bit        Muxes := 56    
+	   2 Input     64 Bit        Muxes := 57    
+	   2 Input     32 Bit        Muxes := 168   
+	   2 Input     16 Bit        Muxes := 115220
+	  10 Input     16 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 50    
+	  10 Input     10 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 7     
+	  10 Input      5 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 114   
+	  10 Input      1 Bit        Muxes := 13    
+	  15 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module conv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 8     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 12    
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 8     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	  10 Input     16 Bit        Muxes := 4     
+	  10 Input     10 Bit        Muxes := 10    
+	   2 Input     10 Bit        Muxes := 8     
+	  10 Input      5 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+	  10 Input      1 Bit        Muxes := 13    
+	  15 Input      1 Bit        Muxes := 14    
+Module ram 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               16 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input  16384 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 8209  
+Module systolic_data_setup 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	               16 Bit    Registers := 12    
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+Module output_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 8     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+Module qadd__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module qadd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module seq_mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+Module processing_element 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module matmul_4x4_systolic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: Generating DSP u_mac/mul_out_reg_reg, operation Mode is: (C' or 0)+(0 or (A2*B2)').
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/a_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/b_flopped_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: register u_mac/mul_out_reg_reg is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: operator u_mac/mult_u1/o_result is absorbed into DSP u_mac/mul_out_reg_reg.
+DSP Report: Generating DSP u_mac/add_out_reg_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register u_mac/add_out_reg_reg is absorbed into DSP u_mac/add_out_reg_reg.
+DSP Report: operator u_mac/add_u1/c is absorbed into DSP u_mac/add_out_reg_reg.
+INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'i_0/slice_4_op_reg[0]' (FDRE) to 'i_0/validity_mask_b_4_cols_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/slice_4_op_reg[1]' (FDRE) to 'i_0/address_stride_a_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_4_cols_reg[0]' (FDRE) to 'i_0/validity_mask_b_4_cols_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_4_cols_reg[1]' (FDRE) to 'i_0/validity_mask_b_4_cols_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_4_cols_reg[2]' (FDRE) to 'i_0/address_stride_c_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_4_cols_reg[3]' (FDRE) to 'i_0/address_stride_c_4_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_4_rows_reg[0]' (FDRE) to 'i_0/address_stride_c_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_4_rows_reg[1]' (FDRE) to 'i_0/address_stride_c_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_4_rows_reg[2]' (FDRE) to 'i_0/address_stride_c_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_4_rows_reg[3]' (FDRE) to 'i_0/address_stride_c_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[0]' (FDRE) to 'i_0/address_stride_c_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[1]' (FDRE) to 'i_0/address_stride_c_4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[2]' (FDRE) to 'i_0/address_stride_c_4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[3]' (FDRE) to 'i_0/address_stride_c_4_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[4]' (FDRE) to 'i_0/address_stride_c_4_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[5]' (FDRE) to 'i_0/address_stride_c_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[7]' (FDRE) to 'i_0/address_stride_c_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[8]' (FDRE) to 'i_0/address_stride_c_4_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[9]' (FDRE) to 'i_0/address_stride_c_4_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[10]' (FDRE) to 'i_0/address_stride_c_4_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[11]' (FDRE) to 'i_0/address_stride_c_4_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[12]' (FDRE) to 'i_0/address_stride_c_4_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[13]' (FDRE) to 'i_0/address_stride_c_4_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[14]' (FDRE) to 'i_0/address_stride_c_4_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_4_reg[15]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[0]' (FDRE) to 'i_0/address_stride_a_4_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[1]' (FDRE) to 'i_0/address_stride_a_4_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[2]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[3]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[4]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[5]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[6]' (FDRE) to 'i_0/address_stride_a_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[7]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[8]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[9]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[10]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[11]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[12]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[13]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[14]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_4_reg[15]' (FDRE) to 'i_0/address_stride_a_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[0]' (FDRE) to 'i_0/address_mat_c_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[1]' (FDRE) to 'i_0/address_stride_a_4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[2]' (FDRE) to 'i_0/address_stride_a_4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[3]' (FDRE) to 'i_0/address_stride_a_4_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[4]' (FDRE) to 'i_0/address_stride_a_4_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[5]' (FDRE) to 'i_0/address_stride_a_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[6]' (FDRE) to 'i_0/address_mat_b_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[7]' (FDRE) to 'i_0/address_stride_a_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[8]' (FDRE) to 'i_0/address_stride_a_4_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[9]' (FDRE) to 'i_0/address_stride_a_4_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[10]' (FDRE) to 'i_0/address_stride_a_4_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[11]' (FDRE) to 'i_0/address_stride_a_4_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[12]' (FDRE) to 'i_0/address_stride_a_4_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[13]' (FDRE) to 'i_0/address_stride_a_4_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[14]' (FDRE) to 'i_0/address_stride_a_4_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_a_4_reg[15]' (FDRE) to 'i_0/address_mat_b_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_c_4_reg[5]' (FDRE) to 'i_0/address_mat_b_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_c_4_reg[6]' (FDRE) to 'i_0/address_mat_c_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_c_4_reg[8]' (FDRE) to 'i_0/address_mat_b_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_c_4_reg[9]' (FDRE) to 'i_0/address_mat_b_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_b_4_reg[7]' (FDRE) to 'i_0/address_mat_a_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_b_4_reg[8]' (FDRE) to 'i_0/address_mat_b_4_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_b_4_reg[9]' (FDRE) to 'i_0/address_mat_a_4_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_mat_a_4_reg[8]' (FDRE) to 'i_0/address_mat_a_4_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\address_mat_a_4_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/slice_5_op_reg[0]' (FDRE) to 'i_0/validity_mask_b_5_cols_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_5_cols_reg[0]' (FDRE) to 'i_0/validity_mask_b_5_cols_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_5_cols_reg[1]' (FDRE) to 'i_0/validity_mask_b_5_cols_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_5_cols_reg[2]' (FDRE) to 'i_0/address_stride_c_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_b_5_cols_reg[3]' (FDRE) to 'i_0/address_stride_c_5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_5_rows_reg[0]' (FDRE) to 'i_0/address_stride_c_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_5_rows_reg[1]' (FDRE) to 'i_0/address_stride_c_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_5_rows_reg[2]' (FDRE) to 'i_0/address_stride_c_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/validity_mask_a_5_rows_reg[3]' (FDRE) to 'i_0/address_stride_c_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[0]' (FDRE) to 'i_0/address_stride_c_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[1]' (FDRE) to 'i_0/address_stride_c_5_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[2]' (FDRE) to 'i_0/address_stride_c_5_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[3]' (FDRE) to 'i_0/address_stride_c_5_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[4]' (FDRE) to 'i_0/address_stride_c_5_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[5]' (FDRE) to 'i_0/address_stride_c_5_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[7]' (FDRE) to 'i_0/address_stride_c_5_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[8]' (FDRE) to 'i_0/address_stride_c_5_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[9]' (FDRE) to 'i_0/address_stride_c_5_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[10]' (FDRE) to 'i_0/address_stride_c_5_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[11]' (FDRE) to 'i_0/address_stride_c_5_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[12]' (FDRE) to 'i_0/address_stride_c_5_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[13]' (FDRE) to 'i_0/address_stride_c_5_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[14]' (FDRE) to 'i_0/address_stride_c_5_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_c_5_reg[15]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[0]' (FDRE) to 'i_0/address_stride_a_5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[1]' (FDRE) to 'i_0/address_stride_a_5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[2]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[3]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[4]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[5]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[7]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[8]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[9]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[10]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/address_stride_b_5_reg[11]' (FDRE) to 'i_0/address_stride_a_5_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\address_mat_a_5_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\address_stride_a_6_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\address_mat_c_0_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_0/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_1/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_2/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_3/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_4/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_5/\u_output_logic/c_data_out_3_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_matmul_4x4_systolic_6/\u_output_logic/c_data_out_3_reg[63] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:07:32 ; elapsed = 00:08:41 . Memory (MB): peak = 2886.418 ; gain = 1410.777 ; free physical = 236208 ; free virtual = 301164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping               | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|processing_element | (C' or 0)+(0 or (A2*B2)') | 16     | 16     | 16     | -      | 32     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|processing_element | (PCIN+A:B)'               | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++-------------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram__GBM0              |          14|     75222|
+|2     |ram__GBM1              |          14|      9404|
+|3     |ram__GBM2              |          14|     54831|
+|4     |ram__GBM3              |          14|     16955|
+|5     |ram__GBM4              |          14|     16609|
+|6     |ram__GBM5              |          14|     45985|
+|7     |ram__GBM6              |          14|     48488|
+|8     |ram__GBM7              |          14|     24393|
+|9     |muxpart_ram            |          14|     16368|
+|10    |muxpart__8194_ram      |          14|     16368|
+|11    |muxpart__8193_ram      |          14|     16368|
+|12    |ram__GBM11             |          14|     57000|
+|13    |ram__GBM12             |          14|     33574|
+|14    |muxpart__8198_ram      |          14|     16368|
+|15    |muxpart__8197_ram      |          14|     16368|
+|16    |ram__GBM15             |          14|     77869|
+|17    |ram__GBM16             |          14|      7596|
+|18    |ram__GBM17             |          14|     67773|
+|19    |ram__GBM18             |          14|     75220|
+|20    |ram__GBM19             |          14|      9382|
+|21    |matmul_4x4_systolic    |           1|      2384|
+|22    |conv__GC0              |           1|      2647|
+|23    |matmul_4x4_systolic__1 |           1|      2384|
+|24    |matmul_4x4_systolic__2 |           1|      2384|
+|25    |matmul_4x4_systolic__3 |           1|      2384|
+|26    |matmul_4x4_systolic__4 |           1|      3614|
+|27    |matmul_4x4_systolic__5 |           1|      3614|
+|28    |matmul_4x4_systolic__6 |           1|      3614|
++------+-----------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:08:12 ; elapsed = 00:09:22 . Memory (MB): peak = 2923.473 ; gain = 1447.832 ; free physical = 236814 ; free virtual = 301745
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram__GBM0              |          14|     75222|
+|2     |ram__GBM1              |          14|      9404|
+|3     |ram__GBM2              |          14|     54831|
+|4     |ram__GBM3              |          14|     16955|
+|5     |ram__GBM4              |          14|     16609|
+|6     |ram__GBM5              |          14|     45985|
+|7     |ram__GBM6              |          14|     48488|
+|8     |ram__GBM7              |           7|     24393|
+|9     |muxpart_ram            |          14|     16368|
+|10    |muxpart__8194_ram      |          14|     16368|
+|11    |muxpart__8193_ram      |          14|     16368|
+|12    |ram__GBM11             |          14|     57000|
+|13    |ram__GBM12             |          14|     33574|
+|14    |muxpart__8198_ram      |          14|     16368|
+|15    |muxpart__8197_ram      |          14|     16368|
+|16    |ram__GBM15             |           7|     77869|
+|17    |ram__GBM16             |           7|      7596|
+|18    |ram__GBM17             |           7|     67773|
+|19    |ram__GBM18             |           7|     75220|
+|20    |ram__GBM19             |           7|      9382|
+|21    |matmul_4x4_systolic    |           1|      2384|
+|22    |conv__GC0              |           1|      2647|
+|23    |matmul_4x4_systolic__1 |           1|      2384|
+|24    |matmul_4x4_systolic__2 |           1|      2384|
+|25    |matmul_4x4_systolic__3 |           1|      2384|
+|26    |matmul_4x4_systolic__4 |           1|      3614|
+|27    |matmul_4x4_systolic__5 |           1|      3614|
+|28    |matmul_4x4_systolic__6 |           1|      3614|
+|29    |ram__GBM7__1           |           7|      7783|
+|30    |ram__GBM15__1          |           7|     14639|
+|31    |ram__GBM17__1          |           7|     33915|
+|32    |ram__GBM16__1          |           7|      5120|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:13:14 ; elapsed = 00:14:36 . Memory (MB): peak = 5375.008 ; gain = 3899.367 ; free physical = 234381 ; free virtual = 299620
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |ram__GBM0              |          14|     16838|
+|2     |ram__GBM1              |           1|      8469|
+|3     |ram__GBM2              |          14|     16472|
+|4     |ram__GBM3              |          14|     11894|
+|5     |ram__GBM4              |          14|     12114|
+|6     |ram__GBM5              |          14|     15496|
+|7     |ram__GBM6              |          14|     23452|
+|8     |ram__GBM7              |           7|     11490|
+|9     |muxpart_ram            |          14|      7632|
+|10    |muxpart__8194_ram      |          14|      7632|
+|11    |muxpart__8193_ram      |          14|      7632|
+|12    |ram__GBM11             |          14|     18000|
+|13    |ram__GBM12             |          14|     15581|
+|14    |muxpart__8198_ram      |          14|      7632|
+|15    |muxpart__8197_ram      |          14|      7632|
+|16    |ram__GBM15             |           7|     16865|
+|17    |ram__GBM16             |           1|      4943|
+|18    |ram__GBM17             |           7|     22590|
+|19    |ram__GBM18             |           7|     16838|
+|20    |ram__GBM19             |           1|      8462|
+|21    |matmul_4x4_systolic    |           1|      1560|
+|22    |conv__GC0              |           1|      1718|
+|23    |matmul_4x4_systolic__1 |           1|      1560|
+|24    |matmul_4x4_systolic__2 |           1|      1560|
+|25    |matmul_4x4_systolic__3 |           1|      1560|
+|26    |matmul_4x4_systolic__4 |           1|      2298|
+|27    |matmul_4x4_systolic__5 |           1|      2298|
+|28    |matmul_4x4_systolic__6 |           1|      2298|
+|29    |ram__GBM7__1           |           1|      3740|
+|30    |ram__GBM15__1          |           7|      4749|
+|31    |ram__GBM17__1          |           7|     10024|
+|32    |ram__GBM16__1          |           1|      2453|
+|33    |ram__GBM1__1           |           1|      8469|
+|34    |ram__GBM16__2          |           1|      4943|
+|35    |ram__GBM19__2          |           1|      8462|
+|36    |ram__GBM1__2           |           1|      8469|
+|37    |ram__GBM7__2           |           1|      3740|
+|38    |ram__GBM16__3          |           1|      2453|
+|39    |ram__GBM1__3           |           1|      8469|
+|40    |ram__GBM16__4          |           1|      4943|
+|41    |ram__GBM19__3          |           1|      8462|
+|42    |ram__GBM1__4           |           1|      8469|
+|43    |ram__GBM7__3           |           1|      3740|
+|44    |ram__GBM16__5          |           1|      2453|
+|45    |ram__GBM1__5           |           1|      8469|
+|46    |ram__GBM16__6          |           1|      4943|
+|47    |ram__GBM19__4          |           1|      8462|
+|48    |ram__GBM1__6           |           1|      8469|
+|49    |ram__GBM7__4           |           1|      3740|
+|50    |ram__GBM16__7          |           1|      2453|
+|51    |ram__GBM1__7           |           1|      8469|
+|52    |ram__GBM16__8          |           1|      4943|
+|53    |ram__GBM19__5          |           1|      8462|
+|54    |ram__GBM1__8           |           1|      8469|
+|55    |ram__GBM7__5           |           1|      3740|
+|56    |ram__GBM16__9          |           1|      2453|
+|57    |ram__GBM1__9           |           1|      8469|
+|58    |ram__GBM16__10         |           1|      4943|
+|59    |ram__GBM19__6          |           1|      8462|
+|60    |ram__GBM1__10          |           1|      8469|
+|61    |ram__GBM7__6           |           1|      3740|
+|62    |ram__GBM16__11         |           1|      2453|
+|63    |ram__GBM1__11          |           1|      8469|
+|64    |ram__GBM16__12         |           1|      4943|
+|65    |ram__GBM19__7          |           1|      8462|
+|66    |ram__GBM1__12          |           1|      8469|
+|67    |ram__GBM7__7           |           1|      3740|
+|68    |ram__GBM16__13         |           1|      2453|
+|69    |ram__GBM1__13          |           1|      8469|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:27:36 ; elapsed = 00:29:34 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 222639 ; free virtual = 289293
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:27:55 ; elapsed = 00:29:55 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 222609 ; free virtual = 289254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:29:57 ; elapsed = 00:31:59 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 222287 ; free virtual = 289062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:30:09 ; elapsed = 00:32:11 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 221800 ; free virtual = 288582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 01:29:50 ; elapsed = 01:32:35 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 214989 ; free virtual = 281968
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 01:30:01 ; elapsed = 01:32:46 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 216263 ; free virtual = 283324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+--------+
+|      |Cell    |Count   |
++------+--------+--------+
+|1     |CARRY4  |     177|
+|2     |DSP48E1 |     168|
+|3     |LUT1    |      99|
+|4     |LUT2    |   12501|
+|5     |LUT3    |  219170|
+|6     |LUT4    |   76094|
+|7     |LUT5    |  614379|
+|8     |LUT6    | 1400376|
+|9     |MUXF7   |  228480|
+|10    |MUXF8   |  114240|
+|11    |FDRE    |  238142|
+|12    |FDSE    |       1|
+|13    |LD      |    3066|
++------+--------+--------+
+
+Report Instance Areas: 
++------+--------------------------+------------------------+--------+
+|      |Instance                  |Module                  |Cells   |
++------+--------------------------+------------------------+--------+
+|1     |top                       |                        | 2906893|
+|2     |  matrix_A_0              |ram                     |   77632|
+|3     |  matrix_A_1              |ram_0                   |   77632|
+|4     |  matrix_A_2              |ram_1                   |   77632|
+|5     |  matrix_A_3              |ram_2                   |   77632|
+|6     |  matrix_A_4              |ram_3                   |   77632|
+|7     |  matrix_A_5              |ram_4                   |   77632|
+|8     |  matrix_A_6              |ram_5                   |   77632|
+|9     |  matrix_B_0              |ram_6                   |   73472|
+|10    |  matrix_B_1              |ram_7                   |   73600|
+|11    |  matrix_B_2              |ram_8                   |   73472|
+|12    |  matrix_B_3              |ram_9                   |   73536|
+|13    |  matrix_B_4              |ram_10                  |   73472|
+|14    |  matrix_B_5              |ram_11                  |   73600|
+|15    |  matrix_B_6              |ram_12                  |   73472|
+|16    |  u_matmul_4x4_systolic_0 |matmul_4x4_systolic     |  263287|
+|17    |    u_output_logic        |output_logic_176        |  153482|
+|18    |    u_systolic_data_setup |systolic_data_setup_177 |  109229|
+|19    |    u_systolic_pe_matrix  |systolic_pe_matrix_178  |     556|
+|20    |      pe00                |processing_element_179  |      69|
+|21    |        u_mac             |seq_mac_202             |      37|
+|22    |      pe01                |processing_element_180  |      53|
+|23    |        u_mac             |seq_mac_201             |      37|
+|24    |      pe02                |processing_element_181  |      53|
+|25    |        u_mac             |seq_mac_200             |      37|
+|26    |      pe10                |processing_element_182  |      53|
+|27    |        u_mac             |seq_mac_199             |      37|
+|28    |      pe11                |processing_element_183  |      53|
+|29    |        u_mac             |seq_mac_198             |      37|
+|30    |      pe12                |processing_element_184  |      53|
+|31    |        u_mac             |seq_mac_197             |      37|
+|32    |      pe20                |processing_element_185  |      37|
+|33    |        u_mac             |seq_mac_196             |      37|
+|34    |      pe21                |processing_element_186  |      37|
+|35    |        u_mac             |seq_mac_195             |      37|
+|36    |      pe22                |processing_element_187  |      37|
+|37    |        u_mac             |seq_mac_194             |      37|
+|38    |      pe30                |processing_element_188  |      37|
+|39    |        u_mac             |seq_mac_193             |      37|
+|40    |      pe31                |processing_element_189  |      37|
+|41    |        u_mac             |seq_mac_192             |      37|
+|42    |      pe32                |processing_element_190  |      37|
+|43    |        u_mac             |seq_mac_191             |      37|
+|44    |  u_matmul_4x4_systolic_1 |matmul_4x4_systolic_13  |  263290|
+|45    |    u_output_logic        |output_logic_149        |  153482|
+|46    |    u_systolic_data_setup |systolic_data_setup_150 |  109229|
+|47    |    u_systolic_pe_matrix  |systolic_pe_matrix_151  |     556|
+|48    |      pe00                |processing_element_152  |      69|
+|49    |        u_mac             |seq_mac_175             |      37|
+|50    |      pe01                |processing_element_153  |      53|
+|51    |        u_mac             |seq_mac_174             |      37|
+|52    |      pe02                |processing_element_154  |      53|
+|53    |        u_mac             |seq_mac_173             |      37|
+|54    |      pe10                |processing_element_155  |      53|
+|55    |        u_mac             |seq_mac_172             |      37|
+|56    |      pe11                |processing_element_156  |      53|
+|57    |        u_mac             |seq_mac_171             |      37|
+|58    |      pe12                |processing_element_157  |      53|
+|59    |        u_mac             |seq_mac_170             |      37|
+|60    |      pe20                |processing_element_158  |      37|
+|61    |        u_mac             |seq_mac_169             |      37|
+|62    |      pe21                |processing_element_159  |      37|
+|63    |        u_mac             |seq_mac_168             |      37|
+|64    |      pe22                |processing_element_160  |      37|
+|65    |        u_mac             |seq_mac_167             |      37|
+|66    |      pe30                |processing_element_161  |      37|
+|67    |        u_mac             |seq_mac_166             |      37|
+|68    |      pe31                |processing_element_162  |      37|
+|69    |        u_mac             |seq_mac_165             |      37|
+|70    |      pe32                |processing_element_163  |      37|
+|71    |        u_mac             |seq_mac_164             |      37|
+|72    |  u_matmul_4x4_systolic_2 |matmul_4x4_systolic_14  |  263287|
+|73    |    u_output_logic        |output_logic_122        |  153482|
+|74    |    u_systolic_data_setup |systolic_data_setup_123 |  109229|
+|75    |    u_systolic_pe_matrix  |systolic_pe_matrix_124  |     556|
+|76    |      pe00                |processing_element_125  |      69|
+|77    |        u_mac             |seq_mac_148             |      37|
+|78    |      pe01                |processing_element_126  |      53|
+|79    |        u_mac             |seq_mac_147             |      37|
+|80    |      pe02                |processing_element_127  |      53|
+|81    |        u_mac             |seq_mac_146             |      37|
+|82    |      pe10                |processing_element_128  |      53|
+|83    |        u_mac             |seq_mac_145             |      37|
+|84    |      pe11                |processing_element_129  |      53|
+|85    |        u_mac             |seq_mac_144             |      37|
+|86    |      pe12                |processing_element_130  |      53|
+|87    |        u_mac             |seq_mac_143             |      37|
+|88    |      pe20                |processing_element_131  |      37|
+|89    |        u_mac             |seq_mac_142             |      37|
+|90    |      pe21                |processing_element_132  |      37|
+|91    |        u_mac             |seq_mac_141             |      37|
+|92    |      pe22                |processing_element_133  |      37|
+|93    |        u_mac             |seq_mac_140             |      37|
+|94    |      pe30                |processing_element_134  |      37|
+|95    |        u_mac             |seq_mac_139             |      37|
+|96    |      pe31                |processing_element_135  |      37|
+|97    |        u_mac             |seq_mac_138             |      37|
+|98    |      pe32                |processing_element_136  |      37|
+|99    |        u_mac             |seq_mac_137             |      37|
+|100   |  u_matmul_4x4_systolic_3 |matmul_4x4_systolic_15  |  263289|
+|101   |    u_output_logic        |output_logic_95         |  153483|
+|102   |    u_systolic_data_setup |systolic_data_setup_96  |  109229|
+|103   |    u_systolic_pe_matrix  |systolic_pe_matrix_97   |     557|
+|104   |      pe00                |processing_element_98   |      70|
+|105   |        u_mac             |seq_mac_121             |      38|
+|106   |      pe01                |processing_element_99   |      53|
+|107   |        u_mac             |seq_mac_120             |      37|
+|108   |      pe02                |processing_element_100  |      53|
+|109   |        u_mac             |seq_mac_119             |      37|
+|110   |      pe10                |processing_element_101  |      53|
+|111   |        u_mac             |seq_mac_118             |      37|
+|112   |      pe11                |processing_element_102  |      53|
+|113   |        u_mac             |seq_mac_117             |      37|
+|114   |      pe12                |processing_element_103  |      53|
+|115   |        u_mac             |seq_mac_116             |      37|
+|116   |      pe20                |processing_element_104  |      37|
+|117   |        u_mac             |seq_mac_115             |      37|
+|118   |      pe21                |processing_element_105  |      37|
+|119   |        u_mac             |seq_mac_114             |      37|
+|120   |      pe22                |processing_element_106  |      37|
+|121   |        u_mac             |seq_mac_113             |      37|
+|122   |      pe30                |processing_element_107  |      37|
+|123   |        u_mac             |seq_mac_112             |      37|
+|124   |      pe31                |processing_element_108  |      37|
+|125   |        u_mac             |seq_mac_111             |      37|
+|126   |      pe32                |processing_element_109  |      37|
+|127   |        u_mac             |seq_mac_110             |      37|
+|128   |  u_matmul_4x4_systolic_4 |matmul_4x4_systolic_16  |  264123|
+|129   |    u_output_logic        |output_logic_68         |  153401|
+|130   |    u_systolic_data_setup |systolic_data_setup_69  |  109309|
+|131   |    u_systolic_pe_matrix  |systolic_pe_matrix_70   |    1393|
+|132   |      pe00                |processing_element_71   |     134|
+|133   |        u_mac             |seq_mac_94              |     102|
+|134   |      pe01                |processing_element_72   |     118|
+|135   |        u_mac             |seq_mac_93              |      85|
+|136   |      pe02                |processing_element_73   |     117|
+|137   |        u_mac             |seq_mac_92              |     101|
+|138   |      pe10                |processing_element_74   |     126|
+|139   |        u_mac             |seq_mac_91              |      94|
+|140   |      pe11                |processing_element_75   |     117|
+|141   |        u_mac             |seq_mac_90              |      85|
+|142   |      pe12                |processing_element_76   |     117|
+|143   |        u_mac             |seq_mac_89              |     101|
+|144   |      pe20                |processing_element_77   |     117|
+|145   |        u_mac             |seq_mac_88              |      85|
+|146   |      pe21                |processing_element_78   |     117|
+|147   |        u_mac             |seq_mac_87              |      85|
+|148   |      pe22                |processing_element_79   |     117|
+|149   |        u_mac             |seq_mac_86              |     101|
+|150   |      pe30                |processing_element_80   |     101|
+|151   |        u_mac             |seq_mac_85              |      85|
+|152   |      pe31                |processing_element_81   |     102|
+|153   |        u_mac             |seq_mac_84              |      86|
+|154   |      pe32                |processing_element_82   |     110|
+|155   |        u_mac             |seq_mac_83              |     110|
+|156   |  u_matmul_4x4_systolic_5 |matmul_4x4_systolic_17  |  264123|
+|157   |    u_output_logic        |output_logic_41         |  153401|
+|158   |    u_systolic_data_setup |systolic_data_setup_42  |  109309|
+|159   |    u_systolic_pe_matrix  |systolic_pe_matrix_43   |    1393|
+|160   |      pe00                |processing_element_44   |     134|
+|161   |        u_mac             |seq_mac_67              |     102|
+|162   |      pe01                |processing_element_45   |     118|
+|163   |        u_mac             |seq_mac_66              |      85|
+|164   |      pe02                |processing_element_46   |     117|
+|165   |        u_mac             |seq_mac_65              |     101|
+|166   |      pe10                |processing_element_47   |     126|
+|167   |        u_mac             |seq_mac_64              |      94|
+|168   |      pe11                |processing_element_48   |     117|
+|169   |        u_mac             |seq_mac_63              |      85|
+|170   |      pe12                |processing_element_49   |     117|
+|171   |        u_mac             |seq_mac_62              |     101|
+|172   |      pe20                |processing_element_50   |     117|
+|173   |        u_mac             |seq_mac_61              |      85|
+|174   |      pe21                |processing_element_51   |     117|
+|175   |        u_mac             |seq_mac_60              |      85|
+|176   |      pe22                |processing_element_52   |     117|
+|177   |        u_mac             |seq_mac_59              |     101|
+|178   |      pe30                |processing_element_53   |     101|
+|179   |        u_mac             |seq_mac_58              |      85|
+|180   |      pe31                |processing_element_54   |     102|
+|181   |        u_mac             |seq_mac_57              |      86|
+|182   |      pe32                |processing_element_55   |     110|
+|183   |        u_mac             |seq_mac_56              |     110|
+|184   |  u_matmul_4x4_systolic_6 |matmul_4x4_systolic_18  |  264124|
+|185   |    u_output_logic        |output_logic            |  153401|
+|186   |    u_systolic_data_setup |systolic_data_setup     |  109309|
+|187   |    u_systolic_pe_matrix  |systolic_pe_matrix      |    1393|
+|188   |      pe00                |processing_element      |     134|
+|189   |        u_mac             |seq_mac_40              |     102|
+|190   |      pe01                |processing_element_19   |     118|
+|191   |        u_mac             |seq_mac_39              |      85|
+|192   |      pe02                |processing_element_20   |     117|
+|193   |        u_mac             |seq_mac_38              |     101|
+|194   |      pe10                |processing_element_21   |     126|
+|195   |        u_mac             |seq_mac_37              |      94|
+|196   |      pe11                |processing_element_22   |     117|
+|197   |        u_mac             |seq_mac_36              |      85|
+|198   |      pe12                |processing_element_23   |     117|
+|199   |        u_mac             |seq_mac_35              |     101|
+|200   |      pe20                |processing_element_24   |     117|
+|201   |        u_mac             |seq_mac_34              |      85|
+|202   |      pe21                |processing_element_25   |     117|
+|203   |        u_mac             |seq_mac_33              |      85|
+|204   |      pe22                |processing_element_26   |     117|
+|205   |        u_mac             |seq_mac_32              |     101|
+|206   |      pe30                |processing_element_27   |     101|
+|207   |        u_mac             |seq_mac_31              |      85|
+|208   |      pe31                |processing_element_28   |     102|
+|209   |        u_mac             |seq_mac_30              |      86|
+|210   |      pe32                |processing_element_29   |     110|
+|211   |        u_mac             |seq_mac                 |     110|
++------+--------------------------+------------------------+--------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 01:30:01 ; elapsed = 01:32:47 . Memory (MB): peak = 6010.699 ; gain = 4535.059 ; free physical = 216147 ; free virtual = 283209
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 240 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 01:30:02 ; elapsed = 01:32:48 . Memory (MB): peak = 6014.605 ; gain = 4538.965 ; free physical = 219982 ; free virtual = 287046
+Synthesis Optimization Complete : Time (s): cpu = 01:30:02 ; elapsed = 01:32:48 . Memory (MB): peak = 6014.605 ; gain = 4538.965 ; free physical = 220090 ; free virtual = 287031
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 346131 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.57 . Memory (MB): peak = 7467.637 ; gain = 0.000 ; free physical = 217962 ; free virtual = 285195
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3066 instances were transformed.
+  LD => LDCE: 3066 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+216 Infos, 154 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 01:35:51 ; elapsed = 01:38:31 . Memory (MB): peak = 7467.637 ; gain = 5992.094 ; free physical = 219211 ; free virtual = 286445
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:06:55 ; elapsed = 00:01:53 . Memory (MB): peak = 10029.027 ; gain = 2561.391 ; free physical = 217992 ; free virtual = 285225
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk_mem]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name.
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.55 . Memory (MB): peak = 10029.027 ; gain = 0.000 ; free physical = 218012 ; free virtual = 285247
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.57 . Memory (MB): peak = 10651.625 ; gain = 0.000 ; free physical = 216237 ; free virtual = 284018
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/conv_layer/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:09:08 ; elapsed = 00:10:44 . Memory (MB): peak = 10730.922 ; gain = 701.895 ; free physical = 217622 ; free virtual = 285231
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[0]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[1]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[2]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[3]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[4]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[5]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[6]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[7]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk_mem" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:08:30 ; elapsed = 00:02:37 . Memory (MB): peak = 11954.355 ; gain = 1223.434 ; free physical = 216001 ; free virtual = 283644
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/conv_layer/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:24:09 ; elapsed = 00:13:39 . Memory (MB): peak = 13301.586 ; gain = 1347.230 ; free physical = 221608 ; free virtual = 288962
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 13301.590 ; gain = 0.004 ; free physical = 221169 ; free virtual = 288528
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: f1b72098
+
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 221199 ; free virtual = 288561
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 72 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: d3f95095
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:02:03 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 224773 ; free virtual = 292108
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 3 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: d3f95095
+
+Time (s): cpu = 00:04:19 ; elapsed = 00:02:44 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 225066 ; free virtual = 292407
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 98cbf7b5
+
+Time (s): cpu = 00:05:06 ; elapsed = 00:03:32 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 224387 ; free virtual = 291725
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 98cbf7b5
+
+Time (s): cpu = 00:05:26 ; elapsed = 00:03:52 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 223783 ; free virtual = 291121
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:06:35 ; elapsed = 00:05:04 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 223506 ; free virtual = 290835
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:06:50 ; elapsed = 00:05:19 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 223286 ; free virtual = 290615
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               3  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 223166 ; free virtual = 290495
+Ending Logic Optimization Task | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:07:08 ; elapsed = 00:05:36 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 224297 ; free virtual = 291624
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 225743 ; free virtual = 293070
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 226046 ; free virtual = 293375
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.55 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 226001 ; free virtual = 293331
+Ending Netlist Obfuscation Task | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.55 . Memory (MB): peak = 13301.590 ; gain = 0.000 ; free physical = 225891 ; free virtual = 293239
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:08:13 ; elapsed = 00:06:34 . Memory (MB): peak = 13301.590 ; gain = 0.004 ; free physical = 225914 ; free virtual = 293263
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 9e2bf8cb
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module conv ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[0]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[1]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[2]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[3]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[4]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[5]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[6]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "bram_select[7]" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk_mem" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.045 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:09:52 ; elapsed = 00:02:04 . Memory (MB): peak = 14107.934 ; gain = 806.344 ; free physical = 219852 ; free virtual = 287212
+Running Vector-less Activity Propagation...
+Pre-processing: Time (s): cpu = 00:32:40 ; elapsed = 00:08:47 . Memory (MB): peak = 16659.891 ; gain = 3358.301 ; free physical = 221309 ; free virtual = 288511
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+IDT: Time (s): cpu = 00:11:12 ; elapsed = 00:05:43 . Memory (MB): peak = 18426.047 ; gain = 1766.156 ; free physical = 217046 ; free virtual = 284355
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 0 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:15:56 ; elapsed = 00:14:04 . Memory (MB): peak = 19561.824 ; gain = 1135.777 ; free physical = 209822 ; free virtual = 278062
+Power optimization passes: Time (s): cpu = 00:59:49 ; elapsed = 00:28:35 . Memory (MB): peak = 19561.824 ; gain = 6260.234 ; free physical = 209813 ; free virtual = 278053
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 217069 ; free virtual = 285387
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design conv ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 0 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+
+Number of Slice Registers augmented: 0 newly gated: 0 Total: 238143
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 0
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/0 RAMS dropped: 0/0 Clusters dropped: 0/0 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.95 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 217097 ; free virtual = 285404
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 9e2bf8cb
+Power optimization: Time (s): cpu = 01:00:42 ; elapsed = 00:29:36 . Memory (MB): peak = 19585.824 ; gain = 6284.234 ; free physical = 218685 ; free virtual = 286997
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 271029864 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:01:56 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 223447 ; free virtual = 291753
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 9e2bf8cb
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:02:15 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 223065 ; free virtual = 291378
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: f6bb9783
+
+Time (s): cpu = 00:27:21 ; elapsed = 00:26:27 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 232252 ; free virtual = 299636
+INFO: [Opt 31-389] Phase Remap created 253344 cells and removed 485744 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 6616825b
+
+Time (s): cpu = 00:27:43 ; elapsed = 00:26:50 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 233316 ; free virtual = 300700
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |          253344  |          485744  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: b004966b
+
+Time (s): cpu = 00:28:19 ; elapsed = 00:27:19 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 234858 ; free virtual = 302263
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.55 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 234955 ; free virtual = 302360
+Ending Netlist Obfuscation Task | Checksum: b004966b
+
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.55 . Memory (MB): peak = 19585.824 ; gain = 0.000 ; free physical = 234823 ; free virtual = 302209
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 01:31:23 ; elapsed = 00:58:03 . Memory (MB): peak = 19585.824 ; gain = 6284.234 ; free physical = 234823 ; free virtual = 302209
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:00.80 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 233774 ; free virtual = 301169
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 95406b1f
+
+Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:01 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 233764 ; free virtual = 301159
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.50 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 233035 ; free virtual = 300422
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 36ef8814
+
+Time (s): cpu = 00:06:45 ; elapsed = 00:03:48 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 232367 ; free virtual = 299744
+Phase 1 Placer Initialization | Checksum: 36ef8814
+
+Time (s): cpu = 00:06:45 ; elapsed = 00:03:48 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 232339 ; free virtual = 299716
+Ending Placer Task | Checksum: 36ef8814
+
+Time (s): cpu = 00:06:45 ; elapsed = 00:03:48 . Memory (MB): peak = 19617.840 ; gain = 0.000 ; free physical = 232314 ; free virtual = 299691
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 14 Errors encountered.
+place_design failed
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 04:00:38 2022...

@@ -1,0 +1,431 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 22:23:24 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/LU32PEEng_submodules/LU/post_route_power.rpt
+| Design           : LU
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 2072.583     |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 1924.709     |
+| Device Static (mW)       | 147.874      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 76.1         |
+| Junction Temperature (C) | 48.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+------------+----------+-----------+-----------------+
+| On-Chip                  | Power (mW) | Used     | Available | Utilization (%) |
++--------------------------+------------+----------+-----------+-----------------+
+| Clocks                   |    61.742  |        3 |       --- |             --- |
+| Slice Logic              |   731.759  |    69795 |       --- |             --- |
+|   LUT as Logic           |   715.794  |    46438 |     53200 |           87.29 |
+|   CARRY4                 |     7.756  |     1476 |     13300 |           11.10 |
+|   Register               |     7.221  |    13044 |    106400 |           12.26 |
+|   F7/F8 Muxes            |     0.570  |      481 |     53200 |            0.90 |
+|   LUT as Shift Register  |     0.391  |       66 |     17400 |            0.38 |
+|   LUT as Distributed RAM |     0.028  |       24 |     17400 |            0.14 |
+|   Others                 |     0.000  |      501 |       --- |             --- |
+| Signals                  |   846.982  |    64127 |       --- |             --- |
+| Block RAM                |   221.235  |       58 |       140 |           41.43 |
+| DSPs                     |    62.991  |       64 |       220 |           29.09 |
+| Static Power             |   147.874  |          |           |                 |
+| Total                    |  2072.583  |          |           |                 |
++--------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     1.938 |       1.919 |      0.019 |
+| Vccaux    |       1.800 |     0.017 |       0.000 |      0.017 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.009 |       0.006 |      0.003 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.035 |       0.000 |      0.035 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------+------------+
+| Name                     | Power (mW) |
++--------------------------+------------+
+| LU                       |  1924.708  |
+|   PE0                    |    34.950  |
+|     ADD                  |    18.553  |
+|     MUL                  |    12.578  |
+|       exponenter         |     0.778  |
+|       multiplier         |     6.162  |
+|       rounder            |     0.155  |
+|       shifter            |     4.688  |
+|       specialer          |     0.014  |
+|   PE1                    |    33.374  |
+|     ADD                  |    18.660  |
+|     MUL                  |    10.889  |
+|       exponenter         |     0.677  |
+|       multiplier         |     5.274  |
+|       rounder            |     0.137  |
+|       shifter            |     4.491  |
+|       specialer          |     0.015  |
+|   PE10                   |    33.027  |
+|     ADD                  |    18.571  |
+|     MUL                  |    10.886  |
+|       exponenter         |     0.683  |
+|       multiplier         |     5.304  |
+|       rounder            |     0.119  |
+|       shifter            |     4.464  |
+|       specialer          |     0.030  |
+|   PE11                   |    33.250  |
+|     ADD                  |    18.993  |
+|     MUL                  |    10.677  |
+|       exponenter         |     0.727  |
+|       multiplier         |     5.071  |
+|       rounder            |     0.132  |
+|       shifter            |     4.442  |
+|       specialer          |     0.024  |
+|   PE12                   |    32.718  |
+|     ADD                  |    18.295  |
+|     MUL                  |    11.021  |
+|       exponenter         |     0.775  |
+|       multiplier         |     5.048  |
+|       rounder            |     0.139  |
+|       shifter            |     4.660  |
+|       specialer          |     0.027  |
+|   PE13                   |    34.023  |
+|     ADD                  |    19.072  |
+|     MUL                  |    11.470  |
+|       exponenter         |     0.714  |
+|       multiplier         |     5.294  |
+|       rounder            |     0.138  |
+|       shifter            |     4.683  |
+|       specialer          |     0.021  |
+|   PE14                   |    33.913  |
+|     ADD                  |    19.247  |
+|     MUL                  |    11.072  |
+|       exponenter         |     0.730  |
+|       multiplier         |     5.280  |
+|       rounder            |     0.114  |
+|       shifter            |     4.488  |
+|       specialer          |     0.020  |
+|   PE15                   |    33.212  |
+|     ADD                  |    18.690  |
+|     MUL                  |    10.674  |
+|       exponenter         |     0.729  |
+|       multiplier         |     5.193  |
+|       rounder            |     0.105  |
+|       shifter            |     4.304  |
+|       specialer          |     0.034  |
+|   PE16                   |    33.567  |
+|     ADD                  |    18.465  |
+|     MUL                  |    11.219  |
+|       exponenter         |     0.704  |
+|       multiplier         |     5.460  |
+|       rounder            |     0.131  |
+|       shifter            |     4.572  |
+|       specialer          |     0.025  |
+|   PE17                   |    32.777  |
+|     ADD                  |    18.133  |
+|     MUL                  |    10.915  |
+|       exponenter         |     0.680  |
+|       multiplier         |     5.235  |
+|       rounder            |     0.116  |
+|       shifter            |     4.516  |
+|       specialer          |     0.022  |
+|   PE18                   |    34.339  |
+|     ADD                  |    18.709  |
+|     MUL                  |    11.658  |
+|       exponenter         |     0.749  |
+|       multiplier         |     5.641  |
+|       rounder            |     0.130  |
+|       shifter            |     4.734  |
+|       specialer          |     0.020  |
+|   PE19                   |    32.907  |
+|     ADD                  |    18.706  |
+|     MUL                  |    10.747  |
+|       exponenter         |     0.784  |
+|       multiplier         |     5.075  |
+|       rounder            |     0.107  |
+|       shifter            |     4.455  |
+|       specialer          |     0.013  |
+|   PE2                    |    33.498  |
+|     ADD                  |    18.337  |
+|     MUL                  |    11.340  |
+|       exponenter         |     0.710  |
+|       multiplier         |     5.560  |
+|       rounder            |     0.146  |
+|       shifter            |     4.595  |
+|       specialer          |     0.026  |
+|   PE20                   |    33.540  |
+|     ADD                  |    18.598  |
+|     MUL                  |    11.385  |
+|       exponenter         |     0.699  |
+|       multiplier         |     5.394  |
+|       rounder            |     0.124  |
+|       shifter            |     4.350  |
+|       specialer          |     0.017  |
+|   PE21                   |    33.302  |
+|     ADD                  |    18.591  |
+|     MUL                  |    11.012  |
+|       exponenter         |     0.670  |
+|       multiplier         |     5.501  |
+|       rounder            |     0.108  |
+|       shifter            |     4.410  |
+|       specialer          |     0.021  |
+|   PE22                   |    32.862  |
+|     ADD                  |    18.037  |
+|     MUL                  |    10.911  |
+|       exponenter         |     0.715  |
+|       multiplier         |     5.424  |
+|       rounder            |     0.115  |
+|       shifter            |     4.318  |
+|       specialer          |     0.041  |
+|   PE23                   |    32.512  |
+|     ADD                  |    18.320  |
+|     MUL                  |    10.627  |
+|       exponenter         |     0.721  |
+|       multiplier         |     5.012  |
+|       rounder            |     0.106  |
+|       shifter            |     4.492  |
+|       specialer          |     0.024  |
+|   PE24                   |    33.619  |
+|     ADD                  |    18.870  |
+|     MUL                  |    11.122  |
+|       exponenter         |     0.688  |
+|       multiplier         |     5.226  |
+|       rounder            |     0.114  |
+|       shifter            |     4.768  |
+|       specialer          |     0.014  |
+|   PE25                   |    33.853  |
+|     ADD                  |    18.548  |
+|     MUL                  |    11.730  |
+|       exponenter         |     0.802  |
+|       multiplier         |     5.708  |
+|       rounder            |     0.131  |
+|       shifter            |     4.619  |
+|       specialer          |     0.042  |
+|   PE26                   |    33.725  |
+|     ADD                  |    18.560  |
+|     MUL                  |    11.742  |
+|       exponenter         |     0.781  |
+|       multiplier         |     5.512  |
+|       rounder            |     0.110  |
+|       shifter            |     4.674  |
+|       specialer          |     0.030  |
+|   PE27                   |    33.797  |
+|     ADD                  |    18.748  |
+|     MUL                  |    10.955  |
+|       exponenter         |     0.738  |
+|       multiplier         |     5.065  |
+|       rounder            |     0.147  |
+|       shifter            |     4.445  |
+|       specialer          |     0.017  |
+|   PE28                   |    33.591  |
+|     ADD                  |    18.581  |
+|     MUL                  |    11.385  |
+|       exponenter         |     0.765  |
+|       multiplier         |     5.306  |
+|       rounder            |     0.127  |
+|       shifter            |     4.610  |
+|       specialer          |     0.022  |
+|   PE29                   |    33.483  |
+|     ADD                  |    18.390  |
+|     MUL                  |    11.355  |
+|       exponenter         |     0.732  |
+|       multiplier         |     5.564  |
+|       rounder            |     0.132  |
+|       shifter            |     4.457  |
+|       specialer          |     0.014  |
+|   PE3                    |    32.829  |
+|     ADD                  |    18.657  |
+|     MUL                  |    10.577  |
+|       exponenter         |     0.679  |
+|       multiplier         |     5.221  |
+|       rounder            |     0.103  |
+|       shifter            |     4.257  |
+|       specialer          |     0.025  |
+|   PE30                   |    35.081  |
+|     ADD                  |    18.758  |
+|     MUL                  |    12.331  |
+|       exponenter         |     0.848  |
+|       multiplier         |     5.908  |
+|       rounder            |     0.162  |
+|       shifter            |     5.006  |
+|       specialer          |     0.020  |
+|   PE31                   |    34.473  |
+|     ADD                  |    18.916  |
+|     MUL                  |    11.938  |
+|       exponenter         |     0.873  |
+|       multiplier         |     6.056  |
+|       rounder            |     0.131  |
+|       shifter            |     4.531  |
+|       specialer          |     0.020  |
+|   PE4                    |    33.517  |
+|     ADD                  |    18.891  |
+|     MUL                  |    11.206  |
+|       exponenter         |     0.823  |
+|       multiplier         |     5.282  |
+|       rounder            |     0.129  |
+|       shifter            |     4.571  |
+|       specialer          |     0.015  |
+|   PE5                    |    33.149  |
+|     ADD                  |    18.449  |
+|     MUL                  |    11.231  |
+|       exponenter         |     0.685  |
+|       multiplier         |     5.509  |
+|       rounder            |     0.130  |
+|       shifter            |     4.606  |
+|       specialer          |     0.024  |
+|   PE6                    |    32.502  |
+|     ADD                  |    18.577  |
+|     MUL                  |    10.639  |
+|       exponenter         |     0.718  |
+|       multiplier         |     5.124  |
+|       rounder            |     0.128  |
+|       shifter            |     4.382  |
+|       specialer          |     0.017  |
+|   PE7                    |    33.659  |
+|     ADD                  |    19.053  |
+|     MUL                  |    10.795  |
+|       exponenter         |     0.700  |
+|       multiplier         |     4.943  |
+|       rounder            |     0.138  |
+|       shifter            |     4.407  |
+|       specialer          |     0.038  |
+|   PE8                    |    34.167  |
+|     ADD                  |    18.853  |
+|     MUL                  |    11.397  |
+|       exponenter         |     0.673  |
+|       multiplier         |     5.376  |
+|       rounder            |     0.111  |
+|       shifter            |     4.555  |
+|       specialer          |     0.044  |
+|   PE9                    |    33.072  |
+|     ADD                  |    18.451  |
+|     MUL                  |    11.219  |
+|       exponenter         |     0.698  |
+|       multiplier         |     5.600  |
+|       rounder            |     0.129  |
+|       shifter            |     4.480  |
+|       specialer          |     0.015  |
+|   conBlock               |     9.992  |
+|   currentBlock0          |    96.924  |
+|     inst1                |    96.924  |
+|   currentBlock1          |    73.275  |
+|     inst1                |    73.275  |
+|   leftBlock0             |   442.069  |
+|     inst1                |   442.069  |
+|   leftBlock1             |    68.926  |
+|     inst1                |    68.926  |
+|   rec                    |    82.891  |
+|   topBlock               |     0.430  |
+|     inst2                |     0.430  |
+|       ram_reg_0_15_0_5   |     0.048  |
+|       ram_reg_0_15_12_17 |     0.041  |
+|       ram_reg_0_15_18_23 |     0.041  |
+|       ram_reg_0_15_24_29 |     0.041  |
+|       ram_reg_0_15_30_31 |     0.039  |
+|       ram_reg_0_15_6_11  |     0.041  |
++--------------------------+------------+
+
+

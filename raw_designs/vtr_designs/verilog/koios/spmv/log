@@ -1,0 +1,2260 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v
+# synth_design -part xc7z020clg484-3 -top spmv -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top spmv -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 53644 
+WARNING: [Synth 8-2507] parameter declaration becomes local in generic_fifo_sc_a with formal parameter declaration list [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3523]
+WARNING: [Synth 8-2507] parameter declaration becomes local in dpram with formal parameter declaration list [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3624]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1511.488 ; gain = 79.395 ; free physical = 241673 ; free virtual = 308611
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'spmv' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:55]
+INFO: [Synth 8-6157] synthesizing module 'spram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+	Parameter INIT bound to: 64'b0110100101101110011010010111010000101110011101000111100001110100 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter NUM_WORDS bound to: 128 - type: integer 
+	Parameter DWIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spram' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+INFO: [Synth 8-6157] synthesizing module 'fetcher' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:256]
+	Parameter MAT_VAL_FILE bound to: /home/aatman/Desktop/SpMV/src/coe/mat_val.txt - type: string 
+	Parameter COL_ID_FILE bound to: /home/aatman/Desktop/SpMV/src/coe/col_id.txt - type: string 
+	Parameter ROW_ID_FILE bound to: /home/aatman/Desktop/SpMV/src/coe/row_id.txt - type: string 
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+	Parameter ROW_ID_ROM_DWIDTH bound to: 8 - type: integer 
+	Parameter ROW_ID_ROM_NUM_ADDR bound to: 8864 - type: integer 
+	Parameter ROW_ID_AWIDTH bound to: 14 - type: integer 
+	Parameter MAT_VAL_ROM_DWIDTH bound to: 8 - type: integer 
+	Parameter MAT_VAL_ROM_NUM_ADDR bound to: 8864 - type: integer 
+	Parameter MAT_VAL_AWIDTH bound to: 14 - type: integer 
+	Parameter COL_ID_ROM_DWIDTH bound to: 8 - type: integer 
+	Parameter COL_ID_ROM_NUM_ADDR bound to: 8864 - type: integer 
+	Parameter COL_ID_AWIDTH bound to: 14 - type: integer 
+	Parameter NUM_CHANNEL_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'spram__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+	Parameter INIT bound to: 360'b001011110110100001101111011011010110010100101111011000010110000101110100011011010110000101101110001011110100010001100101011100110110101101110100011011110111000000101111010100110111000001001101010101100010111101110011011100100110001100101111011000110110111101100101001011110110110101100001011101000101111101110110011000010110110000101110011101000111100001110100 
+	Parameter AWIDTH bound to: 14 - type: integer 
+	Parameter NUM_WORDS bound to: 8864 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spram__parameterized0' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+INFO: [Synth 8-6157] synthesizing module 'spram__parameterized1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+	Parameter INIT bound to: 352'b0010111101101000011011110110110101100101001011110110000101100001011101000110110101100001011011100010111101000100011001010111001101101011011101000110111101110000001011110101001101110000010011010101011000101111011100110111001001100011001011110110001101101111011001010010111101100011011011110110110001011111011010010110010000101110011101000111100001110100 
+	Parameter AWIDTH bound to: 14 - type: integer 
+	Parameter NUM_WORDS bound to: 8864 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spram__parameterized1' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+INFO: [Synth 8-6157] synthesizing module 'spram__parameterized2' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+	Parameter INIT bound to: 352'b0010111101101000011011110110110101100101001011110110000101100001011101000110110101100001011011100010111101000100011001010111001101101011011101000110111101110000001011110101001101110000010011010101011000101111011100110111001001100011001011110110001101101111011001010010111101110010011011110111011101011111011010010110010000101110011101000111100001110100 
+	Parameter AWIDTH bound to: 14 - type: integer 
+	Parameter NUM_WORDS bound to: 8864 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spram__parameterized2' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+INFO: [Synth 8-6157] synthesizing module 'generic_fifo_sc_a' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3517]
+	Parameter dw bound to: 8 - type: integer 
+	Parameter aw bound to: 3 - type: integer 
+	Parameter max_size bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dpram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3608]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter NUM_WORDS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3608]
+WARNING: [Synth 8-3848] Net din_nc in module/entity generic_fifo_sc_a does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3537]
+INFO: [Synth 8-6155] done synthesizing module 'generic_fifo_sc_a' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3517]
+INFO: [Synth 8-6155] done synthesizing module 'fetcher' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:256]
+INFO: [Synth 8-6157] synthesizing module 'bvb' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:1872]
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'spram__parameterized3' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+	Parameter INIT bound to: 360'b001011110110100001101111011011010110010100101111011000010110000101110100011011010110000101101110001011110100010001100101011100110110101101110100011011110111000000101111010100110111000001001101010101100010111101110011011100100110001100101111011000110110111101100101001011110111011001100101011000110101111101110110011000010110110000101110011101000111100001110100 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter NUM_WORDS bound to: 128 - type: integer 
+	Parameter DWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spram__parameterized3' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3677]
+WARNING: [Synth 8-5788] Register id_rd_en_local_reg_reg in module bvb is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:2419]
+WARNING: [Synth 8-5788] Register val_wr_en_reg in module bvb is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:1934]
+WARNING: [Synth 8-5788] Register rd_addr_reg in module bvb is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:1921]
+WARNING: [Synth 8-3848] Net din_nc in module/entity bvb does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:1898]
+INFO: [Synth 8-6155] done synthesizing module 'bvb' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:1872]
+INFO: [Synth 8-6157] synthesizing module 'Big_Channel' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:2426]
+INFO: [Synth 8-6157] synthesizing module 'Channel_Accumulator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3125]
+INFO: [Synth 8-6157] synthesizing module 'Channel' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3191]
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_fifo_sc_a__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3517]
+	Parameter dw bound to: 16 - type: integer 
+	Parameter aw bound to: 3 - type: integer 
+	Parameter max_size bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3608]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter NUM_WORDS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized0' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3608]
+WARNING: [Synth 8-3848] Net din_nc in module/entity generic_fifo_sc_a__parameterized0 does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3537]
+INFO: [Synth 8-6155] done synthesizing module 'generic_fifo_sc_a__parameterized0' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3517]
+INFO: [Synth 8-4471] merging register 'mat_val_rd_en_reg_reg' into 'vec_val_rd_en_reg_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3245]
+WARNING: [Synth 8-6014] Unused sequential element mat_val_rd_en_reg_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3245]
+INFO: [Synth 8-6155] done synthesizing module 'Channel' (6#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3191]
+INFO: [Synth 8-6157] synthesizing module 'Accumulator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3257]
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-5788] Register last_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3341]
+WARNING: [Synth 8-5788] Register row_id_rd_en_reg_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3342]
+WARNING: [Synth 8-5788] Register mult_rd_en_reg_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3343]
+WARNING: [Synth 8-5788] Register wr_addr_delay_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3322]
+WARNING: [Synth 8-5788] Register wr_data_delay_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3307]
+WARNING: [Synth 8-5788] Register wr_addr_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3344]
+INFO: [Synth 8-6155] done synthesizing module 'Accumulator' (7#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3257]
+INFO: [Synth 8-6155] done synthesizing module 'Channel_Accumulator' (8#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3125]
+INFO: [Synth 8-6155] done synthesizing module 'Big_Channel' (9#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:2426]
+WARNING: [Synth 8-5788] Register done_all_reg in module spmv is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:154]
+WARNING: [Synth 8-5788] Register wr_en_reg in module spmv is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:158]
+WARNING: [Synth 8-5788] Register counter_store_reg in module spmv is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:164]
+WARNING: [Synth 8-5788] Register done_reg_reg in module spmv is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'spmv' (10#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:55]
+WARNING: [Synth 8-3331] design spram__parameterized3 has unconnected port address[7]
+WARNING: [Synth 8-3331] design spram has unconnected port address[7]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1545.629 ; gain = 113.535 ; free physical = 241586 ; free virtual = 308526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1545.629 ; gain = 113.535 ; free physical = 241575 ; free virtual = 308514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1553.625 ; gain = 121.531 ; free physical = 241575 ; free virtual = 308514
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-4471] merging register 'mult_rd_en_reg_reg' into 'row_id_rd_en_reg_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv.v:3343]
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1574.648 ; gain = 142.555 ; free physical = 241480 ; free virtual = 308421
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 448   
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 161   
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 389   
+	                5 Bit    Registers := 8     
+	                3 Bit    Registers := 448   
+	                1 Bit    Registers := 455   
++---RAMs : 
+	              69K Bit         RAMs := 3     
+	               2K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
+	              128 Bit         RAMs := 64    
+	               64 Bit         RAMs := 160   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 448   
+	   2 Input      1 Bit        Muxes := 963   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module spmv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
+Module spram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module spram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              69K Bit         RAMs := 1     
+Module spram__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              69K Bit         RAMs := 1     
+Module spram__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              69K Bit         RAMs := 1     
+Module dpram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	               64 Bit         RAMs := 1     
+Module generic_fifo_sc_a 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module fetcher 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               15 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module spram__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module bvb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
+Module dpram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	              128 Bit         RAMs := 1     
+Module generic_fifo_sc_a__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Channel 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module Accumulator 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+warning: Removed RAM mat_val_rom/mem_reg due to inactive write enable
+WARNING: [Synth 8-6014] Unused sequential element mat_val_rom/mem_reg was removed. 
+warning: Removed RAM col_id_rom/mem_reg due to inactive write enable
+WARNING: [Synth 8-6014] Unused sequential element col_id_rom/mem_reg was removed. 
+warning: Removed RAM row_id_rom/mem_reg due to inactive write enable
+WARNING: [Synth 8-6014] Unused sequential element row_id_rom/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_0/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_0/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_0/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_1/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_1/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_1/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_2/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_2/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_2/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_3/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_3/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_3/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_4/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_4/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_4/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_5/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_5/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_5/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_6/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_6/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_6/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_7/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_7/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_7/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_8/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_8/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_8/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_9/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_9/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_9/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_10/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_10/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_10/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_11/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_11/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_11/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_12/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_12/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_12/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_13/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_13/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_13/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_14/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_14/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_14/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_15/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_15/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_15/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_16/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_16/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_16/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_17/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_17/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_17/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_18/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_18/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_18/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_19/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_19/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_19/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_20/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_20/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_20/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_21/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_21/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_21/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_22/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_22/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_22/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_23/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_23/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_23/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_24/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_24/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_24/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_25/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_25/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_25/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_26/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_26/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_26/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_27/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_27/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_27/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_28/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_28/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_28/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_29/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_29/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_29/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_30/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_30/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_30/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_mat_val_31/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_col_id_31/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element fifo_row_id_31/u0/ram_reg was removed. 
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+warning: Removed RAM vector_ram/mem_reg due to inactive write enable
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[4]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[5]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[2]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[3]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[0]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[1]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_3/row_id_rom/dout_reg[6]' (FD) to 'fetcher/i_3/row_id_rom/dout_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fetcher/i_3/\row_id_rom/dout_reg[7] )
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[4]' (FD) to 'bvb/i_1/vector_ram/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[5]' (FD) to 'bvb/i_1/vector_ram/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[2]' (FD) to 'bvb/i_1/vector_ram/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[3]' (FD) to 'bvb/i_1/vector_ram/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[0]' (FD) to 'bvb/i_1/vector_ram/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[1]' (FD) to 'bvb/i_1/vector_ram/dout_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_1/vector_ram/dout_reg[6]' (FD) to 'bvb/i_1/vector_ram/dout_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (bvb/i_1/\vector_ram/dout_reg[7] )
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[4]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[5]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[2]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[3]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[0]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[1]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/i_0/mat_val_rom/dout_reg[6]' (FD) to 'fetcher/i_0/mat_val_rom/dout_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fetcher/i_0/\mat_val_rom/dout_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fetcher/\counter_reg[14] )
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_31i_66/fifo_row_id_31/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_31i_66/fifo_row_id_31/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_31i_66/fifo_row_id_31/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_31i_66/fifo_row_id_31/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_33/fifo_bvb_31/u0/out_a_reg[0]' (FD) to 'bvb/i_33/fifo_bvb_31/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_33/fifo_bvb_31/u0/out_a_reg[1]' (FD) to 'bvb/i_33/fifo_bvb_31/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_31i_65/fifo_mat_val_31/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_31i_65/fifo_mat_val_31/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_31i_65/fifo_mat_val_31/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_31i_65/fifo_mat_val_31/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_15i_34/fifo_row_id_15/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_15i_34/fifo_row_id_15/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_15i_34/fifo_row_id_15/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_15i_34/fifo_row_id_15/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_17/fifo_bvb_15/u0/out_a_reg[0]' (FD) to 'bvb/i_17/fifo_bvb_15/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_17/fifo_bvb_15/u0/out_a_reg[1]' (FD) to 'bvb/i_17/fifo_bvb_15/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_15i_33/fifo_mat_val_15/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_15i_33/fifo_mat_val_15/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_15i_33/fifo_mat_val_15/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_15i_33/fifo_mat_val_15/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_23i_50/fifo_row_id_23/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_23i_50/fifo_row_id_23/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_23i_50/fifo_row_id_23/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_23i_50/fifo_row_id_23/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_25/fifo_bvb_23/u0/out_a_reg[0]' (FD) to 'bvb/i_25/fifo_bvb_23/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_25/fifo_bvb_23/u0/out_a_reg[1]' (FD) to 'bvb/i_25/fifo_bvb_23/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_23i_49/fifo_mat_val_23/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_23i_49/fifo_mat_val_23/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_23i_49/fifo_mat_val_23/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_23i_49/fifo_mat_val_23/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_7i_18/fifo_row_id_7/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_7i_18/fifo_row_id_7/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_7i_18/fifo_row_id_7/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_7i_18/fifo_row_id_7/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_9/fifo_bvb_7/u0/out_a_reg[0]' (FD) to 'bvb/i_9/fifo_bvb_7/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_9/fifo_bvb_7/u0/out_a_reg[1]' (FD) to 'bvb/i_9/fifo_bvb_7/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_7i_17/fifo_mat_val_7/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_7i_17/fifo_mat_val_7/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_7i_17/fifo_mat_val_7/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_7i_17/fifo_mat_val_7/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_27i_58/fifo_row_id_27/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_27i_58/fifo_row_id_27/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_27i_58/fifo_row_id_27/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_27i_58/fifo_row_id_27/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_29/fifo_bvb_27/u0/out_a_reg[0]' (FD) to 'bvb/i_29/fifo_bvb_27/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_29/fifo_bvb_27/u0/out_a_reg[1]' (FD) to 'bvb/i_29/fifo_bvb_27/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_27i_57/fifo_mat_val_27/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_27i_57/fifo_mat_val_27/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_27i_57/fifo_mat_val_27/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_27i_57/fifo_mat_val_27/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_11i_26/fifo_row_id_11/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_11i_26/fifo_row_id_11/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_11i_26/fifo_row_id_11/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_11i_26/fifo_row_id_11/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_13/fifo_bvb_11/u0/out_a_reg[0]' (FD) to 'bvb/i_13/fifo_bvb_11/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_13/fifo_bvb_11/u0/out_a_reg[1]' (FD) to 'bvb/i_13/fifo_bvb_11/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_11i_25/fifo_mat_val_11/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_11i_25/fifo_mat_val_11/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_11i_25/fifo_mat_val_11/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_11i_25/fifo_mat_val_11/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_19i_42/fifo_row_id_19/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_19i_42/fifo_row_id_19/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_19i_42/fifo_row_id_19/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_19i_42/fifo_row_id_19/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_21/fifo_bvb_19/u0/out_a_reg[0]' (FD) to 'bvb/i_21/fifo_bvb_19/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_21/fifo_bvb_19/u0/out_a_reg[1]' (FD) to 'bvb/i_21/fifo_bvb_19/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_19i_41/fifo_mat_val_19/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_19i_41/fifo_mat_val_19/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_19i_41/fifo_mat_val_19/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_19i_41/fifo_mat_val_19/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_3i_10/fifo_row_id_3/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_3i_10/fifo_row_id_3/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_3i_10/fifo_row_id_3/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_3i_10/fifo_row_id_3/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_5/fifo_bvb_3/u0/out_a_reg[0]' (FD) to 'bvb/i_5/fifo_bvb_3/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_5/fifo_bvb_3/u0/out_a_reg[1]' (FD) to 'bvb/i_5/fifo_bvb_3/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_3i_9/fifo_mat_val_3/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_3i_9/fifo_mat_val_3/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_3i_9/fifo_mat_val_3/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_3i_9/fifo_mat_val_3/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_29i_62/fifo_row_id_29/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_29i_62/fifo_row_id_29/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_29i_62/fifo_row_id_29/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_29i_62/fifo_row_id_29/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_31/fifo_bvb_29/u0/out_a_reg[0]' (FD) to 'bvb/i_31/fifo_bvb_29/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_31/fifo_bvb_29/u0/out_a_reg[1]' (FD) to 'bvb/i_31/fifo_bvb_29/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_29i_61/fifo_mat_val_29/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_29i_61/fifo_mat_val_29/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_29i_61/fifo_mat_val_29/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_29i_61/fifo_mat_val_29/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_13i_30/fifo_row_id_13/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_13i_30/fifo_row_id_13/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_13i_30/fifo_row_id_13/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_13i_30/fifo_row_id_13/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_15/fifo_bvb_13/u0/out_a_reg[0]' (FD) to 'bvb/i_15/fifo_bvb_13/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_15/fifo_bvb_13/u0/out_a_reg[1]' (FD) to 'bvb/i_15/fifo_bvb_13/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_13i_29/fifo_mat_val_13/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_13i_29/fifo_mat_val_13/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_13i_29/fifo_mat_val_13/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_13i_29/fifo_mat_val_13/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_21i_46/fifo_row_id_21/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_21i_46/fifo_row_id_21/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_21i_46/fifo_row_id_21/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_21i_46/fifo_row_id_21/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_23/fifo_bvb_21/u0/out_a_reg[0]' (FD) to 'bvb/i_23/fifo_bvb_21/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_23/fifo_bvb_21/u0/out_a_reg[1]' (FD) to 'bvb/i_23/fifo_bvb_21/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_21i_45/fifo_mat_val_21/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_21i_45/fifo_mat_val_21/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_21i_45/fifo_mat_val_21/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_21i_45/fifo_mat_val_21/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_5i_14/fifo_row_id_5/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_5i_14/fifo_row_id_5/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_5i_14/fifo_row_id_5/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_5i_14/fifo_row_id_5/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_7/fifo_bvb_5/u0/out_a_reg[0]' (FD) to 'bvb/i_7/fifo_bvb_5/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_7/fifo_bvb_5/u0/out_a_reg[1]' (FD) to 'bvb/i_7/fifo_bvb_5/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_5i_13/fifo_mat_val_5/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_5i_13/fifo_mat_val_5/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_5i_13/fifo_mat_val_5/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_5i_13/fifo_mat_val_5/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_25i_54/fifo_row_id_25/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_25i_54/fifo_row_id_25/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_25i_54/fifo_row_id_25/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_row_id_25i_54/fifo_row_id_25/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_27/fifo_bvb_25/u0/out_a_reg[0]' (FD) to 'bvb/i_27/fifo_bvb_25/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bvb/i_27/fifo_bvb_25/u0/out_a_reg[1]' (FD) to 'bvb/i_27/fifo_bvb_25/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_25i_53/fifo_mat_val_25/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_mat_val_25i_53/fifo_mat_val_25/u0/out_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_mat_val_25i_53/fifo_mat_val_25/u0/out_a_reg[1]' (FD) to 'fetcher/fifo_mat_val_25i_53/fifo_mat_val_25/u0/out_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fetcher/fifo_row_id_9i_22/fifo_row_id_9/u0/out_a_reg[0]' (FD) to 'fetcher/fifo_row_id_9i_22/fifo_row_id_9/u0/out_a_reg[6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1824.320 ; gain = 392.227 ; free physical = 239668 ; free virtual = 306613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|spram:      | mem_reg    | 128 x 16(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|fetcher              | fifo_mat_val_0/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_0/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_1/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_1/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_2/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_2/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_3/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_3/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_4/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_4/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_5/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_5/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_6/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_6/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_7/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_7/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_8/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_8/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_9/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_9/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_10/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_10/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_11/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_11/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_12/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_12/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_13/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_13/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_14/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_14/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_15/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_15/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_16/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_16/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_17/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_17/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_18/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_18/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_19/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_19/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_20/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_20/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_21/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_21/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_22/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_22/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_23/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_23/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_24/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_24/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_25/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_25/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_26/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_26/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_27/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_27/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_28/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_28/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_29/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_29/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_30/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_30/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_31/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_31/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_0/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_1/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_2/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_3/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_4/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_5/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_6/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_7/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_8/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_9/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_10/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_11/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_12/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_13/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_14/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_15/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_16/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_17/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_18/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_19/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_20/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_21/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_22/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_23/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_24/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_25/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_26/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_27/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_28/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_29/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_30/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_31/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/write_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1824.324 ; gain = 392.230 ; free physical = 239208 ; free virtual = 306154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|spram:      | mem_reg    | 128 x 16(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|fetcher              | fifo_mat_val_0/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_0/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_1/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_1/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_2/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_2/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_3/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_3/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_4/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_4/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_5/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_5/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_6/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_6/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_7/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_7/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_8/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_8/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_9/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_9/u0/ram_reg    | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_10/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_10/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_11/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_11/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_12/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_12/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_13/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_13/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_14/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_14/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_15/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_15/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_16/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_16/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_17/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_17/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_18/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_18/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_19/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_19/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_20/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_20/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_21/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_21/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_22/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_22/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_23/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_23/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_24/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_24/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_25/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_25/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_26/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_26/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_27/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_27/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_28/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_28/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_29/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_29/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_30/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_30/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_mat_val_31/u0/ram_reg  | Implied   | 8 x 8                | RAM32M x 2   | 
+|fetcher              | fifo_row_id_31/u0/ram_reg   | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_0/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_1/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_2/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_3/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_4/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_5/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_6/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_7/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_8/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_9/u0/ram_reg       | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_10/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_11/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_12/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_13/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_14/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_15/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_16/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_17/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_18/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_19/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_20/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_21/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_22/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_23/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_24/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_25/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_26/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_27/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_28/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_29/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_30/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|bvb                  | fifo_bvb_31/u0/ram_reg      | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance write_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1853.336 ; gain = 421.242 ; free physical = 239102 ; free virtual = 306047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 239041 ; free virtual = 305987
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 239030 ; free virtual = 305976
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238974 ; free virtual = 305920
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238958 ; free virtual = 305904
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238918 ; free virtual = 305864
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238929 ; free virtual = 305875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   452|
+|2     |LUT1     |   262|
+|3     |LUT2     |  1331|
+|4     |LUT3     |  1224|
+|5     |LUT4     |   816|
+|6     |LUT5     |   413|
+|7     |LUT6     |  2289|
+|8     |MUXF7    |    92|
+|9     |RAM32M   |   352|
+|10    |RAMB18E1 |     1|
+|11    |FDCE     |  2291|
+|12    |FDPE     |     1|
+|13    |FDRE     |  3401|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+--------------------------------------+------+
+|      |Instance              |Module                                |Cells |
++------+----------------------+--------------------------------------+------+
+|1     |top                   |                                      | 12925|
+|2     |  Big_Channel_        |Big_Channel                           |  7554|
+|3     |    CH_0              |Channel_Accumulator                   |   226|
+|4     |      A0              |Accumulator_497                       |   114|
+|5     |        fifo_addr_out |generic_fifo_sc_a_501                 |    21|
+|6     |          u0          |dpram_504                             |     9|
+|7     |        fifo_data_out |generic_fifo_sc_a__parameterized0_502 |    38|
+|8     |          u0          |dpram__parameterized0_503             |    19|
+|9     |      CH0             |Channel_498                           |   112|
+|10    |        fifo_mult     |generic_fifo_sc_a__parameterized0_499 |    56|
+|11    |          u0          |dpram__parameterized0_500             |    39|
+|12    |    CH_1              |Channel_Accumulator_222               |   226|
+|13    |      A0              |Accumulator_489                       |   114|
+|14    |        fifo_addr_out |generic_fifo_sc_a_493                 |    21|
+|15    |          u0          |dpram_496                             |     9|
+|16    |        fifo_data_out |generic_fifo_sc_a__parameterized0_494 |    38|
+|17    |          u0          |dpram__parameterized0_495             |    19|
+|18    |      CH0             |Channel_490                           |   112|
+|19    |        fifo_mult     |generic_fifo_sc_a__parameterized0_491 |    56|
+|20    |          u0          |dpram__parameterized0_492             |    39|
+|21    |    CH_10             |Channel_Accumulator_223               |   227|
+|22    |      A0              |Accumulator_481                       |   115|
+|23    |        fifo_addr_out |generic_fifo_sc_a_485                 |    21|
+|24    |          u0          |dpram_488                             |     9|
+|25    |        fifo_data_out |generic_fifo_sc_a__parameterized0_486 |    38|
+|26    |          u0          |dpram__parameterized0_487             |    19|
+|27    |      CH0             |Channel_482                           |   112|
+|28    |        fifo_mult     |generic_fifo_sc_a__parameterized0_483 |    56|
+|29    |          u0          |dpram__parameterized0_484             |    39|
+|30    |    CH_11             |Channel_Accumulator_224               |   226|
+|31    |      A0              |Accumulator_473                       |   114|
+|32    |        fifo_addr_out |generic_fifo_sc_a_477                 |    21|
+|33    |          u0          |dpram_480                             |     9|
+|34    |        fifo_data_out |generic_fifo_sc_a__parameterized0_478 |    38|
+|35    |          u0          |dpram__parameterized0_479             |    19|
+|36    |      CH0             |Channel_474                           |   112|
+|37    |        fifo_mult     |generic_fifo_sc_a__parameterized0_475 |    56|
+|38    |          u0          |dpram__parameterized0_476             |    39|
+|39    |    CH_12             |Channel_Accumulator_225               |   226|
+|40    |      A0              |Accumulator_465                       |   114|
+|41    |        fifo_addr_out |generic_fifo_sc_a_469                 |    21|
+|42    |          u0          |dpram_472                             |     9|
+|43    |        fifo_data_out |generic_fifo_sc_a__parameterized0_470 |    38|
+|44    |          u0          |dpram__parameterized0_471             |    19|
+|45    |      CH0             |Channel_466                           |   112|
+|46    |        fifo_mult     |generic_fifo_sc_a__parameterized0_467 |    56|
+|47    |          u0          |dpram__parameterized0_468             |    39|
+|48    |    CH_13             |Channel_Accumulator_226               |   226|
+|49    |      A0              |Accumulator_457                       |   114|
+|50    |        fifo_addr_out |generic_fifo_sc_a_461                 |    21|
+|51    |          u0          |dpram_464                             |     9|
+|52    |        fifo_data_out |generic_fifo_sc_a__parameterized0_462 |    38|
+|53    |          u0          |dpram__parameterized0_463             |    19|
+|54    |      CH0             |Channel_458                           |   112|
+|55    |        fifo_mult     |generic_fifo_sc_a__parameterized0_459 |    56|
+|56    |          u0          |dpram__parameterized0_460             |    39|
+|57    |    CH_14             |Channel_Accumulator_227               |   226|
+|58    |      A0              |Accumulator_449                       |   114|
+|59    |        fifo_addr_out |generic_fifo_sc_a_453                 |    21|
+|60    |          u0          |dpram_456                             |     9|
+|61    |        fifo_data_out |generic_fifo_sc_a__parameterized0_454 |    38|
+|62    |          u0          |dpram__parameterized0_455             |    19|
+|63    |      CH0             |Channel_450                           |   112|
+|64    |        fifo_mult     |generic_fifo_sc_a__parameterized0_451 |    56|
+|65    |          u0          |dpram__parameterized0_452             |    39|
+|66    |    CH_15             |Channel_Accumulator_228               |   227|
+|67    |      A0              |Accumulator_441                       |   115|
+|68    |        fifo_addr_out |generic_fifo_sc_a_445                 |    21|
+|69    |          u0          |dpram_448                             |     9|
+|70    |        fifo_data_out |generic_fifo_sc_a__parameterized0_446 |    39|
+|71    |          u0          |dpram__parameterized0_447             |    19|
+|72    |      CH0             |Channel_442                           |   112|
+|73    |        fifo_mult     |generic_fifo_sc_a__parameterized0_443 |    56|
+|74    |          u0          |dpram__parameterized0_444             |    39|
+|75    |    CH_16             |Channel_Accumulator_229               |   228|
+|76    |      A0              |Accumulator_433                       |   116|
+|77    |        fifo_addr_out |generic_fifo_sc_a_437                 |    21|
+|78    |          u0          |dpram_440                             |     9|
+|79    |        fifo_data_out |generic_fifo_sc_a__parameterized0_438 |    39|
+|80    |          u0          |dpram__parameterized0_439             |    19|
+|81    |      CH0             |Channel_434                           |   112|
+|82    |        fifo_mult     |generic_fifo_sc_a__parameterized0_435 |    56|
+|83    |          u0          |dpram__parameterized0_436             |    39|
+|84    |    CH_17             |Channel_Accumulator_230               |   227|
+|85    |      A0              |Accumulator_425                       |   115|
+|86    |        fifo_addr_out |generic_fifo_sc_a_429                 |    21|
+|87    |          u0          |dpram_432                             |     9|
+|88    |        fifo_data_out |generic_fifo_sc_a__parameterized0_430 |    39|
+|89    |          u0          |dpram__parameterized0_431             |    19|
+|90    |      CH0             |Channel_426                           |   112|
+|91    |        fifo_mult     |generic_fifo_sc_a__parameterized0_427 |    56|
+|92    |          u0          |dpram__parameterized0_428             |    39|
+|93    |    CH_18             |Channel_Accumulator_231               |   227|
+|94    |      A0              |Accumulator_417                       |   115|
+|95    |        fifo_addr_out |generic_fifo_sc_a_421                 |    21|
+|96    |          u0          |dpram_424                             |     9|
+|97    |        fifo_data_out |generic_fifo_sc_a__parameterized0_422 |    39|
+|98    |          u0          |dpram__parameterized0_423             |    19|
+|99    |      CH0             |Channel_418                           |   112|
+|100   |        fifo_mult     |generic_fifo_sc_a__parameterized0_419 |    56|
+|101   |          u0          |dpram__parameterized0_420             |    39|
+|102   |    CH_19             |Channel_Accumulator_232               |   227|
+|103   |      A0              |Accumulator_409                       |   115|
+|104   |        fifo_addr_out |generic_fifo_sc_a_413                 |    21|
+|105   |          u0          |dpram_416                             |     9|
+|106   |        fifo_data_out |generic_fifo_sc_a__parameterized0_414 |    39|
+|107   |          u0          |dpram__parameterized0_415             |    19|
+|108   |      CH0             |Channel_410                           |   112|
+|109   |        fifo_mult     |generic_fifo_sc_a__parameterized0_411 |    56|
+|110   |          u0          |dpram__parameterized0_412             |    39|
+|111   |    CH_2              |Channel_Accumulator_233               |   226|
+|112   |      A0              |Accumulator_401                       |   114|
+|113   |        fifo_addr_out |generic_fifo_sc_a_405                 |    21|
+|114   |          u0          |dpram_408                             |     9|
+|115   |        fifo_data_out |generic_fifo_sc_a__parameterized0_406 |    38|
+|116   |          u0          |dpram__parameterized0_407             |    19|
+|117   |      CH0             |Channel_402                           |   112|
+|118   |        fifo_mult     |generic_fifo_sc_a__parameterized0_403 |    56|
+|119   |          u0          |dpram__parameterized0_404             |    39|
+|120   |    CH_20             |Channel_Accumulator_234               |   228|
+|121   |      A0              |Accumulator_393                       |   116|
+|122   |        fifo_addr_out |generic_fifo_sc_a_397                 |    21|
+|123   |          u0          |dpram_400                             |     9|
+|124   |        fifo_data_out |generic_fifo_sc_a__parameterized0_398 |    40|
+|125   |          u0          |dpram__parameterized0_399             |    19|
+|126   |      CH0             |Channel_394                           |   112|
+|127   |        fifo_mult     |generic_fifo_sc_a__parameterized0_395 |    56|
+|128   |          u0          |dpram__parameterized0_396             |    39|
+|129   |    CH_21             |Channel_Accumulator_235               |   229|
+|130   |      A0              |Accumulator_385                       |   117|
+|131   |        fifo_addr_out |generic_fifo_sc_a_389                 |    21|
+|132   |          u0          |dpram_392                             |     9|
+|133   |        fifo_data_out |generic_fifo_sc_a__parameterized0_390 |    41|
+|134   |          u0          |dpram__parameterized0_391             |    19|
+|135   |      CH0             |Channel_386                           |   112|
+|136   |        fifo_mult     |generic_fifo_sc_a__parameterized0_387 |    56|
+|137   |          u0          |dpram__parameterized0_388             |    39|
+|138   |    CH_22             |Channel_Accumulator_236               |   230|
+|139   |      A0              |Accumulator_377                       |   118|
+|140   |        fifo_addr_out |generic_fifo_sc_a_381                 |    21|
+|141   |          u0          |dpram_384                             |     9|
+|142   |        fifo_data_out |generic_fifo_sc_a__parameterized0_382 |    39|
+|143   |          u0          |dpram__parameterized0_383             |    19|
+|144   |      CH0             |Channel_378                           |   112|
+|145   |        fifo_mult     |generic_fifo_sc_a__parameterized0_379 |    56|
+|146   |          u0          |dpram__parameterized0_380             |    39|
+|147   |    CH_23             |Channel_Accumulator_237               |   228|
+|148   |      A0              |Accumulator_369                       |   116|
+|149   |        fifo_addr_out |generic_fifo_sc_a_373                 |    21|
+|150   |          u0          |dpram_376                             |     9|
+|151   |        fifo_data_out |generic_fifo_sc_a__parameterized0_374 |    40|
+|152   |          u0          |dpram__parameterized0_375             |    19|
+|153   |      CH0             |Channel_370                           |   112|
+|154   |        fifo_mult     |generic_fifo_sc_a__parameterized0_371 |    56|
+|155   |          u0          |dpram__parameterized0_372             |    39|
+|156   |    CH_24             |Channel_Accumulator_238               |   272|
+|157   |      A0              |Accumulator_361                       |   160|
+|158   |        fifo_addr_out |generic_fifo_sc_a_365                 |    35|
+|159   |          u0          |dpram_368                             |    23|
+|160   |        fifo_data_out |generic_fifo_sc_a__parameterized0_366 |    70|
+|161   |          u0          |dpram__parameterized0_367             |    51|
+|162   |      CH0             |Channel_362                           |   112|
+|163   |        fifo_mult     |generic_fifo_sc_a__parameterized0_363 |    56|
+|164   |          u0          |dpram__parameterized0_364             |    39|
+|165   |    CH_25             |Channel_Accumulator_239               |   272|
+|166   |      A0              |Accumulator_353                       |   160|
+|167   |        fifo_addr_out |generic_fifo_sc_a_357                 |    35|
+|168   |          u0          |dpram_360                             |    23|
+|169   |        fifo_data_out |generic_fifo_sc_a__parameterized0_358 |    70|
+|170   |          u0          |dpram__parameterized0_359             |    51|
+|171   |      CH0             |Channel_354                           |   112|
+|172   |        fifo_mult     |generic_fifo_sc_a__parameterized0_355 |    56|
+|173   |          u0          |dpram__parameterized0_356             |    39|
+|174   |    CH_26             |Channel_Accumulator_240               |   272|
+|175   |      A0              |Accumulator_345                       |   160|
+|176   |        fifo_addr_out |generic_fifo_sc_a_349                 |    35|
+|177   |          u0          |dpram_352                             |    23|
+|178   |        fifo_data_out |generic_fifo_sc_a__parameterized0_350 |    70|
+|179   |          u0          |dpram__parameterized0_351             |    51|
+|180   |      CH0             |Channel_346                           |   112|
+|181   |        fifo_mult     |generic_fifo_sc_a__parameterized0_347 |    56|
+|182   |          u0          |dpram__parameterized0_348             |    39|
+|183   |    CH_27             |Channel_Accumulator_241               |   295|
+|184   |      A0              |Accumulator_337                       |   183|
+|185   |        fifo_addr_out |generic_fifo_sc_a_341                 |    42|
+|186   |          u0          |dpram_344                             |    30|
+|187   |        fifo_data_out |generic_fifo_sc_a__parameterized0_342 |    86|
+|188   |          u0          |dpram__parameterized0_343             |    67|
+|189   |      CH0             |Channel_338                           |   112|
+|190   |        fifo_mult     |generic_fifo_sc_a__parameterized0_339 |    56|
+|191   |          u0          |dpram__parameterized0_340             |    39|
+|192   |    CH_28             |Channel_Accumulator_242               |   251|
+|193   |      A0              |Accumulator_329                       |   139|
+|194   |        fifo_addr_out |generic_fifo_sc_a_333                 |    28|
+|195   |          u0          |dpram_336                             |    16|
+|196   |        fifo_data_out |generic_fifo_sc_a__parameterized0_334 |    54|
+|197   |          u0          |dpram__parameterized0_335             |    35|
+|198   |      CH0             |Channel_330                           |   112|
+|199   |        fifo_mult     |generic_fifo_sc_a__parameterized0_331 |    56|
+|200   |          u0          |dpram__parameterized0_332             |    39|
+|201   |    CH_29             |Channel_Accumulator_243               |   249|
+|202   |      A0              |Accumulator_321                       |   137|
+|203   |        fifo_addr_out |generic_fifo_sc_a_325                 |    28|
+|204   |          u0          |dpram_328                             |    16|
+|205   |        fifo_data_out |generic_fifo_sc_a__parameterized0_326 |    54|
+|206   |          u0          |dpram__parameterized0_327             |    35|
+|207   |      CH0             |Channel_322                           |   112|
+|208   |        fifo_mult     |generic_fifo_sc_a__parameterized0_323 |    56|
+|209   |          u0          |dpram__parameterized0_324             |    39|
+|210   |    CH_3              |Channel_Accumulator_244               |   226|
+|211   |      A0              |Accumulator_313                       |   114|
+|212   |        fifo_addr_out |generic_fifo_sc_a_317                 |    21|
+|213   |          u0          |dpram_320                             |     9|
+|214   |        fifo_data_out |generic_fifo_sc_a__parameterized0_318 |    38|
+|215   |          u0          |dpram__parameterized0_319             |    19|
+|216   |      CH0             |Channel_314                           |   112|
+|217   |        fifo_mult     |generic_fifo_sc_a__parameterized0_315 |    56|
+|218   |          u0          |dpram__parameterized0_316             |    39|
+|219   |    CH_30             |Channel_Accumulator_245               |   249|
+|220   |      A0              |Accumulator_305                       |   137|
+|221   |        fifo_addr_out |generic_fifo_sc_a_309                 |    28|
+|222   |          u0          |dpram_312                             |    16|
+|223   |        fifo_data_out |generic_fifo_sc_a__parameterized0_310 |    54|
+|224   |          u0          |dpram__parameterized0_311             |    35|
+|225   |      CH0             |Channel_306                           |   112|
+|226   |        fifo_mult     |generic_fifo_sc_a__parameterized0_307 |    56|
+|227   |          u0          |dpram__parameterized0_308             |    39|
+|228   |    CH_31             |Channel_Accumulator_246               |   250|
+|229   |      A0              |Accumulator_297                       |   138|
+|230   |        fifo_addr_out |generic_fifo_sc_a_301                 |    28|
+|231   |          u0          |dpram_304                             |    16|
+|232   |        fifo_data_out |generic_fifo_sc_a__parameterized0_302 |    55|
+|233   |          u0          |dpram__parameterized0_303             |    35|
+|234   |      CH0             |Channel_298                           |   112|
+|235   |        fifo_mult     |generic_fifo_sc_a__parameterized0_299 |    56|
+|236   |          u0          |dpram__parameterized0_300             |    39|
+|237   |    CH_4              |Channel_Accumulator_247               |   227|
+|238   |      A0              |Accumulator_289                       |   115|
+|239   |        fifo_addr_out |generic_fifo_sc_a_293                 |    21|
+|240   |          u0          |dpram_296                             |     9|
+|241   |        fifo_data_out |generic_fifo_sc_a__parameterized0_294 |    38|
+|242   |          u0          |dpram__parameterized0_295             |    19|
+|243   |      CH0             |Channel_290                           |   112|
+|244   |        fifo_mult     |generic_fifo_sc_a__parameterized0_291 |    56|
+|245   |          u0          |dpram__parameterized0_292             |    39|
+|246   |    CH_5              |Channel_Accumulator_248               |   226|
+|247   |      A0              |Accumulator_281                       |   114|
+|248   |        fifo_addr_out |generic_fifo_sc_a_285                 |    21|
+|249   |          u0          |dpram_288                             |     9|
+|250   |        fifo_data_out |generic_fifo_sc_a__parameterized0_286 |    38|
+|251   |          u0          |dpram__parameterized0_287             |    19|
+|252   |      CH0             |Channel_282                           |   112|
+|253   |        fifo_mult     |generic_fifo_sc_a__parameterized0_283 |    56|
+|254   |          u0          |dpram__parameterized0_284             |    39|
+|255   |    CH_6              |Channel_Accumulator_249               |   226|
+|256   |      A0              |Accumulator_273                       |   114|
+|257   |        fifo_addr_out |generic_fifo_sc_a_277                 |    21|
+|258   |          u0          |dpram_280                             |     9|
+|259   |        fifo_data_out |generic_fifo_sc_a__parameterized0_278 |    38|
+|260   |          u0          |dpram__parameterized0_279             |    19|
+|261   |      CH0             |Channel_274                           |   112|
+|262   |        fifo_mult     |generic_fifo_sc_a__parameterized0_275 |    56|
+|263   |          u0          |dpram__parameterized0_276             |    39|
+|264   |    CH_7              |Channel_Accumulator_250               |   227|
+|265   |      A0              |Accumulator_265                       |   115|
+|266   |        fifo_addr_out |generic_fifo_sc_a_269                 |    21|
+|267   |          u0          |dpram_272                             |     9|
+|268   |        fifo_data_out |generic_fifo_sc_a__parameterized0_270 |    39|
+|269   |          u0          |dpram__parameterized0_271             |    19|
+|270   |      CH0             |Channel_266                           |   112|
+|271   |        fifo_mult     |generic_fifo_sc_a__parameterized0_267 |    56|
+|272   |          u0          |dpram__parameterized0_268             |    39|
+|273   |    CH_8              |Channel_Accumulator_251               |   226|
+|274   |      A0              |Accumulator_257                       |   114|
+|275   |        fifo_addr_out |generic_fifo_sc_a_261                 |    21|
+|276   |          u0          |dpram_264                             |     9|
+|277   |        fifo_data_out |generic_fifo_sc_a__parameterized0_262 |    38|
+|278   |          u0          |dpram__parameterized0_263             |    19|
+|279   |      CH0             |Channel_258                           |   112|
+|280   |        fifo_mult     |generic_fifo_sc_a__parameterized0_259 |    56|
+|281   |          u0          |dpram__parameterized0_260             |    39|
+|282   |    CH_9              |Channel_Accumulator_252               |   226|
+|283   |      A0              |Accumulator                           |   114|
+|284   |        fifo_addr_out |generic_fifo_sc_a_253                 |    21|
+|285   |          u0          |dpram_256                             |     9|
+|286   |        fifo_data_out |generic_fifo_sc_a__parameterized0_254 |    38|
+|287   |          u0          |dpram__parameterized0_255             |    19|
+|288   |      CH0             |Channel                               |   112|
+|289   |        fifo_mult     |generic_fifo_sc_a__parameterized0     |    56|
+|290   |          u0          |dpram__parameterized0                 |    39|
+|291   |  bvb                 |bvb                                   |  2303|
+|292   |    fifo_bvb_0        |generic_fifo_sc_a_158                 |    68|
+|293   |      u0              |dpram_221                             |    51|
+|294   |    fifo_bvb_1        |generic_fifo_sc_a_159                 |    68|
+|295   |      u0              |dpram_220                             |    51|
+|296   |    fifo_bvb_10       |generic_fifo_sc_a_160                 |    69|
+|297   |      u0              |dpram_219                             |    51|
+|298   |    fifo_bvb_11       |generic_fifo_sc_a_161                 |    69|
+|299   |      u0              |dpram_218                             |    51|
+|300   |    fifo_bvb_12       |generic_fifo_sc_a_162                 |    69|
+|301   |      u0              |dpram_217                             |    51|
+|302   |    fifo_bvb_13       |generic_fifo_sc_a_163                 |    69|
+|303   |      u0              |dpram_216                             |    51|
+|304   |    fifo_bvb_14       |generic_fifo_sc_a_164                 |    69|
+|305   |      u0              |dpram_215                             |    51|
+|306   |    fifo_bvb_15       |generic_fifo_sc_a_165                 |    69|
+|307   |      u0              |dpram_214                             |    51|
+|308   |    fifo_bvb_16       |generic_fifo_sc_a_166                 |    68|
+|309   |      u0              |dpram_213                             |    51|
+|310   |    fifo_bvb_17       |generic_fifo_sc_a_167                 |    68|
+|311   |      u0              |dpram_212                             |    51|
+|312   |    fifo_bvb_18       |generic_fifo_sc_a_168                 |    68|
+|313   |      u0              |dpram_211                             |    51|
+|314   |    fifo_bvb_19       |generic_fifo_sc_a_169                 |    68|
+|315   |      u0              |dpram_210                             |    51|
+|316   |    fifo_bvb_2        |generic_fifo_sc_a_170                 |    68|
+|317   |      u0              |dpram_209                             |    51|
+|318   |    fifo_bvb_20       |generic_fifo_sc_a_171                 |    68|
+|319   |      u0              |dpram_208                             |    51|
+|320   |    fifo_bvb_21       |generic_fifo_sc_a_172                 |    68|
+|321   |      u0              |dpram_207                             |    51|
+|322   |    fifo_bvb_22       |generic_fifo_sc_a_173                 |    68|
+|323   |      u0              |dpram_206                             |    51|
+|324   |    fifo_bvb_23       |generic_fifo_sc_a_174                 |    68|
+|325   |      u0              |dpram_205                             |    51|
+|326   |    fifo_bvb_24       |generic_fifo_sc_a_175                 |    69|
+|327   |      u0              |dpram_204                             |    51|
+|328   |    fifo_bvb_25       |generic_fifo_sc_a_176                 |    69|
+|329   |      u0              |dpram_203                             |    51|
+|330   |    fifo_bvb_26       |generic_fifo_sc_a_177                 |    70|
+|331   |      u0              |dpram_202                             |    51|
+|332   |    fifo_bvb_27       |generic_fifo_sc_a_178                 |    70|
+|333   |      u0              |dpram_201                             |    51|
+|334   |    fifo_bvb_28       |generic_fifo_sc_a_179                 |    69|
+|335   |      u0              |dpram_200                             |    51|
+|336   |    fifo_bvb_29       |generic_fifo_sc_a_180                 |    69|
+|337   |      u0              |dpram_199                             |    51|
+|338   |    fifo_bvb_3        |generic_fifo_sc_a_181                 |    68|
+|339   |      u0              |dpram_198                             |    51|
+|340   |    fifo_bvb_30       |generic_fifo_sc_a_182                 |    70|
+|341   |      u0              |dpram_197                             |    51|
+|342   |    fifo_bvb_31       |generic_fifo_sc_a_183                 |    71|
+|343   |      u0              |dpram_196                             |    51|
+|344   |    fifo_bvb_4        |generic_fifo_sc_a_184                 |    68|
+|345   |      u0              |dpram_195                             |    51|
+|346   |    fifo_bvb_5        |generic_fifo_sc_a_185                 |    68|
+|347   |      u0              |dpram_194                             |    51|
+|348   |    fifo_bvb_6        |generic_fifo_sc_a_186                 |    68|
+|349   |      u0              |dpram_193                             |    51|
+|350   |    fifo_bvb_7        |generic_fifo_sc_a_187                 |    68|
+|351   |      u0              |dpram_192                             |    51|
+|352   |    fifo_bvb_8        |generic_fifo_sc_a_188                 |    69|
+|353   |      u0              |dpram_191                             |    51|
+|354   |    fifo_bvb_9        |generic_fifo_sc_a_189                 |    69|
+|355   |      u0              |dpram_190                             |    51|
+|356   |  fetcher             |fetcher                               |  3035|
+|357   |    fifo_col_id_0     |generic_fifo_sc_a                     |    18|
+|358   |    fifo_col_id_1     |generic_fifo_sc_a_0                   |    18|
+|359   |    fifo_col_id_10    |generic_fifo_sc_a_1                   |    19|
+|360   |    fifo_col_id_11    |generic_fifo_sc_a_2                   |    20|
+|361   |    fifo_col_id_12    |generic_fifo_sc_a_3                   |    19|
+|362   |    fifo_col_id_13    |generic_fifo_sc_a_4                   |    19|
+|363   |    fifo_col_id_14    |generic_fifo_sc_a_5                   |    19|
+|364   |    fifo_col_id_15    |generic_fifo_sc_a_6                   |    20|
+|365   |    fifo_col_id_16    |generic_fifo_sc_a_7                   |    19|
+|366   |    fifo_col_id_17    |generic_fifo_sc_a_8                   |    20|
+|367   |    fifo_col_id_18    |generic_fifo_sc_a_9                   |    19|
+|368   |    fifo_col_id_19    |generic_fifo_sc_a_10                  |    19|
+|369   |    fifo_col_id_2     |generic_fifo_sc_a_11                  |    18|
+|370   |    fifo_col_id_20    |generic_fifo_sc_a_12                  |    20|
+|371   |    fifo_col_id_21    |generic_fifo_sc_a_13                  |    23|
+|372   |    fifo_col_id_22    |generic_fifo_sc_a_14                  |    19|
+|373   |    fifo_col_id_23    |generic_fifo_sc_a_15                  |    19|
+|374   |    fifo_col_id_24    |generic_fifo_sc_a_16                  |    20|
+|375   |    fifo_col_id_25    |generic_fifo_sc_a_17                  |    19|
+|376   |    fifo_col_id_26    |generic_fifo_sc_a_18                  |    20|
+|377   |    fifo_col_id_27    |generic_fifo_sc_a_19                  |    20|
+|378   |    fifo_col_id_28    |generic_fifo_sc_a_20                  |    19|
+|379   |    fifo_col_id_29    |generic_fifo_sc_a_21                  |    20|
+|380   |    fifo_col_id_3     |generic_fifo_sc_a_22                  |    19|
+|381   |    fifo_col_id_30    |generic_fifo_sc_a_23                  |    21|
+|382   |    fifo_col_id_31    |generic_fifo_sc_a_24                  |    22|
+|383   |    fifo_col_id_4     |generic_fifo_sc_a_25                  |    18|
+|384   |    fifo_col_id_5     |generic_fifo_sc_a_26                  |    18|
+|385   |    fifo_col_id_6     |generic_fifo_sc_a_27                  |    18|
+|386   |    fifo_col_id_7     |generic_fifo_sc_a_28                  |    19|
+|387   |    fifo_col_id_8     |generic_fifo_sc_a_29                  |    19|
+|388   |    fifo_col_id_9     |generic_fifo_sc_a_30                  |    19|
+|389   |    fifo_mat_val_0    |generic_fifo_sc_a_31                  |    38|
+|390   |      u0              |dpram_157                             |    20|
+|391   |    fifo_mat_val_1    |generic_fifo_sc_a_32                  |    38|
+|392   |      u0              |dpram_156                             |    20|
+|393   |    fifo_mat_val_10   |generic_fifo_sc_a_33                  |    39|
+|394   |      u0              |dpram_155                             |    20|
+|395   |    fifo_mat_val_11   |generic_fifo_sc_a_34                  |    40|
+|396   |      u0              |dpram_154                             |    20|
+|397   |    fifo_mat_val_12   |generic_fifo_sc_a_35                  |    39|
+|398   |      u0              |dpram_153                             |    20|
+|399   |    fifo_mat_val_13   |generic_fifo_sc_a_36                  |    39|
+|400   |      u0              |dpram_152                             |    20|
+|401   |    fifo_mat_val_14   |generic_fifo_sc_a_37                  |    39|
+|402   |      u0              |dpram_151                             |    20|
+|403   |    fifo_mat_val_15   |generic_fifo_sc_a_38                  |    40|
+|404   |      u0              |dpram_150                             |    20|
+|405   |    fifo_mat_val_16   |generic_fifo_sc_a_39                  |    38|
+|406   |      u0              |dpram_149                             |    20|
+|407   |    fifo_mat_val_17   |generic_fifo_sc_a_40                  |    39|
+|408   |      u0              |dpram_148                             |    20|
+|409   |    fifo_mat_val_18   |generic_fifo_sc_a_41                  |    41|
+|410   |      u0              |dpram_147                             |    20|
+|411   |    fifo_mat_val_19   |generic_fifo_sc_a_42                  |    38|
+|412   |      u0              |dpram_146                             |    20|
+|413   |    fifo_mat_val_2    |generic_fifo_sc_a_43                  |    38|
+|414   |      u0              |dpram_145                             |    20|
+|415   |    fifo_mat_val_20   |generic_fifo_sc_a_44                  |    38|
+|416   |      u0              |dpram_144                             |    20|
+|417   |    fifo_mat_val_21   |generic_fifo_sc_a_45                  |    38|
+|418   |      u0              |dpram_143                             |    20|
+|419   |    fifo_mat_val_22   |generic_fifo_sc_a_46                  |    38|
+|420   |      u0              |dpram_142                             |    20|
+|421   |    fifo_mat_val_23   |generic_fifo_sc_a_47                  |    38|
+|422   |      u0              |dpram_141                             |    20|
+|423   |    fifo_mat_val_24   |generic_fifo_sc_a_48                  |    39|
+|424   |      u0              |dpram_140                             |    20|
+|425   |    fifo_mat_val_25   |generic_fifo_sc_a_49                  |    39|
+|426   |      u0              |dpram_139                             |    20|
+|427   |    fifo_mat_val_26   |generic_fifo_sc_a_50                  |    40|
+|428   |      u0              |dpram_138                             |    20|
+|429   |    fifo_mat_val_27   |generic_fifo_sc_a_51                  |    40|
+|430   |      u0              |dpram_137                             |    20|
+|431   |    fifo_mat_val_28   |generic_fifo_sc_a_52                  |    39|
+|432   |      u0              |dpram_136                             |    20|
+|433   |    fifo_mat_val_29   |generic_fifo_sc_a_53                  |    39|
+|434   |      u0              |dpram_135                             |    20|
+|435   |    fifo_mat_val_3    |generic_fifo_sc_a_54                  |    39|
+|436   |      u0              |dpram_134                             |    20|
+|437   |    fifo_mat_val_30   |generic_fifo_sc_a_55                  |    40|
+|438   |      u0              |dpram_133                             |    20|
+|439   |    fifo_mat_val_31   |generic_fifo_sc_a_56                  |    42|
+|440   |      u0              |dpram_132                             |    20|
+|441   |    fifo_mat_val_4    |generic_fifo_sc_a_57                  |    38|
+|442   |      u0              |dpram_131                             |    20|
+|443   |    fifo_mat_val_5    |generic_fifo_sc_a_58                  |    38|
+|444   |      u0              |dpram_130                             |    20|
+|445   |    fifo_mat_val_6    |generic_fifo_sc_a_59                  |    38|
+|446   |      u0              |dpram_129                             |    20|
+|447   |    fifo_mat_val_7    |generic_fifo_sc_a_60                  |    39|
+|448   |      u0              |dpram_128                             |    20|
+|449   |    fifo_mat_val_8    |generic_fifo_sc_a_61                  |    39|
+|450   |      u0              |dpram_127                             |    20|
+|451   |    fifo_mat_val_9    |generic_fifo_sc_a_62                  |    39|
+|452   |      u0              |dpram_126                             |    20|
+|453   |    fifo_row_id_0     |generic_fifo_sc_a_63                  |    28|
+|454   |      u0              |dpram_125                             |     9|
+|455   |    fifo_row_id_1     |generic_fifo_sc_a_64                  |    28|
+|456   |      u0              |dpram_124                             |     9|
+|457   |    fifo_row_id_10    |generic_fifo_sc_a_65                  |    29|
+|458   |      u0              |dpram_123                             |     9|
+|459   |    fifo_row_id_11    |generic_fifo_sc_a_66                  |    30|
+|460   |      u0              |dpram_122                             |     9|
+|461   |    fifo_row_id_12    |generic_fifo_sc_a_67                  |    29|
+|462   |      u0              |dpram_121                             |     9|
+|463   |    fifo_row_id_13    |generic_fifo_sc_a_68                  |    29|
+|464   |      u0              |dpram_120                             |     9|
+|465   |    fifo_row_id_14    |generic_fifo_sc_a_69                  |    29|
+|466   |      u0              |dpram_119                             |     9|
+|467   |    fifo_row_id_15    |generic_fifo_sc_a_70                  |    30|
+|468   |      u0              |dpram_118                             |     9|
+|469   |    fifo_row_id_16    |generic_fifo_sc_a_71                  |    28|
+|470   |      u0              |dpram_117                             |     9|
+|471   |    fifo_row_id_17    |generic_fifo_sc_a_72                  |    30|
+|472   |      u0              |dpram_116                             |     9|
+|473   |    fifo_row_id_18    |generic_fifo_sc_a_73                  |    29|
+|474   |      u0              |dpram_115                             |     9|
+|475   |    fifo_row_id_19    |generic_fifo_sc_a_74                  |    28|
+|476   |      u0              |dpram_114                             |     9|
+|477   |    fifo_row_id_2     |generic_fifo_sc_a_75                  |    28|
+|478   |      u0              |dpram_113                             |     9|
+|479   |    fifo_row_id_20    |generic_fifo_sc_a_76                  |    28|
+|480   |      u0              |dpram_112                             |     9|
+|481   |    fifo_row_id_21    |generic_fifo_sc_a_77                  |    28|
+|482   |      u0              |dpram_111                             |     9|
+|483   |    fifo_row_id_22    |generic_fifo_sc_a_78                  |    28|
+|484   |      u0              |dpram_110                             |     9|
+|485   |    fifo_row_id_23    |generic_fifo_sc_a_79                  |    28|
+|486   |      u0              |dpram_109                             |     9|
+|487   |    fifo_row_id_24    |generic_fifo_sc_a_80                  |    29|
+|488   |      u0              |dpram_108                             |     9|
+|489   |    fifo_row_id_25    |generic_fifo_sc_a_81                  |    29|
+|490   |      u0              |dpram_107                             |     9|
+|491   |    fifo_row_id_26    |generic_fifo_sc_a_82                  |    30|
+|492   |      u0              |dpram_106                             |     9|
+|493   |    fifo_row_id_27    |generic_fifo_sc_a_83                  |    30|
+|494   |      u0              |dpram_105                             |     9|
+|495   |    fifo_row_id_28    |generic_fifo_sc_a_84                  |    29|
+|496   |      u0              |dpram_104                             |     9|
+|497   |    fifo_row_id_29    |generic_fifo_sc_a_85                  |    31|
+|498   |      u0              |dpram_103                             |     9|
+|499   |    fifo_row_id_3     |generic_fifo_sc_a_86                  |    29|
+|500   |      u0              |dpram_102                             |     9|
+|501   |    fifo_row_id_30    |generic_fifo_sc_a_87                  |    30|
+|502   |      u0              |dpram_101                             |     9|
+|503   |    fifo_row_id_31    |generic_fifo_sc_a_88                  |    32|
+|504   |      u0              |dpram_100                             |     9|
+|505   |    fifo_row_id_4     |generic_fifo_sc_a_89                  |    28|
+|506   |      u0              |dpram_99                              |     9|
+|507   |    fifo_row_id_5     |generic_fifo_sc_a_90                  |    28|
+|508   |      u0              |dpram_98                              |     9|
+|509   |    fifo_row_id_6     |generic_fifo_sc_a_91                  |    28|
+|510   |      u0              |dpram_97                              |     9|
+|511   |    fifo_row_id_7     |generic_fifo_sc_a_92                  |    29|
+|512   |      u0              |dpram_96                              |     9|
+|513   |    fifo_row_id_8     |generic_fifo_sc_a_93                  |    29|
+|514   |      u0              |dpram_95                              |     9|
+|515   |    fifo_row_id_9     |generic_fifo_sc_a_94                  |    29|
+|516   |      u0              |dpram                                 |     9|
+|517   |  write_mem           |spram                                 |     1|
++------+----------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238929 ; free virtual = 305875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 156 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.340 ; gain = 421.246 ; free physical = 238928 ; free virtual = 305874
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1853.344 ; gain = 421.246 ; free physical = 238944 ; free virtual = 305890
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 897 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1915.512 ; gain = 0.000 ; free physical = 238806 ; free virtual = 305752
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 352 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 352 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 120 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1915.512 ; gain = 483.516 ; free physical = 238871 ; free virtual = 305817
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2469.156 ; gain = 553.645 ; free physical = 238334 ; free virtual = 305280
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2469.156 ; gain = 0.000 ; free physical = 238344 ; free virtual = 305291
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2493.168 ; gain = 0.000 ; free physical = 238323 ; free virtual = 305277
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2493.176 ; gain = 24.020 ; free physical = 238171 ; free virtual = 305123
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2622.438 ; gain = 0.004 ; free physical = 240383 ; free virtual = 307331
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: cafb9994
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240388 ; free virtual = 307337
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: cafb9994
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.64 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240310 ; free virtual = 307259
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 9b961a2d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240293 ; free virtual = 307241
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: ea398cd9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240255 ; free virtual = 307203
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: ea398cd9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240339 ; free virtual = 307287
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240130 ; free virtual = 307079
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240213 ; free virtual = 307161
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240209 ; free virtual = 307157
+Ending Logic Optimization Task | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.438 ; gain = 0.000 ; free physical = 240205 ; free virtual = 307153
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.645 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
+Ending PowerOpt Patch Enables Task | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 239997 ; free virtual = 306946
+Ending Power Optimization Task | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2883.598 ; gain = 261.160 ; free physical = 240010 ; free virtual = 306959
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 240003 ; free virtual = 306951
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 240003 ; free virtual = 306951
+Ending Netlist Obfuscation Task | Checksum: 12baf8dfc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 240000 ; free virtual = 306948
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2883.598 ; gain = 261.164 ; free physical = 239994 ; free virtual = 306943
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 12baf8dfc
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module spmv ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Pre-processing: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 239749 ; free virtual = 306698
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.645 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 239663 ; free virtual = 306612
+IDT: Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2883.598 ; gain = 0.000 ; free physical = 239647 ; free virtual = 306595
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 15 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.664 ; gain = 30.066 ; free physical = 239530 ; free virtual = 306479
+Power optimization passes: Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2913.664 ; gain = 30.066 ; free physical = 239544 ; free virtual = 306493
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239568 ; free virtual = 306532
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design spmv ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 647 accepted clusters 647
+
+Number of Slice Registers augmented: 629 newly gated: 727 Total: 5693
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/1585 RAMS dropped: 0/0 Clusters dropped: 0/647 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 9c2c815f
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240438 ; free virtual = 307389
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 9c2c815f
+Power optimization: Time (s): cpu = 00:00:28 ; elapsed = 00:00:11 . Memory (MB): peak = 2913.664 ; gain = 30.066 ; free physical = 240507 ; free virtual = 307457
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 10935472 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 171f509d6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240457 ; free virtual = 307407
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 171f509d6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240441 ; free virtual = 307391
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: fc1ac96d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240344 ; free virtual = 307294
+INFO: [Opt 31-389] Phase Remap created 152 cells and removed 304 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 11db0616b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240340 ; free virtual = 307290
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |             152  |             304  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: c5589f82
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240325 ; free virtual = 307275
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240324 ; free virtual = 307275
+Ending Netlist Obfuscation Task | Checksum: c5589f82
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 240319 ; free virtual = 307269
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:14 . Memory (MB): peak = 2913.664 ; gain = 30.066 ; free physical = 240319 ; free virtual = 307269
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[10] (net: write_mem/ADDRARDADDR[6]) which is driven by a register (counter_delay_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[10] (net: write_mem/ADDRARDADDR[6]) which is driven by a register (counter_delay_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[10] (net: write_mem/ADDRARDADDR[6]) which is driven by a register (counter_delay_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[10] (net: write_mem/ADDRARDADDR[6]) which is driven by a register (counter_delay_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[10] (net: write_mem/ADDRARDADDR[6]) which is driven by a register (counter_delay_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[7] (net: write_mem/ADDRARDADDR[3]) which is driven by a register (counter_delay_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[7] (net: write_mem/ADDRARDADDR[3]) which is driven by a register (counter_delay_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[7] (net: write_mem/ADDRARDADDR[3]) which is driven by a register (counter_delay_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[7] (net: write_mem/ADDRARDADDR[3]) which is driven by a register (counter_delay_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[7] (net: write_mem/ADDRARDADDR[3]) which is driven by a register (counter_delay_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[8] (net: write_mem/ADDRARDADDR[4]) which is driven by a register (counter_delay_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[8] (net: write_mem/ADDRARDADDR[4]) which is driven by a register (counter_delay_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[8] (net: write_mem/ADDRARDADDR[4]) which is driven by a register (counter_delay_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[8] (net: write_mem/ADDRARDADDR[4]) which is driven by a register (counter_delay_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[8] (net: write_mem/ADDRARDADDR[4]) which is driven by a register (counter_delay_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[9] (net: write_mem/ADDRARDADDR[5]) which is driven by a register (counter_delay_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[9] (net: write_mem/ADDRARDADDR[5]) which is driven by a register (counter_delay_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[9] (net: write_mem/ADDRARDADDR[5]) which is driven by a register (counter_delay_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[9] (net: write_mem/ADDRARDADDR[5]) which is driven by a register (counter_delay_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 write_mem/mem_reg has an input control pin write_mem/mem_reg/ADDRARDADDR[9] (net: write_mem/ADDRARDADDR[5]) which is driven by a register (counter_delay_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239530 ; free virtual = 306481
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 30e0de0d
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239528 ; free virtual = 306478
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239324 ; free virtual = 306274
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 692fbc1c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239236 ; free virtual = 306188
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: fdb5ca1f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239092 ; free virtual = 306044
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: fdb5ca1f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239089 ; free virtual = 306041
+Phase 1 Placer Initialization | Checksum: fdb5ca1f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239085 ; free virtual = 306037
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 81b5b55b
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239049 ; free virtual = 306002
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238860 ; free virtual = 305813
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: c5c1544c
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:18 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238865 ; free virtual = 305819
+Phase 2 Global Placement | Checksum: 135c0af37
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:18 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238868 ; free virtual = 305821
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 135c0af37
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:18 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238870 ; free virtual = 305823
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1387bfd01
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238804 ; free virtual = 305757
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1631c04ca
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:20 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238796 ; free virtual = 305749
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1d9305239
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:20 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238803 ; free virtual = 305756
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 13aef3282
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238737 ; free virtual = 305691
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 174e759a0
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238735 ; free virtual = 305688
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 11f93af01
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238730 ; free virtual = 305684
+Phase 3 Detail Placement | Checksum: 11f93af01
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:22 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238728 ; free virtual = 305681
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 20af1ef4b
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 20af1ef4b
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238624 ; free virtual = 305577
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.122. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1e783524d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238611 ; free virtual = 305565
+Phase 4.1 Post Commit Optimization | Checksum: 1e783524d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238617 ; free virtual = 305571
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e783524d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238606 ; free virtual = 305560
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1e783524d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238609 ; free virtual = 305563
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238607 ; free virtual = 305561
+Phase 4.4 Final Placement Cleanup | Checksum: 20ed897af
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238599 ; free virtual = 305552
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 20ed897af
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:25 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238609 ; free virtual = 305563
+Ending Placer Task | Checksum: 1806f20dd
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:25 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238583 ; free virtual = 305536
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:30 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238578 ; free virtual = 305532
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# write_checkpoint -force $outputDir/post_place
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238560 ; free virtual = 305514
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238558 ; free virtual = 305516
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238535 ; free virtual = 305506
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_place.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239312 ; free virtual = 306283
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: a486b925 ConstDB: 0 ShapeSum: dbe867b8 RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 15f27ab4a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239645 ; free virtual = 306606
+Post Restoration Checksum: NetGraph: a8f97a13 NumContArr: b62e3137 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 15f27ab4a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239642 ; free virtual = 306602
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 15f27ab4a
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239595 ; free virtual = 306556
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 15f27ab4a
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239594 ; free virtual = 306555
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 20140b7d1
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239472 ; free virtual = 306433
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.293  | TNS=0.000  | WHS=-0.002 | THS=-0.103 |
+
+Phase 2 Router Initialization | Checksum: 22d5c25c7
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239345 ; free virtual = 306306
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 11ee15c19
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 239107 ; free virtual = 306068
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 900
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.539  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 163a3ee0d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238934 ; free virtual = 305895
+Phase 4 Rip-up And Reroute | Checksum: 163a3ee0d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238932 ; free virtual = 305892
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 163a3ee0d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238925 ; free virtual = 305886
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 163a3ee0d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238922 ; free virtual = 305883
+Phase 5 Delay and Skew Optimization | Checksum: 163a3ee0d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238917 ; free virtual = 305878
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 16b1da195
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238909 ; free virtual = 305870
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.539  | TNS=0.000  | WHS=0.060  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 16b1da195
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238910 ; free virtual = 305871
+Phase 6 Post Hold Fix | Checksum: 16b1da195
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238907 ; free virtual = 305867
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.61375 %
+  Global Horizontal Routing Utilization  = 1.96966 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1b630c906
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238909 ; free virtual = 305870
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1b630c906
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:24 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238906 ; free virtual = 305866
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 27327bcc8
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:25 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238943 ; free virtual = 305904
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.539  | TNS=0.000  | WHS=0.060  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 27327bcc8
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:25 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238947 ; free virtual = 305908
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:25 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238985 ; free virtual = 305946
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:31 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238985 ; free virtual = 305945
+# write_checkpoint -force $outputDir/post_route
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238985 ; free virtual = 305945
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238970 ; free virtual = 305938
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238891 ; free virtual = 305872
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_route.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2913.664 ; gain = 0.000 ; free physical = 238777 ; free virtual = 305746
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -sort_by group -max_paths 100 -path_type summary -file $outputDir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 1 -delay_type max -sort_by group.
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# report_utilization -file $outputDir/post_route_util.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_route_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/packages/xilinx_2018/vivado_hl/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv/post_imp_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2913.695 ; gain = 0.000 ; free physical = 238087 ; free virtual = 305059
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 04:13:41 2022...

@@ -1,0 +1,744 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Jan 11 22:10:30 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/LU32PEEng_submodules/LU/post_synth_timing_summary.rpt
+| Design       : LU
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 2085 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 1025 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -47.838   -13323.855                   1313                18749        0.160        0.000                      0                18749        3.950        0.000                       0                 13137  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -47.838   -13323.855                   1313                18749        0.160        0.000                      0                18749        3.950        0.000                       0                 13137  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         1313  Failing Endpoints,  Worst Slack      -47.838ns,  Total Violation   -13323.855ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.160ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.950ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -47.838ns  (required time - arrival time)
+  Source:                 rec/d_man_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            multOperand_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        57.836ns  (logic 27.328ns (47.251%)  route 30.508ns (52.749%))
+  Logic Levels:           165  (CARRY4=115 LUT2=1 LUT3=2 LUT4=21 LUT5=1 LUT6=25)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13136, unset)        0.704     0.704    rec/clk
+                         FDRE                                         r  rec/d_man_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.393     1.097 f  rec/d_man_reg[3]/Q
+                         net (fo=70, unplaced)        0.398     1.495    rec/d_man[3]
+                         LUT2 (Prop_lut2_I0_O)        0.199     1.694 r  rec/multOperand[1]_i_123/O
+                         net (fo=1, unplaced)         0.000     1.694    rec/multOperand[1]_i_123_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.402     2.096 r  rec/multOperand_reg[1]_i_47/CO[3]
+                         net (fo=1, unplaced)         0.007     2.103    rec/multOperand_reg[1]_i_47_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.195 r  rec/multOperand_reg[1]_i_13/CO[3]
+                         net (fo=1, unplaced)         0.000     2.195    rec/multOperand_reg[1]_i_13_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.287 r  rec/multOperand_reg[1]_i_3/CO[3]
+                         net (fo=216, unplaced)       0.803     3.090    rec/div_man[23]
+                         LUT3 (Prop_lut3_I1_O)        0.102     3.192 r  rec/multOperand[1]_i_276/O
+                         net (fo=1, unplaced)         0.000     3.192    rec/multOperand[1]_i_276_n_0
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.428     3.620 r  rec/multOperand_reg[1]_i_161/CO[3]
+                         net (fo=1, unplaced)         0.007     3.627    rec/multOperand_reg[1]_i_161_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.719 r  rec/multOperand_reg[1]_i_70/CO[3]
+                         net (fo=1, unplaced)         0.000     3.719    rec/multOperand_reg[1]_i_70_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.811 r  rec/multOperand_reg[1]_i_27/CO[3]
+                         net (fo=1, unplaced)         0.000     3.811    rec/multOperand_reg[1]_i_27_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218     4.029 r  rec/multOperand_reg[1]_i_5/CO[0]
+                         net (fo=161, unplaced)       0.320     4.349    rec/res[17]
+                         LUT4 (Prop_lut4_I1_O)        0.262     4.611 r  rec/multOperand[22]_i_1102/O
+                         net (fo=7, unplaced)         0.336     4.947    rec/divide/numer21[23]
+                         LUT6 (Prop_lut6_I0_O)        0.097     5.044 r  rec/multOperand[22]_i_687/O
+                         net (fo=1, unplaced)         0.471     5.515    rec/multOperand[22]_i_687_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386     5.901 r  rec/multOperand_reg[22]_i_318/CO[3]
+                         net (fo=1, unplaced)         0.007     5.908    rec/multOperand_reg[22]_i_318_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.000 r  rec/multOperand_reg[22]_i_115/CO[3]
+                         net (fo=1, unplaced)         0.000     6.000    rec/multOperand_reg[22]_i_115_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.092 r  rec/multOperand_reg[22]_i_28/CO[3]
+                         net (fo=1, unplaced)         0.000     6.092    rec/multOperand_reg[22]_i_28_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218     6.310 r  rec/multOperand_reg[22]_i_8/CO[0]
+                         net (fo=133, unplaced)       0.315     6.625    rec/res[16]
+                         LUT4 (Prop_lut4_I1_O)        0.262     6.887 r  rec/multOperand[22]_i_1122/O
+                         net (fo=7, unplaced)         0.336     7.223    rec/divide/numer20[22]
+                         LUT6 (Prop_lut6_I0_O)        0.097     7.320 r  rec/multOperand[22]_i_720/O
+                         net (fo=1, unplaced)         0.471     7.791    rec/multOperand[22]_i_720_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386     8.177 r  rec/multOperand_reg[22]_i_342/CO[3]
+                         net (fo=1, unplaced)         0.007     8.184    rec/multOperand_reg[22]_i_342_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.276 r  rec/multOperand_reg[22]_i_125/CO[3]
+                         net (fo=1, unplaced)         0.000     8.276    rec/multOperand_reg[22]_i_125_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.368 r  rec/multOperand_reg[22]_i_31/CO[3]
+                         net (fo=1, unplaced)         0.000     8.368    rec/multOperand_reg[22]_i_31_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136     8.504 r  rec/multOperand_reg[22]_i_9/CO[1]
+                         net (fo=173, unplaced)       0.517     9.021    rec/res[15]
+                         LUT5 (Prop_lut5_I1_O)        0.251     9.272 r  rec/multOperand[22]_i_293/O
+                         net (fo=8, unplaced)         0.339     9.611    rec/divide/numer19[37]
+                         LUT6 (Prop_lut6_I0_O)        0.097     9.708 r  rec/multOperand[22]_i_206/O
+                         net (fo=1, unplaced)         0.471    10.179    rec/multOperand[22]_i_206_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    10.565 r  rec/multOperand_reg[22]_i_67/CO[3]
+                         net (fo=1, unplaced)         0.000    10.565    rec/multOperand_reg[22]_i_67_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136    10.701 r  rec/multOperand_reg[22]_i_15/CO[1]
+                         net (fo=160, unplaced)       0.317    11.018    rec/res[14]
+                         LUT4 (Prop_lut4_I1_O)        0.251    11.269 r  rec/multOperand[22]_i_1082/O
+                         net (fo=7, unplaced)         0.336    11.605    rec/divide/numer18[20]
+                         LUT6 (Prop_lut6_I0_O)        0.097    11.702 r  rec/multOperand[22]_i_649/O
+                         net (fo=1, unplaced)         0.471    12.173    rec/multOperand[22]_i_649_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    12.559 r  rec/multOperand_reg[22]_i_279/CO[3]
+                         net (fo=1, unplaced)         0.007    12.566    rec/multOperand_reg[22]_i_279_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.658 r  rec/multOperand_reg[22]_i_98/CO[3]
+                         net (fo=1, unplaced)         0.000    12.658    rec/multOperand_reg[22]_i_98_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.750 r  rec/multOperand_reg[22]_i_21/CO[3]
+                         net (fo=1, unplaced)         0.000    12.750    rec/multOperand_reg[22]_i_21_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    12.941 r  rec/multOperand_reg[22]_i_6/CO[2]
+                         net (fo=181, unplaced)       0.416    13.357    rec/res[13]
+                         LUT4 (Prop_lut4_I1_O)        0.223    13.580 r  rec/multOperand[22]_i_1228/O
+                         net (fo=7, unplaced)         0.336    13.916    rec/divide/p_1_in[2]
+                         LUT6 (Prop_lut6_I0_O)        0.097    14.013 r  rec/multOperand[22]_i_858/O
+                         net (fo=1, unplaced)         0.471    14.484    rec/multOperand[22]_i_858_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    14.870 r  rec/multOperand_reg[22]_i_456/CO[3]
+                         net (fo=1, unplaced)         0.007    14.877    rec/multOperand_reg[22]_i_456_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.969 r  rec/multOperand_reg[22]_i_176/CO[3]
+                         net (fo=1, unplaced)         0.000    14.969    rec/multOperand_reg[22]_i_176_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    15.061 r  rec/multOperand_reg[22]_i_51/CO[3]
+                         net (fo=1, unplaced)         0.000    15.061    rec/multOperand_reg[22]_i_51_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    15.252 r  rec/multOperand_reg[22]_i_13/CO[2]
+                         net (fo=180, unplaced)       0.416    15.668    rec/res[12]
+                         LUT4 (Prop_lut4_I1_O)        0.223    15.891 r  rec/multOperand[22]_i_1184/O
+                         net (fo=7, unplaced)         0.336    16.227    rec/divide/numer16[18]
+                         LUT6 (Prop_lut6_I0_O)        0.097    16.324 r  rec/multOperand[22]_i_882/O
+                         net (fo=1, unplaced)         0.471    16.795    rec/multOperand[22]_i_882_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    17.181 r  rec/multOperand_reg[22]_i_484/CO[3]
+                         net (fo=1, unplaced)         0.007    17.188    rec/multOperand_reg[22]_i_484_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.280 r  rec/multOperand_reg[22]_i_191/CO[3]
+                         net (fo=1, unplaced)         0.000    17.280    rec/multOperand_reg[22]_i_191_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.372 r  rec/multOperand_reg[22]_i_58/CO[3]
+                         net (fo=1, unplaced)         0.000    17.372    rec/multOperand_reg[22]_i_58_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.464 r  rec/multOperand_reg[22]_i_14/CO[3]
+                         net (fo=200, unplaced)       0.801    18.265    rec/div_man[16]
+                         LUT4 (Prop_lut4_I1_O)        0.097    18.362 r  rec/multOperand[22]_i_1183/O
+                         net (fo=7, unplaced)         0.336    18.698    rec/divide/numer15[17]
+                         LUT6 (Prop_lut6_I0_O)        0.097    18.795 r  rec/multOperand[22]_i_789/O
+                         net (fo=1, unplaced)         0.471    19.266    rec/multOperand[22]_i_789_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    19.652 r  rec/multOperand_reg[22]_i_389/CO[3]
+                         net (fo=1, unplaced)         0.007    19.659    rec/multOperand_reg[22]_i_389_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.751 r  rec/multOperand_reg[22]_i_145/CO[3]
+                         net (fo=1, unplaced)         0.000    19.751    rec/multOperand_reg[22]_i_145_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.843 r  rec/multOperand_reg[22]_i_39/CO[3]
+                         net (fo=1, unplaced)         0.000    19.843    rec/multOperand_reg[22]_i_39_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.935 r  rec/multOperand_reg[22]_i_11/CO[3]
+                         net (fo=188, unplaced)       0.799    20.734    rec/div_man[15]
+                         LUT4 (Prop_lut4_I1_O)        0.097    20.831 r  rec/multOperand[22]_i_1499/O
+                         net (fo=7, unplaced)         0.336    21.167    rec/divide/numer14[16]
+                         LUT6 (Prop_lut6_I0_O)        0.097    21.264 r  rec/multOperand[22]_i_1200/O
+                         net (fo=1, unplaced)         0.471    21.735    rec/multOperand[22]_i_1200_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    22.121 r  rec/multOperand_reg[22]_i_825/CO[3]
+                         net (fo=1, unplaced)         0.007    22.128    rec/multOperand_reg[22]_i_825_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.220 r  rec/multOperand_reg[22]_i_435/CO[3]
+                         net (fo=1, unplaced)         0.000    22.220    rec/multOperand_reg[22]_i_435_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.312 r  rec/multOperand_reg[22]_i_166/CO[3]
+                         net (fo=1, unplaced)         0.000    22.312    rec/multOperand_reg[22]_i_166_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.404 r  rec/multOperand_reg[22]_i_48/CO[3]
+                         net (fo=1, unplaced)         0.000    22.404    rec/multOperand_reg[22]_i_48_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218    22.622 r  rec/multOperand_reg[22]_i_12/CO[0]
+                         net (fo=210, unplaced)       0.326    22.948    rec/res[11]
+                         LUT4 (Prop_lut4_I1_O)        0.262    23.210 r  rec/multOperand[22]_i_1651/O
+                         net (fo=7, unplaced)         0.336    23.546    rec/divide/numer13[15]
+                         LUT6 (Prop_lut6_I0_O)        0.097    23.643 r  rec/multOperand[22]_i_1450/O
+                         net (fo=1, unplaced)         0.471    24.114    rec/multOperand[22]_i_1450_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    24.500 r  rec/multOperand_reg[22]_i_1139/CO[3]
+                         net (fo=1, unplaced)         0.007    24.507    rec/multOperand_reg[22]_i_1139_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    24.599 r  rec/multOperand_reg[22]_i_747/CO[3]
+                         net (fo=1, unplaced)         0.000    24.599    rec/multOperand_reg[22]_i_747_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    24.691 r  rec/multOperand_reg[22]_i_365/CO[3]
+                         net (fo=1, unplaced)         0.000    24.691    rec/multOperand_reg[22]_i_365_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    24.783 r  rec/multOperand_reg[22]_i_137/CO[3]
+                         net (fo=1, unplaced)         0.000    24.783    rec/multOperand_reg[22]_i_137_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218    25.001 r  rec/multOperand_reg[22]_i_36/CO[0]
+                         net (fo=209, unplaced)       0.326    25.327    rec/res[10]
+                         LUT4 (Prop_lut4_I1_O)        0.262    25.589 r  rec/multOperand[30]_i_399/O
+                         net (fo=7, unplaced)         0.336    25.925    rec/divide/numer12[14]
+                         LUT6 (Prop_lut6_I0_O)        0.097    26.022 r  rec/multOperand[22]_i_1475/O
+                         net (fo=1, unplaced)         0.471    26.493    rec/multOperand[22]_i_1475_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    26.879 r  rec/multOperand_reg[22]_i_1168/CO[3]
+                         net (fo=1, unplaced)         0.007    26.886    rec/multOperand_reg[22]_i_1168_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    26.978 r  rec/multOperand_reg[22]_i_768/CO[3]
+                         net (fo=1, unplaced)         0.000    26.978    rec/multOperand_reg[22]_i_768_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    27.070 r  rec/multOperand_reg[22]_i_377/CO[3]
+                         net (fo=1, unplaced)         0.000    27.070    rec/multOperand_reg[22]_i_377_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    27.162 r  rec/multOperand_reg[22]_i_140/CO[3]
+                         net (fo=1, unplaced)         0.000    27.162    rec/multOperand_reg[22]_i_140_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136    27.298 r  rec/multOperand_reg[22]_i_37/CO[1]
+                         net (fo=214, unplaced)       0.325    27.623    rec/res[9]
+                         LUT4 (Prop_lut4_I1_O)        0.251    27.874 r  rec/multOperand[30]_i_398/O
+                         net (fo=7, unplaced)         0.336    28.210    rec/divide/numer11[13]
+                         LUT6 (Prop_lut6_I0_O)        0.097    28.307 r  rec/multOperand[30]_i_328/O
+                         net (fo=1, unplaced)         0.471    28.778    rec/multOperand[30]_i_328_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    29.164 r  rec/multOperand_reg[30]_i_231/CO[3]
+                         net (fo=1, unplaced)         0.007    29.171    rec/multOperand_reg[30]_i_231_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.263 r  rec/multOperand_reg[30]_i_131/CO[3]
+                         net (fo=1, unplaced)         0.000    29.263    rec/multOperand_reg[30]_i_131_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.355 r  rec/multOperand_reg[30]_i_77/CO[3]
+                         net (fo=1, unplaced)         0.000    29.355    rec/multOperand_reg[30]_i_77_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.447 r  rec/multOperand_reg[30]_i_49/CO[3]
+                         net (fo=1, unplaced)         0.000    29.447    rec/multOperand_reg[30]_i_49_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136    29.583 r  rec/multOperand_reg[30]_i_19/CO[1]
+                         net (fo=221, unplaced)       0.325    29.908    rec/res[8]
+                         LUT4 (Prop_lut4_I1_O)        0.251    30.159 r  rec/multOperand[30]_i_381/O
+                         net (fo=7, unplaced)         0.336    30.495    rec/divide/numer10[12]
+                         LUT6 (Prop_lut6_I0_O)        0.097    30.592 r  rec/multOperand[30]_i_365/O
+                         net (fo=1, unplaced)         0.471    31.063    rec/multOperand[30]_i_365_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    31.449 r  rec/multOperand_reg[30]_i_280/CO[3]
+                         net (fo=1, unplaced)         0.007    31.456    rec/multOperand_reg[30]_i_280_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    31.548 r  rec/multOperand_reg[30]_i_162/CO[3]
+                         net (fo=1, unplaced)         0.000    31.548    rec/multOperand_reg[30]_i_162_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    31.640 r  rec/multOperand_reg[30]_i_92/CO[3]
+                         net (fo=1, unplaced)         0.000    31.640    rec/multOperand_reg[30]_i_92_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    31.732 r  rec/multOperand_reg[30]_i_54/CO[3]
+                         net (fo=1, unplaced)         0.000    31.732    rec/multOperand_reg[30]_i_54_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    31.923 r  rec/multOperand_reg[30]_i_20/CO[2]
+                         net (fo=232, unplaced)       0.423    32.346    rec/res[7]
+                         LUT4 (Prop_lut4_I1_O)        0.223    32.569 r  rec/multOperand[22]_i_1635/O
+                         net (fo=7, unplaced)         0.336    32.905    rec/divide/numer9[11]
+                         LUT6 (Prop_lut6_I0_O)        0.097    33.002 r  rec/multOperand[30]_i_293/O
+                         net (fo=1, unplaced)         0.471    33.473    rec/multOperand[30]_i_293_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    33.859 r  rec/multOperand_reg[30]_i_185/CO[3]
+                         net (fo=1, unplaced)         0.007    33.866    rec/multOperand_reg[30]_i_185_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    33.958 r  rec/multOperand_reg[30]_i_104/CO[3]
+                         net (fo=1, unplaced)         0.000    33.958    rec/multOperand_reg[30]_i_104_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    34.050 r  rec/multOperand_reg[30]_i_62/CO[3]
+                         net (fo=1, unplaced)         0.000    34.050    rec/multOperand_reg[30]_i_62_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    34.142 r  rec/multOperand_reg[30]_i_42/CO[3]
+                         net (fo=1, unplaced)         0.000    34.142    rec/multOperand_reg[30]_i_42_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    34.333 r  rec/multOperand_reg[30]_i_18/CO[2]
+                         net (fo=219, unplaced)       0.421    34.754    rec/res[6]
+                         LUT4 (Prop_lut4_I1_O)        0.223    34.977 r  rec/multOperand[22]_i_1596/O
+                         net (fo=7, unplaced)         0.336    35.313    rec/divide/numer8[10]
+                         LUT6 (Prop_lut6_I0_O)        0.097    35.410 r  rec/multOperand[22]_i_1406/O
+                         net (fo=1, unplaced)         0.471    35.881    rec/multOperand[22]_i_1406_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    36.267 r  rec/multOperand_reg[22]_i_1063/CO[3]
+                         net (fo=1, unplaced)         0.007    36.274    rec/multOperand_reg[22]_i_1063_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    36.366 r  rec/multOperand_reg[22]_i_618/CO[3]
+                         net (fo=1, unplaced)         0.000    36.366    rec/multOperand_reg[22]_i_618_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    36.458 r  rec/multOperand_reg[22]_i_265/CO[3]
+                         net (fo=1, unplaced)         0.000    36.458    rec/multOperand_reg[22]_i_265_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    36.550 r  rec/multOperand_reg[22]_i_89/CO[3]
+                         net (fo=1, unplaced)         0.000    36.550    rec/multOperand_reg[22]_i_89_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    36.642 r  rec/multOperand_reg[22]_i_20/CO[3]
+                         net (fo=240, unplaced)       0.806    37.448    rec/div_man[8]
+                         LUT4 (Prop_lut4_I1_O)        0.097    37.545 r  rec/multOperand[22]_i_1595/O
+                         net (fo=7, unplaced)         0.336    37.881    rec/divide/numer7[9]
+                         LUT6 (Prop_lut6_I0_O)        0.097    37.978 r  rec/multOperand[22]_i_1342/O
+                         net (fo=1, unplaced)         0.471    38.449    rec/multOperand[22]_i_1342_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    38.835 r  rec/multOperand_reg[22]_i_971/CO[3]
+                         net (fo=1, unplaced)         0.007    38.842    rec/multOperand_reg[22]_i_971_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    38.934 r  rec/multOperand_reg[22]_i_558/CO[3]
+                         net (fo=1, unplaced)         0.000    38.934    rec/multOperand_reg[22]_i_558_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    39.026 r  rec/multOperand_reg[22]_i_235/CO[3]
+                         net (fo=1, unplaced)         0.000    39.026    rec/multOperand_reg[22]_i_235_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    39.118 r  rec/multOperand_reg[22]_i_77/CO[3]
+                         net (fo=1, unplaced)         0.000    39.118    rec/multOperand_reg[22]_i_77_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    39.210 r  rec/multOperand_reg[22]_i_18/CO[3]
+                         net (fo=223, unplaced)       0.804    40.014    rec/div_man[7]
+                         LUT4 (Prop_lut4_I1_O)        0.097    40.111 r  rec/multOperand[22]_i_1707/O
+                         net (fo=7, unplaced)         0.336    40.447    rec/divide/numer6[8]
+                         LUT6 (Prop_lut6_I0_O)        0.097    40.544 r  rec/multOperand[22]_i_1613/O
+                         net (fo=1, unplaced)         0.471    41.015    rec/multOperand[22]_i_1613_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    41.401 r  rec/multOperand_reg[22]_i_1386/CO[3]
+                         net (fo=1, unplaced)         0.007    41.408    rec/multOperand_reg[22]_i_1386_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    41.500 r  rec/multOperand_reg[22]_i_1036/CO[3]
+                         net (fo=1, unplaced)         0.000    41.500    rec/multOperand_reg[22]_i_1036_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    41.592 r  rec/multOperand_reg[22]_i_601/CO[3]
+                         net (fo=1, unplaced)         0.000    41.592    rec/multOperand_reg[22]_i_601_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    41.684 r  rec/multOperand_reg[22]_i_255/CO[3]
+                         net (fo=1, unplaced)         0.000    41.684    rec/multOperand_reg[22]_i_255_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    41.776 r  rec/multOperand_reg[22]_i_86/CO[3]
+                         net (fo=1, unplaced)         0.000    41.776    rec/multOperand_reg[22]_i_86_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218    41.994 r  rec/multOperand_reg[22]_i_19/CO[0]
+                         net (fo=246, unplaced)       0.330    42.324    rec/res[5]
+                         LUT4 (Prop_lut4_I1_O)        0.262    42.586 r  rec/multOperand[22]_i_1706/O
+                         net (fo=7, unplaced)         0.336    42.922    rec/divide/numer5[7]
+                         LUT6 (Prop_lut6_I0_O)        0.097    43.019 r  rec/multOperand[22]_i_1560/O
+                         net (fo=1, unplaced)         0.471    43.490    rec/multOperand[22]_i_1560_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    43.876 r  rec/multOperand_reg[22]_i_1297/CO[3]
+                         net (fo=1, unplaced)         0.007    43.883    rec/multOperand_reg[22]_i_1297_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    43.975 r  rec/multOperand_reg[22]_i_935/CO[3]
+                         net (fo=1, unplaced)         0.000    43.975    rec/multOperand_reg[22]_i_935_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    44.067 r  rec/multOperand_reg[22]_i_532/CO[3]
+                         net (fo=1, unplaced)         0.000    44.067    rec/multOperand_reg[22]_i_532_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    44.159 r  rec/multOperand_reg[22]_i_223/CO[3]
+                         net (fo=1, unplaced)         0.000    44.159    rec/multOperand_reg[22]_i_223_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    44.251 r  rec/multOperand_reg[22]_i_74/CO[3]
+                         net (fo=1, unplaced)         0.000    44.251    rec/multOperand_reg[22]_i_74_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.218    44.469 r  rec/multOperand_reg[22]_i_17/CO[0]
+                         net (fo=227, unplaced)       0.328    44.797    rec/res[4]
+                         LUT4 (Prop_lut4_I1_O)        0.262    45.059 r  rec/multOperand[1]_i_605/O
+                         net (fo=7, unplaced)         0.336    45.395    rec/divide/numer4[6]
+                         LUT6 (Prop_lut6_I0_O)        0.097    45.492 r  rec/multOperand[22]_i_1694/O
+                         net (fo=1, unplaced)         0.471    45.963    rec/multOperand[22]_i_1694_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    46.349 r  rec/multOperand_reg[22]_i_1542/CO[3]
+                         net (fo=1, unplaced)         0.007    46.356    rec/multOperand_reg[22]_i_1542_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    46.448 r  rec/multOperand_reg[22]_i_1277/CO[3]
+                         net (fo=1, unplaced)         0.000    46.448    rec/multOperand_reg[22]_i_1277_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    46.540 r  rec/multOperand_reg[22]_i_923/CO[3]
+                         net (fo=1, unplaced)         0.000    46.540    rec/multOperand_reg[22]_i_923_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    46.632 r  rec/multOperand_reg[22]_i_522/CO[3]
+                         net (fo=1, unplaced)         0.000    46.632    rec/multOperand_reg[22]_i_522_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    46.724 r  rec/multOperand_reg[22]_i_218/CO[3]
+                         net (fo=1, unplaced)         0.000    46.724    rec/multOperand_reg[22]_i_218_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136    46.860 r  rec/multOperand_reg[22]_i_73/CO[1]
+                         net (fo=254, unplaced)       0.329    47.189    rec/res[3]
+                         LUT4 (Prop_lut4_I1_O)        0.251    47.440 r  rec/multOperand[2]_i_109/O
+                         net (fo=7, unplaced)         0.336    47.776    rec/divide/numer3[5]
+                         LUT6 (Prop_lut6_I0_O)        0.097    47.873 r  rec/multOperand[22]_i_1686/O
+                         net (fo=1, unplaced)         0.471    48.344    rec/multOperand[22]_i_1686_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    48.730 r  rec/multOperand_reg[22]_i_1533/CO[3]
+                         net (fo=1, unplaced)         0.007    48.737    rec/multOperand_reg[22]_i_1533_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    48.829 r  rec/multOperand_reg[22]_i_1267/CO[3]
+                         net (fo=1, unplaced)         0.000    48.829    rec/multOperand_reg[22]_i_1267_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    48.921 r  rec/multOperand_reg[22]_i_914/CO[3]
+                         net (fo=1, unplaced)         0.000    48.921    rec/multOperand_reg[22]_i_914_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    49.013 r  rec/multOperand_reg[22]_i_513/CO[3]
+                         net (fo=1, unplaced)         0.000    49.013    rec/multOperand_reg[22]_i_513_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    49.105 r  rec/multOperand_reg[22]_i_213/CO[3]
+                         net (fo=1, unplaced)         0.000    49.105    rec/multOperand_reg[22]_i_213_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.136    49.241 r  rec/multOperand_reg[22]_i_72/CO[1]
+                         net (fo=222, unplaced)       0.326    49.567    rec/res[2]
+                         LUT4 (Prop_lut4_I1_O)        0.251    49.818 r  rec/multOperand[1]_i_539/O
+                         net (fo=6, unplaced)         0.333    50.151    rec/divide/numer2[4]
+                         LUT6 (Prop_lut6_I0_O)        0.097    50.248 r  rec/multOperand[2]_i_90/O
+                         net (fo=1, unplaced)         0.471    50.719    rec/multOperand[2]_i_90_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    51.105 r  rec/multOperand_reg[2]_i_66/CO[3]
+                         net (fo=1, unplaced)         0.007    51.112    rec/multOperand_reg[2]_i_66_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    51.204 r  rec/multOperand_reg[2]_i_42/CO[3]
+                         net (fo=1, unplaced)         0.000    51.204    rec/multOperand_reg[2]_i_42_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    51.296 r  rec/multOperand_reg[2]_i_23/CO[3]
+                         net (fo=1, unplaced)         0.000    51.296    rec/multOperand_reg[2]_i_23_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    51.388 r  rec/multOperand_reg[2]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    51.388    rec/multOperand_reg[2]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    51.480 r  rec/multOperand_reg[2]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    51.480    rec/multOperand_reg[2]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    51.671 r  rec/multOperand_reg[2]_i_3/CO[2]
+                         net (fo=198, unplaced)       0.419    52.090    rec/res[1]
+                         LUT4 (Prop_lut4_I1_O)        0.223    52.313 r  rec/multOperand[1]_i_538/O
+                         net (fo=4, unplaced)         0.325    52.638    rec/divide/numer1[3]
+                         LUT6 (Prop_lut6_I0_O)        0.097    52.735 r  rec/multOperand[1]_i_426/O
+                         net (fo=1, unplaced)         0.471    53.206    rec/multOperand[1]_i_426_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    53.592 r  rec/multOperand_reg[1]_i_291/CO[3]
+                         net (fo=1, unplaced)         0.007    53.599    rec/multOperand_reg[1]_i_291_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    53.691 r  rec/multOperand_reg[1]_i_175/CO[3]
+                         net (fo=1, unplaced)         0.000    53.691    rec/multOperand_reg[1]_i_175_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    53.783 r  rec/multOperand_reg[1]_i_80/CO[3]
+                         net (fo=1, unplaced)         0.000    53.783    rec/multOperand_reg[1]_i_80_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    53.875 r  rec/multOperand_reg[1]_i_30/CO[3]
+                         net (fo=1, unplaced)         0.000    53.875    rec/multOperand_reg[1]_i_30_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    53.967 r  rec/multOperand_reg[1]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    53.967    rec/multOperand_reg[1]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191    54.158 r  rec/multOperand_reg[1]_i_2/CO[2]
+                         net (fo=89, unplaced)        0.399    54.557    rec/res[0]
+                         LUT4 (Prop_lut4_I1_O)        0.223    54.780 r  rec/multOperand[1]_i_582/O
+                         net (fo=1, unplaced)         0.301    55.081    rec/divide/numer0__0[2]
+                         LUT6 (Prop_lut6_I0_O)        0.097    55.178 r  rec/multOperand[1]_i_505/O
+                         net (fo=1, unplaced)         0.471    55.649    rec/multOperand[1]_i_505_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    56.035 r  rec/multOperand_reg[1]_i_384/CO[3]
+                         net (fo=1, unplaced)         0.007    56.042    rec/multOperand_reg[1]_i_384_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    56.134 r  rec/multOperand_reg[1]_i_240/CO[3]
+                         net (fo=1, unplaced)         0.000    56.134    rec/multOperand_reg[1]_i_240_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    56.226 r  rec/multOperand_reg[1]_i_125/CO[3]
+                         net (fo=1, unplaced)         0.000    56.226    rec/multOperand_reg[1]_i_125_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    56.318 r  rec/multOperand_reg[1]_i_52/CO[3]
+                         net (fo=1, unplaced)         0.000    56.318    rec/multOperand_reg[1]_i_52_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    56.410 r  rec/multOperand_reg[1]_i_18/CO[3]
+                         net (fo=1, unplaced)         0.000    56.410    rec/multOperand_reg[1]_i_18_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    56.502 r  rec/multOperand_reg[1]_i_4/CO[3]
+                         net (fo=23, unplaced)        0.747    57.249    rec/div_man[0]
+                         LUT6 (Prop_lut6_I0_O)        0.097    57.346 f  rec/multOperand[14]_i_7/O
+                         net (fo=1, unplaced)         0.301    57.647    rec/multOperand[14]_i_7_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.097    57.744 r  rec/multOperand[14]_i_4/O
+                         net (fo=1, unplaced)         0.301    58.045    rec/multOperand[14]_i_4_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.097    58.142 r  rec/multOperand[14]_i_2/O
+                         net (fo=1, unplaced)         0.301    58.443    rec/recResult[14]
+                         LUT3 (Prop_lut3_I1_O)        0.097    58.540 r  rec/multOperand[14]_i_1/O
+                         net (fo=1, unplaced)         0.000    58.540    rec_n_35
+                         FDRE                                         r  multOperand_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=13136, unset)        0.669    10.669    clk
+                         FDRE                                         r  multOperand_reg[14]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+                         FDRE (Setup_fdre_C_D)        0.069    10.702    multOperand_reg[14]
+  -------------------------------------------------------------------
+                         required time                         10.702    
+                         arrival time                         -58.540    
+  -------------------------------------------------------------------
+                         slack                                -47.838    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.160ns  (arrival time - required time)
+  Source:                 topWriteDataReg2_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            topBlock/inst2/ram_reg_0_15_0_5/RAMA/I
+                            (rising edge-triggered cell RAMD32 clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.275ns  (logic 0.148ns (53.782%)  route 0.127ns (46.218%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13136, unset)        0.411     0.411    clk
+                         FDRE                                         r  topWriteDataReg2_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.148     0.559 r  topWriteDataReg2_reg[0]/Q
+                         net (fo=1, unplaced)         0.127     0.686    topBlock/inst2/ram_reg_0_15_0_5/DIA0
+                         RAMD32                                       r  topBlock/inst2/ram_reg_0_15_0_5/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13136, unset)        0.432     0.432    topBlock/inst2/ram_reg_0_15_0_5/WCLK
+                         RAMD32                                       r  topBlock/inst2/ram_reg_0_15_0_5/RAMA/CLK
+                         clock pessimism              0.000     0.432    
+                         RAMD32 (Hold_ramd32_CLK_I)
+                                                      0.094     0.526    topBlock/inst2/ram_reg_0_15_0_5/RAMA
+  -------------------------------------------------------------------
+                         required time                         -0.526    
+                         arrival time                           0.686    
+  -------------------------------------------------------------------
+                         slack                                  0.160    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.234         10.000      7.766                currentBlock0/inst1/ram_reg_0/CLKARDCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.050         5.000       3.950                topBlock/inst2/ram_reg_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.050         5.000       3.950                topBlock/inst2/ram_reg_0_15_0_5/RAMA/CLK
+
+
+

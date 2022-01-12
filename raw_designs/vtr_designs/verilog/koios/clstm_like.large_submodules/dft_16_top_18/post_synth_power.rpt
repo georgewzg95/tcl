@@ -1,0 +1,247 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:39:26 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.large_submodules/dft_16_top_18/post_synth_power.rpt
+| Design           : dft_16_top_18
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 162.404      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 58.980       |
+| Device Static (mW)       | 103.424      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.1         |
+| Junction Temperature (C) | 26.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    18.566  |        3 |       --- |             --- |
+| Slice Logic             |    15.418  |     4240 |       --- |             --- |
+|   LUT as Logic          |     8.434  |     1349 |     53200 |            2.54 |
+|   CARRY4                |     3.682  |      375 |     13300 |            2.82 |
+|   Register              |     1.806  |     2151 |    106400 |            2.02 |
+|   LUT as Shift Register |     1.495  |      198 |     17400 |            1.14 |
+|   Others                |     0.000  |      167 |       --- |             --- |
+| Signals                 |     9.980  |     2063 |       --- |             --- |
+| DSPs                    |    15.016  |       14 |       220 |            6.36 |
+| Static Power            |   103.424  |          |           |                 |
+| Total                   |   162.404  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.067 |       0.059 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------+------------+
+| Name                                          | Power (mW) |
++-----------------------------------------------+------------+
+| dft_16_top_18                                 |    58.980  |
+|   codeBlock88206_18_inst                      |    38.748  |
+|     add88218                                  |     0.627  |
+|     add88233                                  |     0.627  |
+|     add88278                                  |     0.233  |
+|     add88293                                  |     0.233  |
+|     add88330                                  |     0.213  |
+|     add88337                                  |     0.213  |
+|     add88374                                  |     0.213  |
+|     add88426                                  |     0.627  |
+|     add88441                                  |     0.627  |
+|     add88486                                  |     0.233  |
+|     add88501                                  |     0.233  |
+|     add88538                                  |     0.052  |
+|     add88545                                  |     0.052  |
+|     add88580                                  |     0.353  |
+|     add88610                                  |     0.052  |
+|     add88652                                  |     0.353  |
+|     add88746                                  |     0.627  |
+|     add88761                                  |     0.627  |
+|     add88806                                  |     0.233  |
+|     add88821                                  |     0.233  |
+|     add88858                                  |     0.213  |
+|     add88865                                  |     0.213  |
+|     add88903                                  |     0.052  |
+|     add88945                                  |     0.353  |
+|     add89012                                  |     0.627  |
+|     add89027                                  |     0.627  |
+|     add89072                                  |     0.233  |
+|     add89087                                  |     0.233  |
+|     add89124                                  |     0.052  |
+|     add89131                                  |     0.052  |
+|     add89197                                  |     0.052  |
+|     add89239                                  |     0.352  |
+|     m88566                                    |     2.533  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.533  |
+|     m88570                                    |     2.422  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.422  |
+|     m88572                                    |     2.422  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.422  |
+|     m88578                                    |     2.533  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.533  |
+|     m88582                                    |     2.533  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.533  |
+|     m88584                                    |     2.422  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.422  |
+|     m88586                                    |     2.422  |
+|       dsp_signed_mult_18x18_unit_18_36_0_inst |     2.422  |
+|     shiftRegFIFO_5_1_inst                     |     0.047  |
+|     sub88381                                  |     0.213  |
+|     sub88552                                  |     0.161  |
+|     sub88559                                  |     0.161  |
+|     sub88617                                  |     0.052  |
+|     sub88673                                  |     0.353  |
+|     sub88910                                  |     0.052  |
+|     sub89138                                  |     0.161  |
+|     sub89145                                  |     0.161  |
+|     sub89166                                  |     0.353  |
+|     sub89204                                  |     0.052  |
+|     sub89260                                  |     0.352  |
+|   codeBlock89324_18_inst                      |    20.231  |
+|     add89336                                  |     0.888  |
+|     add89351                                  |     0.888  |
+|     add89396                                  |     0.355  |
+|     add89411                                  |     0.355  |
+|     add89448                                  |     0.218  |
+|     add89455                                  |     0.218  |
+|     add89492                                  |     0.218  |
+|     add89544                                  |     0.894  |
+|     add89559                                  |     0.894  |
+|     add89604                                  |     0.360  |
+|     add89619                                  |     0.360  |
+|     add89656                                  |     0.218  |
+|     add89663                                  |     0.218  |
+|     add89700                                  |     0.218  |
+|     add89752                                  |     0.889  |
+|     add89767                                  |     0.889  |
+|     add89812                                  |     0.360  |
+|     add89827                                  |     0.360  |
+|     add89864                                  |     0.218  |
+|     add89871                                  |     0.218  |
+|     add89908                                  |     0.218  |
+|     add89960                                  |     0.904  |
+|     add89975                                  |     0.894  |
+|     add90020                                  |     0.360  |
+|     add90035                                  |     0.378  |
+|     add90072                                  |     0.218  |
+|     add90079                                  |     0.218  |
+|     add90116                                  |     0.218  |
+|     shiftRegFIFO_2_1_inst                     |     0.018  |
+|     sub89499                                  |     0.218  |
+|     sub89707                                  |     0.218  |
+|     sub89915                                  |     0.218  |
+|     sub90123                                  |     0.218  |
++-----------------------------------------------+------------+
+
+

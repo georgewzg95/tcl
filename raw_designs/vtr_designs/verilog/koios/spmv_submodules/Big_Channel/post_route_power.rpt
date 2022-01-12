@@ -1,0 +1,345 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 04:14:08 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_route_power.rpt
+| Design           : Big_Channel
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 167.939      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 64.434       |
+| Device Static (mW)       | 103.505      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.1         |
+| Junction Temperature (C) | 26.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+------------+----------+-----------+-----------------+
+| On-Chip                  | Power (mW) | Used     | Available | Utilization (%) |
++--------------------------+------------+----------+-----------+-----------------+
+| Clocks                   |    23.986  |        3 |       --- |             --- |
+| Slice Logic              |    21.812  |    11726 |       --- |             --- |
+|   LUT as Logic           |    15.548  |     3758 |     53200 |            7.06 |
+|   LUT as Distributed RAM |     2.851  |     1024 |     17400 |            5.89 |
+|   CARRY4                 |     2.280  |      448 |     13300 |            3.37 |
+|   Register               |     1.134  |     4192 |    106400 |            3.94 |
+|   Others                 |     0.000  |      384 |       --- |             --- |
+| Signals                  |    18.636  |     6448 |       --- |             --- |
+| Static Power             |   103.505  |          |           |                 |
+| Total                    |   167.939  |          |           |                 |
++--------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.072 |       0.064 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------+------------+
+| Name                | Power (mW) |
++---------------------+------------+
+| Big_Channel         |    64.434  |
+|   CH_0              |     1.996  |
+|     A0              |     1.043  |
+|       fifo_addr_out |     0.263  |
+|       fifo_data_out |     0.470  |
+|     CH0             |     0.952  |
+|       fifo_mult     |     0.280  |
+|   CH_1              |     1.965  |
+|     A0              |     1.019  |
+|       fifo_addr_out |     0.260  |
+|       fifo_data_out |     0.449  |
+|     CH0             |     0.947  |
+|       fifo_mult     |     0.276  |
+|   CH_10             |     1.963  |
+|     A0              |     1.006  |
+|       fifo_addr_out |     0.257  |
+|       fifo_data_out |     0.436  |
+|     CH0             |     0.957  |
+|       fifo_mult     |     0.272  |
+|   CH_11             |     1.995  |
+|     A0              |     1.018  |
+|       fifo_addr_out |     0.253  |
+|       fifo_data_out |     0.448  |
+|     CH0             |     0.976  |
+|       fifo_mult     |     0.284  |
+|   CH_12             |     2.064  |
+|     A0              |     1.015  |
+|       fifo_addr_out |     0.263  |
+|       fifo_data_out |     0.441  |
+|     CH0             |     1.049  |
+|       fifo_mult     |     0.281  |
+|   CH_13             |     1.968  |
+|     A0              |     1.012  |
+|       fifo_addr_out |     0.245  |
+|       fifo_data_out |     0.437  |
+|     CH0             |     0.956  |
+|       fifo_mult     |     0.280  |
+|   CH_14             |     2.037  |
+|     A0              |     1.046  |
+|       fifo_addr_out |     0.267  |
+|       fifo_data_out |     0.466  |
+|     CH0             |     0.992  |
+|       fifo_mult     |     0.285  |
+|   CH_15             |     2.007  |
+|     A0              |     1.013  |
+|       fifo_addr_out |     0.251  |
+|       fifo_data_out |     0.447  |
+|     CH0             |     0.994  |
+|       fifo_mult     |     0.287  |
+|   CH_16             |     2.027  |
+|     A0              |     1.051  |
+|       fifo_addr_out |     0.264  |
+|       fifo_data_out |     0.475  |
+|     CH0             |     0.977  |
+|       fifo_mult     |     0.283  |
+|   CH_17             |     2.057  |
+|     A0              |     1.054  |
+|       fifo_addr_out |     0.273  |
+|       fifo_data_out |     0.461  |
+|     CH0             |     1.003  |
+|       fifo_mult     |     0.276  |
+|   CH_18             |     2.030  |
+|     A0              |     1.033  |
+|       fifo_addr_out |     0.268  |
+|       fifo_data_out |     0.457  |
+|     CH0             |     0.997  |
+|       fifo_mult     |     0.281  |
+|   CH_19             |     2.038  |
+|     A0              |     1.056  |
+|       fifo_addr_out |     0.262  |
+|       fifo_data_out |     0.481  |
+|     CH0             |     0.982  |
+|       fifo_mult     |     0.281  |
+|   CH_2              |     2.086  |
+|     A0              |     1.065  |
+|       fifo_addr_out |     0.272  |
+|       fifo_data_out |     0.480  |
+|     CH0             |     1.021  |
+|       fifo_mult     |     0.276  |
+|   CH_20             |     1.994  |
+|     A0              |     1.049  |
+|       fifo_addr_out |     0.271  |
+|       fifo_data_out |     0.467  |
+|     CH0             |     0.945  |
+|       fifo_mult     |     0.280  |
+|   CH_21             |     1.977  |
+|     A0              |     1.005  |
+|       fifo_addr_out |     0.250  |
+|       fifo_data_out |     0.440  |
+|     CH0             |     0.972  |
+|       fifo_mult     |     0.280  |
+|   CH_22             |     2.022  |
+|     A0              |     1.024  |
+|       fifo_addr_out |     0.257  |
+|       fifo_data_out |     0.453  |
+|     CH0             |     0.998  |
+|       fifo_mult     |     0.280  |
+|   CH_23             |     2.004  |
+|     A0              |     1.032  |
+|       fifo_addr_out |     0.264  |
+|       fifo_data_out |     0.457  |
+|     CH0             |     0.971  |
+|       fifo_mult     |     0.274  |
+|   CH_24             |     2.008  |
+|     A0              |     1.010  |
+|       fifo_addr_out |     0.243  |
+|       fifo_data_out |     0.456  |
+|     CH0             |     0.998  |
+|       fifo_mult     |     0.278  |
+|   CH_25             |     2.013  |
+|     A0              |     1.011  |
+|       fifo_addr_out |     0.246  |
+|       fifo_data_out |     0.455  |
+|     CH0             |     1.003  |
+|       fifo_mult     |     0.278  |
+|   CH_26             |     1.998  |
+|     A0              |     1.033  |
+|       fifo_addr_out |     0.261  |
+|       fifo_data_out |     0.460  |
+|     CH0             |     0.964  |
+|       fifo_mult     |     0.281  |
+|   CH_27             |     1.954  |
+|     A0              |     1.012  |
+|       fifo_addr_out |     0.262  |
+|       fifo_data_out |     0.441  |
+|     CH0             |     0.942  |
+|       fifo_mult     |     0.277  |
+|   CH_28             |     2.001  |
+|     A0              |     1.029  |
+|       fifo_addr_out |     0.258  |
+|       fifo_data_out |     0.451  |
+|     CH0             |     0.972  |
+|       fifo_mult     |     0.280  |
+|   CH_29             |     2.223  |
+|     A0              |     1.240  |
+|       fifo_addr_out |     0.263  |
+|       fifo_data_out |     0.473  |
+|     CH0             |     0.983  |
+|       fifo_mult     |     0.277  |
+|   CH_3              |     2.012  |
+|     A0              |     1.022  |
+|       fifo_addr_out |     0.256  |
+|       fifo_data_out |     0.453  |
+|     CH0             |     0.990  |
+|       fifo_mult     |     0.288  |
+|   CH_30             |     2.037  |
+|     A0              |     1.042  |
+|       fifo_addr_out |     0.260  |
+|       fifo_data_out |     0.465  |
+|     CH0             |     0.995  |
+|       fifo_mult     |     0.275  |
+|   CH_31             |     1.977  |
+|     A0              |     1.027  |
+|       fifo_addr_out |     0.241  |
+|       fifo_data_out |     0.470  |
+|     CH0             |     0.950  |
+|       fifo_mult     |     0.283  |
+|   CH_4              |     1.990  |
+|     A0              |     1.002  |
+|       fifo_addr_out |     0.256  |
+|       fifo_data_out |     0.437  |
+|     CH0             |     0.987  |
+|       fifo_mult     |     0.273  |
+|   CH_5              |     2.057  |
+|     A0              |     1.036  |
+|       fifo_addr_out |     0.263  |
+|       fifo_data_out |     0.452  |
+|     CH0             |     1.020  |
+|       fifo_mult     |     0.284  |
+|   CH_6              |     1.958  |
+|     A0              |     0.997  |
+|       fifo_addr_out |     0.246  |
+|       fifo_data_out |     0.437  |
+|     CH0             |     0.961  |
+|       fifo_mult     |     0.277  |
+|   CH_7              |     1.938  |
+|     A0              |     1.001  |
+|       fifo_addr_out |     0.238  |
+|       fifo_data_out |     0.451  |
+|     CH0             |     0.937  |
+|       fifo_mult     |     0.272  |
+|   CH_8              |     2.012  |
+|     A0              |     1.041  |
+|       fifo_addr_out |     0.263  |
+|       fifo_data_out |     0.454  |
+|     CH0             |     0.971  |
+|       fifo_mult     |     0.283  |
+|   CH_9              |     2.026  |
+|     A0              |     1.042  |
+|       fifo_addr_out |     0.253  |
+|       fifo_data_out |     0.472  |
+|     CH0             |     0.984  |
+|       fifo_mult     |     0.284  |
++---------------------+------------+
+
+

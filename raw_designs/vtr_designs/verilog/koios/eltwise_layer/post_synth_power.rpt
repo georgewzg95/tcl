@@ -1,0 +1,219 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 05:10:23 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/eltwise_layer/post_synth_power.rpt
+| Design           : eltwise_layer
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------------------------------------+
+| Total On-Chip Power (mW) | 54446.930 (Junction temp exceeded!) |
+| Design Power Budget (mW) | Unspecified*                        |
+| Power Budget Margin (mW) | NA                                  |
+| Dynamic (mW)             | 53409.328                           |
+| Device Static (mW)       | 1037.601                            |
+| Effective TJA (C/W)      | 11.5                                |
+| Max Ambient (C)          | 0.0                                 |
+| Junction Temperature (C) | 125.0                               |
+| Confidence Level         | Medium                              |
+| Setting File             | ---                                 |
+| Simulation Activity File | ---                                 |
+| Design Nets Matched      | NA                                  |
++--------------------------+-------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |  1458.432  |        3 |       --- |             --- |
+| Slice Logic             | 28930.180  |  3564341 |       --- |             --- |
+|   LUT as Logic          | 27908.447  |  2656905 |     53200 |         4994.18 |
+|   F7/F8 Muxes           |   724.266  |   424448 |     53200 |          797.83 |
+|   Register              |   289.375  |   310142 |    106400 |          291.49 |
+|   CARRY4                |     5.620  |      838 |     13300 |            6.30 |
+|   LUT as Shift Register |     1.560  |      220 |     17400 |            1.26 |
+|   Others                |     0.000  |      605 |       --- |             --- |
+| Signals                 | 23022.730  |  2657278 |       --- |             --- |
+| Static Power            |  1037.601  |          |           |                 |
+| Total                   | 54448.945  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    53.708 |      53.409 |      0.299 |
+| Vccaux    |       1.800 |     0.100 |       0.000 |      0.100 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+---------+-----------------+
+| Clock | Domain  | Constraint (ns) |
++-------+---------+-----------------+
+| clk   | clk_mem |            10.0 |
++-------+---------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------+------------+
+| Name               | Power (mW) |
++--------------------+------------+
+| eltwise_layer      | 53411.344  |
+|   matrix_A_0       |  1175.345  |
+|   matrix_A_1       |  1177.080  |
+|   matrix_A_2       |  1175.346  |
+|   matrix_A_3       |  1175.346  |
+|   matrix_A_4       |  1175.346  |
+|   matrix_A_5       |  1001.074  |
+|   matrix_B_0       |  1175.803  |
+|   matrix_B_1       |  1176.523  |
+|   matrix_B_2       |  1175.803  |
+|   matrix_B_3       |  1175.803  |
+|   matrix_B_4       |  1175.803  |
+|   matrix_B_5       |  1002.130  |
+|   matrix_C_0       |   756.084  |
+|   matrix_C_1       |   756.084  |
+|   matrix_C_2       |   756.084  |
+|   matrix_C_3       |   756.811  |
+|   matrix_C_4       |   756.084  |
+|   matrix_C_5       |   749.103  |
+|   u_eltwise_cu_0   |  5774.424  |
+|     u_input_logic  |  3269.077  |
+|     u_output_logic |  2478.616  |
+|     u_pe_array     |    26.563  |
+|       pe0          |     7.215  |
+|       pe1          |     6.450  |
+|       pe2          |     6.447  |
+|       pe3          |     6.450  |
+|   u_eltwise_cu_1   |  5771.726  |
+|     u_input_logic  |  3267.153  |
+|     u_output_logic |  2478.631  |
+|     u_pe_array     |    25.794  |
+|       pe0          |     6.447  |
+|       pe1          |     6.450  |
+|       pe2          |     6.447  |
+|       pe3          |     6.450  |
+|   u_eltwise_cu_2   |  5771.712  |
+|     u_input_logic  |  3267.153  |
+|     u_output_logic |  2478.616  |
+|     u_pe_array     |    25.794  |
+|       pe0          |     6.447  |
+|       pe1          |     6.450  |
+|       pe2          |     6.447  |
+|       pe3          |     6.450  |
+|   u_eltwise_cu_3   |  5771.695  |
+|     u_input_logic  |  3267.136  |
+|     u_output_logic |  2478.616  |
+|     u_pe_array     |    25.794  |
+|       pe0          |     6.447  |
+|       pe1          |     6.450  |
+|       pe2          |     6.447  |
+|       pe3          |     6.450  |
+|   u_eltwise_cu_4   |  5771.695  |
+|     u_input_logic  |  3267.136  |
+|     u_output_logic |  2478.616  |
+|     u_pe_array     |    25.794  |
+|       pe0          |     6.447  |
+|       pe1          |     6.450  |
+|       pe2          |     6.447  |
+|       pe3          |     6.450  |
+|   u_eltwise_cu_5   |  5348.881  |
+|     u_input_logic  |  3311.644  |
+|     u_output_logic |  2024.231  |
+|     u_pe_array     |    12.858  |
+|       pe0          |     6.385  |
+|       pe1          |     6.388  |
+|       pe3          |     0.084  |
++--------------------+------------+
+
+

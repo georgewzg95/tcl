@@ -1,0 +1,422 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 21:26:55 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/opencores/arithmetic/dvb_s2_ldpc_decoder_submodules/ldpc_shuffle/post_route_power.rpt
+| Design           : ldpc_shuffle
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 134.460      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 31.440       |
+| Device Static (mW)       | 103.020      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.4         |
+| Junction Temperature (C) | 26.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |     6.502  |        3 |       --- |             --- |
+| Slice Logic    |    13.969  |     4236 |       --- |             --- |
+|   LUT as Logic |    12.823  |     2164 |     53200 |            4.07 |
+|   Register     |     0.730  |     1080 |    106400 |            1.02 |
+|   F7/F8 Muxes  |     0.416  |      360 |     53200 |            0.68 |
+|   Others       |     0.000  |      270 |       --- |             --- |
+| Signals        |    10.969  |     1808 |       --- |             --- |
+| Static Power   |   103.020  |          |           |                 |
+| Total          |   134.460  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.039 |       0.031 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.016 |       0.000 |      0.016 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------+------------+
+| Name                            | Power (mW) |
++---------------------------------+------------+
+| ldpc_shuffle                    |    31.440  |
+|   lastshift[0].ldpc_muxregi     |     0.092  |
+|   lastshift[10].ldpc_muxregi    |     0.093  |
+|   lastshift[11].ldpc_muxregi    |     0.093  |
+|   lastshift[12].ldpc_muxregi    |     0.093  |
+|   lastshift[13].ldpc_muxregi    |     0.093  |
+|   lastshift[14].ldpc_muxregi    |     0.093  |
+|   lastshift[15].ldpc_muxregi    |     0.093  |
+|   lastshift[16].ldpc_muxregi    |     0.092  |
+|   lastshift[17].ldpc_muxregi    |     0.093  |
+|   lastshift[18].ldpc_muxregi    |     0.094  |
+|   lastshift[19].ldpc_muxregi    |     0.093  |
+|   lastshift[1].ldpc_muxregi     |     0.092  |
+|   lastshift[20].ldpc_muxregi    |     0.094  |
+|   lastshift[21].ldpc_muxregi    |     0.093  |
+|   lastshift[22].ldpc_muxregi    |     0.093  |
+|   lastshift[23].ldpc_muxregi    |     0.093  |
+|   lastshift[24].ldpc_muxregi    |     0.093  |
+|   lastshift[25].ldpc_muxregi    |     0.093  |
+|   lastshift[26].ldpc_muxregi    |     0.093  |
+|   lastshift[27].ldpc_muxregi    |     0.094  |
+|   lastshift[28].ldpc_muxregi    |     0.094  |
+|   lastshift[29].ldpc_muxregi    |     0.093  |
+|   lastshift[2].ldpc_muxregi     |     0.092  |
+|   lastshift[30].ldpc_muxregi    |     0.093  |
+|   lastshift[31].ldpc_muxregi    |     0.093  |
+|   lastshift[32].ldpc_muxregi    |     0.092  |
+|   lastshift[33].ldpc_muxregi    |     0.093  |
+|   lastshift[34].ldpc_muxregi    |     0.094  |
+|   lastshift[35].ldpc_muxregi    |     0.092  |
+|   lastshift[36].ldpc_muxregi    |     0.093  |
+|   lastshift[37].ldpc_muxregi    |     0.094  |
+|   lastshift[38].ldpc_muxregi    |     0.093  |
+|   lastshift[39].ldpc_muxregi    |     0.093  |
+|   lastshift[3].ldpc_muxregi     |     0.093  |
+|   lastshift[40].ldpc_muxregi    |     0.092  |
+|   lastshift[41].ldpc_muxregi    |     0.094  |
+|   lastshift[42].ldpc_muxregi    |     0.092  |
+|   lastshift[43].ldpc_muxregi    |     0.094  |
+|   lastshift[44].ldpc_muxregi    |     0.093  |
+|   lastshift[45].ldpc_muxregi    |     0.093  |
+|   lastshift[46].ldpc_muxregi    |     0.093  |
+|   lastshift[47].ldpc_muxregi    |     0.094  |
+|   lastshift[48].ldpc_muxregi    |     0.094  |
+|   lastshift[49].ldpc_muxregi    |     0.093  |
+|   lastshift[4].ldpc_muxregi     |     0.094  |
+|   lastshift[50].ldpc_muxregi    |     0.094  |
+|   lastshift[51].ldpc_muxregi    |     0.093  |
+|   lastshift[52].ldpc_muxregi    |     0.094  |
+|   lastshift[53].ldpc_muxregi    |     0.094  |
+|   lastshift[54].ldpc_muxregi    |     0.094  |
+|   lastshift[55].ldpc_muxregi    |     0.093  |
+|   lastshift[56].ldpc_muxregi    |     0.092  |
+|   lastshift[57].ldpc_muxregi    |     0.093  |
+|   lastshift[58].ldpc_muxregi    |     0.093  |
+|   lastshift[59].ldpc_muxregi    |     0.093  |
+|   lastshift[5].ldpc_muxregi     |     0.094  |
+|   lastshift[60].ldpc_muxregi    |     0.092  |
+|   lastshift[61].ldpc_muxregi    |     0.092  |
+|   lastshift[62].ldpc_muxregi    |     0.093  |
+|   lastshift[63].ldpc_muxregi    |     0.094  |
+|   lastshift[64].ldpc_muxregi    |     0.094  |
+|   lastshift[65].ldpc_muxregi    |     0.093  |
+|   lastshift[66].ldpc_muxregi    |     0.092  |
+|   lastshift[67].ldpc_muxregi    |     0.092  |
+|   lastshift[68].ldpc_muxregi    |     0.094  |
+|   lastshift[69].ldpc_muxregi    |     0.092  |
+|   lastshift[6].ldpc_muxregi     |     0.092  |
+|   lastshift[70].ldpc_muxregi    |     0.093  |
+|   lastshift[71].ldpc_muxregi    |     0.093  |
+|   lastshift[72].ldpc_muxregi    |     0.093  |
+|   lastshift[73].ldpc_muxregi    |     0.093  |
+|   lastshift[74].ldpc_muxregi    |     0.093  |
+|   lastshift[75].ldpc_muxregi    |     0.093  |
+|   lastshift[76].ldpc_muxregi    |     0.092  |
+|   lastshift[77].ldpc_muxregi    |     0.093  |
+|   lastshift[78].ldpc_muxregi    |     0.092  |
+|   lastshift[79].ldpc_muxregi    |     0.093  |
+|   lastshift[7].ldpc_muxregi     |     0.093  |
+|   lastshift[80].ldpc_muxregi    |     0.094  |
+|   lastshift[81].ldpc_muxregi    |     0.093  |
+|   lastshift[82].ldpc_muxregi    |     0.093  |
+|   lastshift[83].ldpc_muxregi    |     0.093  |
+|   lastshift[84].ldpc_muxregi    |     0.092  |
+|   lastshift[85].ldpc_muxregi    |     0.093  |
+|   lastshift[86].ldpc_muxregi    |     0.092  |
+|   lastshift[87].ldpc_muxregi    |     0.093  |
+|   lastshift[88].ldpc_muxregi    |     0.093  |
+|   lastshift[89].ldpc_muxregi    |     0.094  |
+|   lastshift[8].ldpc_muxregi     |     0.093  |
+|   lastshift[9].ldpc_muxregi     |     0.094  |
+|   middleshift[0].ldpc_muxregi   |     0.105  |
+|   middleshift[10].ldpc_muxregi  |     0.095  |
+|   middleshift[11].ldpc_muxregi  |     0.098  |
+|   middleshift[12].ldpc_muxregi  |     0.096  |
+|   middleshift[13].ldpc_muxregi  |     0.101  |
+|   middleshift[14].ldpc_muxregi  |     0.100  |
+|   middleshift[15].ldpc_muxregi  |     0.101  |
+|   middleshift[16].ldpc_muxregi  |     0.106  |
+|   middleshift[17].ldpc_muxregi  |     0.113  |
+|   middleshift[18].ldpc_muxregi  |     0.098  |
+|   middleshift[19].ldpc_muxregi  |     0.095  |
+|   middleshift[1].ldpc_muxregi   |     0.094  |
+|   middleshift[20].ldpc_muxregi  |     0.102  |
+|   middleshift[21].ldpc_muxregi  |     0.097  |
+|   middleshift[22].ldpc_muxregi  |     0.098  |
+|   middleshift[23].ldpc_muxregi  |     0.099  |
+|   middleshift[24].ldpc_muxregi  |     0.090  |
+|   middleshift[25].ldpc_muxregi  |     0.096  |
+|   middleshift[26].ldpc_muxregi  |     0.104  |
+|   middleshift[27].ldpc_muxregi  |     0.098  |
+|   middleshift[28].ldpc_muxregi  |     0.107  |
+|   middleshift[29].ldpc_muxregi  |     0.103  |
+|   middleshift[2].ldpc_muxregi   |     0.103  |
+|   middleshift[30].ldpc_muxregi  |     0.096  |
+|   middleshift[31].ldpc_muxregi  |     0.100  |
+|   middleshift[32].ldpc_muxregi  |     0.091  |
+|   middleshift[33].ldpc_muxregi  |     0.103  |
+|   middleshift[34].ldpc_muxregi  |     0.096  |
+|   middleshift[35].ldpc_muxregi  |     0.098  |
+|   middleshift[36].ldpc_muxregi  |     0.094  |
+|   middleshift[37].ldpc_muxregi  |     0.094  |
+|   middleshift[38].ldpc_muxregi  |     0.101  |
+|   middleshift[39].ldpc_muxregi  |     0.103  |
+|   middleshift[3].ldpc_muxregi   |     0.110  |
+|   middleshift[40].ldpc_muxregi  |     0.100  |
+|   middleshift[41].ldpc_muxregi  |     0.100  |
+|   middleshift[42].ldpc_muxregi  |     0.100  |
+|   middleshift[43].ldpc_muxregi  |     0.104  |
+|   middleshift[44].ldpc_muxregi  |     0.097  |
+|   middleshift[45].ldpc_muxregi  |     0.106  |
+|   middleshift[46].ldpc_muxregi  |     0.103  |
+|   middleshift[47].ldpc_muxregi  |     0.105  |
+|   middleshift[48].ldpc_muxregi  |     0.109  |
+|   middleshift[49].ldpc_muxregi  |     0.108  |
+|   middleshift[4].ldpc_muxregi   |     0.103  |
+|   middleshift[50].ldpc_muxregi  |     0.105  |
+|   middleshift[51].ldpc_muxregi  |     0.102  |
+|   middleshift[52].ldpc_muxregi  |     0.107  |
+|   middleshift[53].ldpc_muxregi  |     0.107  |
+|   middleshift[54].ldpc_muxregi  |     0.096  |
+|   middleshift[55].ldpc_muxregi  |     0.098  |
+|   middleshift[56].ldpc_muxregi  |     0.106  |
+|   middleshift[57].ldpc_muxregi  |     0.100  |
+|   middleshift[58].ldpc_muxregi  |     0.104  |
+|   middleshift[59].ldpc_muxregi  |     0.103  |
+|   middleshift[5].ldpc_muxregi   |     0.106  |
+|   middleshift[60].ldpc_muxregi  |     0.104  |
+|   middleshift[61].ldpc_muxregi  |     0.109  |
+|   middleshift[62].ldpc_muxregi  |     0.113  |
+|   middleshift[63].ldpc_muxregi  |     0.105  |
+|   middleshift[64].ldpc_muxregi  |     0.103  |
+|   middleshift[65].ldpc_muxregi  |     0.109  |
+|   middleshift[66].ldpc_muxregi  |     0.103  |
+|   middleshift[67].ldpc_muxregi  |     0.102  |
+|   middleshift[68].ldpc_muxregi  |     0.109  |
+|   middleshift[69].ldpc_muxregi  |     0.106  |
+|   middleshift[6].ldpc_muxregi   |     0.099  |
+|   middleshift[70].ldpc_muxregi  |     0.099  |
+|   middleshift[71].ldpc_muxregi  |     0.108  |
+|   middleshift[72].ldpc_muxregi  |     0.101  |
+|   middleshift[73].ldpc_muxregi  |     0.109  |
+|   middleshift[74].ldpc_muxregi  |     0.104  |
+|   middleshift[75].ldpc_muxregi  |     0.097  |
+|   middleshift[76].ldpc_muxregi  |     0.101  |
+|   middleshift[77].ldpc_muxregi  |     0.105  |
+|   middleshift[78].ldpc_muxregi  |     0.096  |
+|   middleshift[79].ldpc_muxregi  |     0.098  |
+|   middleshift[7].ldpc_muxregi   |     0.104  |
+|   middleshift[80].ldpc_muxregi  |     0.110  |
+|   middleshift[81].ldpc_muxregi  |     0.100  |
+|   middleshift[82].ldpc_muxregi  |     0.094  |
+|   middleshift[83].ldpc_muxregi  |     0.105  |
+|   middleshift[84].ldpc_muxregi  |     0.093  |
+|   middleshift[85].ldpc_muxregi  |     0.099  |
+|   middleshift[86].ldpc_muxregi  |     0.100  |
+|   middleshift[87].ldpc_muxregi  |     0.099  |
+|   middleshift[88].ldpc_muxregi  |     0.097  |
+|   middleshift[89].ldpc_muxregi  |     0.105  |
+|   middleshift[8].ldpc_muxregi   |     0.097  |
+|   middleshift[9].ldpc_muxregi   |     0.105  |
+|   quartershift[0].ldpc_muxregi  |     0.139  |
+|   quartershift[10].ldpc_muxregi |     0.134  |
+|   quartershift[11].ldpc_muxregi |     0.145  |
+|   quartershift[12].ldpc_muxregi |     0.132  |
+|   quartershift[13].ldpc_muxregi |     0.141  |
+|   quartershift[14].ldpc_muxregi |     0.135  |
+|   quartershift[15].ldpc_muxregi |     0.132  |
+|   quartershift[16].ldpc_muxregi |     0.133  |
+|   quartershift[17].ldpc_muxregi |     0.134  |
+|   quartershift[18].ldpc_muxregi |     0.130  |
+|   quartershift[19].ldpc_muxregi |     0.130  |
+|   quartershift[1].ldpc_muxregi  |     0.141  |
+|   quartershift[20].ldpc_muxregi |     0.127  |
+|   quartershift[21].ldpc_muxregi |     0.135  |
+|   quartershift[22].ldpc_muxregi |     0.134  |
+|   quartershift[23].ldpc_muxregi |     0.155  |
+|   quartershift[24].ldpc_muxregi |     0.144  |
+|   quartershift[25].ldpc_muxregi |     0.148  |
+|   quartershift[26].ldpc_muxregi |     0.157  |
+|   quartershift[27].ldpc_muxregi |     0.150  |
+|   quartershift[28].ldpc_muxregi |     0.156  |
+|   quartershift[29].ldpc_muxregi |     0.155  |
+|   quartershift[2].ldpc_muxregi  |     0.130  |
+|   quartershift[30].ldpc_muxregi |     0.154  |
+|   quartershift[31].ldpc_muxregi |     0.152  |
+|   quartershift[32].ldpc_muxregi |     0.149  |
+|   quartershift[33].ldpc_muxregi |     0.149  |
+|   quartershift[34].ldpc_muxregi |     0.150  |
+|   quartershift[35].ldpc_muxregi |     0.153  |
+|   quartershift[36].ldpc_muxregi |     0.151  |
+|   quartershift[37].ldpc_muxregi |     0.157  |
+|   quartershift[38].ldpc_muxregi |     0.150  |
+|   quartershift[39].ldpc_muxregi |     0.152  |
+|   quartershift[3].ldpc_muxregi  |     0.132  |
+|   quartershift[40].ldpc_muxregi |     0.147  |
+|   quartershift[41].ldpc_muxregi |     0.154  |
+|   quartershift[42].ldpc_muxregi |     0.145  |
+|   quartershift[43].ldpc_muxregi |     0.143  |
+|   quartershift[44].ldpc_muxregi |     0.147  |
+|   quartershift[45].ldpc_muxregi |     0.151  |
+|   quartershift[46].ldpc_muxregi |     0.147  |
+|   quartershift[47].ldpc_muxregi |     0.148  |
+|   quartershift[48].ldpc_muxregi |     0.147  |
+|   quartershift[49].ldpc_muxregi |     0.153  |
+|   quartershift[4].ldpc_muxregi  |     0.132  |
+|   quartershift[50].ldpc_muxregi |     0.162  |
+|   quartershift[51].ldpc_muxregi |     0.149  |
+|   quartershift[52].ldpc_muxregi |     0.153  |
+|   quartershift[53].ldpc_muxregi |     0.158  |
+|   quartershift[54].ldpc_muxregi |     0.155  |
+|   quartershift[55].ldpc_muxregi |     0.158  |
+|   quartershift[56].ldpc_muxregi |     0.158  |
+|   quartershift[57].ldpc_muxregi |     0.152  |
+|   quartershift[58].ldpc_muxregi |     0.155  |
+|   quartershift[59].ldpc_muxregi |     0.150  |
+|   quartershift[5].ldpc_muxregi  |     0.139  |
+|   quartershift[60].ldpc_muxregi |     0.152  |
+|   quartershift[61].ldpc_muxregi |     0.155  |
+|   quartershift[62].ldpc_muxregi |     0.157  |
+|   quartershift[63].ldpc_muxregi |     0.153  |
+|   quartershift[64].ldpc_muxregi |     0.148  |
+|   quartershift[65].ldpc_muxregi |     0.149  |
+|   quartershift[66].ldpc_muxregi |     0.140  |
+|   quartershift[67].ldpc_muxregi |     0.157  |
+|   quartershift[68].ldpc_muxregi |     0.161  |
+|   quartershift[69].ldpc_muxregi |     0.172  |
+|   quartershift[6].ldpc_muxregi  |     0.141  |
+|   quartershift[70].ldpc_muxregi |     0.160  |
+|   quartershift[71].ldpc_muxregi |     0.168  |
+|   quartershift[72].ldpc_muxregi |     0.163  |
+|   quartershift[73].ldpc_muxregi |     0.151  |
+|   quartershift[74].ldpc_muxregi |     0.155  |
+|   quartershift[75].ldpc_muxregi |     0.165  |
+|   quartershift[76].ldpc_muxregi |     0.166  |
+|   quartershift[77].ldpc_muxregi |     0.161  |
+|   quartershift[78].ldpc_muxregi |     0.161  |
+|   quartershift[79].ldpc_muxregi |     0.164  |
+|   quartershift[7].ldpc_muxregi  |     0.128  |
+|   quartershift[80].ldpc_muxregi |     0.163  |
+|   quartershift[81].ldpc_muxregi |     0.166  |
+|   quartershift[82].ldpc_muxregi |     0.162  |
+|   quartershift[83].ldpc_muxregi |     0.162  |
+|   quartershift[84].ldpc_muxregi |     0.167  |
+|   quartershift[85].ldpc_muxregi |     0.161  |
+|   quartershift[86].ldpc_muxregi |     0.155  |
+|   quartershift[87].ldpc_muxregi |     0.246  |
+|   quartershift[88].ldpc_muxregi |     0.328  |
+|   quartershift[89].ldpc_muxregi |     0.340  |
+|   quartershift[8].ldpc_muxregi  |     0.134  |
+|   quartershift[9].ldpc_muxregi  |     0.142  |
++---------------------------------+------------+
+
+

@@ -1,0 +1,1225 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v
+# synth_design -part xc7z020clg484-3 -top elementwise_mult_core_18_18_10_16_1 -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top elementwise_mult_core_18_18_10_16_1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 270280 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.539 ; gain = 27.895 ; free physical = 243313 ; free virtual = 307777
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'elementwise_mult_core_18_18_10_16_1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dsp_signed_mult_18x18_unit_18_18_1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:546]
+INFO: [Synth 8-6155] done synthesizing module 'dsp_signed_mult_18x18_unit_18_18_1' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:546]
+INFO: [Synth 8-6157] synthesizing module 'fp_rounding_unit_1_37_10' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:598]
+INFO: [Synth 8-6155] done synthesizing module 'fp_rounding_unit_1_37_10' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:598]
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_mult_core_18_18_10_16_1' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1546.305 ; gain = 72.660 ; free physical = 243216 ; free virtual = 307668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1546.305 ; gain = 72.660 ; free physical = 243203 ; free virtual = 307656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1554.305 ; gain = 80.660 ; free physical = 243202 ; free virtual = 307655
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1562.305 ; gain = 88.660 ; free physical = 243160 ; free virtual = 307613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 16    
++---Registers : 
+	               37 Bit    Registers := 32    
+	               28 Bit    Registers := 16    
+	               18 Bit    Registers := 80    
+	                1 Bit    Registers := 73    
++---Muxes : 
+	   2 Input     37 Bit        Muxes := 16    
+	   2 Input     35 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module elementwise_mult_core_18_18_10_16_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 32    
+	                1 Bit    Registers := 1     
+Module dsp_signed_mult_18x18_unit_18_18_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 6     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 2     
+Module fp_rounding_unit_1_37_10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               37 Bit    Registers := 2     
+	               28 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     37 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/input_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/input_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:586]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/result_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/result_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:587]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/output_valid_reg' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/output_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:585]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ay_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ay_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:565]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_by_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_by_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:567]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst1/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst2/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst3/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst4/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst5/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst6/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst7/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst8/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst9/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst10/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst11/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst12/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst13/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst14/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'fp_rounding_unit_1_37_10_inst15/floor_ceil_valid_reg' into 'fp_rounding_unit_1_37_10_inst0/floor_ceil_valid_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:627]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ax_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ax_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:564]
+INFO: [Synth 8-4471] merging register 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_bx_reg[17:0]' into 'dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_bx_reg[17:0]' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:566]
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_0_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: register reg_A_0_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_1_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: register reg_A_1_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst0/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_2_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: register reg_A_2_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_3_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: register reg_A_3_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst2/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_4_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: register reg_A_4_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_5_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: register reg_A_5_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst4/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_6_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: register reg_A_6_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_7_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: register reg_A_7_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst6/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_8_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: register reg_A_8_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_9_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: register reg_A_9_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst8/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_10_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: register reg_A_10_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_11_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: register reg_A_11_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst10/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_12_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: register reg_A_12_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_13_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: register reg_A_13_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst12/reg_resb_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_14_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ay_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: register reg_A_14_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_ax_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resa_reg.
+DSP Report: Generating DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg, operation Mode is: (C+A''*B'')'.
+DSP Report: register reg_B_15_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_by_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: register reg_A_15_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_bx_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: register dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+DSP Report: operator dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb0 is absorbed into DSP dsp_signed_mult_18x18_unit_18_18_1_inst14/reg_resb_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.285 ; gain = 225.641 ; free physical = 243692 ; free virtual = 308145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                         | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
+|elementwise_mult_core_18_18_10_16_1 | (C+A''*B'')' | 18     | 17     | 35     | -      | 36     | 2    | 2    | 0    | -    | -     | 0    | 1    | 
++------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.289 ; gain = 225.645 ; free physical = 243562 ; free virtual = 308016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:185]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:187]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:199]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:201]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:213]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:215]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:227]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:229]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:241]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:243]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:255]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:257]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:269]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:271]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:283]
+INFO: [Synth 8-5842] Cannot pack DSP OPMODE registers because of constant '1' value. Packing the registers will cause simulation mismatch at initial cycle [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1.v:285]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1701.301 ; gain = 227.656 ; free physical = 243522 ; free virtual = 307975
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243374 ; free virtual = 307827
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243385 ; free virtual = 307838
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243370 ; free virtual = 307823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243369 ; free virtual = 307822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243375 ; free virtual = 307828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243382 ; free virtual = 307835
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    80|
+|2     |DSP48E1 |    16|
+|3     |LUT1    |    16|
+|4     |LUT2    |     1|
+|5     |LUT3    |   288|
+|6     |FDRE    |  1206|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+-------------------------------------+------+
+|      |Instance                                    |Module                               |Cells |
++------+--------------------------------------------+-------------------------------------+------+
+|1     |top                                         |                                     |  1607|
+|2     |  dsp_signed_mult_18x18_unit_18_18_1_inst0  |dsp_signed_mult_18x18_unit_18_18_1   |     7|
+|3     |  dsp_signed_mult_18x18_unit_18_18_1_inst10 |dsp_signed_mult_18x18_unit_18_18_1_0 |     4|
+|4     |  dsp_signed_mult_18x18_unit_18_18_1_inst12 |dsp_signed_mult_18x18_unit_18_18_1_1 |     4|
+|5     |  dsp_signed_mult_18x18_unit_18_18_1_inst14 |dsp_signed_mult_18x18_unit_18_18_1_2 |     4|
+|6     |  dsp_signed_mult_18x18_unit_18_18_1_inst2  |dsp_signed_mult_18x18_unit_18_18_1_3 |     4|
+|7     |  dsp_signed_mult_18x18_unit_18_18_1_inst4  |dsp_signed_mult_18x18_unit_18_18_1_4 |     4|
+|8     |  dsp_signed_mult_18x18_unit_18_18_1_inst6  |dsp_signed_mult_18x18_unit_18_18_1_5 |     4|
+|9     |  dsp_signed_mult_18x18_unit_18_18_1_inst8  |dsp_signed_mult_18x18_unit_18_18_1_6 |     4|
+|10    |  fp_rounding_unit_1_37_10_inst0            |fp_rounding_unit_1_37_10             |    82|
+|11    |  fp_rounding_unit_1_37_10_inst1            |fp_rounding_unit_1_37_10_7           |    79|
+|12    |  fp_rounding_unit_1_37_10_inst10           |fp_rounding_unit_1_37_10_8           |    79|
+|13    |  fp_rounding_unit_1_37_10_inst11           |fp_rounding_unit_1_37_10_9           |    79|
+|14    |  fp_rounding_unit_1_37_10_inst12           |fp_rounding_unit_1_37_10_10          |    79|
+|15    |  fp_rounding_unit_1_37_10_inst13           |fp_rounding_unit_1_37_10_11          |    79|
+|16    |  fp_rounding_unit_1_37_10_inst14           |fp_rounding_unit_1_37_10_12          |    79|
+|17    |  fp_rounding_unit_1_37_10_inst15           |fp_rounding_unit_1_37_10_13          |    79|
+|18    |  fp_rounding_unit_1_37_10_inst2            |fp_rounding_unit_1_37_10_14          |    79|
+|19    |  fp_rounding_unit_1_37_10_inst3            |fp_rounding_unit_1_37_10_15          |    79|
+|20    |  fp_rounding_unit_1_37_10_inst4            |fp_rounding_unit_1_37_10_16          |    79|
+|21    |  fp_rounding_unit_1_37_10_inst5            |fp_rounding_unit_1_37_10_17          |    79|
+|22    |  fp_rounding_unit_1_37_10_inst6            |fp_rounding_unit_1_37_10_18          |    79|
+|23    |  fp_rounding_unit_1_37_10_inst7            |fp_rounding_unit_1_37_10_19          |    79|
+|24    |  fp_rounding_unit_1_37_10_inst8            |fp_rounding_unit_1_37_10_20          |    79|
+|25    |  fp_rounding_unit_1_37_10_inst9            |fp_rounding_unit_1_37_10_21          |    79|
++------+--------------------------------------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243382 ; free virtual = 307835
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.305 ; gain = 227.660 ; free physical = 243382 ; free virtual = 307835
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1701.309 ; gain = 227.660 ; free physical = 243382 ; free virtual = 307835
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1850.488 ; gain = 0.000 ; free physical = 243297 ; free virtual = 307749
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+99 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1850.488 ; gain = 376.941 ; free physical = 243353 ; free virtual = 307805
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2376.145 ; gain = 525.656 ; free physical = 243843 ; free virtual = 308295
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.145 ; gain = 0.000 ; free physical = 243843 ; free virtual = 308295
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2400.152 ; gain = 0.000 ; free physical = 243767 ; free virtual = 308220
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_synth.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2501.418 ; gain = 0.004 ; free physical = 243336 ; free virtual = 307787
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 138d2580c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243335 ; free virtual = 307787
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 138d2580c
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243275 ; free virtual = 307727
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 138d2580c
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243275 ; free virtual = 307726
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 124498774
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243271 ; free virtual = 307723
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 124498774
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243271 ; free virtual = 307722
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243261 ; free virtual = 307713
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243261 ; free virtual = 307713
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243261 ; free virtual = 307713
+Ending Logic Optimization Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243261 ; free virtual = 307712
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243256 ; free virtual = 307708
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243256 ; free virtual = 307708
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243256 ; free virtual = 307708
+Ending Netlist Obfuscation Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2501.418 ; gain = 0.000 ; free physical = 243256 ; free virtual = 307708
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2501.418 ; gain = 0.004 ; free physical = 243255 ; free virtual = 307707
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 13d88886a
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module elementwise_mult_core_18_18_10_16_1 ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Pre-processing: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2543.402 ; gain = 9.988 ; free physical = 243184 ; free virtual = 307636
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+IDT: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2543.402 ; gain = 0.000 ; free physical = 243177 ; free virtual = 307628
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=7.235 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2545.402 ; gain = 11.988 ; free physical = 243172 ; free virtual = 307623
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 0 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2733.578 ; gain = 190.176 ; free physical = 243148 ; free virtual = 307600
+Power optimization passes: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.60 . Memory (MB): peak = 2733.578 ; gain = 200.164 ; free physical = 243148 ; free virtual = 307600
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243170 ; free virtual = 307622
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design elementwise_mult_core_18_18_10_16_1 ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 0 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+
+Number of Slice Registers augmented: 0 newly gated: 0 Total: 1206
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 0
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/0 RAMS dropped: 0/0 Clusters dropped: 0/0 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243173 ; free virtual = 307625
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 13d88886a
+Power optimization: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.86 . Memory (MB): peak = 2733.578 ; gain = 232.160 ; free physical = 243179 ; free virtual = 307630
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 15645424 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243189 ; free virtual = 307640
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243183 ; free virtual = 307634
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243178 ; free virtual = 307629
+INFO: [Opt 31-389] Phase Remap created 0 cells and removed 0 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243176 ; free virtual = 307628
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243178 ; free virtual = 307630
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243183 ; free virtual = 307634
+Ending Netlist Obfuscation Task | Checksum: 13d88886a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243183 ; free virtual = 307634
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242876 ; free virtual = 307347
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: edb6663f
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242882 ; free virtual = 307354
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242875 ; free virtual = 307346
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a3867341
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242875 ; free virtual = 307347
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: c6ea7b2d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242879 ; free virtual = 307350
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: c6ea7b2d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242888 ; free virtual = 307360
+Phase 1 Placer Initialization | Checksum: c6ea7b2d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242888 ; free virtual = 307360
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 142aa072e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242883 ; free virtual = 307355
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242868 ; free virtual = 307340
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1b09a1ba8
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242867 ; free virtual = 307339
+Phase 2 Global Placement | Checksum: 1c4e6a9fd
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242856 ; free virtual = 307327
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1c4e6a9fd
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242856 ; free virtual = 307327
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11dad7113
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242851 ; free virtual = 307323
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1d86e811a
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242849 ; free virtual = 307321
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 144f73da5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242849 ; free virtual = 307320
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1c088bd2c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242854 ; free virtual = 307326
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1c088bd2c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242851 ; free virtual = 307323
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 24bd200b5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242848 ; free virtual = 307320
+Phase 3 Detail Placement | Checksum: 24bd200b5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242847 ; free virtual = 307319
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 19bb0cd41
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 19bb0cd41
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242814 ; free virtual = 307286
+INFO: [Place 30-746] Post Placement Timing Summary WNS=7.468. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 216be2c88
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242811 ; free virtual = 307283
+Phase 4.1 Post Commit Optimization | Checksum: 216be2c88
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242810 ; free virtual = 307282
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 216be2c88
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242824 ; free virtual = 307296
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 216be2c88
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242819 ; free virtual = 307291
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242823 ; free virtual = 307295
+Phase 4.4 Final Placement Cleanup | Checksum: 1ee1e08b4
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242821 ; free virtual = 307293
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1ee1e08b4
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242820 ; free virtual = 307292
+Ending Placer Task | Checksum: 168b018f5
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242834 ; free virtual = 307306
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242834 ; free virtual = 307306
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# write_checkpoint -force $outputDir/post_place
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242811 ; free virtual = 307283
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242811 ; free virtual = 307284
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.82 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 242822 ; free virtual = 307298
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_place.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: edc9c988 ConstDB: 0 ShapeSum: 7ae64f6d RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-198] Port "i_A_1[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_1[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_1[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_1[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_1[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_ready" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_ready". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "reset" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "reset". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_10[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_10[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_10[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_10[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_A_11[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_A_11[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "i_B_11[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "i_B_11[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1 Build RT Design | Checksum: 7dfeea3c
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243854 ; free virtual = 308326
+Post Restoration Checksum: NetGraph: 6cbad288 NumContArr: 114417b4 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 7dfeea3c
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243844 ; free virtual = 308317
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 7dfeea3c
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243800 ; free virtual = 308273
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 7dfeea3c
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243800 ; free virtual = 308272
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1304b4905
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243838 ; free virtual = 308310
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.479  | TNS=0.000  | WHS=0.101  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 11febc0fd
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243916 ; free virtual = 308388
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1adbc34db
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243905 ; free virtual = 308378
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.471  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 18e19e3e4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243849 ; free virtual = 308322
+Phase 4 Rip-up And Reroute | Checksum: 18e19e3e4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243849 ; free virtual = 308322
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 18e19e3e4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243851 ; free virtual = 308324
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 18e19e3e4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243851 ; free virtual = 308324
+Phase 5 Delay and Skew Optimization | Checksum: 18e19e3e4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243851 ; free virtual = 308324
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1b11e4d33
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243879 ; free virtual = 308352
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.471  | TNS=0.000  | WHS=0.114  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1b11e4d33
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243879 ; free virtual = 308351
+Phase 6 Post Hold Fix | Checksum: 1b11e4d33
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243878 ; free virtual = 308351
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.074868 %
+  Global Horizontal Routing Utilization  = 0.10235 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1b11e4d33
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243877 ; free virtual = 308350
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1b11e4d33
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243875 ; free virtual = 308348
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2382f7b64
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243868 ; free virtual = 308341
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=7.471  | TNS=0.000  | WHS=0.114  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 2382f7b64
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243867 ; free virtual = 308339
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243907 ; free virtual = 308379
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243906 ; free virtual = 308378
+# write_checkpoint -force $outputDir/post_route
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243905 ; free virtual = 308377
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243887 ; free virtual = 308362
+Write XDEF Complete: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2733.578 ; gain = 0.000 ; free physical = 243885 ; free virtual = 308360
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_route.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -sort_by group -max_paths 100 -path_type summary -file $outputDir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 1 -delay_type max -sort_by group.
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# report_utilization -file $outputDir/post_route_util.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_route_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/packages/xilinx_2018/vivado_hl/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.small_submodules/elementwise_mult_core_18_18_10_16_1/post_imp_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2749.711 ; gain = 0.000 ; free physical = 243237 ; free virtual = 307735
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 00:36:54 2022...

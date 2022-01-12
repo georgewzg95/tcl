@@ -1,0 +1,192 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 04:09:27 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/softmax_submodules/mode4_adder_tree/post_route_power.rpt
+| Design           : mode4_adder_tree
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 124.660      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 21.781       |
+| Device Static (mW)       | 102.879      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.6         |
+| Junction Temperature (C) | 26.4         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |     8.937  |        3 |       --- |             --- |
+| Slice Logic    |     7.116  |     2552 |       --- |             --- |
+|   LUT as Logic |     6.559  |     1014 |     53200 |            1.91 |
+|   Register     |     0.397  |     1128 |    106400 |            1.06 |
+|   CARRY4       |     0.161  |       48 |     13300 |            0.36 |
+|   Others       |     0.000  |       48 |       --- |             --- |
+| Signals        |     5.728  |     1807 |       --- |             --- |
+| Static Power   |   102.879  |          |           |                 |
+| Total          |   124.660  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.029 |       0.022 |      0.007 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.016 |       0.000 |      0.016 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                             |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | High       | User specified more than 95% of inputs                |                                                                                                                    |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                          |                                                                                                                    |
+|                             |            |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------+------------+
+| Name                  | Power (mW) |
++-----------------------+------------+
+| mode4_adder_tree      |    21.781  |
+|   add0_stage0         |     2.233  |
+|     u_FPAddSub        |     2.233  |
+|       AlignModule     |     0.017  |
+|       ExecutionModule |     0.014  |
+|       NormalizeShift1 |     0.224  |
+|   add0_stage1         |     2.423  |
+|     u_FPAddSub        |     2.423  |
+|       AlignModule     |     0.015  |
+|       ExecutionModule |     0.014  |
+|       NormalizeShift1 |     0.279  |
+|   add0_stage2         |     2.641  |
+|     u_FPAddSub        |     2.641  |
+|       AlignModule     |     0.022  |
+|       ExecutionModule |     0.016  |
+|       NormalizeShift1 |     0.282  |
+|   add0_stage3         |     2.629  |
+|     u_FPAddSub        |     2.629  |
+|       AlignModule     |     0.027  |
+|       ExecutionModule |     0.021  |
+|       NormalizeShift1 |     0.283  |
+|   add1_stage2         |     2.641  |
+|     u_FPAddSub        |     2.641  |
+|       AlignModule     |     0.027  |
+|       ExecutionModule |     0.016  |
+|       NormalizeShift1 |     0.262  |
+|   add1_stage3         |     2.580  |
+|     u_FPAddSub        |     2.580  |
+|       AlignModule     |     0.022  |
+|       ExecutionModule |     0.021  |
+|       NormalizeShift1 |     0.244  |
+|   add2_stage3         |     2.612  |
+|     u_FPAddSub        |     2.612  |
+|       AlignModule     |     0.023  |
+|       ExecutionModule |     0.021  |
+|       NormalizeShift1 |     0.261  |
+|   add3_stage3         |     2.642  |
+|     u_FPAddSub        |     2.642  |
+|       AlignModule     |     0.023  |
+|       ExecutionModule |     0.021  |
+|       NormalizeShift1 |     0.257  |
++-----------------------+------------+
+
+

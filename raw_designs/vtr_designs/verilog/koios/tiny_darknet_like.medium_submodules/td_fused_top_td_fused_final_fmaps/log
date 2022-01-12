@@ -1,0 +1,732 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v
+# synth_design -part xc7z020clg484-3 -top td_fused_top_td_fused_final_fmaps -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top td_fused_top_td_fused_final_fmaps -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 180269 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.270 ; gain = 53.895 ; free physical = 246837 ; free virtual = 313842
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_td_fused_final_fmaps' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:15]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 16 - type: integer 
+	Parameter BufferCount bound to: 2 - type: integer 
+	Parameter MemLatency bound to: 1 - type: integer 
+	Parameter IndexWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_td_fused_final_fmaps_memcore' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:222]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressRange bound to: 49000 - type: integer 
+	Parameter AddressWidth bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'td_fused_top_td_fused_final_fmaps_memcore_ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:260]
+	Parameter DWIDTH bound to: 64 - type: integer 
+	Parameter AWIDTH bound to: 16 - type: integer 
+	Parameter MEM_SIZE bound to: 49000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'td_fused_top_td_fused_final_fmaps_memcore_ram' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:260]
+INFO: [Synth 8-6155] done synthesizing module 'td_fused_top_td_fused_final_fmaps_memcore' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'td_fused_top_td_fused_final_fmaps' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps.v:15]
+WARNING: [Synth 8-3331] design td_fused_top_td_fused_final_fmaps_memcore has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1605.871 ; gain = 158.496 ; free physical = 246846 ; free virtual = 313852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1605.871 ; gain = 158.496 ; free physical = 246848 ; free virtual = 313852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1613.871 ; gain = 166.496 ; free physical = 246848 ; free virtual = 313852
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1613.879 ; gain = 166.504 ; free physical = 246786 ; free virtual = 313790
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	            3062K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module td_fused_top_td_fused_final_fmaps 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module td_fused_top_td_fused_final_fmaps_memcore_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---RAMs : 
+	            3062K Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1730.617 ; gain = 283.242 ; free physical = 246439 ; free virtual = 313447
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5835] Resources of type BRAM have been overutilized. Used = 512, Available = 280. Will try to implement using LUT-RAM. 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|td_fused_top_td_fused_final_fmaps_memcore_ram: | ram_reg    | 64 K x 64(READ_FIRST)  | W |   | 64 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 128    | 
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+|Module Name                       | RTL Object                                                                                            | Inference | Size (Depth x Width) | Primitives                       | 
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+|td_fused_top_td_fused_final_fmaps | td_fused_top_td_fused_final_fmaps_memcore_U_0/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg | Implied   | 64 K x 64            | RAM64X1D x 766  RAM64M x 16086   | 
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_37 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_41 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_43 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_44 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_45 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_46 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_48 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_49 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_50 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_51 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_52 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_53 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_54 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_56 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_57 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_58 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_59 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_60 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_61 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_62 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_63 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1836.023 ; gain = 388.648 ; free physical = 246092 ; free virtual = 313102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|td_fused_top_td_fused_final_fmaps_memcore_ram: | ram_reg    | 64 K x 64(READ_FIRST)  | W |   | 64 K x 64(WRITE_FIRST) |   | R | Port A and B     | 0      | 128    | 
++-----------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+|Module Name                       | RTL Object                                                                                            | Inference | Size (Depth x Width) | Primitives                       | 
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+|td_fused_top_td_fused_final_fmaps | td_fused_top_td_fused_final_fmaps_memcore_U_0/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg | Implied   | 64 K x 64            | RAM64X1D x 766  RAM64M x 16086   | 
++----------------------------------+-------------------------------------------------------------------------------------------------------+-----------+----------------------+----------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance td_fused_top_td_fused_final_fmaps_memcore_U_1/td_fused_top_td_fused_final_fmaps_memcore_ram_U/ram_reg_1_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2236.422 ; gain = 789.047 ; free physical = 245529 ; free virtual = 312541
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net n_0_843 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_842 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_841 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_840 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_839 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_838 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_837 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net buf_ce1_1 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245401 ; free virtual = 312413
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245394 ; free virtual = 312405
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245400 ; free virtual = 312412
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245409 ; free virtual = 312420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245413 ; free virtual = 312425
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245385 ; free virtual = 312396
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     1|
+|2     |LUT2     |   101|
+|3     |LUT3     |   302|
+|4     |LUT4     | 18179|
+|5     |LUT5     |  6932|
+|6     |LUT6     | 23122|
+|7     |MUXF7    |  6528|
+|8     |MUXF8    |  3264|
+|9     |RAM64M   | 16086|
+|10    |RAM64X1D |   766|
+|11    |RAMB36E1 |   128|
+|12    |FDRE     |   140|
+|13    |FDSE     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------------------------------------+------------------------------------------------+------+
+|      |Instance                                            |Module                                          |Cells |
++------+----------------------------------------------------+------------------------------------------------+------+
+|1     |top                                                 |                                                | 75550|
+|2     |  td_fused_top_td_fused_final_fmaps_memcore_U_0     |td_fused_top_td_fused_final_fmaps_memcore       | 74879|
+|3     |    td_fused_top_td_fused_final_fmaps_memcore_ram_U |td_fused_top_td_fused_final_fmaps_memcore_ram_1 | 74879|
+|4     |  td_fused_top_td_fused_final_fmaps_memcore_U_1     |td_fused_top_td_fused_final_fmaps_memcore_0     |   580|
+|5     |    td_fused_top_td_fused_final_fmaps_memcore_ram_U |td_fused_top_td_fused_final_fmaps_memcore_ram   |   580|
++------+----------------------------------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245382 ; free virtual = 312394
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2236.426 ; gain = 789.051 ; free physical = 245377 ; free virtual = 312389
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 2236.430 ; gain = 789.051 ; free physical = 245386 ; free virtual = 312398
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 26772 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 8 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'td_fused_top_td_fused_final_fmaps' is not ideal for floorplanning, since the cellview 'td_fused_top_td_fused_final_fmaps_memcore_ram_1' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2298.598 ; gain = 0.000 ; free physical = 245933 ; free virtual = 312943
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16852 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 16086 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 766 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:31 . Memory (MB): peak = 2298.598 ; gain = 851.320 ; free physical = 246048 ; free virtual = 313058
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:56 ; elapsed = 00:00:21 . Memory (MB): peak = 3124.836 ; gain = 826.238 ; free physical = 244604 ; free virtual = 311615
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3124.836 ; gain = 0.000 ; free physical = 244635 ; free virtual = 311647
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3158.855 ; gain = 0.000 ; free physical = 244428 ; free virtual = 311576
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 3158.863 ; gain = 34.027 ; free physical = 244424 ; free virtual = 311462
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:01:07 ; elapsed = 00:00:23 . Memory (MB): peak = 3354.898 ; gain = 196.035 ; free physical = 244990 ; free virtual = 312026
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tiny_darknet_like.medium_submodules/td_fused_top_td_fused_final_fmaps/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:50 ; elapsed = 00:00:16 . Memory (MB): peak = 3791.832 ; gain = 436.934 ; free physical = 244962 ; free virtual = 311999
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3791.836 ; gain = 0.004 ; free physical = 245281 ; free virtual = 312318
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: a5a957a4
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245279 ; free virtual = 312316
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: b47a236b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245463 ; free virtual = 312500
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: b47a236b
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245419 ; free virtual = 312456
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 7e783bf5
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245355 ; free virtual = 312392
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 7e783bf5
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245710 ; free virtual = 312747
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+CRITICAL WARNING: [Opt 31-1017] Shift register, flop remap optimizations have resulted in SRL/LUTM over-utilization. Please review thresholds for remap between SRLs and flops
+Phase 5 Shift Register Optimization | Checksum: d2ae94ef
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245595 ; free virtual = 312632
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: d2ae94ef
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245614 ; free virtual = 312651
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245573 ; free virtual = 312610
+Ending Logic Optimization Task | Checksum: d2ae94ef
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 3791.836 ; gain = 0.000 ; free physical = 245577 ; free virtual = 312614
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.849 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 128 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 192 newly gated: 0 Total Ports: 256
+Number of Flops added for Enable Generation: 6
+
+Ending PowerOpt Patch Enables Task | Checksum: 1196aa41d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244526 ; free virtual = 311565
+Ending Power Optimization Task | Checksum: 1196aa41d
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:00:46 . Memory (MB): peak = 4467.105 ; gain = 675.270 ; free physical = 244587 ; free virtual = 311626
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1196aa41d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244587 ; free virtual = 311626
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244589 ; free virtual = 311628
+Ending Netlist Obfuscation Task | Checksum: bed188ce
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244589 ; free virtual = 311628
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:02:54 ; elapsed = 00:01:12 . Memory (MB): peak = 4467.105 ; gain = 675.273 ; free physical = 244594 ; free virtual = 311633
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: bed188ce
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module td_fused_top_td_fused_final_fmaps ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Found 16256 new always-off flops by back propagation
+Pre-processing: Time (s): cpu = 00:00:41 ; elapsed = 00:00:08 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244795 ; free virtual = 311833
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+IDT: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244729 ; free virtual = 311767
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.849 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:01:05 ; elapsed = 00:00:16 . Memory (MB): peak = 4467.105 ; gain = 0.000 ; free physical = 244332 ; free virtual = 311370
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 192 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:01:21 ; elapsed = 00:00:33 . Memory (MB): peak = 4536.023 ; gain = 68.918 ; free physical = 243384 ; free virtual = 310424
+Power optimization passes: Time (s): cpu = 00:02:07 ; elapsed = 00:00:44 . Memory (MB): peak = 4536.023 ; gain = 68.918 ; free physical = 243381 ; free virtual = 310420
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244050 ; free virtual = 311090
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design td_fused_top_td_fused_final_fmaps ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 128 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original ram clusters 192 accepted clusters 192
+
+Number of Slice Registers augmented: 0 newly gated: 0 Total: 147
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 192 newly gated: 0 Total Ports: 256
+Number of Flops added for Enable Generation: 64
+
+Flops dropped: 0/0 RAMS dropped: 0/192 Clusters dropped: 0/192 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 18c6fc223
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 243935 ; free virtual = 310975
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 18c6fc223
+Power optimization: Time (s): cpu = 00:02:27 ; elapsed = 00:00:58 . Memory (MB): peak = 4536.023 ; gain = 68.918 ; free physical = 244126 ; free virtual = 311166
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 219037032 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: ceb6abb8
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244529 ; free virtual = 311569
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: ceb6abb8
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244521 ; free virtual = 311561
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: 13e7f5681
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245352 ; free virtual = 312391
+INFO: [Opt 31-389] Phase Remap created 192 cells and removed 384 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: e0d44a3f
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245319 ; free virtual = 312358
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |             192  |             384  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1dcb9b153
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245363 ; free virtual = 312403
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245365 ; free virtual = 312405
+Ending Netlist Obfuscation Task | Checksum: 1dcb9b153
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245340 ; free virtual = 312379
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:03:17 ; elapsed = 00:01:30 . Memory (MB): peak = 4536.023 ; gain = 68.918 ; free physical = 245340 ; free virtual = 312379
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245182 ; free virtual = 312220
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e1b9700a
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 245181 ; free virtual = 312219
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244821 ; free virtual = 311860
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 6edbfc1c
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:47 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244409 ; free virtual = 311448
+Phase 1 Placer Initialization | Checksum: 6edbfc1c
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:47 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244409 ; free virtual = 311448
+Ending Placer Task | Checksum: 6edbfc1c
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:47 . Memory (MB): peak = 4536.023 ; gain = 0.000 ; free physical = 244412 ; free virtual = 311452
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 6 Errors encountered.
+place_design failed
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 06:44:50 2022...

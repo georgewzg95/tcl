@@ -1,0 +1,218 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 01:59:59 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/dla_like.small_submodules/winograd_transform_0/post_synth_power.rpt
+| Design           : winograd_transform_0
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 325.929      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 220.054      |
+| Device Static (mW)       | 105.875      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 96.2         |
+| Junction Temperature (C) | 28.8         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    50.824  |        3 |       --- |             --- |
+| Slice Logic             |    65.062  |    18576 |       --- |             --- |
+|   LUT as Logic          |    41.414  |     7908 |     53200 |           14.86 |
+|   CARRY4                |    16.494  |     2037 |     13300 |           15.32 |
+|   Register              |     7.151  |     8197 |    106400 |            7.70 |
+|   LUT as Shift Register |     0.003  |        2 |     17400 |            0.01 |
+|   Others                |     0.000  |      186 |       --- |             --- |
+| Signals                 |    55.401  |    11397 |       --- |             --- |
+| DSPs                    |    48.767  |       56 |       220 |           25.45 |
+| Static Power            |   105.875  |          |           |                 |
+| Total                   |   325.929  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.228 |       0.220 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+------------+
+| Name                          | Power (mW) |
++-------------------------------+------------+
+| winograd_transform_0          |   220.054  |
+|   winograd_adder_16_20_4_WA00 |     3.562  |
+|   winograd_adder_16_20_4_WA01 |     3.799  |
+|   winograd_adder_16_20_4_WA02 |     3.793  |
+|   winograd_adder_16_20_4_WA03 |     3.936  |
+|   winograd_adder_16_20_4_WA04 |     3.884  |
+|   winograd_adder_16_20_4_WA05 |     3.283  |
+|   winograd_adder_16_20_4_WA10 |     3.804  |
+|   winograd_adder_16_20_4_WA11 |     4.419  |
+|   winograd_adder_16_20_4_WA12 |     4.461  |
+|   winograd_adder_16_20_4_WA13 |     4.709  |
+|   winograd_adder_16_20_4_WA14 |     4.565  |
+|   winograd_adder_16_20_4_WA15 |     3.769  |
+|   winograd_adder_16_20_4_WA20 |     3.839  |
+|   winograd_adder_16_20_4_WA21 |     4.403  |
+|   winograd_adder_16_20_4_WA22 |     4.362  |
+|   winograd_adder_16_20_4_WA23 |     4.474  |
+|   winograd_adder_16_20_4_WA24 |     4.507  |
+|   winograd_adder_16_20_4_WA25 |     3.954  |
+|   winograd_adder_16_20_4_WA30 |     3.793  |
+|   winograd_adder_16_20_4_WA31 |     4.430  |
+|   winograd_adder_16_20_4_WA32 |     4.519  |
+|   winograd_adder_16_20_4_WA33 |     4.483  |
+|   winograd_adder_16_20_4_WA34 |     4.796  |
+|   winograd_adder_16_20_4_WA35 |     3.689  |
+|   winograd_adder_16_20_4_WA40 |     3.933  |
+|   winograd_adder_16_20_4_WA41 |     4.713  |
+|   winograd_adder_16_20_4_WA42 |     4.715  |
+|   winograd_adder_16_20_4_WA43 |     4.677  |
+|   winograd_adder_16_20_4_WA44 |     4.857  |
+|   winograd_adder_16_20_4_WA45 |     4.008  |
+|   winograd_adder_16_20_4_WA50 |     2.725  |
+|   winograd_adder_16_20_4_WA51 |     3.504  |
+|   winograd_adder_16_20_4_WA52 |     3.611  |
+|   winograd_adder_16_20_4_WA53 |     3.603  |
+|   winograd_adder_16_20_4_WA54 |     3.672  |
+|   winograd_adder_16_20_4_WA55 |     2.725  |
+|   winograd_dsp_16_WD00        |     1.902  |
+|   winograd_dsp_16_WD01        |     1.579  |
+|   winograd_dsp_16_WD02        |     1.755  |
+|   winograd_dsp_16_WD03        |     1.785  |
+|   winograd_dsp_16_WD04        |     1.973  |
+|   winograd_dsp_16_WD05        |     1.902  |
+|   winograd_dsp_16_WD10        |     2.125  |
+|   winograd_dsp_16_WD11        |     2.247  |
+|   winograd_dsp_16_WD12        |     2.048  |
+|   winograd_dsp_16_WD13        |     2.166  |
+|   winograd_dsp_16_WD14        |     1.978  |
+|   winograd_dsp_16_WD15        |     2.125  |
+|   winograd_dsp_16_WD20        |     2.950  |
+|   winograd_dsp_16_WD21        |     1.579  |
+|   winograd_dsp_16_WD22        |     1.755  |
+|   winograd_dsp_16_WD23        |     1.785  |
+|   winograd_dsp_16_WD24        |     1.973  |
+|   winograd_dsp_16_WD25        |     2.962  |
+|   winograd_dsp_16_WD30        |     2.940  |
+|   winograd_dsp_16_WD31        |     2.247  |
+|   winograd_dsp_16_WD32        |     2.048  |
+|   winograd_dsp_16_WD33        |     2.166  |
+|   winograd_dsp_16_WD34        |     1.978  |
+|   winograd_dsp_16_WD35        |     2.940  |
+|   winograd_dsp_16_WD40        |     1.968  |
+|   winograd_dsp_16_WD45        |     1.968  |
+|   winograd_dsp_16_WD50        |     2.218  |
+|   winograd_dsp_16_WD55        |     2.223  |
++-------------------------------+------------+
+
+

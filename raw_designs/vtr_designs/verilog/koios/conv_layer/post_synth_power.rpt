@@ -1,0 +1,280 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 02:50:51 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/conv_layer/post_synth_power.rpt
+| Design           : conv
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------------------------------------+
+| Total On-Chip Power (mW) | 42958.992 (Junction temp exceeded!) |
+| Design Power Budget (mW) | Unspecified*                        |
+| Power Budget Margin (mW) | NA                                  |
+| Dynamic (mW)             | 41921.391                           |
+| Device Static (mW)       | 1037.601                            |
+| Effective TJA (C/W)      | 11.5                                |
+| Max Ambient (C)          | 0.0                                 |
+| Junction Temperature (C) | 125.0                               |
+| Confidence Level         | Medium                              |
+| Setting File             | ---                                 |
+| Simulation Activity File | ---                                 |
+| Design Nets Matched      | NA                                  |
++--------------------------+-------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |  1100.536  |        3 |       --- |             --- |
+| Slice Logic    | 21921.289  |  2907151 |       --- |             --- |
+|   LUT as Logic | 21119.799  |  2181619 |     53200 |         4100.79 |
+|   F7/F8 Muxes  |   578.628  |   342720 |     53200 |          644.21 |
+|   Register     |   223.596  |   241209 |    106400 |          226.70 |
+|   CARRY4       |     0.698  |      177 |     13300 |            1.33 |
+|   Others       |     0.000  |      426 |       --- |             --- |
+| Signals        | 18818.135  |  2204129 |       --- |             --- |
+| DSPs           |    78.656  |      168 |       220 |           76.36 |
+| Static Power   |  1037.601  |          |           |                 |
+| Total          | 42956.215  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    42.220 |      41.921 |      0.299 |
+| Vccaux    |       1.800 |     0.100 |       0.000 |      0.100 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+---------+-----------------+
+| Clock | Domain  | Constraint (ns) |
++-------+---------+-----------------+
+| clk   | clk_mem |            10.0 |
++-------+---------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------+------------+
+| Name                      | Power (mW) |
++---------------------------+------------+
+| conv                      | 41918.613  |
+|   matrix_A_0              |   958.930  |
+|   matrix_A_1              |   959.431  |
+|   matrix_A_2              |   958.805  |
+|   matrix_A_3              |   959.297  |
+|   matrix_A_4              |   952.490  |
+|   matrix_A_5              |   948.655  |
+|   matrix_A_6              |   946.203  |
+|   matrix_B_0              |  1049.476  |
+|   matrix_B_1              |  1002.864  |
+|   matrix_B_2              |   995.060  |
+|   matrix_B_3              |   992.086  |
+|   matrix_B_4              |  1058.680  |
+|   matrix_B_5              |  1053.332  |
+|   matrix_B_6              |  1051.184  |
+|   u_matmul_4x4_systolic_0 |  4062.881  |
+|     u_output_logic        |  2349.261  |
+|     u_systolic_data_setup |  1687.060  |
+|     u_systolic_pe_matrix  |    26.275  |
+|       pe00                |     1.638  |
+|       pe01                |     2.381  |
+|       pe02                |     2.450  |
+|       pe10                |     1.572  |
+|       pe11                |     2.314  |
+|       pe12                |     2.329  |
+|       pe20                |     2.296  |
+|       pe21                |     2.267  |
+|       pe22                |     2.280  |
+|       pe30                |     2.297  |
+|       pe31                |     2.221  |
+|       pe32                |     2.230  |
+|   u_matmul_4x4_systolic_1 |  3855.795  |
+|     u_output_logic        |  2311.636  |
+|     u_systolic_data_setup |  1517.609  |
+|     u_systolic_pe_matrix  |    26.260  |
+|       pe00                |     1.636  |
+|       pe01                |     2.380  |
+|       pe02                |     2.447  |
+|       pe10                |     1.571  |
+|       pe11                |     2.313  |
+|       pe12                |     2.327  |
+|       pe20                |     2.295  |
+|       pe21                |     2.266  |
+|       pe22                |     2.279  |
+|       pe30                |     2.296  |
+|       pe31                |     2.220  |
+|       pe32                |     2.229  |
+|   u_matmul_4x4_systolic_2 |  3802.088  |
+|     u_output_logic        |  2292.361  |
+|     u_systolic_data_setup |  1483.183  |
+|     u_systolic_pe_matrix  |    26.260  |
+|       pe00                |     1.636  |
+|       pe01                |     2.380  |
+|       pe02                |     2.448  |
+|       pe10                |     1.571  |
+|       pe11                |     2.313  |
+|       pe12                |     2.327  |
+|       pe20                |     2.295  |
+|       pe21                |     2.266  |
+|       pe22                |     2.279  |
+|       pe30                |     2.296  |
+|       pe31                |     2.220  |
+|       pe32                |     2.229  |
+|   u_matmul_4x4_systolic_3 |  3801.736  |
+|     u_output_logic        |  2300.896  |
+|     u_systolic_data_setup |  1473.291  |
+|     u_systolic_pe_matrix  |    27.265  |
+|       pe00                |     2.640  |
+|       pe01                |     2.380  |
+|       pe02                |     2.448  |
+|       pe10                |     1.571  |
+|       pe11                |     2.313  |
+|       pe12                |     2.327  |
+|       pe20                |     2.295  |
+|       pe21                |     2.266  |
+|       pe22                |     2.279  |
+|       pe30                |     2.296  |
+|       pe31                |     2.220  |
+|       pe32                |     2.229  |
+|   u_matmul_4x4_systolic_4 |  3976.668  |
+|     u_output_logic        |  2240.445  |
+|     u_systolic_data_setup |  1721.027  |
+|     u_systolic_pe_matrix  |    14.852  |
+|       pe00                |     1.138  |
+|       pe01                |     1.417  |
+|       pe02                |     1.214  |
+|       pe10                |     1.263  |
+|       pe11                |     1.228  |
+|       pe12                |     1.200  |
+|       pe20                |     1.224  |
+|       pe21                |     1.208  |
+|       pe22                |     1.180  |
+|       pe30                |     1.190  |
+|       pe31                |     1.173  |
+|       pe32                |     1.418  |
+|   u_matmul_4x4_systolic_5 |  3931.302  |
+|     u_output_logic        |  2233.427  |
+|     u_systolic_data_setup |  1683.909  |
+|     u_systolic_pe_matrix  |    13.609  |
+|       pe00                |     1.072  |
+|       pe01                |     1.212  |
+|       pe02                |     1.068  |
+|       pe10                |     1.160  |
+|       pe11                |     1.132  |
+|       pe12                |     1.114  |
+|       pe20                |     1.127  |
+|       pe21                |     1.116  |
+|       pe22                |     1.099  |
+|       pe30                |     1.099  |
+|       pe31                |     1.089  |
+|       pe32                |     1.322  |
+|   u_matmul_4x4_systolic_6 |  3893.385  |
+|     u_output_logic        |  2187.400  |
+|     u_systolic_data_setup |  1692.571  |
+|     u_systolic_pe_matrix  |    13.057  |
+|       pe00                |     1.039  |
+|       pe01                |     1.098  |
+|       pe02                |     1.006  |
+|       pe10                |     1.119  |
+|       pe11                |     1.094  |
+|       pe12                |     1.080  |
+|       pe20                |     1.088  |
+|       pe21                |     1.080  |
+|       pe22                |     1.065  |
+|       pe30                |     1.064  |
+|       pe31                |     1.055  |
+|       pe32                |     1.270  |
++---------------------------+------------+
+
+

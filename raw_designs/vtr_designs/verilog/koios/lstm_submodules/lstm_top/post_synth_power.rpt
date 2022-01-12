@@ -1,0 +1,960 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Wed Jan 12 03:29:13 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/lstm_submodules/lstm_top/post_synth_power.rpt
+| Design           : lstm_top
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 3682.098     |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 3469.834     |
+| Device Static (mW)       | 212.264      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 57.5         |
+| Junction Temperature (C) | 67.5         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |   270.049  |        3 |       --- |             --- |
+| Slice Logic             |  1611.835  |   269522 |       --- |             --- |
+|   LUT as Logic          |  1391.486  |   171307 |     53200 |          322.01 |
+|   CARRY4                |   188.874  |    26791 |     13300 |          201.44 |
+|   Register              |    31.402  |    47144 |    106400 |           44.31 |
+|   LUT as Shift Register |     0.075  |       13 |     17400 |            0.07 |
+|   Others                |     0.000  |     1955 |       --- |             --- |
+| Signals                 |  1324.575  |   231736 |       --- |             --- |
+| DSPs                    |   263.369  |      242 |       220 |          110.00 |
+| Static Power            |   212.264  |          |           |                 |
+| Total                   |  3682.095  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     3.508 |       3.470 |      0.038 |
+| Vccaux    |       1.800 |     0.025 |       0.000 |      0.025 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.003 |       0.000 |      0.003 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.066 |       0.000 |      0.066 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------+------------+
+| Name             | Power (mW) |
++------------------+------------+
+| lstm_top         |  3469.831  |
+|   c_elmul        |     5.902  |
+|   c_gate_biasadd |     0.402  |
+|   c_gateaddh     |    18.069  |
+|     Add_u1       |     0.674  |
+|     Add_u11      |     0.674  |
+|     Add_u13      |     0.674  |
+|     Add_u15      |     0.674  |
+|     Add_u17      |     0.674  |
+|     Add_u19      |     0.674  |
+|     Add_u21      |     0.674  |
+|     Add_u23      |     0.674  |
+|     Add_u25      |     0.674  |
+|     Add_u27      |     0.674  |
+|     Add_u29      |     0.674  |
+|     Add_u3       |     0.674  |
+|     Add_u31      |     0.674  |
+|     Add_u5       |     0.674  |
+|     Add_u61      |     3.713  |
+|     Add_u7       |     0.674  |
+|     Add_u9       |     0.674  |
+|   c_gateaddx     |     6.739  |
+|     Add_u49      |     0.175  |
+|     Add_u51      |     0.175  |
+|     Add_u53      |     0.175  |
+|     Add_u55      |     0.175  |
+|     Add_u57      |     0.175  |
+|     Add_u59      |     0.175  |
+|     Add_u61      |     0.175  |
+|     Add_u63      |     0.175  |
+|     Add_u65      |     0.175  |
+|     Add_u67      |     0.175  |
+|     Add_u69      |     0.175  |
+|     Add_u71      |     0.175  |
+|     Add_u73      |     0.175  |
+|     Add_u97      |     1.509  |
+|   c_gateh        |   419.800  |
+|     mult_u0      |     5.233  |
+|     mult_u1      |     5.233  |
+|     mult_u10     |     5.233  |
+|     mult_u11     |     5.233  |
+|     mult_u12     |     5.233  |
+|     mult_u13     |     5.233  |
+|     mult_u14     |     5.233  |
+|     mult_u15     |     5.233  |
+|     mult_u16     |     5.233  |
+|     mult_u17     |     5.233  |
+|     mult_u18     |     5.233  |
+|     mult_u19     |     5.233  |
+|     mult_u2      |     5.233  |
+|     mult_u20     |     5.233  |
+|     mult_u21     |     5.233  |
+|     mult_u22     |     5.233  |
+|     mult_u23     |     5.233  |
+|     mult_u24     |     5.233  |
+|     mult_u25     |     5.233  |
+|     mult_u26     |     5.233  |
+|     mult_u27     |     5.233  |
+|     mult_u28     |     5.233  |
+|     mult_u29     |     5.233  |
+|     mult_u3      |     5.233  |
+|     mult_u30     |     5.233  |
+|     mult_u31     |     5.233  |
+|     mult_u32     |     5.233  |
+|     mult_u33     |     5.233  |
+|     mult_u34     |     5.233  |
+|     mult_u35     |     5.233  |
+|     mult_u36     |     5.233  |
+|     mult_u37     |     5.233  |
+|     mult_u38     |     5.233  |
+|     mult_u39     |     5.233  |
+|     mult_u4      |     5.233  |
+|     mult_u40     |     5.233  |
+|     mult_u41     |     5.233  |
+|     mult_u42     |     5.233  |
+|     mult_u43     |     5.233  |
+|     mult_u44     |     5.233  |
+|     mult_u45     |     5.233  |
+|     mult_u46     |     5.233  |
+|     mult_u47     |     5.233  |
+|     mult_u48     |     5.233  |
+|     mult_u49     |     5.233  |
+|     mult_u5      |     5.233  |
+|     mult_u50     |     5.233  |
+|     mult_u51     |     5.233  |
+|     mult_u52     |     5.233  |
+|     mult_u53     |     5.233  |
+|     mult_u54     |     5.233  |
+|     mult_u55     |     5.233  |
+|     mult_u56     |     5.233  |
+|     mult_u57     |     5.233  |
+|     mult_u58     |     5.233  |
+|     mult_u59     |     5.233  |
+|     mult_u6      |     5.233  |
+|     mult_u60     |     5.233  |
+|     mult_u61     |     5.233  |
+|     mult_u62     |     5.233  |
+|     mult_u63     |     5.233  |
+|     mult_u7      |     5.233  |
+|     mult_u8      |     5.233  |
+|     mult_u9      |     5.233  |
+|   c_gatex        |   398.450  |
+|     mult_u0      |     5.766  |
+|     mult_u1      |     5.766  |
+|     mult_u10     |     5.766  |
+|     mult_u11     |     5.766  |
+|     mult_u12     |     5.766  |
+|     mult_u13     |     5.766  |
+|     mult_u14     |     5.766  |
+|     mult_u15     |     5.766  |
+|     mult_u16     |     5.766  |
+|     mult_u17     |     5.766  |
+|     mult_u18     |     5.766  |
+|     mult_u19     |     5.766  |
+|     mult_u2      |     5.766  |
+|     mult_u20     |     5.766  |
+|     mult_u21     |     1.965  |
+|     mult_u22     |     1.965  |
+|     mult_u23     |     1.965  |
+|     mult_u24     |     1.965  |
+|     mult_u25     |     1.965  |
+|     mult_u26     |     1.965  |
+|     mult_u27     |     1.965  |
+|     mult_u28     |     1.965  |
+|     mult_u29     |     1.965  |
+|     mult_u3      |     5.766  |
+|     mult_u30     |     1.965  |
+|     mult_u31     |     1.965  |
+|     mult_u32     |     1.965  |
+|     mult_u33     |     1.965  |
+|     mult_u34     |     1.965  |
+|     mult_u35     |     1.965  |
+|     mult_u36     |     1.965  |
+|     mult_u37     |     1.965  |
+|     mult_u38     |     1.965  |
+|     mult_u39     |     1.965  |
+|     mult_u4      |     5.766  |
+|     mult_u40     |     1.965  |
+|     mult_u41     |     1.965  |
+|     mult_u42     |     1.965  |
+|     mult_u43     |     1.965  |
+|     mult_u44     |     1.965  |
+|     mult_u45     |     1.965  |
+|     mult_u46     |     1.965  |
+|     mult_u47     |     1.965  |
+|     mult_u48     |     1.965  |
+|     mult_u49     |     1.965  |
+|     mult_u5      |     5.766  |
+|     mult_u50     |     1.965  |
+|     mult_u51     |     1.965  |
+|     mult_u52     |     1.965  |
+|     mult_u53     |     1.965  |
+|     mult_u54     |     1.965  |
+|     mult_u55     |     1.965  |
+|     mult_u56     |     1.965  |
+|     mult_u57     |     1.965  |
+|     mult_u58     |     1.965  |
+|     mult_u59     |     1.965  |
+|     mult_u6      |     5.766  |
+|     mult_u60     |     1.965  |
+|     mult_u61     |     1.965  |
+|     mult_u62     |     1.965  |
+|     mult_u63     |     1.965  |
+|     mult_u64     |     1.965  |
+|     mult_u65     |     1.965  |
+|     mult_u66     |     1.965  |
+|     mult_u67     |     5.766  |
+|     mult_u68     |     5.766  |
+|     mult_u69     |     5.766  |
+|     mult_u7      |     5.766  |
+|     mult_u70     |     5.766  |
+|     mult_u71     |     5.766  |
+|     mult_u72     |     5.766  |
+|     mult_u73     |     5.766  |
+|     mult_u74     |     5.766  |
+|     mult_u75     |     5.766  |
+|     mult_u76     |     5.766  |
+|     mult_u77     |     5.766  |
+|     mult_u78     |     5.766  |
+|     mult_u79     |     1.965  |
+|     mult_u8      |     5.766  |
+|     mult_u80     |     1.965  |
+|     mult_u81     |     1.965  |
+|     mult_u82     |     1.965  |
+|     mult_u83     |     1.965  |
+|     mult_u84     |     5.766  |
+|     mult_u85     |     5.766  |
+|     mult_u86     |     5.766  |
+|     mult_u87     |     5.766  |
+|     mult_u88     |     5.766  |
+|     mult_u89     |     5.766  |
+|     mult_u9      |     5.766  |
+|     mult_u90     |     5.766  |
+|     mult_u91     |     5.766  |
+|     mult_u92     |     5.766  |
+|     mult_u93     |     5.766  |
+|     mult_u94     |     5.766  |
+|     mult_u95     |     1.965  |
+|     mult_u96     |     1.965  |
+|     mult_u97     |     1.965  |
+|     mult_u98     |     1.965  |
+|     mult_u99     |     5.766  |
+|   cf_gate_add    |     0.175  |
+|   f_elmul        |     4.826  |
+|   f_gate_biasadd |     0.402  |
+|   f_gateaddh     |    18.069  |
+|     Add_u1       |     0.674  |
+|     Add_u11      |     0.674  |
+|     Add_u13      |     0.674  |
+|     Add_u15      |     0.674  |
+|     Add_u17      |     0.674  |
+|     Add_u19      |     0.674  |
+|     Add_u21      |     0.674  |
+|     Add_u23      |     0.674  |
+|     Add_u25      |     0.674  |
+|     Add_u27      |     0.674  |
+|     Add_u29      |     0.674  |
+|     Add_u3       |     0.674  |
+|     Add_u31      |     0.674  |
+|     Add_u5       |     0.674  |
+|     Add_u61      |     3.713  |
+|     Add_u7       |     0.674  |
+|     Add_u9       |     0.674  |
+|   f_gateaddx     |     6.739  |
+|     Add_u49      |     0.175  |
+|     Add_u51      |     0.175  |
+|     Add_u53      |     0.175  |
+|     Add_u55      |     0.175  |
+|     Add_u57      |     0.175  |
+|     Add_u59      |     0.175  |
+|     Add_u61      |     0.175  |
+|     Add_u63      |     0.175  |
+|     Add_u65      |     0.175  |
+|     Add_u67      |     0.175  |
+|     Add_u69      |     0.175  |
+|     Add_u71      |     0.175  |
+|     Add_u73      |     0.175  |
+|     Add_u97      |     1.509  |
+|   f_gateh        |   393.910  |
+|     mult_u0      |     5.004  |
+|     mult_u1      |     5.004  |
+|     mult_u10     |     5.004  |
+|     mult_u11     |     5.004  |
+|     mult_u12     |     5.004  |
+|     mult_u13     |     5.004  |
+|     mult_u14     |     5.004  |
+|     mult_u15     |     5.004  |
+|     mult_u16     |     5.004  |
+|     mult_u17     |     5.004  |
+|     mult_u18     |     5.004  |
+|     mult_u19     |     5.004  |
+|     mult_u2      |     5.004  |
+|     mult_u20     |     5.004  |
+|     mult_u21     |     5.004  |
+|     mult_u22     |     5.004  |
+|     mult_u23     |     5.004  |
+|     mult_u24     |     5.004  |
+|     mult_u25     |     5.004  |
+|     mult_u26     |     5.004  |
+|     mult_u27     |     5.004  |
+|     mult_u28     |     5.004  |
+|     mult_u29     |     5.004  |
+|     mult_u3      |     5.004  |
+|     mult_u30     |     5.004  |
+|     mult_u31     |     5.004  |
+|     mult_u32     |     5.004  |
+|     mult_u33     |     5.004  |
+|     mult_u34     |     5.004  |
+|     mult_u35     |     5.004  |
+|     mult_u36     |     5.004  |
+|     mult_u37     |     5.004  |
+|     mult_u38     |     5.004  |
+|     mult_u39     |     5.004  |
+|     mult_u4      |     5.004  |
+|     mult_u40     |     5.004  |
+|     mult_u41     |     5.004  |
+|     mult_u42     |     5.004  |
+|     mult_u43     |     5.004  |
+|     mult_u44     |     5.004  |
+|     mult_u45     |     5.004  |
+|     mult_u46     |     5.004  |
+|     mult_u47     |     5.004  |
+|     mult_u48     |     5.004  |
+|     mult_u49     |     5.004  |
+|     mult_u5      |     5.004  |
+|     mult_u50     |     5.004  |
+|     mult_u51     |     5.004  |
+|     mult_u52     |     5.004  |
+|     mult_u53     |     5.004  |
+|     mult_u54     |     5.004  |
+|     mult_u55     |     5.004  |
+|     mult_u56     |     5.004  |
+|     mult_u57     |     5.004  |
+|     mult_u58     |     5.004  |
+|     mult_u59     |     5.004  |
+|     mult_u6      |     5.004  |
+|     mult_u60     |     5.004  |
+|     mult_u61     |     5.004  |
+|     mult_u62     |     5.004  |
+|     mult_u63     |     5.004  |
+|     mult_u7      |     5.004  |
+|     mult_u8      |     5.004  |
+|     mult_u9      |     5.004  |
+|   f_gatex        |   271.961  |
+|     mult_u0      |     1.713  |
+|     mult_u1      |     1.713  |
+|     mult_u10     |     1.713  |
+|     mult_u11     |     1.713  |
+|     mult_u12     |     1.713  |
+|     mult_u13     |     1.713  |
+|     mult_u14     |     1.713  |
+|     mult_u15     |     1.713  |
+|     mult_u16     |     1.713  |
+|     mult_u17     |     1.713  |
+|     mult_u18     |     1.713  |
+|     mult_u19     |     1.713  |
+|     mult_u2      |     1.713  |
+|     mult_u20     |     1.713  |
+|     mult_u21     |     1.713  |
+|     mult_u22     |     1.713  |
+|     mult_u23     |     1.713  |
+|     mult_u24     |     1.713  |
+|     mult_u25     |     1.713  |
+|     mult_u26     |     1.713  |
+|     mult_u27     |     1.713  |
+|     mult_u28     |     1.713  |
+|     mult_u29     |     1.713  |
+|     mult_u3      |     1.713  |
+|     mult_u30     |     1.713  |
+|     mult_u31     |     1.713  |
+|     mult_u32     |     1.713  |
+|     mult_u33     |     1.713  |
+|     mult_u34     |     1.713  |
+|     mult_u35     |     1.713  |
+|     mult_u36     |     1.713  |
+|     mult_u37     |     1.713  |
+|     mult_u38     |     1.713  |
+|     mult_u39     |     1.713  |
+|     mult_u4      |     1.713  |
+|     mult_u40     |     1.713  |
+|     mult_u41     |     1.713  |
+|     mult_u42     |     1.713  |
+|     mult_u43     |     1.713  |
+|     mult_u44     |     1.713  |
+|     mult_u45     |     1.713  |
+|     mult_u46     |     1.713  |
+|     mult_u47     |     1.713  |
+|     mult_u48     |     1.713  |
+|     mult_u49     |     1.713  |
+|     mult_u5      |     1.713  |
+|     mult_u50     |     1.713  |
+|     mult_u51     |     1.713  |
+|     mult_u52     |     1.713  |
+|     mult_u53     |     1.713  |
+|     mult_u54     |     1.713  |
+|     mult_u55     |     1.713  |
+|     mult_u56     |     1.713  |
+|     mult_u57     |     1.713  |
+|     mult_u58     |     1.713  |
+|     mult_u59     |     1.713  |
+|     mult_u6      |     1.713  |
+|     mult_u60     |     1.713  |
+|     mult_u61     |     1.713  |
+|     mult_u62     |     1.713  |
+|     mult_u63     |     1.713  |
+|     mult_u64     |     1.713  |
+|     mult_u65     |     1.713  |
+|     mult_u66     |     1.713  |
+|     mult_u67     |     5.537  |
+|     mult_u68     |     5.537  |
+|     mult_u69     |     5.537  |
+|     mult_u7      |     1.713  |
+|     mult_u70     |     5.537  |
+|     mult_u71     |     5.537  |
+|     mult_u72     |     5.537  |
+|     mult_u73     |     5.537  |
+|     mult_u74     |     5.537  |
+|     mult_u75     |     5.537  |
+|     mult_u76     |     5.537  |
+|     mult_u77     |     5.537  |
+|     mult_u78     |     5.537  |
+|     mult_u79     |     1.713  |
+|     mult_u8      |     1.713  |
+|     mult_u80     |     1.713  |
+|     mult_u81     |     1.713  |
+|     mult_u82     |     1.713  |
+|     mult_u83     |     1.713  |
+|     mult_u84     |     5.537  |
+|     mult_u85     |     5.537  |
+|     mult_u86     |     5.537  |
+|     mult_u87     |     5.537  |
+|     mult_u88     |     5.537  |
+|     mult_u89     |     5.537  |
+|     mult_u9      |     1.713  |
+|     mult_u90     |     5.537  |
+|     mult_u91     |     5.537  |
+|     mult_u92     |     5.537  |
+|     mult_u93     |     5.537  |
+|     mult_u94     |     5.537  |
+|     mult_u95     |     1.713  |
+|     mult_u96     |     1.713  |
+|     mult_u97     |     1.713  |
+|     mult_u98     |     1.713  |
+|     mult_u99     |     1.713  |
+|   h_elmul        |     5.895  |
+|   i_gate_biasadd |     0.402  |
+|   i_gateaddh     |    18.069  |
+|     Add_u1       |     0.674  |
+|     Add_u11      |     0.674  |
+|     Add_u13      |     0.674  |
+|     Add_u15      |     0.674  |
+|     Add_u17      |     0.674  |
+|     Add_u19      |     0.674  |
+|     Add_u21      |     0.674  |
+|     Add_u23      |     0.674  |
+|     Add_u25      |     0.674  |
+|     Add_u27      |     0.674  |
+|     Add_u29      |     0.674  |
+|     Add_u3       |     0.674  |
+|     Add_u31      |     0.674  |
+|     Add_u5       |     0.674  |
+|     Add_u61      |     3.713  |
+|     Add_u7       |     0.674  |
+|     Add_u9       |     0.674  |
+|   i_gateaddx     |     6.739  |
+|     Add_u49      |     0.175  |
+|     Add_u51      |     0.175  |
+|     Add_u53      |     0.175  |
+|     Add_u55      |     0.175  |
+|     Add_u57      |     0.175  |
+|     Add_u59      |     0.175  |
+|     Add_u61      |     0.175  |
+|     Add_u63      |     0.175  |
+|     Add_u65      |     0.175  |
+|     Add_u67      |     0.175  |
+|     Add_u69      |     0.175  |
+|     Add_u71      |     0.175  |
+|     Add_u73      |     0.175  |
+|     Add_u97      |     1.509  |
+|   i_gateh        |   393.910  |
+|     mult_u0      |     5.004  |
+|     mult_u1      |     5.004  |
+|     mult_u10     |     5.004  |
+|     mult_u11     |     5.004  |
+|     mult_u12     |     5.004  |
+|     mult_u13     |     5.004  |
+|     mult_u14     |     5.004  |
+|     mult_u15     |     5.004  |
+|     mult_u16     |     5.004  |
+|     mult_u17     |     5.004  |
+|     mult_u18     |     5.004  |
+|     mult_u19     |     5.004  |
+|     mult_u2      |     5.004  |
+|     mult_u20     |     5.004  |
+|     mult_u21     |     5.004  |
+|     mult_u22     |     5.004  |
+|     mult_u23     |     5.004  |
+|     mult_u24     |     5.004  |
+|     mult_u25     |     5.004  |
+|     mult_u26     |     5.004  |
+|     mult_u27     |     5.004  |
+|     mult_u28     |     5.004  |
+|     mult_u29     |     5.004  |
+|     mult_u3      |     5.004  |
+|     mult_u30     |     5.004  |
+|     mult_u31     |     5.004  |
+|     mult_u32     |     5.004  |
+|     mult_u33     |     5.004  |
+|     mult_u34     |     5.004  |
+|     mult_u35     |     5.004  |
+|     mult_u36     |     5.004  |
+|     mult_u37     |     5.004  |
+|     mult_u38     |     5.004  |
+|     mult_u39     |     5.004  |
+|     mult_u4      |     5.004  |
+|     mult_u40     |     5.004  |
+|     mult_u41     |     5.004  |
+|     mult_u42     |     5.004  |
+|     mult_u43     |     5.004  |
+|     mult_u44     |     5.004  |
+|     mult_u45     |     5.004  |
+|     mult_u46     |     5.004  |
+|     mult_u47     |     5.004  |
+|     mult_u48     |     5.004  |
+|     mult_u49     |     5.004  |
+|     mult_u5      |     5.004  |
+|     mult_u50     |     5.004  |
+|     mult_u51     |     5.004  |
+|     mult_u52     |     5.004  |
+|     mult_u53     |     5.004  |
+|     mult_u54     |     5.004  |
+|     mult_u55     |     5.004  |
+|     mult_u56     |     5.004  |
+|     mult_u57     |     5.004  |
+|     mult_u58     |     5.004  |
+|     mult_u59     |     5.004  |
+|     mult_u6      |     5.004  |
+|     mult_u60     |     5.004  |
+|     mult_u61     |     5.004  |
+|     mult_u62     |     5.004  |
+|     mult_u63     |     5.004  |
+|     mult_u7      |     5.004  |
+|     mult_u8      |     5.004  |
+|     mult_u9      |     5.004  |
+|   i_gatex        |   356.099  |
+|     mult_u0      |     5.537  |
+|     mult_u1      |     5.537  |
+|     mult_u10     |     5.537  |
+|     mult_u11     |     5.537  |
+|     mult_u12     |     5.537  |
+|     mult_u13     |     5.537  |
+|     mult_u14     |     5.537  |
+|     mult_u15     |     5.537  |
+|     mult_u16     |     5.537  |
+|     mult_u17     |     5.537  |
+|     mult_u18     |     5.537  |
+|     mult_u19     |     5.537  |
+|     mult_u2      |     5.537  |
+|     mult_u20     |     5.537  |
+|     mult_u21     |     1.713  |
+|     mult_u22     |     1.713  |
+|     mult_u23     |     1.713  |
+|     mult_u24     |     1.713  |
+|     mult_u25     |     1.713  |
+|     mult_u26     |     1.713  |
+|     mult_u27     |     1.713  |
+|     mult_u28     |     1.713  |
+|     mult_u29     |     1.713  |
+|     mult_u3      |     5.537  |
+|     mult_u30     |     1.713  |
+|     mult_u31     |     1.713  |
+|     mult_u32     |     1.713  |
+|     mult_u33     |     1.713  |
+|     mult_u34     |     1.713  |
+|     mult_u35     |     1.713  |
+|     mult_u36     |     1.713  |
+|     mult_u37     |     1.713  |
+|     mult_u38     |     1.713  |
+|     mult_u39     |     1.713  |
+|     mult_u4      |     5.537  |
+|     mult_u40     |     1.713  |
+|     mult_u41     |     1.713  |
+|     mult_u42     |     1.713  |
+|     mult_u43     |     1.713  |
+|     mult_u44     |     1.713  |
+|     mult_u45     |     1.713  |
+|     mult_u46     |     1.713  |
+|     mult_u47     |     1.713  |
+|     mult_u48     |     1.713  |
+|     mult_u49     |     1.713  |
+|     mult_u5      |     5.537  |
+|     mult_u50     |     1.713  |
+|     mult_u51     |     1.713  |
+|     mult_u52     |     1.713  |
+|     mult_u53     |     1.713  |
+|     mult_u54     |     1.713  |
+|     mult_u55     |     1.713  |
+|     mult_u56     |     1.713  |
+|     mult_u57     |     1.713  |
+|     mult_u58     |     1.713  |
+|     mult_u59     |     1.713  |
+|     mult_u6      |     5.537  |
+|     mult_u60     |     1.713  |
+|     mult_u61     |     1.713  |
+|     mult_u62     |     1.713  |
+|     mult_u63     |     1.713  |
+|     mult_u64     |     1.713  |
+|     mult_u65     |     1.713  |
+|     mult_u66     |     1.713  |
+|     mult_u67     |     5.537  |
+|     mult_u68     |     5.537  |
+|     mult_u69     |     5.537  |
+|     mult_u7      |     5.537  |
+|     mult_u70     |     5.537  |
+|     mult_u71     |     5.537  |
+|     mult_u72     |     5.537  |
+|     mult_u73     |     5.537  |
+|     mult_u74     |     5.537  |
+|     mult_u75     |     5.537  |
+|     mult_u76     |     5.537  |
+|     mult_u77     |     5.537  |
+|     mult_u78     |     5.537  |
+|     mult_u79     |     1.713  |
+|     mult_u8      |     5.537  |
+|     mult_u80     |     1.713  |
+|     mult_u81     |     1.713  |
+|     mult_u82     |     1.713  |
+|     mult_u83     |     1.713  |
+|     mult_u84     |     5.537  |
+|     mult_u85     |     5.537  |
+|     mult_u86     |     5.537  |
+|     mult_u87     |     5.537  |
+|     mult_u88     |     5.537  |
+|     mult_u89     |     5.537  |
+|     mult_u9      |     5.537  |
+|     mult_u90     |     5.537  |
+|     mult_u91     |     5.537  |
+|     mult_u92     |     5.537  |
+|     mult_u93     |     5.537  |
+|     mult_u94     |     5.537  |
+|     mult_u95     |     1.713  |
+|     mult_u96     |     1.713  |
+|     mult_u97     |     1.713  |
+|     mult_u98     |     1.713  |
+|     mult_u99     |     5.537  |
+|   o_gate_biasadd |     0.402  |
+|   o_gateaddh     |    18.069  |
+|     Add_u1       |     0.674  |
+|     Add_u11      |     0.674  |
+|     Add_u13      |     0.674  |
+|     Add_u15      |     0.674  |
+|     Add_u17      |     0.674  |
+|     Add_u19      |     0.674  |
+|     Add_u21      |     0.674  |
+|     Add_u23      |     0.674  |
+|     Add_u25      |     0.674  |
+|     Add_u27      |     0.674  |
+|     Add_u29      |     0.674  |
+|     Add_u3       |     0.674  |
+|     Add_u31      |     0.674  |
+|     Add_u5       |     0.674  |
+|     Add_u61      |     3.713  |
+|     Add_u7       |     0.674  |
+|     Add_u9       |     0.674  |
+|   o_gateaddx     |     6.739  |
+|     Add_u49      |     0.175  |
+|     Add_u51      |     0.175  |
+|     Add_u53      |     0.175  |
+|     Add_u55      |     0.175  |
+|     Add_u57      |     0.175  |
+|     Add_u59      |     0.175  |
+|     Add_u61      |     0.175  |
+|     Add_u63      |     0.175  |
+|     Add_u65      |     0.175  |
+|     Add_u67      |     0.175  |
+|     Add_u69      |     0.175  |
+|     Add_u71      |     0.175  |
+|     Add_u73      |     0.175  |
+|     Add_u97      |     1.509  |
+|   o_gateh        |   393.910  |
+|     mult_u0      |     5.004  |
+|     mult_u1      |     5.004  |
+|     mult_u10     |     5.004  |
+|     mult_u11     |     5.004  |
+|     mult_u12     |     5.004  |
+|     mult_u13     |     5.004  |
+|     mult_u14     |     5.004  |
+|     mult_u15     |     5.004  |
+|     mult_u16     |     5.004  |
+|     mult_u17     |     5.004  |
+|     mult_u18     |     5.004  |
+|     mult_u19     |     5.004  |
+|     mult_u2      |     5.004  |
+|     mult_u20     |     5.004  |
+|     mult_u21     |     5.004  |
+|     mult_u22     |     5.004  |
+|     mult_u23     |     5.004  |
+|     mult_u24     |     5.004  |
+|     mult_u25     |     5.004  |
+|     mult_u26     |     5.004  |
+|     mult_u27     |     5.004  |
+|     mult_u28     |     5.004  |
+|     mult_u29     |     5.004  |
+|     mult_u3      |     5.004  |
+|     mult_u30     |     5.004  |
+|     mult_u31     |     5.004  |
+|     mult_u32     |     5.004  |
+|     mult_u33     |     5.004  |
+|     mult_u34     |     5.004  |
+|     mult_u35     |     5.004  |
+|     mult_u36     |     5.004  |
+|     mult_u37     |     5.004  |
+|     mult_u38     |     5.004  |
+|     mult_u39     |     5.004  |
+|     mult_u4      |     5.004  |
+|     mult_u40     |     5.004  |
+|     mult_u41     |     5.004  |
+|     mult_u42     |     5.004  |
+|     mult_u43     |     5.004  |
+|     mult_u44     |     5.004  |
+|     mult_u45     |     5.004  |
+|     mult_u46     |     5.004  |
+|     mult_u47     |     5.004  |
+|     mult_u48     |     5.004  |
+|     mult_u49     |     5.004  |
+|     mult_u5      |     5.004  |
+|     mult_u50     |     5.004  |
+|     mult_u51     |     5.004  |
+|     mult_u52     |     5.004  |
+|     mult_u53     |     5.004  |
+|     mult_u54     |     5.004  |
+|     mult_u55     |     5.004  |
+|     mult_u56     |     5.004  |
+|     mult_u57     |     5.004  |
+|     mult_u58     |     5.004  |
+|     mult_u59     |     5.004  |
+|     mult_u6      |     5.004  |
+|     mult_u60     |     5.004  |
+|     mult_u61     |     5.004  |
+|     mult_u62     |     5.004  |
+|     mult_u63     |     5.004  |
+|     mult_u7      |     5.004  |
+|     mult_u8      |     5.004  |
+|     mult_u9      |     5.004  |
+|   o_gatex        |   356.099  |
+|     mult_u0      |     5.537  |
+|     mult_u1      |     5.537  |
+|     mult_u10     |     5.537  |
+|     mult_u11     |     5.537  |
+|     mult_u12     |     5.537  |
+|     mult_u13     |     5.537  |
+|     mult_u14     |     5.537  |
+|     mult_u15     |     5.537  |
+|     mult_u16     |     5.537  |
+|     mult_u17     |     5.537  |
+|     mult_u18     |     5.537  |
+|     mult_u19     |     5.537  |
+|     mult_u2      |     5.537  |
+|     mult_u20     |     5.537  |
+|     mult_u21     |     1.713  |
+|     mult_u22     |     1.713  |
+|     mult_u23     |     1.713  |
+|     mult_u24     |     1.713  |
+|     mult_u25     |     1.713  |
+|     mult_u26     |     1.713  |
+|     mult_u27     |     1.713  |
+|     mult_u28     |     1.713  |
+|     mult_u29     |     1.713  |
+|     mult_u3      |     5.537  |
+|     mult_u30     |     1.713  |
+|     mult_u31     |     1.713  |
+|     mult_u32     |     1.713  |
+|     mult_u33     |     1.713  |
+|     mult_u34     |     1.713  |
+|     mult_u35     |     1.713  |
+|     mult_u36     |     1.713  |
+|     mult_u37     |     1.713  |
+|     mult_u38     |     1.713  |
+|     mult_u39     |     1.713  |
+|     mult_u4      |     5.537  |
+|     mult_u40     |     1.713  |
+|     mult_u41     |     1.713  |
+|     mult_u42     |     1.713  |
+|     mult_u43     |     1.713  |
+|     mult_u44     |     1.713  |
+|     mult_u45     |     1.713  |
+|     mult_u46     |     1.713  |
+|     mult_u47     |     1.713  |
+|     mult_u48     |     1.713  |
+|     mult_u49     |     1.713  |
+|     mult_u5      |     5.537  |
+|     mult_u50     |     1.713  |
+|     mult_u51     |     1.713  |
+|     mult_u52     |     1.713  |
+|     mult_u53     |     1.713  |
+|     mult_u54     |     1.713  |
+|     mult_u55     |     1.713  |
+|     mult_u56     |     1.713  |
+|     mult_u57     |     1.713  |
+|     mult_u58     |     1.713  |
+|     mult_u59     |     1.713  |
+|     mult_u6      |     5.537  |
+|     mult_u60     |     1.713  |
+|     mult_u61     |     1.713  |
+|     mult_u62     |     1.713  |
+|     mult_u63     |     1.713  |
+|     mult_u64     |     1.713  |
+|     mult_u65     |     1.713  |
+|     mult_u66     |     1.713  |
+|     mult_u67     |     5.537  |
+|     mult_u68     |     5.537  |
+|     mult_u69     |     5.537  |
+|     mult_u7      |     5.537  |
+|     mult_u70     |     5.537  |
+|     mult_u71     |     5.537  |
+|     mult_u72     |     5.537  |
+|     mult_u73     |     5.537  |
+|     mult_u74     |     5.537  |
+|     mult_u75     |     5.537  |
+|     mult_u76     |     5.537  |
+|     mult_u77     |     5.537  |
+|     mult_u78     |     5.537  |
+|     mult_u79     |     1.713  |
+|     mult_u8      |     5.537  |
+|     mult_u80     |     1.713  |
+|     mult_u81     |     1.713  |
+|     mult_u82     |     1.713  |
+|     mult_u83     |     1.713  |
+|     mult_u84     |     5.537  |
+|     mult_u85     |     5.537  |
+|     mult_u86     |     5.537  |
+|     mult_u87     |     5.537  |
+|     mult_u88     |     5.537  |
+|     mult_u89     |     5.537  |
+|     mult_u9      |     5.537  |
+|     mult_u90     |     5.537  |
+|     mult_u91     |     5.537  |
+|     mult_u92     |     5.537  |
+|     mult_u93     |     5.537  |
+|     mult_u94     |     5.537  |
+|     mult_u95     |     1.713  |
+|     mult_u96     |     1.713  |
+|     mult_u97     |     1.713  |
+|     mult_u98     |     1.713  |
+|     mult_u99     |     5.537  |
+|   tan_c1         |     1.959  |
+|   tan_c2         |     1.959  |
++------------------+------------+
+
+

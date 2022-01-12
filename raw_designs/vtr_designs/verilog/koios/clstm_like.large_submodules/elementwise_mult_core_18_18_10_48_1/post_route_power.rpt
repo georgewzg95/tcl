@@ -1,0 +1,225 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:45:32 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/clstm_like.large_submodules/elementwise_mult_core_18_18_10_48_1/post_route_power.rpt
+| Design           : elementwise_mult_core_18_18_10_48_1
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 217.982      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 113.741      |
+| Device Static (mW)       | 104.241      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 97.5         |
+| Junction Temperature (C) | 27.5         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |    27.911  |        3 |       --- |             --- |
+| Slice Logic    |    13.567  |     4879 |       --- |             --- |
+|   LUT as Logic |     9.418  |      481 |     53200 |            0.90 |
+|   Register     |     2.955  |     3606 |    106400 |            3.39 |
+|   CARRY4       |     1.194  |      240 |     13300 |            1.80 |
+|   Others       |     0.000  |      120 |       --- |             --- |
+| Signals        |    16.640  |     3846 |       --- |             --- |
+| DSPs           |    55.623  |       48 |       220 |           21.82 |
+| Static Power   |   104.241  |          |           |                 |
+| Total          |   217.981  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.122 |       0.114 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------------+------------+
+| Name                                        | Power (mW) |
++---------------------------------------------+------------+
+| elementwise_mult_core_18_18_10_48_1         |   113.741  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst0  |     2.687  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst10 |     2.667  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst12 |     2.666  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst14 |     2.635  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst16 |     2.692  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst18 |     2.672  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst2  |     2.644  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst20 |     2.670  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst22 |     2.659  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst24 |     2.656  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst26 |     2.652  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst28 |     2.642  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst30 |     2.660  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst32 |     2.686  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst34 |     2.685  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst36 |     2.662  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst38 |     2.679  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst4  |     2.658  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst40 |     2.649  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst42 |     2.658  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst44 |     2.645  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst46 |     2.729  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst6  |     2.671  |
+|   dsp_signed_mult_18x18_unit_18_18_1_inst8  |     2.685  |
+|   fp_rounding_unit_1_37_10_inst0            |     0.892  |
+|   fp_rounding_unit_1_37_10_inst1            |     0.859  |
+|   fp_rounding_unit_1_37_10_inst10           |     0.860  |
+|   fp_rounding_unit_1_37_10_inst11           |     0.856  |
+|   fp_rounding_unit_1_37_10_inst12           |     0.862  |
+|   fp_rounding_unit_1_37_10_inst13           |     0.858  |
+|   fp_rounding_unit_1_37_10_inst14           |     0.861  |
+|   fp_rounding_unit_1_37_10_inst15           |     0.858  |
+|   fp_rounding_unit_1_37_10_inst16           |     0.872  |
+|   fp_rounding_unit_1_37_10_inst17           |     0.858  |
+|   fp_rounding_unit_1_37_10_inst18           |     0.862  |
+|   fp_rounding_unit_1_37_10_inst19           |     0.860  |
+|   fp_rounding_unit_1_37_10_inst2            |     0.863  |
+|   fp_rounding_unit_1_37_10_inst20           |     0.872  |
+|   fp_rounding_unit_1_37_10_inst21           |     0.860  |
+|   fp_rounding_unit_1_37_10_inst22           |     0.856  |
+|   fp_rounding_unit_1_37_10_inst23           |     0.875  |
+|   fp_rounding_unit_1_37_10_inst24           |     0.856  |
+|   fp_rounding_unit_1_37_10_inst25           |     0.851  |
+|   fp_rounding_unit_1_37_10_inst26           |     0.848  |
+|   fp_rounding_unit_1_37_10_inst27           |     0.859  |
+|   fp_rounding_unit_1_37_10_inst28           |     0.863  |
+|   fp_rounding_unit_1_37_10_inst29           |     0.860  |
+|   fp_rounding_unit_1_37_10_inst3            |     0.870  |
+|   fp_rounding_unit_1_37_10_inst30           |     0.843  |
+|   fp_rounding_unit_1_37_10_inst31           |     0.863  |
+|   fp_rounding_unit_1_37_10_inst32           |     0.850  |
+|   fp_rounding_unit_1_37_10_inst33           |     0.884  |
+|   fp_rounding_unit_1_37_10_inst34           |     0.872  |
+|   fp_rounding_unit_1_37_10_inst35           |     0.864  |
+|   fp_rounding_unit_1_37_10_inst36           |     0.875  |
+|   fp_rounding_unit_1_37_10_inst37           |     0.851  |
+|   fp_rounding_unit_1_37_10_inst38           |     0.853  |
+|   fp_rounding_unit_1_37_10_inst39           |     0.862  |
+|   fp_rounding_unit_1_37_10_inst4            |     0.881  |
+|   fp_rounding_unit_1_37_10_inst40           |     0.856  |
+|   fp_rounding_unit_1_37_10_inst41           |     0.871  |
+|   fp_rounding_unit_1_37_10_inst42           |     0.873  |
+|   fp_rounding_unit_1_37_10_inst43           |     0.858  |
+|   fp_rounding_unit_1_37_10_inst44           |     0.875  |
+|   fp_rounding_unit_1_37_10_inst45           |     0.853  |
+|   fp_rounding_unit_1_37_10_inst46           |     0.864  |
+|   fp_rounding_unit_1_37_10_inst47           |     0.874  |
+|   fp_rounding_unit_1_37_10_inst5            |     0.860  |
+|   fp_rounding_unit_1_37_10_inst6            |     0.860  |
+|   fp_rounding_unit_1_37_10_inst7            |     0.868  |
+|   fp_rounding_unit_1_37_10_inst8            |     0.855  |
+|   fp_rounding_unit_1_37_10_inst9            |     0.849  |
++---------------------------------------------+------------+
+
+

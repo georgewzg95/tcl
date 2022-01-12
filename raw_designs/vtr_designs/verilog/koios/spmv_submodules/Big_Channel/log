@@ -1,0 +1,1544 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v
+# synth_design -part xc7z020clg484-3 -top Big_Channel -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top Big_Channel -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 80120 
+WARNING: [Synth 8-2507] parameter declaration becomes local in generic_fifo_sc_a with formal parameter declaration list [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:915]
+WARNING: [Synth 8-2507] parameter declaration becomes local in dpram with formal parameter declaration list [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:1015]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1511.035 ; gain = 35.395 ; free physical = 239322 ; free virtual = 306273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Big_Channel' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:31]
+INFO: [Synth 8-6157] synthesizing module 'Channel_Accumulator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:729]
+INFO: [Synth 8-6157] synthesizing module 'Channel' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:1066]
+	Parameter FIFO_DEPTH bound to: 8 - type: integer 
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_fifo_sc_a' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:909]
+	Parameter dw bound to: 16 - type: integer 
+	Parameter aw bound to: 3 - type: integer 
+	Parameter max_size bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dpram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:999]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter NUM_WORDS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:999]
+WARNING: [Synth 8-3848] Net din_nc in module/entity generic_fifo_sc_a does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:929]
+INFO: [Synth 8-6155] done synthesizing module 'generic_fifo_sc_a' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:909]
+INFO: [Synth 8-4471] merging register 'mat_val_rd_en_reg_reg' into 'vec_val_rd_en_reg_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:1120]
+WARNING: [Synth 8-6014] Unused sequential element mat_val_rd_en_reg_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:1120]
+INFO: [Synth 8-6155] done synthesizing module 'Channel' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:1066]
+INFO: [Synth 8-6157] synthesizing module 'Accumulator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:794]
+	Parameter FIFO_DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_fifo_sc_a__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:909]
+	Parameter dw bound to: 8 - type: integer 
+	Parameter aw bound to: 3 - type: integer 
+	Parameter max_size bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dpram__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:999]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter NUM_WORDS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dpram__parameterized0' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:999]
+WARNING: [Synth 8-3848] Net din_nc in module/entity generic_fifo_sc_a__parameterized0 does not have driver. [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:929]
+INFO: [Synth 8-6155] done synthesizing module 'generic_fifo_sc_a__parameterized0' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:909]
+WARNING: [Synth 8-5788] Register last_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:878]
+WARNING: [Synth 8-5788] Register row_id_rd_en_reg_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:879]
+WARNING: [Synth 8-5788] Register mult_rd_en_reg_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:880]
+WARNING: [Synth 8-5788] Register wr_addr_delay_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:859]
+WARNING: [Synth 8-5788] Register wr_data_delay_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:844]
+WARNING: [Synth 8-5788] Register wr_addr_reg in module Accumulator is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:881]
+INFO: [Synth 8-6155] done synthesizing module 'Accumulator' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'Channel_Accumulator' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:729]
+INFO: [Synth 8-6155] done synthesizing module 'Big_Channel' (6#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:31]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1541.176 ; gain = 65.535 ; free physical = 239349 ; free virtual = 306299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1541.176 ; gain = 65.535 ; free physical = 239354 ; free virtual = 306304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1549.176 ; gain = 73.535 ; free physical = 239354 ; free virtual = 306304
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-4471] merging register 'mult_rd_en_reg_reg' into 'row_id_rd_en_reg_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel.v:880]
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1557.172 ; gain = 81.531 ; free physical = 239274 ; free virtual = 306225
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 192   
++---Registers : 
+	               16 Bit    Registers := 160   
+	                8 Bit    Registers := 128   
+	                3 Bit    Registers := 192   
+	                1 Bit    Registers := 320   
++---RAMs : 
+	              128 Bit         RAMs := 64    
+	               64 Bit         RAMs := 32    
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 192   
+	   2 Input      1 Bit        Muxes := 448   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dpram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	              128 Bit         RAMs := 1     
+Module generic_fifo_sc_a 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Channel 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module dpram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	               64 Bit         RAMs := 1     
+Module generic_fifo_sc_a__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Accumulator 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element CH0/fifo_mult/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element A0/fifo_data_out/u0/ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element A0/fifo_addr_out/u0/ram_reg was removed. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.941 ; gain = 247.301 ; free physical = 238914 ; free virtual = 305867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1722.941 ; gain = 247.301 ; free physical = 238921 ; free virtual = 305874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
+|Channel_Accumulator: | CH0/fifo_mult/u0/ram_reg    | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_data_out/u0/ram_reg | Implied   | 8 x 16               | RAM32M x 3   | 
+|Channel_Accumulator: | A0/fifo_addr_out/u0/ram_reg | Implied   | 8 x 8                | RAM32M x 2   | 
++---------------------+-----------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1777.031 ; gain = 301.391 ; free physical = 238871 ; free virtual = 305825
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238856 ; free virtual = 305810
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238864 ; free virtual = 305818
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238874 ; free virtual = 305828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238872 ; free virtual = 305825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238861 ; free virtual = 305815
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238876 ; free virtual = 305829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   448|
+|2     |LUT1   |   128|
+|3     |LUT2   |  1089|
+|4     |LUT3   |   832|
+|5     |LUT4   |   832|
+|6     |LUT5   |   192|
+|7     |LUT6   |  1504|
+|8     |RAM32M |   256|
+|9     |FDCE   |  1248|
+|10    |FDRE   |  2944|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+--------------------------------------+------+
+|      |Instance            |Module                                |Cells |
++------+--------------------+--------------------------------------+------+
+|1     |top                 |                                      |  9473|
+|2     |  CH_0              |Channel_Accumulator                   |   296|
+|3     |    A0              |Accumulator_273                       |   138|
+|4     |      fifo_addr_out |generic_fifo_sc_a__parameterized0_277 |    22|
+|5     |        u0          |dpram__parameterized0_280             |    10|
+|6     |      fifo_data_out |generic_fifo_sc_a_278                 |    38|
+|7     |        u0          |dpram_279                             |    19|
+|8     |    CH0             |Channel_274                           |   158|
+|9     |      fifo_mult     |generic_fifo_sc_a_275                 |    40|
+|10    |        u0          |dpram_276                             |    23|
+|11    |  CH_1              |Channel_Accumulator_0                 |   296|
+|12    |    A0              |Accumulator_265                       |   138|
+|13    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_269 |    22|
+|14    |        u0          |dpram__parameterized0_272             |    10|
+|15    |      fifo_data_out |generic_fifo_sc_a_270                 |    38|
+|16    |        u0          |dpram_271                             |    19|
+|17    |    CH0             |Channel_266                           |   158|
+|18    |      fifo_mult     |generic_fifo_sc_a_267                 |    40|
+|19    |        u0          |dpram_268                             |    23|
+|20    |  CH_10             |Channel_Accumulator_1                 |   296|
+|21    |    A0              |Accumulator_257                       |   138|
+|22    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_261 |    22|
+|23    |        u0          |dpram__parameterized0_264             |    10|
+|24    |      fifo_data_out |generic_fifo_sc_a_262                 |    38|
+|25    |        u0          |dpram_263                             |    19|
+|26    |    CH0             |Channel_258                           |   158|
+|27    |      fifo_mult     |generic_fifo_sc_a_259                 |    40|
+|28    |        u0          |dpram_260                             |    23|
+|29    |  CH_11             |Channel_Accumulator_2                 |   296|
+|30    |    A0              |Accumulator_249                       |   138|
+|31    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_253 |    22|
+|32    |        u0          |dpram__parameterized0_256             |    10|
+|33    |      fifo_data_out |generic_fifo_sc_a_254                 |    38|
+|34    |        u0          |dpram_255                             |    19|
+|35    |    CH0             |Channel_250                           |   158|
+|36    |      fifo_mult     |generic_fifo_sc_a_251                 |    40|
+|37    |        u0          |dpram_252                             |    23|
+|38    |  CH_12             |Channel_Accumulator_3                 |   296|
+|39    |    A0              |Accumulator_241                       |   138|
+|40    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_245 |    22|
+|41    |        u0          |dpram__parameterized0_248             |    10|
+|42    |      fifo_data_out |generic_fifo_sc_a_246                 |    38|
+|43    |        u0          |dpram_247                             |    19|
+|44    |    CH0             |Channel_242                           |   158|
+|45    |      fifo_mult     |generic_fifo_sc_a_243                 |    40|
+|46    |        u0          |dpram_244                             |    23|
+|47    |  CH_13             |Channel_Accumulator_4                 |   296|
+|48    |    A0              |Accumulator_233                       |   138|
+|49    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_237 |    22|
+|50    |        u0          |dpram__parameterized0_240             |    10|
+|51    |      fifo_data_out |generic_fifo_sc_a_238                 |    38|
+|52    |        u0          |dpram_239                             |    19|
+|53    |    CH0             |Channel_234                           |   158|
+|54    |      fifo_mult     |generic_fifo_sc_a_235                 |    40|
+|55    |        u0          |dpram_236                             |    23|
+|56    |  CH_14             |Channel_Accumulator_5                 |   296|
+|57    |    A0              |Accumulator_225                       |   138|
+|58    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_229 |    22|
+|59    |        u0          |dpram__parameterized0_232             |    10|
+|60    |      fifo_data_out |generic_fifo_sc_a_230                 |    38|
+|61    |        u0          |dpram_231                             |    19|
+|62    |    CH0             |Channel_226                           |   158|
+|63    |      fifo_mult     |generic_fifo_sc_a_227                 |    40|
+|64    |        u0          |dpram_228                             |    23|
+|65    |  CH_15             |Channel_Accumulator_6                 |   296|
+|66    |    A0              |Accumulator_217                       |   138|
+|67    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_221 |    22|
+|68    |        u0          |dpram__parameterized0_224             |    10|
+|69    |      fifo_data_out |generic_fifo_sc_a_222                 |    38|
+|70    |        u0          |dpram_223                             |    19|
+|71    |    CH0             |Channel_218                           |   158|
+|72    |      fifo_mult     |generic_fifo_sc_a_219                 |    40|
+|73    |        u0          |dpram_220                             |    23|
+|74    |  CH_16             |Channel_Accumulator_7                 |   296|
+|75    |    A0              |Accumulator_209                       |   138|
+|76    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_213 |    22|
+|77    |        u0          |dpram__parameterized0_216             |    10|
+|78    |      fifo_data_out |generic_fifo_sc_a_214                 |    38|
+|79    |        u0          |dpram_215                             |    19|
+|80    |    CH0             |Channel_210                           |   158|
+|81    |      fifo_mult     |generic_fifo_sc_a_211                 |    40|
+|82    |        u0          |dpram_212                             |    23|
+|83    |  CH_17             |Channel_Accumulator_8                 |   296|
+|84    |    A0              |Accumulator_201                       |   138|
+|85    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_205 |    22|
+|86    |        u0          |dpram__parameterized0_208             |    10|
+|87    |      fifo_data_out |generic_fifo_sc_a_206                 |    38|
+|88    |        u0          |dpram_207                             |    19|
+|89    |    CH0             |Channel_202                           |   158|
+|90    |      fifo_mult     |generic_fifo_sc_a_203                 |    40|
+|91    |        u0          |dpram_204                             |    23|
+|92    |  CH_18             |Channel_Accumulator_9                 |   296|
+|93    |    A0              |Accumulator_193                       |   138|
+|94    |      fifo_addr_out |generic_fifo_sc_a__parameterized0_197 |    22|
+|95    |        u0          |dpram__parameterized0_200             |    10|
+|96    |      fifo_data_out |generic_fifo_sc_a_198                 |    38|
+|97    |        u0          |dpram_199                             |    19|
+|98    |    CH0             |Channel_194                           |   158|
+|99    |      fifo_mult     |generic_fifo_sc_a_195                 |    40|
+|100   |        u0          |dpram_196                             |    23|
+|101   |  CH_19             |Channel_Accumulator_10                |   296|
+|102   |    A0              |Accumulator_185                       |   138|
+|103   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_189 |    22|
+|104   |        u0          |dpram__parameterized0_192             |    10|
+|105   |      fifo_data_out |generic_fifo_sc_a_190                 |    38|
+|106   |        u0          |dpram_191                             |    19|
+|107   |    CH0             |Channel_186                           |   158|
+|108   |      fifo_mult     |generic_fifo_sc_a_187                 |    40|
+|109   |        u0          |dpram_188                             |    23|
+|110   |  CH_2              |Channel_Accumulator_11                |   296|
+|111   |    A0              |Accumulator_177                       |   138|
+|112   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_181 |    22|
+|113   |        u0          |dpram__parameterized0_184             |    10|
+|114   |      fifo_data_out |generic_fifo_sc_a_182                 |    38|
+|115   |        u0          |dpram_183                             |    19|
+|116   |    CH0             |Channel_178                           |   158|
+|117   |      fifo_mult     |generic_fifo_sc_a_179                 |    40|
+|118   |        u0          |dpram_180                             |    23|
+|119   |  CH_20             |Channel_Accumulator_12                |   296|
+|120   |    A0              |Accumulator_169                       |   138|
+|121   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_173 |    22|
+|122   |        u0          |dpram__parameterized0_176             |    10|
+|123   |      fifo_data_out |generic_fifo_sc_a_174                 |    38|
+|124   |        u0          |dpram_175                             |    19|
+|125   |    CH0             |Channel_170                           |   158|
+|126   |      fifo_mult     |generic_fifo_sc_a_171                 |    40|
+|127   |        u0          |dpram_172                             |    23|
+|128   |  CH_21             |Channel_Accumulator_13                |   296|
+|129   |    A0              |Accumulator_161                       |   138|
+|130   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_165 |    22|
+|131   |        u0          |dpram__parameterized0_168             |    10|
+|132   |      fifo_data_out |generic_fifo_sc_a_166                 |    38|
+|133   |        u0          |dpram_167                             |    19|
+|134   |    CH0             |Channel_162                           |   158|
+|135   |      fifo_mult     |generic_fifo_sc_a_163                 |    40|
+|136   |        u0          |dpram_164                             |    23|
+|137   |  CH_22             |Channel_Accumulator_14                |   296|
+|138   |    A0              |Accumulator_153                       |   138|
+|139   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_157 |    22|
+|140   |        u0          |dpram__parameterized0_160             |    10|
+|141   |      fifo_data_out |generic_fifo_sc_a_158                 |    38|
+|142   |        u0          |dpram_159                             |    19|
+|143   |    CH0             |Channel_154                           |   158|
+|144   |      fifo_mult     |generic_fifo_sc_a_155                 |    40|
+|145   |        u0          |dpram_156                             |    23|
+|146   |  CH_23             |Channel_Accumulator_15                |   296|
+|147   |    A0              |Accumulator_145                       |   138|
+|148   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_149 |    22|
+|149   |        u0          |dpram__parameterized0_152             |    10|
+|150   |      fifo_data_out |generic_fifo_sc_a_150                 |    38|
+|151   |        u0          |dpram_151                             |    19|
+|152   |    CH0             |Channel_146                           |   158|
+|153   |      fifo_mult     |generic_fifo_sc_a_147                 |    40|
+|154   |        u0          |dpram_148                             |    23|
+|155   |  CH_24             |Channel_Accumulator_16                |   296|
+|156   |    A0              |Accumulator_137                       |   138|
+|157   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_141 |    22|
+|158   |        u0          |dpram__parameterized0_144             |    10|
+|159   |      fifo_data_out |generic_fifo_sc_a_142                 |    38|
+|160   |        u0          |dpram_143                             |    19|
+|161   |    CH0             |Channel_138                           |   158|
+|162   |      fifo_mult     |generic_fifo_sc_a_139                 |    40|
+|163   |        u0          |dpram_140                             |    23|
+|164   |  CH_25             |Channel_Accumulator_17                |   296|
+|165   |    A0              |Accumulator_129                       |   138|
+|166   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_133 |    22|
+|167   |        u0          |dpram__parameterized0_136             |    10|
+|168   |      fifo_data_out |generic_fifo_sc_a_134                 |    38|
+|169   |        u0          |dpram_135                             |    19|
+|170   |    CH0             |Channel_130                           |   158|
+|171   |      fifo_mult     |generic_fifo_sc_a_131                 |    40|
+|172   |        u0          |dpram_132                             |    23|
+|173   |  CH_26             |Channel_Accumulator_18                |   296|
+|174   |    A0              |Accumulator_121                       |   138|
+|175   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_125 |    22|
+|176   |        u0          |dpram__parameterized0_128             |    10|
+|177   |      fifo_data_out |generic_fifo_sc_a_126                 |    38|
+|178   |        u0          |dpram_127                             |    19|
+|179   |    CH0             |Channel_122                           |   158|
+|180   |      fifo_mult     |generic_fifo_sc_a_123                 |    40|
+|181   |        u0          |dpram_124                             |    23|
+|182   |  CH_27             |Channel_Accumulator_19                |   296|
+|183   |    A0              |Accumulator_113                       |   138|
+|184   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_117 |    22|
+|185   |        u0          |dpram__parameterized0_120             |    10|
+|186   |      fifo_data_out |generic_fifo_sc_a_118                 |    38|
+|187   |        u0          |dpram_119                             |    19|
+|188   |    CH0             |Channel_114                           |   158|
+|189   |      fifo_mult     |generic_fifo_sc_a_115                 |    40|
+|190   |        u0          |dpram_116                             |    23|
+|191   |  CH_28             |Channel_Accumulator_20                |   296|
+|192   |    A0              |Accumulator_105                       |   138|
+|193   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_109 |    22|
+|194   |        u0          |dpram__parameterized0_112             |    10|
+|195   |      fifo_data_out |generic_fifo_sc_a_110                 |    38|
+|196   |        u0          |dpram_111                             |    19|
+|197   |    CH0             |Channel_106                           |   158|
+|198   |      fifo_mult     |generic_fifo_sc_a_107                 |    40|
+|199   |        u0          |dpram_108                             |    23|
+|200   |  CH_29             |Channel_Accumulator_21                |   297|
+|201   |    A0              |Accumulator_97                        |   139|
+|202   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_101 |    22|
+|203   |        u0          |dpram__parameterized0_104             |    10|
+|204   |      fifo_data_out |generic_fifo_sc_a_102                 |    38|
+|205   |        u0          |dpram_103                             |    19|
+|206   |    CH0             |Channel_98                            |   158|
+|207   |      fifo_mult     |generic_fifo_sc_a_99                  |    40|
+|208   |        u0          |dpram_100                             |    23|
+|209   |  CH_3              |Channel_Accumulator_22                |   296|
+|210   |    A0              |Accumulator_89                        |   138|
+|211   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_93  |    22|
+|212   |        u0          |dpram__parameterized0_96              |    10|
+|213   |      fifo_data_out |generic_fifo_sc_a_94                  |    38|
+|214   |        u0          |dpram_95                              |    19|
+|215   |    CH0             |Channel_90                            |   158|
+|216   |      fifo_mult     |generic_fifo_sc_a_91                  |    40|
+|217   |        u0          |dpram_92                              |    23|
+|218   |  CH_30             |Channel_Accumulator_23                |   296|
+|219   |    A0              |Accumulator_81                        |   138|
+|220   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_85  |    22|
+|221   |        u0          |dpram__parameterized0_88              |    10|
+|222   |      fifo_data_out |generic_fifo_sc_a_86                  |    38|
+|223   |        u0          |dpram_87                              |    19|
+|224   |    CH0             |Channel_82                            |   158|
+|225   |      fifo_mult     |generic_fifo_sc_a_83                  |    40|
+|226   |        u0          |dpram_84                              |    23|
+|227   |  CH_31             |Channel_Accumulator_24                |   296|
+|228   |    A0              |Accumulator_73                        |   138|
+|229   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_77  |    22|
+|230   |        u0          |dpram__parameterized0_80              |    10|
+|231   |      fifo_data_out |generic_fifo_sc_a_78                  |    38|
+|232   |        u0          |dpram_79                              |    19|
+|233   |    CH0             |Channel_74                            |   158|
+|234   |      fifo_mult     |generic_fifo_sc_a_75                  |    40|
+|235   |        u0          |dpram_76                              |    23|
+|236   |  CH_4              |Channel_Accumulator_25                |   296|
+|237   |    A0              |Accumulator_65                        |   138|
+|238   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_69  |    22|
+|239   |        u0          |dpram__parameterized0_72              |    10|
+|240   |      fifo_data_out |generic_fifo_sc_a_70                  |    38|
+|241   |        u0          |dpram_71                              |    19|
+|242   |    CH0             |Channel_66                            |   158|
+|243   |      fifo_mult     |generic_fifo_sc_a_67                  |    40|
+|244   |        u0          |dpram_68                              |    23|
+|245   |  CH_5              |Channel_Accumulator_26                |   296|
+|246   |    A0              |Accumulator_57                        |   138|
+|247   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_61  |    22|
+|248   |        u0          |dpram__parameterized0_64              |    10|
+|249   |      fifo_data_out |generic_fifo_sc_a_62                  |    38|
+|250   |        u0          |dpram_63                              |    19|
+|251   |    CH0             |Channel_58                            |   158|
+|252   |      fifo_mult     |generic_fifo_sc_a_59                  |    40|
+|253   |        u0          |dpram_60                              |    23|
+|254   |  CH_6              |Channel_Accumulator_27                |   296|
+|255   |    A0              |Accumulator_49                        |   138|
+|256   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_53  |    22|
+|257   |        u0          |dpram__parameterized0_56              |    10|
+|258   |      fifo_data_out |generic_fifo_sc_a_54                  |    38|
+|259   |        u0          |dpram_55                              |    19|
+|260   |    CH0             |Channel_50                            |   158|
+|261   |      fifo_mult     |generic_fifo_sc_a_51                  |    40|
+|262   |        u0          |dpram_52                              |    23|
+|263   |  CH_7              |Channel_Accumulator_28                |   296|
+|264   |    A0              |Accumulator_41                        |   138|
+|265   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_45  |    22|
+|266   |        u0          |dpram__parameterized0_48              |    10|
+|267   |      fifo_data_out |generic_fifo_sc_a_46                  |    38|
+|268   |        u0          |dpram_47                              |    19|
+|269   |    CH0             |Channel_42                            |   158|
+|270   |      fifo_mult     |generic_fifo_sc_a_43                  |    40|
+|271   |        u0          |dpram_44                              |    23|
+|272   |  CH_8              |Channel_Accumulator_29                |   296|
+|273   |    A0              |Accumulator_33                        |   138|
+|274   |      fifo_addr_out |generic_fifo_sc_a__parameterized0_37  |    22|
+|275   |        u0          |dpram__parameterized0_40              |    10|
+|276   |      fifo_data_out |generic_fifo_sc_a_38                  |    38|
+|277   |        u0          |dpram_39                              |    19|
+|278   |    CH0             |Channel_34                            |   158|
+|279   |      fifo_mult     |generic_fifo_sc_a_35                  |    40|
+|280   |        u0          |dpram_36                              |    23|
+|281   |  CH_9              |Channel_Accumulator_30                |   296|
+|282   |    A0              |Accumulator                           |   138|
+|283   |      fifo_addr_out |generic_fifo_sc_a__parameterized0     |    22|
+|284   |        u0          |dpram__parameterized0                 |    10|
+|285   |      fifo_data_out |generic_fifo_sc_a_31                  |    38|
+|286   |        u0          |dpram_32                              |    19|
+|287   |    CH0             |Channel                               |   158|
+|288   |      fifo_mult     |generic_fifo_sc_a                     |    40|
+|289   |        u0          |dpram                                 |    23|
++------+--------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238874 ; free virtual = 305827
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.035 ; gain = 301.395 ; free physical = 238873 ; free virtual = 305826
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.039 ; gain = 301.395 ; free physical = 238880 ; free virtual = 305834
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 704 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1878.203 ; gain = 0.000 ; free physical = 238768 ; free virtual = 305722
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 256 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 256 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1878.203 ; gain = 402.660 ; free physical = 238834 ; free virtual = 305787
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2440.859 ; gain = 562.656 ; free physical = 238184 ; free virtual = 305156
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.859 ; gain = 0.000 ; free physical = 238181 ; free virtual = 305153
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2464.871 ; gain = 0.000 ; free physical = 238175 ; free virtual = 305155
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_synth.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2593.148 ; gain = 0.004 ; free physical = 239124 ; free virtual = 306084
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 105582858
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 239122 ; free virtual = 306083
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 105582858
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.50 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238986 ; free virtual = 305946
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 128437a72
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238976 ; free virtual = 305937
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 12e185eaf
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238953 ; free virtual = 305914
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 12e185eaf
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238936 ; free virtual = 305897
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238888 ; free virtual = 305849
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238888 ; free virtual = 305849
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238888 ; free virtual = 305849
+Ending Logic Optimization Task | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238887 ; free virtual = 305847
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238881 ; free virtual = 305842
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238881 ; free virtual = 305842
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238881 ; free virtual = 305842
+Ending Netlist Obfuscation Task | Checksum: 1073a2352
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.148 ; gain = 0.000 ; free physical = 238880 ; free virtual = 305841
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2593.148 ; gain = 0.004 ; free physical = 238880 ; free virtual = 305841
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 1073a2352
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module Big_Channel ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Pre-processing: Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2647.148 ; gain = 22.004 ; free physical = 238747 ; free virtual = 305707
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=7.137 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2682.156 ; gain = 57.012 ; free physical = 238681 ; free virtual = 305642
+Running Vector-less Activity Propagation...
+IDT: Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2870.328 ; gain = 223.180 ; free physical = 238581 ; free virtual = 305542
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 0 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2896.352 ; gain = 26.023 ; free physical = 238649 ; free virtual = 305611
+Power optimization passes: Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 2896.352 ; gain = 271.207 ; free physical = 238647 ; free virtual = 305608
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238696 ; free virtual = 305658
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design Big_Channel ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 0 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 203 accepted clusters 203
+
+Number of Slice Registers augmented: 86 newly gated: 194 Total: 4192
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 0
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/310 RAMS dropped: 0/0 Clusters dropped: 0/203 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 122c488ef
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238620 ; free virtual = 305582
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 122c488ef
+Power optimization: Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2896.352 ; gain = 303.203 ; free physical = 238693 ; free virtual = 305656
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 27355464 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: cab9e733
+
+Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239409 ; free virtual = 306370
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: cab9e733
+
+Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.50 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239897 ; free virtual = 306858
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: e4027791
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239879 ; free virtual = 306839
+INFO: [Opt 31-389] Phase Remap created 43 cells and removed 86 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 118bed8ce
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.88 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239877 ; free virtual = 306838
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |              43  |              86  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1601466bd
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239877 ; free virtual = 306837
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239877 ; free virtual = 306837
+Ending Netlist Obfuscation Task | Checksum: 1601466bd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239876 ; free virtual = 306837
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 2896.352 ; gain = 303.203 ; free physical = 239876 ; free virtual = 306837
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239617 ; free virtual = 306578
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: be8dc9ef
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239616 ; free virtual = 306577
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239668 ; free virtual = 306628
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 0aec7974
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239563 ; free virtual = 306524
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: a54ee819
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239438 ; free virtual = 306399
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: a54ee819
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239435 ; free virtual = 306396
+Phase 1 Placer Initialization | Checksum: a54ee819
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239431 ; free virtual = 306391
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 5b5a29b5
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 239055 ; free virtual = 306015
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238829 ; free virtual = 305812
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: b53d0303
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238852 ; free virtual = 305835
+Phase 2 Global Placement | Checksum: 6e99e68d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238845 ; free virtual = 305828
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 6e99e68d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238833 ; free virtual = 305816
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1201ec5c2
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238807 ; free virtual = 305790
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1ee9d7d2a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238802 ; free virtual = 305785
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1893dbb0f
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238800 ; free virtual = 305783
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 9f687243
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:14 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238792 ; free virtual = 305775
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: c4656a10
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238804 ; free virtual = 305787
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 11b0537e7
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238791 ; free virtual = 305774
+Phase 3 Detail Placement | Checksum: 11b0537e7
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238791 ; free virtual = 305774
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1c2f2471e
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1c2f2471e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238777 ; free virtual = 305746
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.516. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 19aeed957
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238782 ; free virtual = 305751
+Phase 4.1 Post Commit Optimization | Checksum: 19aeed957
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238776 ; free virtual = 305745
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 19aeed957
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238784 ; free virtual = 305753
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 19aeed957
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238765 ; free virtual = 305734
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238762 ; free virtual = 305731
+Phase 4.4 Final Placement Cleanup | Checksum: f016193c
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238742 ; free virtual = 305711
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: f016193c
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238744 ; free virtual = 305712
+Ending Placer Task | Checksum: 3e4b1fb9
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:17 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238748 ; free virtual = 305717
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238744 ; free virtual = 305713
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# write_checkpoint -force $outputDir/post_place
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238762 ; free virtual = 305730
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238747 ; free virtual = 305719
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238675 ; free virtual = 305656
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_place.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 2aad086e ConstDB: 0 ShapeSum: 139e174b RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "mat_val[119]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[119]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[114]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[114]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[118]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[118]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[113]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[113]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[115]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[115]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "rst" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "rst". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[118]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[118]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[116]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[116]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[117]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[117]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[150]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[150]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[147]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[147]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[146]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[146]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[145]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[145]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[151]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[151]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[150]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[150]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[148]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[148]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[149]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[149]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[151]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[151]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "start" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "start". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val_empty[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val_empty[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val_empty[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val_empty[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val_empty[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val_empty[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val_empty[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val_empty[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "out_rd_en[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "out_rd_en[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[194]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[194]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[196]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[196]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[193]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[193]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[197]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[197]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[192]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[192]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[198]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[198]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[195]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[195]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[193]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[193]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[194]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[194]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[192]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[192]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[199]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[199]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[199]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[199]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[198]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[198]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[197]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[197]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[196]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[196]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[195]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[195]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[168]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[168]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[175]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[175]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[174]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[174]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[171]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[171]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[174]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[174]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[172]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[172]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[173]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[173]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[175]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[175]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "out_rd_en[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "out_rd_en[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[144]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[144]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[134]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[134]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[134]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[134]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[132]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[132]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val_empty[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val_empty[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val_empty[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val_empty[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "row_id_empty[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "row_id_empty[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "fetcher_done" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "fetcher_done". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val_empty[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val_empty[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val_empty[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val_empty[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val_empty[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val_empty[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val_empty[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val_empty[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[169]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[169]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[117]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[117]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[112]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[112]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[145]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[145]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[146]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[146]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[144]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[144]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[149]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[149]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[129]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[129]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[130]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[130]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[131]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[131]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[128]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[128]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[135]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[135]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[133]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[133]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[133]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[133]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[132]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[132]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[131]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[131]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[135]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[135]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[89]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[89]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[90]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[90]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[90]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[90]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[89]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[89]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[91]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[91]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[88]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[88]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[88]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[88]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[92]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[92]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[93]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[93]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[94]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[94]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "vec_val[95]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "vec_val[95]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[94]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[94]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "mat_val[95]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "mat_val[95]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "out_rd_en[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "out_rd_en[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "row_id_empty[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "row_id_empty[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1 Build RT Design | Checksum: 9786d496
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238905 ; free virtual = 305874
+Post Restoration Checksum: NetGraph: 459c8719 NumContArr: 51ea4d7d Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 9786d496
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238892 ; free virtual = 305861
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 9786d496
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238863 ; free virtual = 305833
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 9786d496
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238862 ; free virtual = 305831
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1993ecb6c
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238777 ; free virtual = 305748
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.622  | TNS=0.000  | WHS=-0.002 | THS=-0.091 |
+
+Phase 2 Router Initialization | Checksum: 1c4f56509
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238756 ; free virtual = 305727
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12ee6ae1a
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238736 ; free virtual = 305707
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 441
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.233  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 102b81608
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238626 ; free virtual = 305597
+Phase 4 Rip-up And Reroute | Checksum: 102b81608
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238624 ; free virtual = 305595
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 102b81608
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238623 ; free virtual = 305594
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 102b81608
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238622 ; free virtual = 305593
+Phase 5 Delay and Skew Optimization | Checksum: 102b81608
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238622 ; free virtual = 305593
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 128f5801e
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238597 ; free virtual = 305568
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.233  | TNS=0.000  | WHS=0.061  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 128f5801e
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238593 ; free virtual = 305564
+Phase 6 Post Hold Fix | Checksum: 128f5801e
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238593 ; free virtual = 305564
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.57026 %
+  Global Horizontal Routing Utilization  = 0.909652 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 7b97b371
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238587 ; free virtual = 305558
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 7b97b371
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238584 ; free virtual = 305555
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 7d1f322b
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238576 ; free virtual = 305547
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=6.233  | TNS=0.000  | WHS=0.061  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 7d1f322b
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238580 ; free virtual = 305551
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238613 ; free virtual = 305584
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:27 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238613 ; free virtual = 305584
+# write_checkpoint -force $outputDir/post_route
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238609 ; free virtual = 305580
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238595 ; free virtual = 305570
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238672 ; free virtual = 305655
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_route.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -sort_by group -max_paths 100 -path_type summary -file $outputDir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 1 -delay_type max -sort_by group.
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# report_utilization -file $outputDir/post_route_util.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_route_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/packages/xilinx_2018/vivado_hl/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/spmv_submodules/Big_Channel/post_imp_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2896.352 ; gain = 0.000 ; free physical = 238838 ; free virtual = 305814
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 12 04:14:17 2022...

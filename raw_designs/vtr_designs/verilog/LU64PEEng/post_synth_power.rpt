@@ -1,0 +1,372 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 22:29:08 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/LU64PEEng/post_synth_power.rpt
+| Design           : LU64PEEng
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 4133.300     |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 3868.945     |
+| Device Static (mW)       | 264.356      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 52.3         |
+| Junction Temperature (C) | 72.7         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+------------+----------+-----------+-----------------+
+| On-Chip                  | Power (mW) | Used     | Available | Utilization (%) |
++--------------------------+------------+----------+-----------+-----------------+
+| Clocks                   |   138.782  |        3 |       --- |             --- |
+| Slice Logic              |  1487.345  |   145773 |       --- |             --- |
+|   LUT as Logic           |  1445.641  |    94664 |     53200 |          177.94 |
+|   CARRY4                 |    20.449  |     2657 |     13300 |           19.98 |
+|   Register               |    18.469  |    27919 |    106400 |           26.24 |
+|   F7/F8 Muxes            |     2.071  |     1504 |     53200 |            2.83 |
+|   LUT as Shift Register  |     0.481  |      111 |     17400 |            0.64 |
+|   LUT as Distributed RAM |     0.234  |       24 |     17400 |            0.14 |
+|   Others                 |     0.000  |      996 |       --- |             --- |
+| Signals                  |  1475.319  |   145687 |       --- |             --- |
+| Block RAM                |   674.942  |    174.5 |       140 |          124.64 |
+| DSPs                     |    92.555  |      128 |       220 |           58.18 |
+| Static Power             |   264.356  |          |           |                 |
+| Total                    |  4133.299  |          |           |                 |
++--------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     3.896 |       3.841 |      0.056 |
+| Vccaux    |       1.800 |     0.029 |       0.000 |      0.029 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.048 |       0.028 |      0.019 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.078 |       0.000 |      0.078 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------+------------+
+| Name               | Power (mW) |
++--------------------+------------+
+| LU64PEEng          |  3868.944  |
+|   DTU              |   242.121  |
+|     cmd_store      |     4.233  |
+|       ram_addr     |     3.951  |
+|     raddress_store |     2.262  |
+|       ram_addr     |     1.973  |
+|     rdata_store    |    49.862  |
+|       ram_addr     |     7.622  |
+|     wdata_store    |   183.800  |
+|       ram_addr     |   180.603  |
+|   MC               |    21.424  |
+|   compBlock        |  3605.398  |
+|     PE0            |    36.831  |
+|       ADD          |    19.734  |
+|       MUL          |    11.612  |
+|     PE1            |    33.486  |
+|       ADD          |    19.766  |
+|       MUL          |     8.374  |
+|     PE10           |    39.055  |
+|       ADD          |    19.758  |
+|       MUL          |    14.107  |
+|     PE11           |    42.709  |
+|       ADD          |    19.770  |
+|       MUL          |    17.555  |
+|     PE12           |    42.297  |
+|       ADD          |    19.754  |
+|       MUL          |    17.194  |
+|     PE13           |    39.126  |
+|       ADD          |    19.710  |
+|       MUL          |    14.179  |
+|     PE14           |    39.029  |
+|       ADD          |    19.667  |
+|       MUL          |    14.141  |
+|     PE15           |    39.149  |
+|       ADD          |    19.714  |
+|       MUL          |    14.195  |
+|     PE16           |    39.152  |
+|       ADD          |    19.717  |
+|       MUL          |    14.195  |
+|     PE17           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE18           |    39.126  |
+|       ADD          |    19.712  |
+|       MUL          |    14.179  |
+|     PE19           |    41.477  |
+|       ADD          |    19.523  |
+|       MUL          |    16.744  |
+|     PE2            |    33.450  |
+|       ADD          |    19.707  |
+|       MUL          |     8.411  |
+|     PE20           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE21           |    37.975  |
+|       ADD          |    19.537  |
+|       MUL          |    13.391  |
+|     PE22           |    38.747  |
+|       ADD          |    19.714  |
+|       MUL          |    13.821  |
+|     PE23           |    38.343  |
+|       ADD          |    19.534  |
+|       MUL          |    13.733  |
+|     PE24           |    38.344  |
+|       ADD          |    19.533  |
+|       MUL          |    13.733  |
+|     PE25           |    39.143  |
+|       ADD          |    19.717  |
+|       MUL          |    14.187  |
+|     PE26           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE27           |    38.346  |
+|       ADD          |    19.529  |
+|       MUL          |    13.747  |
+|     PE28           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE29           |    38.355  |
+|       ADD          |    19.537  |
+|       MUL          |    13.747  |
+|     PE3            |    35.871  |
+|       ADD          |    19.546  |
+|       MUL          |    11.020  |
+|     PE30           |    37.935  |
+|       ADD          |    19.528  |
+|       MUL          |    13.380  |
+|     PE31           |    38.337  |
+|       ADD          |    19.537  |
+|       MUL          |    13.747  |
+|     PE32           |    38.342  |
+|       ADD          |    19.550  |
+|       MUL          |    13.733  |
+|     PE33           |    38.337  |
+|       ADD          |    19.537  |
+|       MUL          |    13.747  |
+|     PE34           |    38.740  |
+|       ADD          |    19.716  |
+|       MUL          |    13.821  |
+|     PE35           |    38.303  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE36           |    37.955  |
+|       ADD          |    19.536  |
+|       MUL          |    13.381  |
+|     PE37           |    38.314  |
+|       ADD          |    19.516  |
+|       MUL          |    13.747  |
+|     PE38           |    37.941  |
+|       ADD          |    19.523  |
+|       MUL          |    13.381  |
+|     PE39           |    37.957  |
+|       ADD          |    19.537  |
+|       MUL          |    13.391  |
+|     PE4            |    32.956  |
+|       ADD          |    19.536  |
+|       MUL          |     8.247  |
+|     PE40           |    37.945  |
+|       ADD          |    19.536  |
+|       MUL          |    13.381  |
+|     PE41           |    38.354  |
+|       ADD          |    19.550  |
+|       MUL          |    13.744  |
+|     PE42           |    38.326  |
+|       ADD          |    19.533  |
+|       MUL          |    13.733  |
+|     PE43           |    39.127  |
+|       ADD          |    19.713  |
+|       MUL          |    14.195  |
+|     PE44           |    38.303  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE45           |    37.955  |
+|       ADD          |    19.536  |
+|       MUL          |    13.381  |
+|     PE46           |    38.303  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE47           |    37.959  |
+|       ADD          |    19.523  |
+|       MUL          |    13.381  |
+|     PE48           |    37.964  |
+|       ADD          |    19.537  |
+|       MUL          |    13.380  |
+|     PE49           |    37.963  |
+|       ADD          |    19.536  |
+|       MUL          |    13.381  |
+|     PE5            |    38.337  |
+|       ADD          |    19.534  |
+|       MUL          |    13.744  |
+|     PE50           |    38.344  |
+|       ADD          |    19.534  |
+|       MUL          |    13.733  |
+|     PE51           |    38.355  |
+|       ADD          |    19.533  |
+|       MUL          |    13.744  |
+|     PE52           |    39.139  |
+|       ADD          |    19.713  |
+|       MUL          |    14.187  |
+|     PE53           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE54           |    37.973  |
+|       ADD          |    19.536  |
+|       MUL          |    13.381  |
+|     PE55           |    38.321  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE56           |    37.959  |
+|       ADD          |    19.523  |
+|       MUL          |    13.381  |
+|     PE57           |    37.964  |
+|       ADD          |    19.537  |
+|       MUL          |    13.380  |
+|     PE58           |    37.974  |
+|       ADD          |    19.536  |
+|       MUL          |    13.391  |
+|     PE59           |    38.343  |
+|       ADD          |    19.534  |
+|       MUL          |    13.733  |
+|     PE6            |    38.326  |
+|       ADD          |    19.533  |
+|       MUL          |    13.733  |
+|     PE60           |    38.344  |
+|       ADD          |    19.533  |
+|       MUL          |    13.733  |
+|     PE61           |    39.139  |
+|       ADD          |    19.713  |
+|       MUL          |    14.187  |
+|     PE62           |    38.322  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE63           |    41.600  |
+|       ADD          |    19.561  |
+|       MUL          |    16.814  |
+|     PE7            |    39.132  |
+|       ADD          |    19.717  |
+|       MUL          |    14.195  |
+|     PE8            |    38.303  |
+|       ADD          |    19.516  |
+|       MUL          |    13.736  |
+|     PE9            |    39.120  |
+|       ADD          |    19.725  |
+|       MUL          |    14.180  |
+|     conBlock       |    11.902  |
+|     currentBlock0  |   227.321  |
+|       inst1        |   227.321  |
+|     currentBlock1  |   182.152  |
+|       inst1        |   182.152  |
+|     leftBlock0     |   397.153  |
+|       inst1        |   397.153  |
+|     leftBlock1     |   115.305  |
+|       inst1        |   115.305  |
+|     rec            |    68.993  |
+|     topBlock       |     0.818  |
+|       inst2        |     0.818  |
++--------------------+------------+
+
+

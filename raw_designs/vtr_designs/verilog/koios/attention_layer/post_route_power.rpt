@@ -1,0 +1,309 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Tue Jan 11 23:01:35 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/attention_layer/post_route_power.rpt
+| Design           : attention
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 622.934      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 509.021      |
+| Device Static (mW)       | 113.913      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 92.8         |
+| Junction Temperature (C) | 32.2         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    13.048  |        3 |       --- |             --- |
+| Slice Logic             |    62.765  |    14461 |       --- |             --- |
+|   LUT as Logic          |    53.923  |     8612 |     53200 |           16.19 |
+|   CARRY4                |     7.799  |     1770 |     13300 |           13.31 |
+|   Register              |     0.952  |     2744 |    106400 |            2.58 |
+|   F7/F8 Muxes           |     0.090  |      138 |     53200 |            0.26 |
+|   LUT as Shift Register |    <0.001  |        1 |     17400 |           <0.01 |
+|   Others                |     0.000  |      493 |       --- |             --- |
+| Signals                 |    81.909  |    16545 |       --- |             --- |
+| Block RAM               |   235.099  |     90.5 |       140 |           64.64 |
+| DSPs                    |   116.200  |      104 |       220 |           47.27 |
+| Static Power            |   113.913  |          |           |                 |
+| Total                   |   622.934  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.501 |       0.491 |      0.010 |
+| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.021 |       0.018 |      0.003 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.020 |       0.000 |      0.020 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------+------------+
+| Name                 | Power (mW) |
++----------------------+------------+
+| attention            |   509.021  |
+|   K                  |   112.590  |
+|   Q                  |    65.102  |
+|   V                  |    58.527  |
+|   in_buffer12        |     6.201  |
+|   out_buffer34       |    32.346  |
+|   out_ram            |     2.081  |
+|   qk_acc             |    25.545  |
+|     Add_u1           |     0.990  |
+|     Add_u11          |     0.947  |
+|     Add_u13          |     0.964  |
+|     Add_u15          |     1.023  |
+|     Add_u17          |     0.996  |
+|     Add_u19          |     0.978  |
+|     Add_u21          |     1.026  |
+|     Add_u23          |     1.069  |
+|     Add_u25          |     1.028  |
+|     Add_u27          |     1.230  |
+|     Add_u29          |     1.000  |
+|     Add_u3           |     1.081  |
+|     Add_u31          |     1.003  |
+|     Add_u5           |     1.045  |
+|     Add_u61          |     4.653  |
+|     Add_u7           |     0.965  |
+|     Add_u9           |     1.194  |
+|   qk_mul             |   107.941  |
+|     mult_u0          |     1.808  |
+|     mult_u1          |     1.462  |
+|     mult_u10         |     1.835  |
+|     mult_u11         |     1.477  |
+|     mult_u12         |     1.829  |
+|     mult_u13         |     1.742  |
+|     mult_u14         |     1.827  |
+|     mult_u15         |     1.464  |
+|     mult_u16         |     1.846  |
+|     mult_u17         |     1.497  |
+|     mult_u18         |     1.843  |
+|     mult_u19         |     1.497  |
+|     mult_u2          |     1.905  |
+|     mult_u20         |     1.788  |
+|     mult_u21         |     1.495  |
+|     mult_u22         |     1.902  |
+|     mult_u23         |     1.494  |
+|     mult_u24         |     1.803  |
+|     mult_u25         |     1.517  |
+|     mult_u26         |     1.931  |
+|     mult_u27         |     1.622  |
+|     mult_u28         |     1.828  |
+|     mult_u29         |     1.501  |
+|     mult_u3          |     1.561  |
+|     mult_u30         |     1.835  |
+|     mult_u31         |     1.614  |
+|     mult_u32         |     1.826  |
+|     mult_u33         |     1.468  |
+|     mult_u34         |     1.849  |
+|     mult_u35         |     1.516  |
+|     mult_u36         |     1.846  |
+|     mult_u37         |     1.493  |
+|     mult_u38         |     1.917  |
+|     mult_u39         |     1.522  |
+|     mult_u4          |     1.821  |
+|     mult_u40         |     1.884  |
+|     mult_u41         |     1.548  |
+|     mult_u42         |     1.805  |
+|     mult_u43         |     1.571  |
+|     mult_u44         |     1.962  |
+|     mult_u45         |     1.575  |
+|     mult_u46         |     1.911  |
+|     mult_u47         |     1.538  |
+|     mult_u48         |     1.896  |
+|     mult_u49         |     1.502  |
+|     mult_u5          |     1.500  |
+|     mult_u50         |     1.809  |
+|     mult_u51         |     1.520  |
+|     mult_u52         |     1.829  |
+|     mult_u53         |     1.509  |
+|     mult_u54         |     1.825  |
+|     mult_u55         |     1.482  |
+|     mult_u56         |     1.824  |
+|     mult_u57         |     1.497  |
+|     mult_u58         |     1.846  |
+|     mult_u59         |     1.494  |
+|     mult_u6          |     1.815  |
+|     mult_u60         |     1.899  |
+|     mult_u61         |     1.469  |
+|     mult_u62         |     1.844  |
+|     mult_u63         |     1.572  |
+|     mult_u7          |     1.495  |
+|     mult_u8          |     1.850  |
+|     mult_u9          |     1.489  |
+|   rv_acc             |    12.796  |
+|     Add_u1           |     1.030  |
+|     Add_u11          |     0.981  |
+|     Add_u13          |     1.110  |
+|     Add_u15          |     1.184  |
+|     Add_u3           |     1.145  |
+|     Add_u5           |     0.971  |
+|     Add_u57          |     2.021  |
+|     Add_u7           |     1.057  |
+|     Add_u9           |     1.075  |
+|   rv_mul             |    54.362  |
+|     mult_u0          |     1.805  |
+|     mult_u1          |     1.485  |
+|     mult_u10         |     1.858  |
+|     mult_u11         |     1.552  |
+|     mult_u12         |     1.802  |
+|     mult_u13         |     1.544  |
+|     mult_u14         |     1.847  |
+|     mult_u15         |     1.529  |
+|     mult_u16         |     1.885  |
+|     mult_u17         |     1.524  |
+|     mult_u18         |     1.878  |
+|     mult_u19         |     1.454  |
+|     mult_u2          |     1.814  |
+|     mult_u20         |     1.788  |
+|     mult_u21         |     1.523  |
+|     mult_u22         |     1.836  |
+|     mult_u23         |     1.500  |
+|     mult_u24         |     1.794  |
+|     mult_u25         |     1.591  |
+|     mult_u26         |     1.832  |
+|     mult_u27         |     1.647  |
+|     mult_u28         |     1.850  |
+|     mult_u29         |     1.565  |
+|     mult_u3          |     1.495  |
+|     mult_u30         |     1.862  |
+|     mult_u31         |     1.500  |
+|     mult_u4          |     1.992  |
+|     mult_u5          |     1.619  |
+|     mult_u6          |     1.886  |
+|     mult_u7          |     1.599  |
+|     mult_u8          |     1.965  |
+|     mult_u9          |     1.542  |
+|   soft               |    25.576  |
+|     mode1_max        |     1.461  |
+|       cmp0_stage0    |     0.174  |
+|       cmp0_stage1    |     0.155  |
+|       cmp0_stage2    |     0.072  |
+|       cmp1_stage2    |     0.068  |
+|     mode3_exp        |     6.073  |
+|       exp0           |     1.461  |
+|       exp1           |     1.441  |
+|       exp2           |     1.475  |
+|       exp3           |     1.696  |
+|     mode4_adder_tree |     1.328  |
+|       add0_stage0    |     0.021  |
+|       add0_stage1    |     0.025  |
+|     mode5_ln         |     2.377  |
+|       ln             |     2.377  |
+|     mode7_exp        |     7.238  |
+|       exp0           |     1.757  |
+|       exp1           |     1.797  |
+|       exp2           |     1.803  |
+|       exp3           |     1.880  |
++----------------------+------------+
+
+
