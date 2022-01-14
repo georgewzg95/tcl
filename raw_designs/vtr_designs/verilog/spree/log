@@ -1,0 +1,1534 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v
+# synth_design -part xc7z020clg484-3 -top system -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top system -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 130890 
+WARNING: [Synth 8-992] ctrl_ifetch_squashn is already implicitly declared earlier [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1202]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1511.035 ; gain = 36.395 ; free physical = 247367 ; free virtual = 315892
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:195]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:506]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:369]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:827]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:671]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1079]
+INFO: [Synth 8-155] case statement is not full and has no default [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:991]
+INFO: [Synth 8-6157] synthesizing module 'addersub' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1611]
+INFO: [Synth 8-6157] synthesizing module 'dummy_add_sub' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1679]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1740]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1740]
+INFO: [Synth 8-6155] done synthesizing module 'dummy_add_sub' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1679]
+INFO: [Synth 8-6155] done synthesizing module 'addersub' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1611]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1757]
+INFO: [Synth 8-6157] synthesizing module 'single_port_ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:117]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'single_port_ram' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1757]
+INFO: [Synth 8-6157] synthesizing module 'mul' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1846]
+INFO: [Synth 8-6157] synthesizing module 'dummy_mult' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1938]
+INFO: [Synth 8-6155] done synthesizing module 'dummy_mult' (6#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1938]
+WARNING: [Synth 8-689] width (33) of port connection 'opB_mux_out' does not match port width (32) of module 'dummy_mult' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1899]
+INFO: [Synth 8-6157] synthesizing module 'onecyclestall' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2942]
+INFO: [Synth 8-6155] done synthesizing module 'onecyclestall' (7#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2942]
+INFO: [Synth 8-6155] done synthesizing module 'mul' (8#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1846]
+WARNING: [Synth 8-689] width (32) of port connection 'dst' does not match port width (5) of module 'mul' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1244]
+INFO: [Synth 8-6157] synthesizing module 'ifetch' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1974]
+INFO: [Synth 8-6157] synthesizing module 'register_1bit' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2659]
+INFO: [Synth 8-6155] done synthesizing module 'register_1bit' (9#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2659]
+INFO: [Synth 8-6157] synthesizing module 'dual_port_ram' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:146]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_ram' (10#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:146]
+INFO: [Synth 8-6157] synthesizing module 'dummy_counter' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2103]
+INFO: [Synth 8-226] default block is never used [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'dummy_counter' (11#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2103]
+WARNING: [Synth 8-689] width (31) of port connection 'data' does not match port width (30) of module 'dummy_counter' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2078]
+INFO: [Synth 8-6155] done synthesizing module 'ifetch' (12#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1974]
+WARNING: [Synth 8-689] width (32) of port connection 'next_pc' does not match port width (30) of module 'ifetch' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1278]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2164]
+INFO: [Synth 8-6157] synthesizing module 'store_data_translator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2264]
+INFO: [Synth 8-6155] done synthesizing module 'store_data_translator' (13#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2264]
+INFO: [Synth 8-6157] synthesizing module 'load_data_translator' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2337]
+INFO: [Synth 8-6155] done synthesizing module 'load_data_translator' (14#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2337]
+INFO: [Synth 8-6157] synthesizing module 'single_port_ram__parameterized0' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:117]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'single_port_ram__parameterized0' (14#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (15#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2164]
+INFO: [Synth 8-6157] synthesizing module 'logic_unit' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2469]
+INFO: [Synth 8-6155] done synthesizing module 'logic_unit' (16#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2469]
+INFO: [Synth 8-6157] synthesizing module 'pcadder' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2502]
+INFO: [Synth 8-6155] done synthesizing module 'pcadder' (17#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2502]
+INFO: [Synth 8-6157] synthesizing module 'signext16' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2523]
+INFO: [Synth 8-6155] done synthesizing module 'signext16' (18#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2523]
+INFO: [Synth 8-6157] synthesizing module 'merge26lo' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2550]
+INFO: [Synth 8-6155] done synthesizing module 'merge26lo' (19#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2550]
+INFO: [Synth 8-6157] synthesizing module 'hi_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2600]
+INFO: [Synth 8-6155] done synthesizing module 'hi_reg' (20#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2600]
+INFO: [Synth 8-6157] synthesizing module 'branchresolve' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3114]
+INFO: [Synth 8-6155] done synthesizing module 'branchresolve' (21#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3114]
+INFO: [Synth 8-6157] synthesizing module 'lo_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2569]
+INFO: [Synth 8-6155] done synthesizing module 'lo_reg' (22#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2569]
+INFO: [Synth 8-6157] synthesizing module 'pipereg_w32' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2741]
+INFO: [Synth 8-6155] done synthesizing module 'pipereg_w32' (23#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2741]
+INFO: [Synth 8-6157] synthesizing module 'pipereg_w26' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2772]
+INFO: [Synth 8-6155] done synthesizing module 'pipereg_w26' (24#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2772]
+INFO: [Synth 8-6157] synthesizing module 'pipereg_w5' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2838]
+INFO: [Synth 8-6155] done synthesizing module 'pipereg_w5' (25#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2838]
+WARNING: [Synth 8-689] width (5) of port connection 'q' does not match port width (32) of module 'pipereg_w5' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1389]
+INFO: [Synth 8-6157] synthesizing module 'nop' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3077]
+INFO: [Synth 8-6155] done synthesizing module 'nop' (26#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3077]
+INFO: [Synth 8-6157] synthesizing module 'zeroer' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3062]
+INFO: [Synth 8-6155] done synthesizing module 'zeroer' (27#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3062]
+WARNING: [Synth 8-689] width (32) of port connection 'd' does not match port width (5) of module 'zeroer' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1462]
+INFO: [Synth 8-6157] synthesizing module 'fakedelay' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3046]
+INFO: [Synth 8-6155] done synthesizing module 'fakedelay' (28#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:3046]
+INFO: [Synth 8-6157] synthesizing module 'pipereg_w6' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2803]
+INFO: [Synth 8-6155] done synthesizing module 'pipereg_w6' (29#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2803]
+WARNING: [Synth 8-689] width (6) of port connection 'q' does not match port width (32) of module 'pipereg_w6' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1539]
+INFO: [Synth 8-6157] synthesizing module 'pipereg_w1' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2872]
+INFO: [Synth 8-6155] done synthesizing module 'pipereg_w1' (30#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:2872]
+WARNING: [Synth 8-689] width (6) of port connection 'q' does not match port width (32) of module 'pipereg_w6' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1579]
+WARNING: [Synth 8-689] width (5) of port connection 'q' does not match port width (32) of module 'pipereg_w5' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1589]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_data_mem_en_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1028]
+INFO: [Synth 8-4471] merging register 'ctrl_reg_file_a_en_reg' into 'ctrl_reg_file_b_en_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:662]
+INFO: [Synth 8-4471] merging register 'ctrl_ifetch_en_reg' into 'ctrl_reg_file_b_en_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:663]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg_file_a_en_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:662]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_ifetch_en_reg was removed.  [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:663]
+INFO: [Synth 8-6155] done synthesizing module 'system' (31#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:195]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[31]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[30]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[29]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[28]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[27]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[26]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[25]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[24]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[23]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[22]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[21]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[20]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[19]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[18]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[17]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[16]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[15]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[14]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[13]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[12]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[11]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[10]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[9]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[8]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[7]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[6]
+WARNING: [Synth 8-3331] design pipereg_w5 has unconnected port d[5]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[31]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[30]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[29]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[28]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[27]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[26]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[25]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[24]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[23]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[22]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[21]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[20]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[19]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[18]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[17]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[16]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[15]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[14]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[13]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[12]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[11]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[10]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[9]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[8]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[7]
+WARNING: [Synth 8-3331] design pipereg_w6 has unconnected port d[6]
+WARNING: [Synth 8-3331] design fakedelay has unconnected port clk
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[27]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[26]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[25]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[24]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[23]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[22]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[21]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[20]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[19]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[18]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[17]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[16]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[15]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[14]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[13]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[12]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[11]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[10]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[9]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[8]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[7]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[6]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[5]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[4]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[3]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[2]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[1]
+WARNING: [Synth 8-3331] design merge26lo has unconnected port in1[0]
+WARNING: [Synth 8-3331] design pcadder has unconnected port offset[31]
+WARNING: [Synth 8-3331] design pcadder has unconnected port offset[30]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[9]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[8]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[7]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[6]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[5]
+WARNING: [Synth 8-3331] design single_port_ram__parameterized0 has unconnected port addr[4]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[30]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[29]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[28]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[27]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[26]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[25]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[24]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[23]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[22]
+WARNING: [Synth 8-3331] design data_mem has unconnected port d_address[21]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1547.176 ; gain = 72.535 ; free physical = 247282 ; free virtual = 315807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1547.176 ; gain = 72.535 ; free physical = 247261 ; free virtual = 315786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1555.176 ; gain = 80.535 ; free physical = 247259 ; free virtual = 315784
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Synth 8-5544] ROM "q0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'ctrl_lo_reg_en_reg' into 'ctrl_hi_reg_en_reg' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1100]
+INFO: [Synth 8-5546] ROM "ctrl_mux2to1_pipereg_d_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctrl_mux3to1_zeroer4_d_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_zeroer_en" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctrl_zeroer0_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctrl_mux7to1_nop10_d_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_mux2to1_addersub_opA_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "ctrl_mux3to1_nop6_d_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctrl_logic_unit_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctrl_mux6to1_ifetch_load_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ctrl_mux3to1_ifetch_load_data_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_data_mem_op" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "ctrl_mux2to1_mul_opA_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctrl_mux2to1_mul_opA_sel0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_mux3to1_mul_sa_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctrl_hi_reg_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1584.465 ; gain = 109.824 ; free physical = 247023 ; free virtual = 315549
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'reg_file/regfile1_replace' (single_port_ram) to 'reg_file/regfile2_replace'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 32    
++---Registers : 
+	               32 Bit    Registers := 15    
+	               30 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 18    
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---RAMs : 
+	              320 Bit         RAMs := 2     
+	              160 Bit         RAMs := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 8     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 6     
+	   7 Input     30 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   3 Input      5 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	  25 Input      4 Bit        Muxes := 1     
+	  23 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	  25 Input      3 Bit        Muxes := 1     
+	  25 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 12    
+	  25 Input      1 Bit        Muxes := 12    
+	  24 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module system 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 2     
+	  25 Input      4 Bit        Muxes := 1     
+	  23 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	  25 Input      3 Bit        Muxes := 1     
+	  25 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 12    
+	  25 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 1     
+	  24 Input      1 Bit        Muxes := 8     
+Module full_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module single_port_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              160 Bit         RAMs := 1     
+Module dummy_mult 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module onecyclestall 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module mul 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module register_1bit 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dual_port_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	              320 Bit         RAMs := 1     
+Module dummy_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
++---Muxes : 
+	   7 Input     30 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module ifetch 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 1     
+Module store_data_translator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+Module single_port_ram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              320 Bit         RAMs := 1     
+Module logic_unit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module pcadder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module hi_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module lo_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module pipereg_w32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module pipereg_w26 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+Module pipereg_w5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+Module zeroer 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module pipereg_w6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+Module pipereg_w1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/spree.v:1961]
+DSP Report: Generating DSP fake_mult_one/result0, operation Mode is: A*B.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result0.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result0.
+DSP Report: Generating DSP fake_mult_one/result_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fake_mult_one/result_reg is absorbed into DSP fake_mult_one/result_reg.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result_reg.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result_reg.
+DSP Report: Generating DSP fake_mult_one/result0, operation Mode is: A*B.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result0.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result0.
+DSP Report: Generating DSP fake_mult_one/result_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fake_mult_one/result_reg is absorbed into DSP fake_mult_one/result_reg.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result_reg.
+DSP Report: operator fake_mult_one/result0 is absorbed into DSP fake_mult_one/result_reg.
+WARNING: [Synth 8-6014] Unused sequential element ifetch/imem_replace/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'pipereg3/q_reg[0]' (FDRE) to 'pipereg3/q_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipereg3/q_reg[1] )
+INFO: [Synth 8-3886] merging instance 'pipereg13/q_reg[0]' (FDRE) to 'pipereg1/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg13/q_reg[4]' (FDRE) to 'pipereg1/q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'pipereg13/q_reg[3]' (FDRE) to 'pipereg1/q_reg[19]'
+INFO: [Synth 8-3886] merging instance 'pipereg13/q_reg[2]' (FDRE) to 'pipereg1/q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'pipereg13/q_reg[1]' (FDRE) to 'pipereg1/q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[15]' (FDRE) to 'pipereg/q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[14]' (FDRE) to 'pipereg/q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[13]' (FDRE) to 'pipereg/q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[12]' (FDRE) to 'pipereg/q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[11]' (FDRE) to 'pipereg/q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[10]' (FDRE) to 'pipereg2/q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[9]' (FDRE) to 'pipereg2/q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[8]' (FDRE) to 'pipereg2/q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[7]' (FDRE) to 'pipereg2/q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[6]' (FDRE) to 'pipereg2/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[5]' (FDRE) to 'pipereg12/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[4]' (FDRE) to 'pipereg12/q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[3]' (FDRE) to 'pipereg12/q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[2]' (FDRE) to 'pipereg12/q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[1]' (FDRE) to 'pipereg12/q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipereg1/q_reg[0]' (FDRE) to 'pipereg12/q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ctrl_zeroer_en_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ctrl_mux2to1_pipereg_d_sel_reg)
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[3]' (FDRE) to 'pipereg/q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[1]' (FDRE) to 'pipereg/q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[4]' (FDRE) to 'pipereg/q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[0]' (FDRE) to 'pipereg/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[5]' (FDRE) to 'pipereg/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'pipereg12/q_reg[2]' (FDRE) to 'pipereg/q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ctrl_zeroer4_en_reg)
+INFO: [Synth 8-3886] merging instance 'pipereg2/q_reg[0]' (FDRE) to 'pipereg/q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pipereg2/q_reg[1]' (FDRE) to 'pipereg/q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pipereg2/q_reg[2]' (FDRE) to 'pipereg/q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'pipereg2/q_reg[3]' (FDRE) to 'pipereg/q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'pipereg2/q_reg[4]' (FDRE) to 'pipereg/q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[8]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[8]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[9]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[9]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[10]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[10]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[11]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[11]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[12]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[12]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[13]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[13]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[14]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[14]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[15]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[15]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[16]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[16]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[17]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[17]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[18]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[18]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[19]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[19]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[20]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[20]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[21]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[21]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[22]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[22]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[23]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[23]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[24]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[24]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[25]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[25]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[26]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[26]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[27]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[27]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[28]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[28]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[29]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[29]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[30]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'lo_reg/q_reg[30]' (FDRE) to 'hi_reg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[30]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[29]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[28]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[27]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[26]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[25]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[24]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[23]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[22]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[21]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[20]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[19]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[18]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[17]' (FDRE) to 'pipereg/q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'pipereg/q_reg[16]' (FDRE) to 'pipereg/q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'hi_reg/q_reg[31]' (FDRE) to 'lo_reg/q_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\lo_reg/q_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ctrl_zeroer0_en_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ctrl_mul_start_reg)
+INFO: [Synth 8-3886] merging instance 'pipereg5/q_reg[5]' (FDRE) to 'pipereg5/q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pipereg5/q_reg[6]' (FDRE) to 'pipereg5/q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'pipereg5/q_reg[7]' (FDRE) to 'pipereg5/q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'pipereg5/q_reg[8]' (FDRE) to 'pipereg5/q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'pipereg5/q_reg[9]' (FDRE) to 'pipereg5/q_reg[10]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pipereg5/q_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[47]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[46]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[45]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[44]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[43]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[42]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[41]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[40]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[39]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[38]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[37]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[36]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[35]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[34]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[33]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[32]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[31]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[30]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[29]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[28]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[27]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[26]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[25]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[24]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[23]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[22]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[21]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[20]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[19]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[18]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[17]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[16]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[15]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[14]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[13]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[12]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[11]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[10]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[9]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[8]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[7]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[6]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[5]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[4]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[3]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[2]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[1]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[0]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[47]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[46]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[45]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[44]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[43]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[42]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[41]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[40]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[39]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[38]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[37]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[36]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[35]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[34]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[33]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[32]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[31]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[30]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[29]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[28]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[27]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[26]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[25]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[24]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[23]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[22]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[21]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[20]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[19]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[18]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[17]__0) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (mul/fake_mult_one/result_reg[16]__0) is unused and will be removed from module system.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1768.086 ; gain = 293.445 ; free physical = 245900 ; free virtual = 314431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-----------------------------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object                        | Inference | Size (Depth x Width) | Primitives      | 
++------------+-----------------------------------+-----------+----------------------+-----------------+
+|system      | reg_file/regfile1_replace/ram_reg | Implied   | 8 x 32               | RAM16X1S x 32   | 
+|system      | ifetch/imem_replace/ram_reg       | Implied   | 16 x 32              | RAM32M x 6      | 
+|system      | data_mem/dmem_replace/ram_reg     | Implied   | 16 x 32              | RAM16X1S x 32   | 
++------------+-----------------------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mul         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mul         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mul         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245807 ; free virtual = 314339
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+-----------------------------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object                        | Inference | Size (Depth x Width) | Primitives      | 
++------------+-----------------------------------+-----------+----------------------+-----------------+
+|system      | reg_file/regfile1_replace/ram_reg | Implied   | 8 x 32               | RAM16X1S x 32   | 
+|system      | ifetch/imem_replace/ram_reg       | Implied   | 16 x 32              | RAM32M x 6      | 
+|system      | data_mem/dmem_replace/ram_reg     | Implied   | 16 x 32              | RAM16X1S x 32   | 
++------------+-----------------------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245777 ; free virtual = 314309
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245734 ; free virtual = 314266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245733 ; free virtual = 314265
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245727 ; free virtual = 314259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245726 ; free virtual = 314258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245724 ; free virtual = 314256
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245721 ; free virtual = 314253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    21|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |     1|
+|4     |LUT2     |    26|
+|5     |LUT3     |    78|
+|6     |LUT4     |    47|
+|7     |LUT5     |   157|
+|8     |LUT6     |   233|
+|9     |MUXF7    |     7|
+|10    |RAM16X1S |    64|
+|11    |RAM32M   |     6|
+|12    |FDRE     |   275|
+|13    |FDSE     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------+--------------------------------+------+
+|      |Instance             |Module                          |Cells |
++------+---------------------+--------------------------------+------+
+|1     |top                  |                                |   917|
+|2     |  branchresolve      |branchresolve                   |     3|
+|3     |  data_mem           |data_mem                        |    73|
+|4     |    dmem_replace     |single_port_ram__parameterized0 |    71|
+|5     |    staller          |onecyclestall_3                 |     2|
+|6     |  hi_reg             |hi_reg                          |     8|
+|7     |  ifetch             |ifetch                          |   158|
+|8     |    imem_replace     |dual_port_ram                   |    52|
+|9     |    pc_reg           |dummy_counter                   |    74|
+|10    |    sync_pcs_up      |register_1bit                   |    32|
+|11    |  lo_reg             |lo_reg                          |     9|
+|12    |  mul                |mul                             |    26|
+|13    |    fake_mult_one    |dummy_mult                      |    25|
+|14    |    staller          |onecyclestall                   |     1|
+|15    |  pcadder            |pcadder                         |    16|
+|16    |  pipereg            |pipereg_w32                     |    72|
+|17    |  pipereg1           |pipereg_w26                     |    10|
+|18    |  pipereg11          |pipereg_w6                      |    41|
+|19    |  pipereg14          |pipereg_w32_0                   |   269|
+|20    |  pipereg15          |pipereg_w1                      |     2|
+|21    |  pipereg16          |pipereg_w1_1                    |     1|
+|22    |  pipereg3           |pipereg_w32_2                   |    38|
+|23    |  pipereg5           |pipereg_w5                      |    14|
+|24    |  reg_file           |reg_file                        |   147|
+|25    |    regfile1_replace |single_port_ram                 |   147|
++------+---------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245720 ; free virtual = 314251
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 620 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.090 ; gain = 293.449 ; free physical = 245718 ; free virtual = 314250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1768.094 ; gain = 293.449 ; free physical = 245727 ; free virtual = 314259
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1855.258 ; gain = 0.000 ; free physical = 245515 ; free virtual = 314046
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 70 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 64 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+212 Infos, 194 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1855.258 ; gain = 380.715 ; free physical = 245564 ; free virtual = 314096
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2341.914 ; gain = 486.656 ; free physical = 244451 ; free virtual = 312983
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2341.914 ; gain = 0.000 ; free physical = 244451 ; free virtual = 312983
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2365.922 ; gain = 0.000 ; free physical = 244446 ; free virtual = 312979
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_synth.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2473.203 ; gain = 0.004 ; free physical = 244191 ; free virtual = 312724
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 10b1d53a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244191 ; free virtual = 312723
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 10b1d53a3
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244109 ; free virtual = 312642
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e4504ff9
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244108 ; free virtual = 312640
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1bde3a31e
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244107 ; free virtual = 312640
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1bde3a31e
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244107 ; free virtual = 312639
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244105 ; free virtual = 312637
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244106 ; free virtual = 312639
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244106 ; free virtual = 312638
+Ending Logic Optimization Task | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244105 ; free virtual = 312637
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244104 ; free virtual = 312637
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244104 ; free virtual = 312637
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244104 ; free virtual = 312637
+Ending Netlist Obfuscation Task | Checksum: 8bbfb722
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2473.203 ; gain = 0.000 ; free physical = 244104 ; free virtual = 312637
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2473.203 ; gain = 0.004 ; free physical = 244104 ; free virtual = 312637
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 8bbfb722
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module system ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Pre-processing: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2526.250 ; gain = 15.016 ; free physical = 244040 ; free virtual = 312572
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.019 | TNS=0.000 |
+IDT: Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2530.250 ; gain = 4.000 ; free physical = 244031 ; free virtual = 312563
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+PSMgr Creation: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2530.250 ; gain = 19.016 ; free physical = 244021 ; free virtual = 312553
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 0 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2728.441 ; gain = 198.191 ; free physical = 243995 ; free virtual = 312531
+Power optimization passes: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2728.441 ; gain = 217.207 ; free physical = 243971 ; free virtual = 312507
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244020 ; free virtual = 312555
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design system ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 0 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 10 accepted clusters 10
+
+Number of Slice Registers augmented: 8 newly gated: 16 Total: 276
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 0
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/26 RAMS dropped: 0/0 Clusters dropped: 0/10 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: ded0e1e4
+
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244020 ; free virtual = 312553
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: ded0e1e4
+Power optimization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2728.441 ; gain = 255.238 ; free physical = 244066 ; free virtual = 312600
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 1403128 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 13e39d19d
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244076 ; free virtual = 312609
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 13e39d19d
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244075 ; free virtual = 312608
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: 7c8ddc5b
+
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244078 ; free virtual = 312611
+INFO: [Opt 31-389] Phase Remap created 1 cells and removed 2 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 7ce431bc
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244080 ; free virtual = 312613
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |               1  |               2  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 13495a901
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244089 ; free virtual = 312622
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244089 ; free virtual = 312622
+Ending Netlist Obfuscation Task | Checksum: 13495a901
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244089 ; free virtual = 312622
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243988 ; free virtual = 312521
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6b9dc736
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243988 ; free virtual = 312521
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243981 ; free virtual = 312514
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: cde18ce7
+
+Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243978 ; free virtual = 312512
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 109a18043
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243966 ; free virtual = 312500
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 109a18043
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243965 ; free virtual = 312500
+Phase 1 Placer Initialization | Checksum: 109a18043
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243965 ; free virtual = 312499
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: e934eb54
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243947 ; free virtual = 312482
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243918 ; free virtual = 312451
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1fbf9a620
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243925 ; free virtual = 312457
+Phase 2 Global Placement | Checksum: 1536263a3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243963 ; free virtual = 312496
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1536263a3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 243967 ; free virtual = 312499
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a713f1a5
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244079 ; free virtual = 312612
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1a6000ee5
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244136 ; free virtual = 312668
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 292f4d202
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244159 ; free virtual = 312691
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 10e2da1bb
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245047 ; free virtual = 313580
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 14994dcf5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245046 ; free virtual = 313579
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 2367f9a18
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245047 ; free virtual = 313580
+Phase 3 Detail Placement | Checksum: 2367f9a18
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245047 ; free virtual = 313580
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1e2c03ae3
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1e2c03ae3
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245042 ; free virtual = 313575
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.491. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1792b400c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245041 ; free virtual = 313574
+Phase 4.1 Post Commit Optimization | Checksum: 1792b400c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245038 ; free virtual = 313571
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1792b400c
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245031 ; free virtual = 313564
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1792b400c
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245030 ; free virtual = 313563
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245029 ; free virtual = 313562
+Phase 4.4 Final Placement Cleanup | Checksum: 1470eef8c
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245028 ; free virtual = 313561
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1470eef8c
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245028 ; free virtual = 313560
+Ending Placer Task | Checksum: f61a9a15
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245038 ; free virtual = 313571
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245037 ; free virtual = 313570
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# write_checkpoint -force $outputDir/post_place
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245016 ; free virtual = 313548
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244985 ; free virtual = 313518
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.70 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244955 ; free virtual = 313486
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_place.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 6b2adb3a ConstDB: 0 ShapeSum: 8aefbedb RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "resetn" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "resetn". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_iaddr[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_iaddr[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_iaddr[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_iaddr[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_iaddr[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_iaddr[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_iaddr[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_iaddr[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_iwe" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_iwe". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "boot_idata[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "boot_idata[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: d9ce5c82
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244681 ; free virtual = 313213
+Post Restoration Checksum: NetGraph: 779a5276 NumContArr: 62340a0c Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: d9ce5c82
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244681 ; free virtual = 313213
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: d9ce5c82
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244651 ; free virtual = 313181
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: d9ce5c82
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244651 ; free virtual = 313181
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1b04f8dbc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 244848 ; free virtual = 313378
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.803  | TNS=0.000  | WHS=0.039  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 175e16b47
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245260 ; free virtual = 313790
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1a65d5c36
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245724 ; free virtual = 314254
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 170
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.445  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 18c57d0aa
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245655 ; free virtual = 314185
+Phase 4 Rip-up And Reroute | Checksum: 18c57d0aa
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245654 ; free virtual = 314185
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 18c57d0aa
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245654 ; free virtual = 314184
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 18c57d0aa
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245652 ; free virtual = 314183
+Phase 5 Delay and Skew Optimization | Checksum: 18c57d0aa
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245652 ; free virtual = 314182
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1c067b3c7
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245639 ; free virtual = 314170
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.445  | TNS=0.000  | WHS=0.163  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1c067b3c7
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245639 ; free virtual = 314169
+Phase 6 Post Hold Fix | Checksum: 1c067b3c7
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245639 ; free virtual = 314169
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.15947 %
+  Global Horizontal Routing Utilization  = 0.228533 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 13fa6f189
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245652 ; free virtual = 314183
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 13fa6f189
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245649 ; free virtual = 314180
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1af4e2779
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245643 ; free virtual = 314174
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.445  | TNS=0.000  | WHS=0.163  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1af4e2779
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245640 ; free virtual = 314170
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245669 ; free virtual = 314199
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245668 ; free virtual = 314198
+# write_checkpoint -force $outputDir/post_route
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245671 ; free virtual = 314201
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245677 ; free virtual = 314207
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2728.441 ; gain = 0.000 ; free physical = 245669 ; free virtual = 314202
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_route.dcp' has been generated.
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -sort_by group -max_paths 100 -path_type summary -file $outputDir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 1 -delay_type max -sort_by group.
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# report_utilization -file $outputDir/post_route_util.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_route_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/packages/xilinx_2018/vivado_hl/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/spree/post_imp_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2728.473 ; gain = 0.000 ; free physical = 245697 ; free virtual = 314227
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 13 17:23:29 2022...

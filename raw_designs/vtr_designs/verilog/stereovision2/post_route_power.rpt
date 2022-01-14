@@ -1,0 +1,294 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Thu Jan 13 17:41:43 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/stereovision2/post_route_power.rpt
+| Design           : sv_chip2_hierarchy_no_mem
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 656.974      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 545.657      |
+| Device Static (mW)       | 111.317      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 92.4         |
+| Junction Temperature (C) | 32.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    69.295  |        3 |       --- |             --- |
+| Slice Logic             |   109.398  |    27199 |       --- |             --- |
+|   LUT as Logic          |    79.502  |     9876 |     53200 |           18.56 |
+|   CARRY4                |    15.692  |     2938 |     13300 |           22.09 |
+|   Register              |     9.731  |    11811 |    106400 |           11.10 |
+|   LUT as Shift Register |     4.470  |      456 |     17400 |            2.62 |
+|   F7/F8 Muxes           |     0.002  |       16 |     53200 |            0.03 |
+|   Others                |     0.000  |      358 |       --- |             --- |
+| Signals                 |   214.744  |    31384 |       --- |             --- |
+| DSPs                    |   152.220  |      210 |       220 |           95.45 |
+| Static Power            |   111.317  |          |           |                 |
+| Total                   |   656.974  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.555 |       0.546 |      0.009 |
+| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.020 |       0.000 |      0.020 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+------------+-----------------+
+| Clock | Domain     | Constraint (ns) |
++-------+------------+-----------------+
+| clk   | tm3_clk_v0 |            10.0 |
++-------+------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------+------------+
+| Name                      | Power (mW) |
++---------------------------+------------+
+| sv_chip2_hierarchy_no_mem |   545.658  |
+|   h_fltr_1_left           |    53.860  |
+|     my_steer_fltr_inst    |    12.071  |
+|     your_instance_name_f1 |     6.228  |
+|     your_instance_name_f2 |     4.371  |
+|     your_instance_name_f3 |     5.386  |
+|     your_instance_name_h1 |     6.598  |
+|     your_instance_name_h2 |     4.146  |
+|     your_instance_name_h3 |     6.551  |
+|     your_instance_name_h4 |     5.955  |
+|   h_fltr_1_right          |    66.802  |
+|     my_steer_fltr_inst    |    16.049  |
+|     your_instance_name_f1 |     6.507  |
+|     your_instance_name_f2 |     5.654  |
+|     your_instance_name_f3 |     6.132  |
+|     your_instance_name_h1 |     7.355  |
+|     your_instance_name_h2 |     5.917  |
+|     your_instance_name_h3 |     7.724  |
+|     your_instance_name_h4 |     7.721  |
+|   h_fltr_2_left           |    64.534  |
+|     my_steer_fltr_inst    |    15.488  |
+|     your_instance_name_f1 |     6.121  |
+|     your_instance_name_f2 |     5.978  |
+|     your_instance_name_f3 |     5.963  |
+|     your_instance_name_h1 |     6.662  |
+|     your_instance_name_h2 |     6.158  |
+|     your_instance_name_h3 |     6.921  |
+|     your_instance_name_h4 |     7.789  |
+|   h_fltr_2_right          |    65.603  |
+|     my_steer_fltr_inst    |    16.447  |
+|     your_instance_name_f1 |     5.798  |
+|     your_instance_name_f2 |     6.150  |
+|     your_instance_name_f3 |     6.326  |
+|     your_instance_name_h1 |     7.954  |
+|     your_instance_name_h2 |     5.769  |
+|     your_instance_name_h3 |     6.323  |
+|     your_instance_name_h4 |     7.502  |
+|   h_fltr_4_left           |    65.870  |
+|     my_steer_fltr_inst    |    15.548  |
+|     your_instance_name_f1 |     6.317  |
+|     your_instance_name_f2 |     5.352  |
+|     your_instance_name_f3 |     6.503  |
+|     your_instance_name_h1 |     9.266  |
+|     your_instance_name_h2 |     4.764  |
+|     your_instance_name_h3 |     6.805  |
+|     your_instance_name_h4 |     7.706  |
+|   h_fltr_4_right          |    64.792  |
+|     my_steer_fltr_inst    |    15.340  |
+|     your_instance_name_f1 |     6.318  |
+|     your_instance_name_f2 |     6.132  |
+|     your_instance_name_f3 |     6.037  |
+|     your_instance_name_h1 |     7.702  |
+|     your_instance_name_h2 |     5.186  |
+|     your_instance_name_h3 |     6.765  |
+|     your_instance_name_h4 |     7.787  |
+|   port_bus_2to1_inst      |     5.992  |
+|   v_fltr_1_left           |    14.859  |
+|     fifo0                 |     0.191  |
+|     fifo1                 |     0.180  |
+|     fifo2                 |     0.128  |
+|     fifo3                 |     0.109  |
+|     fifo4                 |     0.096  |
+|     fifo5                 |     0.092  |
+|     fifo6                 |     0.088  |
+|     inst_fltr_compute_f1  |     2.099  |
+|     inst_fltr_compute_f2  |     3.883  |
+|     inst_fltr_compute_f3  |     2.021  |
+|     inst_fltr_compute_h1  |     1.270  |
+|     inst_fltr_compute_h3  |     1.678  |
+|     inst_fltr_compute_h4  |     3.027  |
+|   v_fltr_1_right          |    28.121  |
+|     fifo0                 |     0.461  |
+|     fifo1                 |     0.728  |
+|     fifo2                 |     0.667  |
+|     fifo3                 |     0.671  |
+|     fifo4                 |     0.656  |
+|     fifo5                 |     0.683  |
+|     fifo6                 |     0.431  |
+|     inst_fltr_compute_f1  |     4.504  |
+|     inst_fltr_compute_f2  |     5.031  |
+|     inst_fltr_compute_f3  |     4.436  |
+|     inst_fltr_compute_h1  |     2.909  |
+|     inst_fltr_compute_h3  |     2.735  |
+|     inst_fltr_compute_h4  |     4.208  |
+|   v_fltr_2_left           |    26.619  |
+|     fifo0                 |     0.476  |
+|     fifo1                 |     0.744  |
+|     fifo2                 |     0.649  |
+|     fifo3                 |     0.611  |
+|     fifo4                 |     0.629  |
+|     fifo5                 |     0.676  |
+|     fifo6                 |     0.429  |
+|     inst_fltr_compute_f1  |     4.103  |
+|     inst_fltr_compute_f2  |     4.495  |
+|     inst_fltr_compute_f3  |     4.132  |
+|     inst_fltr_compute_h1  |     2.838  |
+|     inst_fltr_compute_h3  |     2.762  |
+|     inst_fltr_compute_h4  |     4.074  |
+|   v_fltr_2_right          |    27.517  |
+|     fifo0                 |     0.468  |
+|     fifo1                 |     0.716  |
+|     fifo2                 |     0.655  |
+|     fifo3                 |     0.607  |
+|     fifo4                 |     0.654  |
+|     fifo5                 |     0.694  |
+|     fifo6                 |     0.441  |
+|     inst_fltr_compute_f1  |     4.571  |
+|     inst_fltr_compute_f2  |     4.921  |
+|     inst_fltr_compute_f3  |     4.905  |
+|     inst_fltr_compute_h1  |     2.623  |
+|     inst_fltr_compute_h3  |     2.626  |
+|     inst_fltr_compute_h4  |     3.637  |
+|   v_fltr_4_left           |    28.463  |
+|     fifo0                 |     0.457  |
+|     fifo1                 |     0.747  |
+|     fifo2                 |     0.667  |
+|     fifo3                 |     0.627  |
+|     fifo4                 |     0.663  |
+|     fifo5                 |     0.675  |
+|     fifo6                 |     0.425  |
+|     inst_fltr_compute_f1  |     4.019  |
+|     inst_fltr_compute_f2  |     6.478  |
+|     inst_fltr_compute_f3  |     5.327  |
+|     inst_fltr_compute_h1  |     2.221  |
+|     inst_fltr_compute_h3  |     2.726  |
+|     inst_fltr_compute_h4  |     3.431  |
+|   v_fltr_4_right          |    26.994  |
+|     fifo0                 |     0.450  |
+|     fifo1                 |     0.714  |
+|     fifo2                 |     0.651  |
+|     fifo3                 |     0.638  |
+|     fifo4                 |     0.629  |
+|     fifo5                 |     0.686  |
+|     fifo6                 |     0.427  |
+|     inst_fltr_compute_f1  |     4.207  |
+|     inst_fltr_compute_f2  |     5.253  |
+|     inst_fltr_compute_f3  |     4.546  |
+|     inst_fltr_compute_h1  |     2.576  |
+|     inst_fltr_compute_h3  |     2.722  |
+|     inst_fltr_compute_h4  |     3.497  |
++---------------------------+------------+
+
+

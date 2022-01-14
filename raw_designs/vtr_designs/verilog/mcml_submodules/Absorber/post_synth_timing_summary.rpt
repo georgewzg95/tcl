@@ -1,0 +1,567 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Jan 13 16:48:25 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/Absorber/post_synth_timing_summary.rpt
+| Design       : Absorber
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 338 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 129 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -13.181    -9160.252                   1150                 2088        0.212        0.000                      0                 2088        4.230        0.000                       0                  2136  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -13.181    -9160.252                   1150                 2088        0.212        0.000                      0                 2088        4.230        0.000                       0                  2136  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         1150  Failing Endpoints,  Worst Slack      -13.181ns,  Total Violation    -9160.251ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.212ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.230ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -13.181ns  (required time - arrival time)
+  Source:                 squareRoot/res__11_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            squareRoot/res__15_q_reg[60]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        23.204ns  (logic 14.661ns (63.183%)  route 8.543ns (36.817%))
+  Logic Levels:           92  (CARRY4=84 LUT3=4 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=2135, unset)         0.704     0.704    squareRoot/clock
+                         FDRE                                         r  squareRoot/res__11_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.393     1.097 r  squareRoot/res__11_q_reg[3]/Q
+                         net (fo=6, unplaced)         0.757     1.854    squareRoot/res__11_q[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.483     2.337 r  squareRoot/op__15_q_reg[63]_i_445/CO[3]
+                         net (fo=1, unplaced)         0.007     2.344    squareRoot/op__15_q_reg[63]_i_445_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.436 r  squareRoot/op__15_q_reg[63]_i_444/CO[3]
+                         net (fo=1, unplaced)         0.000     2.436    squareRoot/op__15_q_reg[63]_i_444_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.528 r  squareRoot/op__15_q_reg[63]_i_413/CO[3]
+                         net (fo=1, unplaced)         0.000     2.528    squareRoot/op__15_q_reg[63]_i_413_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.620 r  squareRoot/op__15_q_reg[63]_i_412/CO[3]
+                         net (fo=1, unplaced)         0.000     2.620    squareRoot/op__15_q_reg[63]_i_412_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.712 r  squareRoot/op__15_q_reg[63]_i_356/CO[3]
+                         net (fo=1, unplaced)         0.000     2.712    squareRoot/op__15_q_reg[63]_i_356_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.804 r  squareRoot/op__15_q_reg[63]_i_355/CO[3]
+                         net (fo=1, unplaced)         0.000     2.804    squareRoot/op__15_q_reg[63]_i_355_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.896 r  squareRoot/op__15_q_reg[63]_i_296/CO[3]
+                         net (fo=1, unplaced)         0.000     2.896    squareRoot/op__15_q_reg[63]_i_296_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.988 r  squareRoot/op__15_q_reg[63]_i_295/CO[3]
+                         net (fo=1, unplaced)         0.000     2.988    squareRoot/op__15_q_reg[63]_i_295_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.080 r  squareRoot/op__15_q_reg[63]_i_246/CO[3]
+                         net (fo=1, unplaced)         0.000     3.080    squareRoot/op__15_q_reg[63]_i_246_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.172 r  squareRoot/op__15_q_reg[63]_i_245/CO[3]
+                         net (fo=1, unplaced)         0.000     3.172    squareRoot/op__15_q_reg[63]_i_245_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.264 r  squareRoot/op__15_q_reg[63]_i_202/CO[3]
+                         net (fo=1, unplaced)         0.000     3.264    squareRoot/op__15_q_reg[63]_i_202_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.356 r  squareRoot/op__15_q_reg[63]_i_201/CO[3]
+                         net (fo=1, unplaced)         0.000     3.356    squareRoot/op__15_q_reg[63]_i_201_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.448 r  squareRoot/op__15_q_reg[63]_i_158/CO[3]
+                         net (fo=1, unplaced)         0.000     3.448    squareRoot/op__15_q_reg[63]_i_158_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.540 r  squareRoot/op__15_q_reg[63]_i_157/CO[3]
+                         net (fo=1, unplaced)         0.000     3.540    squareRoot/op__15_q_reg[63]_i_157_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250     3.790 f  squareRoot/op__15_q_reg[63]_i_112/O[3]
+                         net (fo=2, unplaced)         0.468     4.258    squareRoot/op__122[59]
+                         LUT4 (Prop_lut4_I2_O)        0.227     4.485 r  squareRoot/op__15_q[63]_i_63/O
+                         net (fo=1, unplaced)         0.000     4.485    squareRoot/op__15_q[63]_i_63_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.403     4.888 r  squareRoot/op__15_q_reg[63]_i_23/CO[3]
+                         net (fo=361, unplaced)       0.816     5.704    squareRoot/op__121
+                         LUT3 (Prop_lut3_I2_O)        0.097     5.801 r  squareRoot/res__15_q[3]_i_12/O
+                         net (fo=1, unplaced)         0.000     5.801    squareRoot/res__15_q[3]_i_12_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379     6.180 r  squareRoot/res__15_q_reg[3]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.007     6.187    squareRoot/res__15_q_reg[3]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.279 r  squareRoot/res__15_q_reg[7]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.279    squareRoot/res__15_q_reg[7]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.371 r  squareRoot/res__15_q_reg[11]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.371    squareRoot/res__15_q_reg[11]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.463 r  squareRoot/res__15_q_reg[15]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.463    squareRoot/res__15_q_reg[15]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.555 r  squareRoot/res__15_q_reg[19]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.555    squareRoot/res__15_q_reg[19]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.647 r  squareRoot/res__15_q_reg[23]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.647    squareRoot/res__15_q_reg[23]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.739 r  squareRoot/res__15_q_reg[27]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.739    squareRoot/res__15_q_reg[27]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.831 r  squareRoot/res__15_q_reg[31]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.831    squareRoot/res__15_q_reg[31]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.923 r  squareRoot/res__15_q_reg[35]_i_8/CO[3]
+                         net (fo=1, unplaced)         0.000     6.923    squareRoot/res__15_q_reg[35]_i_8_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.015 r  squareRoot/res__15_q_reg[39]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000     7.015    squareRoot/res__15_q_reg[39]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.107 r  squareRoot/res__15_q_reg[43]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     7.107    squareRoot/res__15_q_reg[43]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.199 r  squareRoot/res__15_q_reg[47]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     7.199    squareRoot/res__15_q_reg[47]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.291 r  squareRoot/res__15_q_reg[51]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000     7.291    squareRoot/res__15_q_reg[51]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234     7.525 r  squareRoot/res__15_q_reg[55]_i_4/O[1]
+                         net (fo=7, unplaced)         0.523     8.048    squareRoot/res__12[53]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618     8.666 r  squareRoot/op__15_q_reg[63]_i_168/CO[3]
+                         net (fo=1, unplaced)         0.000     8.666    squareRoot/op__15_q_reg[63]_i_168_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250     8.916 f  squareRoot/op__15_q_reg[63]_i_123/O[3]
+                         net (fo=2, unplaced)         0.468     9.384    squareRoot/op__132[59]
+                         LUT6 (Prop_lut6_I4_O)        0.222     9.606 r  squareRoot/op__15_q[63]_i_72/O
+                         net (fo=1, unplaced)         0.471    10.077    squareRoot/op__15_q[63]_i_72_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    10.463 r  squareRoot/op__15_q_reg[63]_i_24/CO[3]
+                         net (fo=137, unplaced)       0.791    11.254    squareRoot/op__15_q_reg[63]_i_24_n_0
+                         LUT3 (Prop_lut3_I1_O)        0.097    11.351 r  squareRoot/res__15_q[3]_i_10/O
+                         net (fo=1, unplaced)         0.000    11.351    squareRoot/res__15_q[3]_i_10_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    11.730 r  squareRoot/res__15_q_reg[3]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.007    11.737    squareRoot/res__15_q_reg[3]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.829 r  squareRoot/res__15_q_reg[7]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    11.829    squareRoot/res__15_q_reg[7]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.921 r  squareRoot/res__15_q_reg[11]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    11.921    squareRoot/res__15_q_reg[11]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.013 r  squareRoot/res__15_q_reg[15]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.013    squareRoot/res__15_q_reg[15]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.105 r  squareRoot/res__15_q_reg[19]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.105    squareRoot/res__15_q_reg[19]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.197 r  squareRoot/res__15_q_reg[23]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.197    squareRoot/res__15_q_reg[23]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.289 r  squareRoot/res__15_q_reg[27]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.289    squareRoot/res__15_q_reg[27]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.381 r  squareRoot/res__15_q_reg[31]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.381    squareRoot/res__15_q_reg[31]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.473 r  squareRoot/res__15_q_reg[35]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    12.473    squareRoot/res__15_q_reg[35]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.565 r  squareRoot/res__15_q_reg[39]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    12.565    squareRoot/res__15_q_reg[39]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.657 r  squareRoot/res__15_q_reg[43]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    12.657    squareRoot/res__15_q_reg[43]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.749 r  squareRoot/res__15_q_reg[47]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    12.749    squareRoot/res__15_q_reg[47]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234    12.983 r  squareRoot/res__15_q_reg[51]_i_3/O[1]
+                         net (fo=7, unplaced)         0.523    13.506    squareRoot/res__13[49]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618    14.124 r  squareRoot/op__15_q_reg[63]_i_136/CO[3]
+                         net (fo=1, unplaced)         0.000    14.124    squareRoot/op__15_q_reg[63]_i_136_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.216 r  squareRoot/op__15_q_reg[63]_i_135/CO[3]
+                         net (fo=1, unplaced)         0.000    14.216    squareRoot/op__15_q_reg[63]_i_135_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.308 r  squareRoot/op__15_q_reg[63]_i_88/CO[3]
+                         net (fo=1, unplaced)         0.000    14.308    squareRoot/op__15_q_reg[63]_i_88_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.167    14.475 f  squareRoot/op__15_q_reg[63]_i_87/O[0]
+                         net (fo=2, unplaced)         0.318    14.793    squareRoot/op__142[60]
+                         LUT6 (Prop_lut6_I3_O)        0.209    15.002 r  squareRoot/op__15_q[63]_i_27/O
+                         net (fo=1, unplaced)         0.319    15.321    squareRoot/op__15_q[63]_i_27_n_0
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.298    15.619 r  squareRoot/op__15_q_reg[63]_i_5/CO[3]
+                         net (fo=316, unplaced)       0.813    16.432    squareRoot/op__15_q_reg[63]_i_5_n_0
+                         LUT3 (Prop_lut3_I1_O)        0.097    16.529 r  squareRoot/res__15_q[3]_i_7/O
+                         net (fo=1, unplaced)         0.000    16.529    squareRoot/res__15_q[3]_i_7_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    16.908 r  squareRoot/res__15_q_reg[3]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.007    16.915    squareRoot/res__15_q_reg[3]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.007 r  squareRoot/res__15_q_reg[7]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.007    squareRoot/res__15_q_reg[7]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.099 r  squareRoot/res__15_q_reg[11]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.099    squareRoot/res__15_q_reg[11]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.191 r  squareRoot/res__15_q_reg[15]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.191    squareRoot/res__15_q_reg[15]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.283 r  squareRoot/res__15_q_reg[19]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.283    squareRoot/res__15_q_reg[19]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.375 r  squareRoot/res__15_q_reg[23]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.375    squareRoot/res__15_q_reg[23]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.467 r  squareRoot/res__15_q_reg[27]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    17.467    squareRoot/res__15_q_reg[27]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234    17.701 r  squareRoot/res__15_q_reg[31]_i_2/O[1]
+                         net (fo=7, unplaced)         0.523    18.224    squareRoot/res__14[29]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618    18.842 r  squareRoot/op__15_q_reg[63]_i_282/CO[3]
+                         net (fo=1, unplaced)         0.000    18.842    squareRoot/op__15_q_reg[63]_i_282_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    18.934 r  squareRoot/op__15_q_reg[63]_i_235/CO[3]
+                         net (fo=1, unplaced)         0.000    18.934    squareRoot/op__15_q_reg[63]_i_235_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.026 r  squareRoot/op__15_q_reg[63]_i_234/CO[3]
+                         net (fo=1, unplaced)         0.000    19.026    squareRoot/op__15_q_reg[63]_i_234_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.118 r  squareRoot/op__15_q_reg[63]_i_191/CO[3]
+                         net (fo=1, unplaced)         0.000    19.118    squareRoot/op__15_q_reg[63]_i_191_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.210 r  squareRoot/op__15_q_reg[63]_i_190/CO[3]
+                         net (fo=1, unplaced)         0.000    19.210    squareRoot/op__15_q_reg[63]_i_190_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.302 r  squareRoot/op__15_q_reg[63]_i_147/CO[3]
+                         net (fo=1, unplaced)         0.000    19.302    squareRoot/op__15_q_reg[63]_i_147_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    19.394 r  squareRoot/op__15_q_reg[63]_i_146/CO[3]
+                         net (fo=1, unplaced)         0.000    19.394    squareRoot/op__15_q_reg[63]_i_146_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250    19.644 f  squareRoot/op__15_q_reg[63]_i_99/O[3]
+                         net (fo=2, unplaced)         0.468    20.112    squareRoot/op__15_d2[59]
+                         LUT6 (Prop_lut6_I4_O)        0.222    20.334 r  squareRoot/op__15_q[63]_i_37/O
+                         net (fo=1, unplaced)         0.471    20.805    squareRoot/op__15_q[63]_i_37_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    21.191 r  squareRoot/op__15_q_reg[63]_i_6/CO[3]
+                         net (fo=82, unplaced)        0.779    21.970    squareRoot/op__15_d1
+                         LUT3 (Prop_lut3_I0_O)        0.097    22.067 r  squareRoot/res__15_q[3]_i_4/O
+                         net (fo=1, unplaced)         0.000    22.067    squareRoot/res__15_q[3]_i_4_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    22.446 r  squareRoot/res__15_q_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.007    22.453    squareRoot/res__15_q_reg[3]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.545 r  squareRoot/res__15_q_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    22.545    squareRoot/res__15_q_reg[7]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.637 r  squareRoot/res__15_q_reg[11]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    22.637    squareRoot/res__15_q_reg[11]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.729 r  squareRoot/res__15_q_reg[15]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    22.729    squareRoot/res__15_q_reg[15]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.821 r  squareRoot/res__15_q_reg[19]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    22.821    squareRoot/res__15_q_reg[19]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    22.913 r  squareRoot/res__15_q_reg[23]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    22.913    squareRoot/res__15_q_reg[23]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.005 r  squareRoot/res__15_q_reg[27]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.005    squareRoot/res__15_q_reg[27]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.097 r  squareRoot/res__15_q_reg[31]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.097    squareRoot/res__15_q_reg[31]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.189 r  squareRoot/res__15_q_reg[35]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.189    squareRoot/res__15_q_reg[35]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.281 r  squareRoot/res__15_q_reg[39]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.281    squareRoot/res__15_q_reg[39]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.373 r  squareRoot/res__15_q_reg[43]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.373    squareRoot/res__15_q_reg[43]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.465 r  squareRoot/res__15_q_reg[47]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.465    squareRoot/res__15_q_reg[47]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.557 r  squareRoot/res__15_q_reg[51]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.557    squareRoot/res__15_q_reg[51]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.649 r  squareRoot/res__15_q_reg[55]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.649    squareRoot/res__15_q_reg[55]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.741 r  squareRoot/res__15_q_reg[59]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.741    squareRoot/res__15_q_reg[59]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.167    23.908 r  squareRoot/res__15_q_reg[61]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000    23.908    squareRoot/res__15_q_reg[61]_i_1_n_7
+                         FDRE                                         r  squareRoot/res__15_q_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clock (IN)
+                         net (fo=2135, unset)         0.669    10.669    squareRoot/clock
+                         FDRE                                         r  squareRoot/res__15_q_reg[60]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+                         FDRE (Setup_fdre_C_D)        0.094    10.727    squareRoot/res__15_q_reg[60]
+  -------------------------------------------------------------------
+                         required time                         10.727    
+                         arrival time                         -23.908    
+  -------------------------------------------------------------------
+                         slack                                -13.181    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.212ns  (arrival time - required time)
+  Source:                 photon4/o_x_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            photon15/o_x_reg[0]_srl11___photon28_o_x_reg_r/D
+                            (rising edge-triggered cell SRL16E clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.164ns (55.107%)  route 0.134ns (44.893%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=2135, unset)         0.411     0.411    photon4/clock
+                         FDRE                                         r  photon4/o_x_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.164     0.575 r  photon4/o_x_reg[0]/Q
+                         net (fo=2, unplaced)         0.134     0.708    photon15/Q[0]
+                         SRL16E                                       r  photon15/o_x_reg[0]_srl11___photon28_o_x_reg_r/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=2135, unset)         0.432     0.432    photon15/clock
+                         SRL16E                                       r  photon15/o_x_reg[0]_srl11___photon28_o_x_reg_r/CLK
+                         clock pessimism              0.000     0.432    
+                         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.064     0.496    photon15/o_x_reg[0]_srl11___photon28_o_x_reg_r
+  -------------------------------------------------------------------
+                         required time                         -0.496    
+                         arrival time                           0.708    
+  -------------------------------------------------------------------
+                         slack                                  0.212    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         10.000      8.410                dwa_temp0__0/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         5.000       4.230                photon12/o_y_reg_srl8___photon25_o_x_reg_r/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.770         5.000       4.230                photon12/o_y_reg_srl8___photon25_o_x_reg_r/CLK
+
+
+

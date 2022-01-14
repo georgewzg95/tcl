@@ -1,0 +1,243 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Thu Jan 13 17:05:48 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/ScattererReflectorWrapper/post_route_power.rpt
+| Design           : ScattererReflectorWrapper
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 878.286      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 762.934      |
+| Device Static (mW)       | 115.352      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 89.9         |
+| Junction Temperature (C) | 35.1         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    37.036  |        3 |       --- |             --- |
+| Slice Logic             |   306.123  |    37335 |       --- |             --- |
+|   LUT as Logic          |   279.607  |    21617 |     53200 |           40.63 |
+|   CARRY4                |    21.404  |     4020 |     13300 |           30.23 |
+|   Register              |     4.222  |     5139 |    106400 |            4.83 |
+|   LUT as Shift Register |     0.817  |      151 |     17400 |            0.87 |
+|   F7/F8 Muxes           |     0.071  |      129 |     53200 |            0.24 |
+|   Others                |     0.000  |       96 |       --- |             --- |
+| Signals                 |   374.612  |    31340 |       --- |             --- |
+| DSPs                    |    45.163  |       60 |       220 |           27.27 |
+| Static Power            |   115.352  |          |           |                 |
+| Total                   |   878.286  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.773 |       0.763 |      0.010 |
+| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.022 |       0.000 |      0.022 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clock  |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------+------------+
+| Name                      | Power (mW) |
++---------------------------+------------+
+| ScattererReflectorWrapper |   762.934  |
+|   divide1_16              |   332.673  |
+|     div_temp              |   332.673  |
+|   multiplier1_2           |     5.172  |
+|   multiplier1_33          |     2.286  |
+|   multiplier1_34          |     6.500  |
+|   multiplier1_36          |     9.400  |
+|   multiplier1_4           |     9.828  |
+|   multiplier2_33          |     2.303  |
+|   multiplier2_34          |     7.045  |
+|   multiplier2_36          |     9.527  |
+|   multiplier3_33          |     5.873  |
+|   multiplier3_34          |     8.253  |
+|   multiplier3_36          |     7.402  |
+|   multiplier4_34          |     7.393  |
+|   multiplier4_36          |     7.355  |
+|   multiplier5_36          |     6.025  |
+|   multiplier6_36          |     7.466  |
+|   reflector_0             |    11.161  |
+|     oneMinusUz2_sub       |     0.158  |
+|     pipeReg16             |     0.007  |
+|     pipeReg17             |     0.007  |
+|     pipeReg18             |     0.007  |
+|     pipeReg19             |     0.007  |
+|     pipeReg2              |     0.413  |
+|     pipeReg20             |     0.007  |
+|     pipeReg21             |     0.007  |
+|     pipeReg22             |     0.007  |
+|     pipeReg23             |     0.007  |
+|     pipeReg24             |     0.007  |
+|     pipeReg25             |     0.007  |
+|     pipeReg26             |     0.007  |
+|     pipeReg27             |     0.007  |
+|     pipeReg28             |     0.007  |
+|     pipeReg29             |     0.007  |
+|     pipeReg3              |     1.759  |
+|     pipeReg30             |     0.007  |
+|     pipeReg31             |     0.007  |
+|     pipeReg32             |     0.007  |
+|     pipeReg33             |     0.019  |
+|     pipeReg34             |     0.022  |
+|     pipeReg35             |     0.405  |
+|     pipeReg36             |     1.775  |
+|     pipeReg37             |     2.108  |
+|     pipeReg4              |     0.445  |
+|     pipeReg5              |     0.787  |
+|   scatterer_0             |    31.852  |
+|     oneMinusUz2_sub       |     0.313  |
+|     pipeReg10             |     0.007  |
+|     pipeReg11             |     0.007  |
+|     pipeReg12             |     0.007  |
+|     pipeReg13             |     0.007  |
+|     pipeReg14             |     0.007  |
+|     pipeReg15             |     0.007  |
+|     pipeReg16             |     0.007  |
+|     pipeReg17             |     0.007  |
+|     pipeReg18             |     0.007  |
+|     pipeReg19             |     0.007  |
+|     pipeReg2              |     1.355  |
+|     pipeReg20             |     0.007  |
+|     pipeReg21             |     0.007  |
+|     pipeReg22             |     0.007  |
+|     pipeReg23             |     0.007  |
+|     pipeReg24             |     0.007  |
+|     pipeReg25             |     0.007  |
+|     pipeReg26             |     0.007  |
+|     pipeReg27             |     0.007  |
+|     pipeReg28             |     0.007  |
+|     pipeReg29             |     0.007  |
+|     pipeReg3              |     1.084  |
+|     pipeReg30             |     0.007  |
+|     pipeReg31             |     0.480  |
+|     pipeReg32             |     0.706  |
+|     pipeReg33             |     6.613  |
+|     pipeReg34             |     4.193  |
+|     pipeReg35             |     7.480  |
+|     pipeReg36             |     6.200  |
+|     pipeReg4              |     0.867  |
+|     pipeReg5              |     0.962  |
+|     pipeReg6              |     0.007  |
+|     pipeReg7              |     0.007  |
+|     pipeReg8              |     0.007  |
+|     pipeReg9              |     0.007  |
+|     uxNumer_sub           |     0.066  |
+|     ux_add                |     0.066  |
+|     uyNumer_add           |     0.366  |
+|     uy_add                |     0.066  |
+|     uz_sub                |     0.066  |
+|   squareRoot1_6           |   285.204  |
++---------------------------+------------+
+
+

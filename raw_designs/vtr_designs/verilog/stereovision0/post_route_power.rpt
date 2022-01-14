@@ -1,0 +1,335 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Thu Jan 13 17:29:54 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/stereovision0/post_route_power.rpt
+| Design           : sv_chip0_hierarchy_no_mem
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 130.508      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 27.545       |
+| Device Static (mW)       | 102.963      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 98.5         |
+| Junction Temperature (C) | 26.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |     0.555  |        3 |       --- |             --- |
+| Slice Logic             |    13.239  |    13932 |       --- |             --- |
+|   LUT as Logic          |     8.859  |     2853 |     53200 |            5.36 |
+|   CARRY4                |     1.817  |      800 |     13300 |            6.02 |
+|   Register              |     1.796  |     8058 |    106400 |            7.57 |
+|   LUT as Shift Register |     0.759  |      672 |     17400 |            3.86 |
+|   F7/F8 Muxes           |     0.008  |        8 |     53200 |            0.02 |
+|   Others                |     0.000  |      479 |       --- |             --- |
+| Signals                 |    13.751  |     9013 |       --- |             --- |
+| Static Power            |   102.963  |          |           |                 |
+| Total                   |   130.508  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.035 |       0.028 |      0.008 |
+| Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.016 |       0.000 |      0.016 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                             |
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks         | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                                    |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                   |                                                                                                                    |
+|                             |            |                                                |                                                                                                                    |
+| Overall confidence level    | Low        |                                                |                                                                                                                    |
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+------------------+-----------------+
+| Clock | Domain           | Constraint (ns) |
++-------+------------------+-----------------+
+| clk   | tm3_vidout_clock |            10.0 |
++-------+------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------+------------+
+| Name                      | Power (mW) |
++---------------------------+------------+
+| sv_chip0_hierarchy_no_mem |    27.545  |
+|   combine_res_inst_0      |     0.366  |
+|   combine_res_inst_1      |     0.176  |
+|   combine_res_inst_10     |     0.466  |
+|   combine_res_inst_11     |     0.211  |
+|   combine_res_inst_12     |     0.411  |
+|   combine_res_inst_13     |     0.211  |
+|   combine_res_inst_14     |     0.317  |
+|   combine_res_inst_15     |     0.184  |
+|   combine_res_inst_16     |     0.440  |
+|   combine_res_inst_17     |     0.155  |
+|   combine_res_inst_18     |     0.420  |
+|   combine_res_inst_19     |     0.165  |
+|   combine_res_inst_2      |     0.316  |
+|   combine_res_inst_20     |     0.106  |
+|   combine_res_inst_3      |     0.190  |
+|   combine_res_inst_4      |     0.340  |
+|   combine_res_inst_5      |     0.149  |
+|   combine_res_inst_6      |     0.318  |
+|   combine_res_inst_7      |     0.145  |
+|   combine_res_inst_8      |     0.425  |
+|   combine_res_inst_9      |     0.231  |
+|   find_max_inst           |     4.319  |
+|   inst_fir_1_0            |     0.061  |
+|   inst_fir_1_1            |     0.060  |
+|   inst_fir_1_10           |     0.069  |
+|   inst_fir_1_11           |     0.062  |
+|   inst_fir_1_12           |     0.065  |
+|   inst_fir_1_13           |     0.059  |
+|   inst_fir_1_14           |     0.060  |
+|   inst_fir_1_15           |     0.063  |
+|   inst_fir_1_16           |     0.060  |
+|   inst_fir_1_17           |     0.060  |
+|   inst_fir_1_18           |     0.059  |
+|   inst_fir_1_19           |     0.063  |
+|   inst_fir_1_2            |     0.061  |
+|   inst_fir_1_20           |     0.063  |
+|   inst_fir_1_3            |     0.061  |
+|   inst_fir_1_4            |     0.060  |
+|   inst_fir_1_5            |     0.059  |
+|   inst_fir_1_6            |     0.064  |
+|   inst_fir_1_7            |     0.060  |
+|   inst_fir_1_8            |     0.062  |
+|   inst_fir_1_9            |     0.061  |
+|   inst_fir_2_0            |     0.036  |
+|   inst_fir_2_1            |     0.037  |
+|   inst_fir_2_10           |     0.034  |
+|   inst_fir_2_2            |     0.034  |
+|   inst_fir_2_3            |     0.035  |
+|   inst_fir_2_4            |     0.032  |
+|   inst_fir_2_5            |     0.033  |
+|   inst_fir_2_6            |     0.037  |
+|   inst_fir_2_7            |     0.035  |
+|   inst_fir_2_8            |     0.034  |
+|   inst_fir_2_9            |     0.033  |
+|   inst_fir_4_0            |     0.004  |
+|   inst_fir_v1_0           |     0.071  |
+|     ints_fifo_1           |     0.014  |
+|   inst_fir_v1_1           |     0.067  |
+|     ints_fifo_1           |     0.011  |
+|   inst_fir_v1_10          |     0.065  |
+|     ints_fifo_1           |     0.012  |
+|   inst_fir_v1_11          |     0.065  |
+|     ints_fifo_1           |     0.010  |
+|   inst_fir_v1_12          |     0.067  |
+|     ints_fifo_1           |     0.011  |
+|   inst_fir_v1_13          |     0.072  |
+|     ints_fifo_1           |     0.013  |
+|   inst_fir_v1_14          |     0.069  |
+|     ints_fifo_1           |     0.010  |
+|   inst_fir_v1_15          |     0.066  |
+|     ints_fifo_1           |     0.009  |
+|   inst_fir_v1_16          |     0.062  |
+|     ints_fifo_1           |     0.010  |
+|   inst_fir_v1_17          |     0.067  |
+|     ints_fifo_1           |     0.009  |
+|   inst_fir_v1_18          |     0.069  |
+|     ints_fifo_1           |     0.011  |
+|   inst_fir_v1_19          |     0.070  |
+|     ints_fifo_1           |     0.013  |
+|   inst_fir_v1_2           |     0.064  |
+|     ints_fifo_1           |     0.009  |
+|   inst_fir_v1_20          |     0.070  |
+|     ints_fifo_1           |     0.014  |
+|   inst_fir_v1_3           |     0.067  |
+|     ints_fifo_1           |     0.012  |
+|   inst_fir_v1_4           |     0.069  |
+|     ints_fifo_1           |     0.013  |
+|   inst_fir_v1_5           |     0.063  |
+|     ints_fifo_1           |     0.010  |
+|   inst_fir_v1_6           |     0.070  |
+|     ints_fifo_1           |     0.011  |
+|   inst_fir_v1_7           |     0.066  |
+|     ints_fifo_1           |     0.013  |
+|   inst_fir_v1_8           |     0.068  |
+|     ints_fifo_1           |     0.012  |
+|   inst_fir_v1_9           |     0.065  |
+|     ints_fifo_1           |     0.010  |
+|   inst_fir_v2_0           |     0.044  |
+|   inst_fir_v2_1           |     0.045  |
+|   inst_fir_v2_10          |     0.041  |
+|   inst_fir_v2_2           |     0.046  |
+|   inst_fir_v2_3           |     0.046  |
+|   inst_fir_v2_4           |     0.054  |
+|   inst_fir_v2_5           |     0.046  |
+|   inst_fir_v2_6           |     0.047  |
+|   inst_fir_v2_7           |     0.047  |
+|   inst_fir_v2_8           |     0.046  |
+|   inst_fir_v2_9           |     0.047  |
+|   inst_fir_v4_0           |     0.032  |
+|   ints_fifo_1_gen_1_0     |     0.020  |
+|   ints_fifo_1_gen_1_1     |     0.008  |
+|   ints_fifo_1_gen_1_10    |     0.008  |
+|   ints_fifo_1_gen_1_11    |     0.008  |
+|   ints_fifo_1_gen_1_12    |     0.008  |
+|   ints_fifo_1_gen_1_13    |     0.008  |
+|   ints_fifo_1_gen_1_14    |     0.008  |
+|   ints_fifo_1_gen_1_15    |     0.008  |
+|   ints_fifo_1_gen_1_16    |     0.008  |
+|   ints_fifo_1_gen_1_17    |     0.008  |
+|   ints_fifo_1_gen_1_18    |     0.008  |
+|   ints_fifo_1_gen_1_19    |     0.008  |
+|   ints_fifo_1_gen_1_2     |     0.008  |
+|   ints_fifo_1_gen_1_20    |     0.008  |
+|   ints_fifo_1_gen_1_3     |     0.008  |
+|   ints_fifo_1_gen_1_4     |     0.008  |
+|   ints_fifo_1_gen_1_5     |     0.008  |
+|   ints_fifo_1_gen_1_6     |     0.008  |
+|   ints_fifo_1_gen_1_7     |     0.008  |
+|   ints_fifo_1_gen_1_8     |     0.008  |
+|   ints_fifo_1_gen_1_9     |     0.008  |
+|   port_bus_1to0_1_inst    |     1.400  |
+|   scaler_inst_left        |     4.328  |
+|     scl_h_fltr_inst       |     2.884  |
+|       ints_sh_reg_2_0     |     0.058  |
+|       ints_sh_reg_2_1     |     0.082  |
+|       ints_sh_reg_2_2     |     0.082  |
+|       ints_sh_reg_4_0     |     0.062  |
+|       ints_sh_reg_4_1     |     0.095  |
+|       ints_sh_reg_4_2     |     0.102  |
+|       ints_sh_reg_4_3     |     0.309  |
+|       ints_sh_reg_4_4     |     0.090  |
+|       ints_sh_reg_4_5     |     0.097  |
+|       ints_sh_reg_4_6     |     0.074  |
+|     scl_v_fltr_inst       |     1.417  |
+|       ints_fifo_gen_0     |     0.028  |
+|       ints_fifo_gen_1     |     0.015  |
+|       ints_fifo_gen_2     |     0.015  |
+|       ints_fifo_gen_3     |     0.015  |
+|       ints_fifo_gen_4     |     0.035  |
+|       ints_fifo_gen_5     |     0.015  |
+|       ints_fifo_gen_6     |     0.033  |
+|   scaler_inst_right       |     4.198  |
+|     scl_h_fltr_inst       |     2.837  |
+|       ints_sh_reg_2_0     |     0.058  |
+|       ints_sh_reg_2_1     |     0.073  |
+|       ints_sh_reg_2_2     |     0.065  |
+|       ints_sh_reg_4_0     |     0.062  |
+|       ints_sh_reg_4_1     |     0.115  |
+|       ints_sh_reg_4_2     |     0.104  |
+|       ints_sh_reg_4_3     |     0.324  |
+|       ints_sh_reg_4_4     |     0.093  |
+|       ints_sh_reg_4_5     |     0.098  |
+|       ints_sh_reg_4_6     |     0.072  |
+|     scl_v_fltr_inst       |     1.341  |
+|       ints_fifo_gen_0     |     0.028  |
+|       ints_fifo_gen_1     |     0.015  |
+|       ints_fifo_gen_2     |     0.015  |
+|       ints_fifo_gen_3     |     0.015  |
+|       ints_fifo_gen_4     |     0.036  |
+|       ints_fifo_gen_5     |     0.015  |
+|       ints_fifo_gen_6     |     0.033  |
+|   v_fltr_496_l_inst       |     0.030  |
+|     fifo10                |     0.015  |
+|     more_inst             |     0.015  |
+|   v_fltr_496_r_inst       |     0.030  |
+|     fifo10                |     0.015  |
+|     more_inst             |     0.015  |
+|   wrapper_qs_intr_inst_10 |     1.197  |
+|     my_inst_quadintr      |     1.194  |
+|   wrapper_qs_intr_inst_5  |     0.001  |
+|     my_inst_quadintr      |     0.001  |
++---------------------------+------------+
+
+

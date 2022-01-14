@@ -1,0 +1,579 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Jan 13 17:00:24 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/DropSpinWrapper/post_place_timing_summary.rpt
+| Design       : DropSpinWrapper
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 1702 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 467 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -23.504   -27625.686                   3537                 9088        0.117        0.000                      0                 9088        4.230        0.000                       0                  9293  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -23.504   -27625.686                   3537                 9088        0.117        0.000                      0                 9088        4.230        0.000                       0                  9293  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         3537  Failing Endpoints,  Worst Slack      -23.504ns,  Total Violation   -27625.685ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.117ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.230ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -23.504ns  (required time - arrival time)
+  Source:                 scattererReflector/squareRoot1_6/res__11_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        33.503ns  (logic 19.662ns (58.687%)  route 13.841ns (41.313%))
+  Logic Levels:           102  (CARRY4=75 DSP48E1=2 LUT1=1 LUT2=2 LUT3=5 LUT4=2 LUT5=4 LUT6=11)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=9292, unset)         0.704     0.704    scattererReflector/squareRoot1_6/clock
+    SLICE_X66Y84         FDRE                                         r  scattererReflector/squareRoot1_6/res__11_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y84         FDRE (Prop_fdre_C_Q)         0.393     1.097 r  scattererReflector/squareRoot1_6/res__11_q_reg[0]/Q
+                         net (fo=5, estimated)        0.329     1.426    scattererReflector/squareRoot1_6/res__11_q[0]
+    SLICE_X67Y84         LUT2 (Prop_lut2_I0_O)        0.097     1.523 r  scattererReflector/squareRoot1_6/op__15_q[63]_i_621__0/O
+                         net (fo=1, routed)           0.000     1.523    scattererReflector/squareRoot1_6/op__15_q[63]_i_621__0_n_0
+    SLICE_X67Y84         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395     1.918 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0/CO[3]
+                         net (fo=1, estimated)        0.000     1.918    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0_n_0
+    SLICE_X67Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.007 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.007    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0_n_0
+    SLICE_X67Y86         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.096 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.096    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0_n_0
+    SLICE_X67Y87         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.185 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.185    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0_n_0
+    SLICE_X67Y88         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.274 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.274    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0_n_0
+    SLICE_X67Y89         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.363 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.363    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0_n_0
+    SLICE_X67Y90         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.452 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.452    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0_n_0
+    SLICE_X67Y91         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.541 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.541    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0_n_0
+    SLICE_X67Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.630 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.630    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0_n_0
+    SLICE_X67Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.719 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.719    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0_n_0
+    SLICE_X67Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.808 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.808    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0_n_0
+    SLICE_X67Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.897 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.897    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0_n_0
+    SLICE_X67Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.986 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.986    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0_n_0
+    SLICE_X67Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     3.075 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0/CO[3]
+                         net (fo=1, estimated)        0.000     3.075    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0_n_0
+    SLICE_X67Y98         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230     3.305 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_126__0/O[1]
+                         net (fo=2, estimated)        0.856     4.161    scattererReflector/squareRoot1_6/op__122[57]
+    SLICE_X82Y97         LUT4 (Prop_lut4_I3_O)        0.225     4.386 r  scattererReflector/squareRoot1_6/op__15_q[63]_i_77__0/O
+                         net (fo=1, routed)           0.000     4.386    scattererReflector/squareRoot1_6/op__15_q[63]_i_77__0_n_0
+    SLICE_X82Y97         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379     4.765 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_23__0/CO[3]
+                         net (fo=415, estimated)      0.732     5.497    scattererReflector/squareRoot1_6/op__121
+    SLICE_X81Y85         LUT3 (Prop_lut3_I2_O)        0.097     5.594 r  scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0/O
+                         net (fo=1, routed)           0.000     5.594    scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0_n_0
+    SLICE_X81Y85         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395     5.989 r  scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     5.989    scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0_n_0
+    SLICE_X81Y86         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     6.078 r  scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     6.078    scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_8__0_n_0
+    SLICE_X81Y87         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     6.167 r  scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     6.167    scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_8__0_n_0
+    SLICE_X81Y88         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     6.256 r  scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     6.256    scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_8__0_n_0
+    SLICE_X81Y89         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     6.345 r  scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     6.345    scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_8__0_n_0
+    SLICE_X81Y90         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230     6.575 r  scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_8__0/O[1]
+                         net (fo=7, estimated)        0.963     7.538    scattererReflector/squareRoot1_6/res__12[21]
+    SLICE_X67Y105        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.637     8.175 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_480__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.175    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_480__0_n_0
+    SLICE_X67Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.264 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_403__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.264    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_403__0_n_0
+    SLICE_X67Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.353 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.353    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0_n_0
+    SLICE_X67Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.442 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.442    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0_n_0
+    SLICE_X67Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.531 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.531    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0_n_0
+    SLICE_X67Y110        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.620 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.620    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0_n_0
+    SLICE_X67Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.709 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.709    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0_n_0
+    SLICE_X67Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.798 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.798    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0_n_0
+    SLICE_X67Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.887 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.887    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0_n_0
+    SLICE_X67Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     8.976 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_137__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.976    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_137__0_n_0
+    SLICE_X67Y115        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.159     9.135 f  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_136__0/O[0]
+                         net (fo=2, estimated)        0.777     9.912    scattererReflector/squareRoot1_6/op__132[60]
+    SLICE_X80Y109        LUT6 (Prop_lut6_I3_O)        0.224    10.136 r  scattererReflector/squareRoot1_6/op__15_q[63]_i_80__0/O
+                         net (fo=1, estimated)        0.217    10.353    scattererReflector/squareRoot1_6/op__15_q[63]_i_80__0_n_0
+    SLICE_X80Y108        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.295    10.648 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0/CO[3]
+                         net (fo=198, estimated)      0.970    11.618    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0_n_0
+    SLICE_X89Y92         LUT3 (Prop_lut3_I1_O)        0.097    11.715 r  scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0/O
+                         net (fo=1, routed)           0.000    11.715    scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0_n_0
+    SLICE_X89Y92         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    12.110 r  scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    12.110    scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0_n_0
+    SLICE_X89Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    12.199 r  scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    12.199    scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0_n_0
+    SLICE_X89Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    12.288 r  scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    12.288    scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0_n_0
+    SLICE_X89Y95         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230    12.518 r  scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_5__0/O[1]
+                         net (fo=7, estimated)        0.425    12.943    scattererReflector/squareRoot1_6/res__13[13]
+    SLICE_X86Y95         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.627    13.570 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_498__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.570    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_498__0_n_0
+    SLICE_X86Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.662 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_420__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.662    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_420__0_n_0
+    SLICE_X86Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.754 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_419__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.754    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_419__0_n_0
+    SLICE_X86Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.846 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_343__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.846    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_343__0_n_0
+    SLICE_X86Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.938 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.938    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0_n_0
+    SLICE_X86Y100        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.030 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.030    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0_n_0
+    SLICE_X86Y101        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.122 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.122    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0_n_0
+    SLICE_X86Y102        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.214 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.214    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0_n_0
+    SLICE_X86Y103        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.306 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.306    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0_n_0
+    SLICE_X86Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.398 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.398    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0_n_0
+    SLICE_X86Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.490 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.490    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0_n_0
+    SLICE_X86Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.582 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0/CO[3]
+                         net (fo=1, estimated)        0.000    14.582    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0_n_0
+    SLICE_X86Y107        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.223    14.805 f  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_96__0/O[1]
+                         net (fo=2, estimated)        0.421    15.226    scattererReflector/squareRoot1_6/op__142[61]
+    SLICE_X85Y105        LUT6 (Prop_lut6_I4_O)        0.216    15.442 r  scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0/O
+                         net (fo=1, estimated)        0.227    15.669    scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0_n_0
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.295    15.964 r  scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0/CO[3]
+                         net (fo=331, estimated)      0.814    16.778    scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0_n_0
+    SLICE_X88Y92         LUT3 (Prop_lut3_I1_O)        0.097    16.875 r  scattererReflector/squareRoot1_6/res__15_q[7]_i_7__0/O
+                         net (fo=1, routed)           0.000    16.875    scattererReflector/squareRoot1_6/res__15_q[7]_i_7__0_n_0
+    SLICE_X88Y92         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    17.270 r  scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.270    scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0_n_0
+    SLICE_X88Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    17.359 r  scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.359    scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0_n_0
+    SLICE_X88Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    17.448 r  scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.448    scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0_n_0
+    SLICE_X88Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    17.537 r  scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.537    scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0_n_0
+    SLICE_X88Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    17.626 r  scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.626    scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0_n_0
+    SLICE_X88Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    17.715 r  scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    17.715    scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0_n_0
+    SLICE_X88Y98         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.234    17.949 r  scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_2__0/O[3]
+                         net (fo=7, estimated)        0.394    18.343    scattererReflector/squareRoot1_6/res__14[31]
+    SLICE_X89Y91         LUT6 (Prop_lut6_I0_O)        0.234    18.577 r  scattererReflector/squareRoot1_6/denom0[31]_i_62/O
+                         net (fo=1, estimated)        0.369    18.946    scattererReflector/squareRoot1_6/denom0[31]_i_62_n_0
+    SLICE_X91Y90         LUT5 (Prop_lut5_I4_O)        0.097    19.043 r  scattererReflector/squareRoot1_6/denom0[31]_i_40/O
+                         net (fo=1, estimated)        0.205    19.248    scattererReflector/squareRoot1_6/denom0[31]_i_40_n_0
+    SLICE_X93Y90         LUT6 (Prop_lut6_I3_O)        0.097    19.345 f  scattererReflector/squareRoot1_6/denom0[31]_i_19/O
+                         net (fo=1, estimated)        0.095    19.440    scattererReflector/squareRoot1_6/denom0[31]_i_19_n_0
+    SLICE_X93Y90         LUT6 (Prop_lut6_I2_O)        0.097    19.537 f  scattererReflector/squareRoot1_6/denom0[31]_i_6/O
+                         net (fo=1, estimated)        0.195    19.732    scattererReflector/squareRoot1_6/denom0[31]_i_6_n_0
+    SLICE_X93Y91         LUT6 (Prop_lut6_I5_O)        0.097    19.829 r  scattererReflector/squareRoot1_6/denom0[31]_i_1/O
+                         net (fo=51, estimated)       0.603    20.432    scattererReflector/divide1_16/div_temp/res[31]
+    SLICE_X98Y93         LUT3 (Prop_lut3_I1_O)        0.102    20.534 f  scattererReflector/divide1_16/div_temp/c_tmp1_i_260/O
+                         net (fo=1, estimated)        0.411    20.945    scattererReflector/divide1_16/div_temp/quot1_16[58]
+    SLICE_X102Y94        LUT6 (Prop_lut6_I4_O)        0.250    21.195 f  scattererReflector/divide1_16/div_temp/c_tmp1_i_243/O
+                         net (fo=1, estimated)        0.111    21.306    scattererReflector/divide1_16/div_temp/c_tmp1_i_243_n_0
+    SLICE_X102Y94        LUT5 (Prop_lut5_I4_O)        0.097    21.403 f  scattererReflector/divide1_16/div_temp/c_tmp1_i_172/O
+                         net (fo=1, estimated)        0.224    21.627    scattererReflector/divide1_16/div_temp/c_tmp1_i_172_n_0
+    SLICE_X102Y94        LUT6 (Prop_lut6_I5_O)        0.097    21.724 f  scattererReflector/divide1_16/div_temp/c_tmp1_i_75/O
+                         net (fo=33, estimated)       0.409    22.133    scattererReflector/divide1_16/div_temp/scatterer_0/div_overflow__14
+    SLICE_X100Y96        LUT4 (Prop_lut4_I3_O)        0.097    22.230 f  scattererReflector/divide1_16/div_temp/c_tmp1_i_72__0/O
+                         net (fo=4, estimated)        0.547    22.777    photon35/op1_36_2_scatterer[0]
+    SLICE_X97Y103        LUT3 (Prop_lut3_I0_O)        0.097    22.874 r  photon35/c_tmp1_i_149__0/O
+                         net (fo=1, routed)           0.000    22.874    photon35/c_tmp1_i_149__0_n_0
+    SLICE_X97Y103        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    23.269 r  photon35/c_tmp1_i_65/CO[3]
+                         net (fo=1, estimated)        0.000    23.269    photon35/c_tmp1_i_65_n_0
+    SLICE_X97Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    23.358 r  photon35/c_tmp1_i_58/CO[3]
+                         net (fo=1, estimated)        0.000    23.358    photon35/c_tmp1_i_58_n_0
+    SLICE_X97Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    23.447 r  photon35/c_tmp1_i_47__1/CO[3]
+                         net (fo=1, estimated)        0.000    23.447    photon35/c_tmp1_i_47__1_n_0
+    SLICE_X97Y106        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.234    23.681 r  photon35/c_tmp1_i_37__3/O[3]
+                         net (fo=1, estimated)        0.443    24.124    photon35/scattererReflector/b_tmp0[16]
+    SLICE_X91Y104        LUT5 (Prop_lut5_I0_O)        0.234    24.358 r  photon35/c_tmp1_i_16__1/O
+                         net (fo=2, estimated)        0.418    24.776    scattererReflector/multiplier1_36/c_tmp1__2_0[15]
+    DSP48_X3Y42          DSP48E1 (Prop_dsp48e1_B[16]_PCOUT[47])
+                                                      2.838    27.614 r  scattererReflector/multiplier1_36/c_tmp1__1/PCOUT[47]
+                         net (fo=1, estimated)        0.000    27.614    scattererReflector/multiplier1_36/c_tmp1__1_n_106
+    DSP48_X3Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[4])
+                                                      1.107    28.721 r  scattererReflector/multiplier1_36/c_tmp1__2/P[4]
+                         net (fo=2, estimated)        0.559    29.280    scattererReflector/multiplier1_36/c_tmp1__2_n_101
+    SLICE_X94Y105        LUT2 (Prop_lut2_I0_O)        0.097    29.377 r  scattererReflector/multiplier1_36/i__carry__0_i_3__2/O
+                         net (fo=1, routed)           0.000    29.377    scattererReflector/multiplier1_36/i__carry__0_i_3__2_n_0
+    SLICE_X94Y105        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.402    29.779 r  scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, estimated)        0.000    29.779    scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0_n_0
+    SLICE_X94Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.871 r  scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1/CO[3]
+                         net (fo=1, estimated)        0.000    29.871    scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1_n_0
+    SLICE_X94Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.963 r  scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2/CO[3]
+                         net (fo=1, estimated)        0.000    29.963    scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2_n_0
+    SLICE_X94Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.055 r  scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3/CO[3]
+                         net (fo=1, estimated)        0.000    30.055    scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3_n_0
+    SLICE_X94Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.223    30.278 f  scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__4/O[1]
+                         net (fo=3, estimated)        0.387    30.665    scattererReflector/multiplier1_36/c_tmp10_in__0[37]
+    SLICE_X95Y111        LUT1 (Prop_lut1_I0_O)        0.216    30.881 r  scattererReflector/multiplier1_36/o_uxQuotient[25]_i_7/O
+                         net (fo=1, routed)           0.000    30.881    scattererReflector/multiplier1_36/o_uxQuotient[25]_i_7_n_0
+    SLICE_X95Y111        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    31.276 r  scattererReflector/multiplier1_36/o_uxQuotient_reg[25]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.276    scattererReflector/multiplier1_36/o_uxQuotient_reg[25]_i_3_n_0
+    SLICE_X95Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.365 r  scattererReflector/multiplier1_36/o_uxQuotient_reg[29]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.365    scattererReflector/multiplier1_36/o_uxQuotient_reg[29]_i_3_n_0
+    SLICE_X95Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.454 r  scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9/CO[3]
+                         net (fo=1, estimated)        0.000    31.454    scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9_n_0
+    SLICE_X95Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.543 r  scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.543    scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3_n_0
+    SLICE_X95Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.632 r  scattererReflector/multiplier1_36/o_ux_transmitted_reg[27]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.632    scattererReflector/multiplier1_36/o_ux_transmitted_reg[27]_i_3_n_0
+    SLICE_X95Y116        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.721 r  scattererReflector/multiplier1_36/o_ux_transmitted_reg[30]_i_6/CO[3]
+                         net (fo=1, estimated)        0.000    31.721    scattererReflector/multiplier1_36/o_ux_transmitted_reg[30]_i_6_n_0
+    SLICE_X95Y117        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230    31.951 r  scattererReflector/multiplier1_36/o_ux_transmitted_reg[31]_i_3/O[1]
+                         net (fo=1, estimated)        0.321    32.272    scattererReflector/multiplier1_36/c_tmp0__0[62]
+    SLICE_X92Y117        LUT6 (Prop_lut6_I5_O)        0.225    32.497 r  scattererReflector/multiplier1_36/o_ux_transmitted[30]_i_4/O
+                         net (fo=33, estimated)       0.636    33.133    scattererReflector/multiplier1_36/prod1_36[62]
+    SLICE_X91Y108        LUT6 (Prop_lut6_I5_O)        0.097    33.230 r  scattererReflector/multiplier1_36/o_uxQuotient[30]_i_10/O
+                         net (fo=1, estimated)        0.271    33.501    scattererReflector/multiplier1_36/o_uxQuotient[30]_i_10_n_0
+    SLICE_X91Y108        LUT6 (Prop_lut6_I0_O)        0.097    33.598 r  scattererReflector/multiplier1_36/o_uxQuotient[30]_i_6/O
+                         net (fo=31, estimated)       0.512    34.110    scattererReflector/multiplier1_36/o_uxQuotient[30]_i_6_n_0
+    SLICE_X96Y111        LUT5 (Prop_lut5_I3_O)        0.097    34.207 r  scattererReflector/multiplier1_36/o_uxQuotient[17]_i_1/O
+                         net (fo=1, routed)           0.000    34.207    scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[30]_0[17]
+    SLICE_X96Y111        FDRE                                         r  scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clock (IN)
+                         net (fo=9292, unset)         0.669    10.669    scattererReflector/scatterer_0/pipeReg36/clock
+    SLICE_X96Y111        FDRE                                         r  scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[17]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+    SLICE_X96Y111        FDRE (Setup_fdre_C_D)        0.070    10.703    scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[17]
+  -------------------------------------------------------------------
+                         required time                         10.703    
+                         arrival time                         -34.207    
+  -------------------------------------------------------------------
+                         slack                                -23.504    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.117ns  (arrival time - required time)
+  Source:                 scattererReflector/reflector_0/pipeReg4/o_sa2_2_reg[18]_inv/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            scattererReflector/reflector_0/pipeReg5/o_uz2_2_reg[18]/D
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.213ns  (logic 0.141ns (66.090%)  route 0.072ns (33.910%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=9292, unset)         0.411     0.411    scattererReflector/reflector_0/pipeReg4/clock
+    SLICE_X107Y53        FDSE                                         r  scattererReflector/reflector_0/pipeReg4/o_sa2_2_reg[18]_inv/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y53        FDSE (Prop_fdse_C_Q)         0.141     0.552 r  scattererReflector/reflector_0/pipeReg4/o_sa2_2_reg[18]_inv/Q
+                         net (fo=1, estimated)        0.072     0.624    scattererReflector/reflector_0/pipeReg5/D[15]
+    SLICE_X107Y53        FDSE                                         r  scattererReflector/reflector_0/pipeReg5/o_uz2_2_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=9292, unset)         0.432     0.432    scattererReflector/reflector_0/pipeReg5/clock
+    SLICE_X107Y53        FDSE                                         r  scattererReflector/reflector_0/pipeReg5/o_uz2_2_reg[18]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X107Y53        FDSE (Hold_fdse_C_D)         0.075     0.507    scattererReflector/reflector_0/pipeReg5/o_uz2_2_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -0.507    
+                         arrival time                           0.624    
+  -------------------------------------------------------------------
+                         slack                                  0.117    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     DSP48E1/CLK  n/a            2.863         10.000      7.137      DSP48_X1Y15    absorb/y2_P_reg__0/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         5.000       4.230      SLICE_X90Y100  scattererReflector/divide1_16/div_temp/quo17_q_reg[49]_srl14/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.770         5.000       4.230      SLICE_X90Y100  scattererReflector/divide1_16/div_temp/quo17_q_reg[49]_srl14/CLK
+
+
+

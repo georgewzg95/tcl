@@ -1,0 +1,361 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Thu Jan 13 17:34:04 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/stereovision1/post_synth_power.rpt
+| Design           : sv_chip1_hierarchy_no_mem
+| Device           : xc7z020clg484-3
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 232.913      |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 128.450      |
+| Device Static (mW)       | 104.463      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 97.3         |
+| Junction Temperature (C) | 27.7         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+------------+----------+-----------+-----------------+
+| On-Chip        | Power (mW) | Used     | Available | Utilization (%) |
++----------------+------------+----------+-----------+-----------------+
+| Clocks         |    41.225  |        3 |       --- |             --- |
+| Slice Logic    |    45.407  |    30614 |       --- |             --- |
+|   LUT as Logic |    33.509  |    13621 |     53200 |           25.60 |
+|   CARRY4       |     8.543  |     2014 |     13300 |           15.14 |
+|   Register     |     3.280  |    11581 |    106400 |           10.88 |
+|   F7/F8 Muxes  |     0.076  |       48 |     53200 |            0.09 |
+|   Others       |     0.000  |      345 |       --- |             --- |
+| Signals        |    41.818  |    22454 |       --- |             --- |
+| Static Power   |   104.463  |          |           |                 |
+| Total          |   232.913  |          |           |                 |
++----------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.136 |       0.128 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                          | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+------------+-----------------+
+| Clock | Domain     | Constraint (ns) |
++-------+------------+-----------------+
+| clk   | tm3_clk_v0 |            10.0 |
++-------+------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+------------+
+| Name                          | Power (mW) |
++-------------------------------+------------+
+| sv_chip1_hierarchy_no_mem     |   128.450  |
+|   port_bus_1to0_inst          |     3.609  |
+|   port_bus_2to1_1_inst        |     4.976  |
+|   wrapper_norm_corr_10_inst_n |    12.427  |
+|     corr_5_inst               |    10.971  |
+|       inst_corr_0             |     0.754  |
+|       inst_corr_1             |     0.754  |
+|       inst_corr_10            |     0.754  |
+|       inst_corr_2             |     0.754  |
+|       inst_corr_3             |     0.754  |
+|       inst_corr_4             |     0.754  |
+|       inst_corr_5             |     0.754  |
+|       inst_corr_6             |     0.754  |
+|       inst_corr_7             |     0.754  |
+|       inst_corr_8             |     0.754  |
+|       inst_corr_9             |     0.754  |
+|       inst_sh_reg_0           |     0.113  |
+|       inst_sh_reg_1           |     0.113  |
+|       inst_sh_reg_10          |     0.111  |
+|       inst_sh_reg_2           |     0.113  |
+|       inst_sh_reg_3           |     0.113  |
+|       inst_sh_reg_4           |     0.113  |
+|       inst_sh_reg_5           |     0.113  |
+|       inst_sh_reg_6           |     0.113  |
+|       inst_sh_reg_7           |     0.113  |
+|       inst_sh_reg_8           |     0.113  |
+|       inst_sh_reg_9           |     0.113  |
+|       inst_sh_reg_r_1         |     0.775  |
+|     norm_inst_left            |     0.728  |
+|       my_div_inst_1           |     0.185  |
+|       my_div_inst_2           |     0.185  |
+|     norm_inst_right           |     0.728  |
+|       my_div_inst_1           |     0.185  |
+|       my_div_inst_2           |     0.185  |
+|   wrapper_norm_corr_10_inst_p |    12.555  |
+|     corr_5_inst               |    11.099  |
+|       inst_corr_0             |     0.754  |
+|       inst_corr_1             |     0.754  |
+|       inst_corr_10            |     0.754  |
+|       inst_corr_2             |     0.754  |
+|       inst_corr_3             |     0.754  |
+|       inst_corr_4             |     0.754  |
+|       inst_corr_5             |     0.754  |
+|       inst_corr_6             |     0.754  |
+|       inst_corr_7             |     0.754  |
+|       inst_corr_8             |     0.754  |
+|       inst_corr_9             |     0.754  |
+|       inst_sh_reg_0           |     0.113  |
+|       inst_sh_reg_1           |     0.113  |
+|       inst_sh_reg_10          |     0.111  |
+|       inst_sh_reg_2           |     0.113  |
+|       inst_sh_reg_3           |     0.113  |
+|       inst_sh_reg_4           |     0.113  |
+|       inst_sh_reg_5           |     0.113  |
+|       inst_sh_reg_6           |     0.113  |
+|       inst_sh_reg_7           |     0.113  |
+|       inst_sh_reg_8           |     0.113  |
+|       inst_sh_reg_9           |     0.113  |
+|       inst_sh_reg_r_1         |     0.775  |
+|     norm_inst_left            |     0.728  |
+|       my_div_inst_1           |     0.185  |
+|       my_div_inst_2           |     0.185  |
+|     norm_inst_right           |     0.728  |
+|       my_div_inst_1           |     0.185  |
+|       my_div_inst_2           |     0.185  |
+|   wrapper_norm_corr_20_inst_n |    39.279  |
+|     corr_20_inst              |    37.612  |
+|       inst_corr_0             |     1.232  |
+|       inst_corr_1             |     1.232  |
+|       inst_corr_10            |     1.232  |
+|       inst_corr_11            |     1.232  |
+|       inst_corr_12            |     1.232  |
+|       inst_corr_13            |     1.232  |
+|       inst_corr_14            |     1.232  |
+|       inst_corr_15            |     1.232  |
+|       inst_corr_16            |     1.232  |
+|       inst_corr_17            |     1.232  |
+|       inst_corr_18            |     1.232  |
+|       inst_corr_19            |     1.232  |
+|       inst_corr_2             |     1.232  |
+|       inst_corr_20            |     1.232  |
+|       inst_corr_3             |     1.232  |
+|       inst_corr_4             |     1.232  |
+|       inst_corr_5             |     1.232  |
+|       inst_corr_6             |     1.232  |
+|       inst_corr_7             |     1.232  |
+|       inst_corr_8             |     1.232  |
+|       inst_corr_9             |     1.232  |
+|       inst_sh_reg_0           |     0.253  |
+|       inst_sh_reg_1           |     0.253  |
+|       inst_sh_reg_10          |     0.253  |
+|       inst_sh_reg_11          |     0.253  |
+|       inst_sh_reg_12          |     0.253  |
+|       inst_sh_reg_13          |     0.253  |
+|       inst_sh_reg_14          |     0.253  |
+|       inst_sh_reg_15          |     0.253  |
+|       inst_sh_reg_16          |     0.253  |
+|       inst_sh_reg_17          |     0.253  |
+|       inst_sh_reg_18          |     0.253  |
+|       inst_sh_reg_19          |     0.253  |
+|       inst_sh_reg_2           |     0.253  |
+|       inst_sh_reg_20          |     0.249  |
+|       inst_sh_reg_3           |     0.253  |
+|       inst_sh_reg_4           |     0.253  |
+|       inst_sh_reg_5           |     0.253  |
+|       inst_sh_reg_6           |     0.253  |
+|       inst_sh_reg_7           |     0.253  |
+|       inst_sh_reg_8           |     0.253  |
+|       inst_sh_reg_9           |     0.253  |
+|       inst_sh_reg_r_1         |     4.976  |
+|     norm_inst_left            |     0.826  |
+|       my_div_inst_1           |     0.227  |
+|       my_div_inst_2           |     0.227  |
+|     norm_inst_right           |     0.841  |
+|       my_div_inst_1           |     0.234  |
+|       my_div_inst_2           |     0.234  |
+|   wrapper_norm_corr_20_inst_p |    40.160  |
+|     corr_20_inst              |    38.493  |
+|       inst_corr_0             |     1.232  |
+|       inst_corr_1             |     1.232  |
+|       inst_corr_10            |     1.232  |
+|       inst_corr_11            |     1.232  |
+|       inst_corr_12            |     1.232  |
+|       inst_corr_13            |     1.232  |
+|       inst_corr_14            |     1.232  |
+|       inst_corr_15            |     1.232  |
+|       inst_corr_16            |     1.232  |
+|       inst_corr_17            |     1.232  |
+|       inst_corr_18            |     1.232  |
+|       inst_corr_19            |     1.232  |
+|       inst_corr_2             |     1.232  |
+|       inst_corr_20            |     1.232  |
+|       inst_corr_3             |     1.232  |
+|       inst_corr_4             |     1.232  |
+|       inst_corr_5             |     1.232  |
+|       inst_corr_6             |     1.232  |
+|       inst_corr_7             |     1.232  |
+|       inst_corr_8             |     1.232  |
+|       inst_corr_9             |     1.232  |
+|       inst_sh_reg_0           |     0.253  |
+|       inst_sh_reg_1           |     0.253  |
+|       inst_sh_reg_10          |     0.253  |
+|       inst_sh_reg_11          |     0.253  |
+|       inst_sh_reg_12          |     0.253  |
+|       inst_sh_reg_13          |     0.253  |
+|       inst_sh_reg_14          |     0.253  |
+|       inst_sh_reg_15          |     0.253  |
+|       inst_sh_reg_16          |     0.253  |
+|       inst_sh_reg_17          |     0.253  |
+|       inst_sh_reg_18          |     0.253  |
+|       inst_sh_reg_19          |     0.253  |
+|       inst_sh_reg_2           |     0.253  |
+|       inst_sh_reg_20          |     0.249  |
+|       inst_sh_reg_3           |     0.253  |
+|       inst_sh_reg_4           |     0.253  |
+|       inst_sh_reg_5           |     0.253  |
+|       inst_sh_reg_6           |     0.253  |
+|       inst_sh_reg_7           |     0.253  |
+|       inst_sh_reg_8           |     0.253  |
+|       inst_sh_reg_9           |     0.253  |
+|       inst_sh_reg_r_1         |     4.976  |
+|     norm_inst_left            |     0.826  |
+|       my_div_inst_1           |     0.227  |
+|       my_div_inst_2           |     0.227  |
+|     norm_inst_right           |     0.841  |
+|       my_div_inst_1           |     0.234  |
+|       my_div_inst_2           |     0.234  |
+|   wrapper_norm_corr_5_inst_n  |     5.338  |
+|     corr_5_inst               |     3.953  |
+|       inst_corr_0             |     0.657  |
+|       inst_corr_1             |     0.476  |
+|       inst_corr_2             |     0.476  |
+|       inst_corr_3             |     0.476  |
+|       inst_corr_4             |     0.476  |
+|       inst_corr_5             |     0.557  |
+|       inst_sh_reg_0           |     0.058  |
+|       inst_sh_reg_1           |     0.072  |
+|       inst_sh_reg_2           |     0.074  |
+|       inst_sh_reg_3           |     0.074  |
+|       inst_sh_reg_4           |     0.074  |
+|       inst_sh_reg_5           |     0.074  |
+|       inst_sh_reg_r_1         |     0.058  |
+|     norm_inst_left            |     0.692  |
+|       my_div_inst_1           |     0.169  |
+|       my_div_inst_2           |     0.169  |
+|     norm_inst_right           |     0.692  |
+|       my_div_inst_1           |     0.169  |
+|       my_div_inst_2           |     0.169  |
+|   wrapper_norm_corr_5_inst_p  |     5.359  |
+|     corr_5_inst               |     3.974  |
+|       inst_corr_0             |     0.657  |
+|       inst_corr_1             |     0.476  |
+|       inst_corr_2             |     0.476  |
+|       inst_corr_3             |     0.476  |
+|       inst_corr_4             |     0.476  |
+|       inst_corr_5             |     0.557  |
+|       inst_sh_reg_0           |     0.058  |
+|       inst_sh_reg_1           |     0.072  |
+|       inst_sh_reg_2           |     0.074  |
+|       inst_sh_reg_3           |     0.074  |
+|       inst_sh_reg_4           |     0.074  |
+|       inst_sh_reg_5           |     0.074  |
+|       inst_sh_reg_r_1         |     0.058  |
+|     norm_inst_left            |     0.692  |
+|       my_div_inst_1           |     0.169  |
+|       my_div_inst_2           |     0.169  |
+|     norm_inst_right           |     0.692  |
+|       my_div_inst_1           |     0.169  |
+|       my_div_inst_2           |     0.169  |
++-------------------------------+------------+
+
+

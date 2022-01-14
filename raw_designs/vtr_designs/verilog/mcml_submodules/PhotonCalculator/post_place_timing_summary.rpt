@@ -1,0 +1,572 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Jan 13 17:07:04 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/PhotonCalculator/post_place_timing_summary.rpt
+| Design       : PhotonCalculator
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 2690 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 121 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -23.677   -33215.547                   4748                14485        0.075        0.000                      0                14485        4.230        0.000                       0                 13921  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -23.677   -33215.547                   4748                14485        0.075        0.000                      0                14485        4.230        0.000                       0                 13921  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         4748  Failing Endpoints,  Worst Slack      -23.677ns,  Total Violation   -33215.547ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.075ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.230ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -23.677ns  (required time - arrival time)
+  Source:                 dropSpin/scattererReflector/squareRoot1_6/one__11_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        33.636ns  (logic 18.849ns (56.038%)  route 14.787ns (43.962%))
+  Logic Levels:           99  (CARRY4=73 DSP48E1=2 LUT1=1 LUT2=2 LUT3=5 LUT4=2 LUT5=4 LUT6=10)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=13921, unset)        0.704     0.704    dropSpin/scattererReflector/squareRoot1_6/clock
+    SLICE_X43Y71         FDRE                                         r  dropSpin/scattererReflector/squareRoot1_6/one__11_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y71         FDRE (Prop_fdre_C_Q)         0.341     1.045 r  dropSpin/scattererReflector/squareRoot1_6/one__11_q_reg[0]/Q
+                         net (fo=34, estimated)       0.570     1.615    dropSpin/scattererReflector/squareRoot1_6/one__11_q[0]
+    SLICE_X43Y65         LUT2 (Prop_lut2_I1_O)        0.097     1.712 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_621__0/O
+                         net (fo=1, routed)           0.000     1.712    dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_621__0_n_0
+    SLICE_X43Y65         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395     2.107 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.107    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0_n_0
+    SLICE_X43Y66         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.196 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.196    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0_n_0
+    SLICE_X43Y67         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.285 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.285    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0_n_0
+    SLICE_X43Y68         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.374 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.374    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0_n_0
+    SLICE_X43Y69         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.463 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.463    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0_n_0
+    SLICE_X43Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.552 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.552    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0_n_0
+    SLICE_X43Y71         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.641 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.641    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0_n_0
+    SLICE_X43Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.730 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.730    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0_n_0
+    SLICE_X43Y73         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.819 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0/CO[3]
+                         net (fo=1, estimated)        0.000     2.819    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0_n_0
+    SLICE_X43Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     2.908 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0/CO[3]
+                         net (fo=1, estimated)        0.007     2.915    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0_n_0
+    SLICE_X43Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     3.004 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0/CO[3]
+                         net (fo=1, estimated)        0.000     3.004    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0_n_0
+    SLICE_X43Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     3.093 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0/CO[3]
+                         net (fo=1, estimated)        0.000     3.093    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0_n_0
+    SLICE_X43Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     3.182 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0/CO[3]
+                         net (fo=1, estimated)        0.000     3.182    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0_n_0
+    SLICE_X43Y78         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089     3.271 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0/CO[3]
+                         net (fo=1, estimated)        0.000     3.271    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.181     3.452 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_126__0/O[2]
+                         net (fo=2, estimated)        0.539     3.991    dropSpin/scattererReflector/squareRoot1_6/op__122[58]
+    SLICE_X40Y80         LUT4 (Prop_lut4_I1_O)        0.230     4.221 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_76__0/O
+                         net (fo=1, routed)           0.000     4.221    dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_76__0_n_0
+    SLICE_X40Y80         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.412     4.633 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_23__0/CO[3]
+                         net (fo=415, estimated)      0.570     5.203    dropSpin/scattererReflector/squareRoot1_6/op__121
+    SLICE_X41Y84         LUT3 (Prop_lut3_I2_O)        0.097     5.300 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0/O
+                         net (fo=1, routed)           0.000     5.300    dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0_n_0
+    SLICE_X41Y84         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395     5.695 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0/CO[3]
+                         net (fo=1, estimated)        0.000     5.695    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0_n_0
+    SLICE_X41Y85         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230     5.925 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_8__0/O[1]
+                         net (fo=7, estimated)        0.495     6.420    dropSpin/scattererReflector/squareRoot1_6/res__12[5]
+    SLICE_X42Y93         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.627     7.047 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_600__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.047    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_600__0_n_0
+    SLICE_X42Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.139 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_559__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.139    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_559__0_n_0
+    SLICE_X42Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.231 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_556__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.231    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_556__0_n_0
+    SLICE_X42Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.323 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_483__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.323    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_483__0_n_0
+    SLICE_X42Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.415 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_480__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.415    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_480__0_n_0
+    SLICE_X42Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.507 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_403__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.507    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_403__0_n_0
+    SLICE_X42Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.599 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.599    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0_n_0
+    SLICE_X42Y100        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.691 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.691    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0_n_0
+    SLICE_X42Y101        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.783 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.783    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0_n_0
+    SLICE_X42Y102        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.875 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.875    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0_n_0
+    SLICE_X42Y103        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     7.967 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0/CO[3]
+                         net (fo=1, estimated)        0.000     7.967    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0_n_0
+    SLICE_X42Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.059 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.059    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0_n_0
+    SLICE_X42Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.151 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.151    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0_n_0
+    SLICE_X42Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.243 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_137__0/CO[3]
+                         net (fo=1, estimated)        0.000     8.243    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_137__0_n_0
+    SLICE_X42Y107        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.157     8.400 f  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_136__0/O[0]
+                         net (fo=2, estimated)        0.724     9.124    dropSpin/scattererReflector/squareRoot1_6/op__132[60]
+    SLICE_X44Y96         LUT6 (Prop_lut6_I3_O)        0.209     9.333 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_80__0/O
+                         net (fo=1, estimated)        0.323     9.656    dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_80__0_n_0
+    SLICE_X43Y95         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.295     9.951 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0/CO[3]
+                         net (fo=198, estimated)      1.087    11.038    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0_n_0
+    SLICE_X44Y74         LUT3 (Prop_lut3_I1_O)        0.097    11.135 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0/O
+                         net (fo=1, routed)           0.000    11.135    dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0_n_0
+    SLICE_X44Y74         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    11.530 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.007    11.537    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0_n_0
+    SLICE_X44Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    11.626 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    11.626    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0_n_0
+    SLICE_X44Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    11.715 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    11.715    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0_n_0
+    SLICE_X44Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    11.804 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    11.804    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_5__0_n_0
+    SLICE_X44Y78         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    11.893 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    11.893    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_5__0_n_0
+    SLICE_X44Y79         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    11.982 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    11.982    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_5__0_n_0
+    SLICE_X44Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    12.071 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_5__0/CO[3]
+                         net (fo=1, estimated)        0.000    12.071    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_5__0_n_0
+    SLICE_X44Y81         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230    12.301 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_5__0/O[1]
+                         net (fo=7, estimated)        0.367    12.668    dropSpin/scattererReflector/squareRoot1_6/res__13[29]
+    SLICE_X39Y82         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.637    13.305 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.305    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0_n_0
+    SLICE_X39Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.394 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.394    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0_n_0
+    SLICE_X39Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.483 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.483    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0_n_0
+    SLICE_X39Y85         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.572 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.572    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0_n_0
+    SLICE_X39Y86         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.661 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.661    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0_n_0
+    SLICE_X39Y87         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.750 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.750    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0_n_0
+    SLICE_X39Y88         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.839 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.839    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0_n_0
+    SLICE_X39Y89         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    13.928 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0/CO[3]
+                         net (fo=1, estimated)        0.000    13.928    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0_n_0
+    SLICE_X39Y90         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.159    14.087 f  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_96__0/O[0]
+                         net (fo=2, estimated)        0.446    14.533    dropSpin/scattererReflector/squareRoot1_6/op__142[60]
+    SLICE_X36Y90         LUT6 (Prop_lut6_I3_O)        0.224    14.757 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0/O
+                         net (fo=1, estimated)        0.321    15.078    dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0_n_0
+    SLICE_X38Y90         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.298    15.376 r  dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0/CO[3]
+                         net (fo=331, estimated)      0.433    15.809    dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0_n_0
+    SLICE_X37Y88         LUT3 (Prop_lut3_I1_O)        0.097    15.906 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_7__0/O
+                         net (fo=1, routed)           0.000    15.906    dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_7__0_n_0
+    SLICE_X37Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    16.301 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.301    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_2__0_n_0
+    SLICE_X37Y89         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.390 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.390    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0_n_0
+    SLICE_X37Y90         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.479 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.479    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0_n_0
+    SLICE_X37Y91         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.568 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.568    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0_n_0
+    SLICE_X37Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.657 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.657    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0_n_0
+    SLICE_X37Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.746 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.746    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0_n_0
+    SLICE_X37Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    16.835 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0/CO[3]
+                         net (fo=1, estimated)        0.000    16.835    dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0_n_0
+    SLICE_X37Y95         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.234    17.069 r  dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_2__0/O[3]
+                         net (fo=7, estimated)        0.490    17.559    dropSpin/scattererReflector/squareRoot1_6/res__14[31]
+    SLICE_X37Y86         LUT6 (Prop_lut6_I0_O)        0.234    17.793 r  dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_62/O
+                         net (fo=1, estimated)        0.356    18.149    dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_62_n_0
+    SLICE_X38Y82         LUT5 (Prop_lut5_I4_O)        0.097    18.246 r  dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_40/O
+                         net (fo=1, estimated)        0.199    18.445    dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_40_n_0
+    SLICE_X38Y81         LUT6 (Prop_lut6_I3_O)        0.097    18.542 f  dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_19/O
+                         net (fo=1, estimated)        0.655    19.197    dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_19_n_0
+    SLICE_X37Y64         LUT6 (Prop_lut6_I2_O)        0.097    19.294 f  dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_6/O
+                         net (fo=1, estimated)        0.194    19.488    dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_6_n_0
+    SLICE_X39Y64         LUT6 (Prop_lut6_I5_O)        0.097    19.585 r  dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_1/O
+                         net (fo=51, estimated)       0.461    20.046    dropSpin/scattererReflector/divide1_16/div_temp/res[31]
+    SLICE_X43Y63         LUT3 (Prop_lut3_I1_O)        0.097    20.143 f  dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_239/O
+                         net (fo=1, estimated)        0.705    20.848    dropSpin/scattererReflector/divide1_16/div_temp/quot1_16[56]
+    SLICE_X40Y65         LUT6 (Prop_lut6_I1_O)        0.097    20.945 f  dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_172_rewire/O
+                         net (fo=1, estimated)        0.222    21.167    dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_172_n_0
+    SLICE_X40Y65         LUT6 (Prop_lut6_I5_O)        0.097    21.264 f  dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_75/O
+                         net (fo=33, estimated)       0.381    21.645    dropSpin/scattererReflector/divide1_16/div_temp/scatterer_0/div_overflow__14
+    SLICE_X39Y65         LUT4 (Prop_lut4_I3_O)        0.097    21.742 f  dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_50__5/O
+                         net (fo=4, estimated)        0.607    22.349    dropSpin/photon35/op1_36_2_scatterer[10]
+    SLICE_X42Y67         LUT3 (Prop_lut3_I0_O)        0.097    22.446 r  dropSpin/photon35/c_tmp1_i_112__0/O
+                         net (fo=1, routed)           0.000    22.446    dropSpin/photon35/c_tmp1_i_112__0_n_0
+    SLICE_X42Y67         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.286    22.732 r  dropSpin/photon35/c_tmp1_i_47__1/CO[3]
+                         net (fo=1, estimated)        0.000    22.732    dropSpin/photon35/c_tmp1_i_47__1_n_0
+    SLICE_X42Y68         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.180    22.912 r  dropSpin/photon35/c_tmp1_i_37__3/O[2]
+                         net (fo=1, estimated)        0.325    23.237    dropSpin/photon35/scattererReflector/b_tmp0[15]
+    SLICE_X40Y68         LUT5 (Prop_lut5_I4_O)        0.217    23.454 r  dropSpin/photon35/c_tmp1_i_17__1/O
+                         net (fo=2, estimated)        0.494    23.948    dropSpin/scattererReflector/multiplier1_36/b_tmp[14]
+    DSP48_X2Y26          DSP48E1 (Prop_dsp48e1_B[15]_PCOUT[47])
+                                                      2.838    26.786 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1__1/PCOUT[47]
+                         net (fo=1, estimated)        0.000    26.786    dropSpin/scattererReflector/multiplier1_36/c_tmp1__1_n_106
+    DSP48_X2Y27          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.107    27.893 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1__2/P[0]
+                         net (fo=2, estimated)        0.816    28.709    dropSpin/scattererReflector/multiplier1_36/c_tmp1__2_n_105
+    SLICE_X32Y59         LUT2 (Prop_lut2_I0_O)        0.097    28.806 r  dropSpin/scattererReflector/multiplier1_36/i__carry_i_3__1/O
+                         net (fo=1, routed)           0.000    28.806    dropSpin/scattererReflector/multiplier1_36/i__carry_i_3__1_n_0
+    SLICE_X32Y59         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.402    29.208 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry/CO[3]
+                         net (fo=1, estimated)        0.000    29.208    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry_n_0
+    SLICE_X32Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.300 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, estimated)        0.000    29.300    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0_n_0
+    SLICE_X32Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.392 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1/CO[3]
+                         net (fo=1, estimated)        0.000    29.392    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1_n_0
+    SLICE_X32Y62         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.484 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2/CO[3]
+                         net (fo=1, estimated)        0.000    29.484    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2_n_0
+    SLICE_X32Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.576 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3/CO[3]
+                         net (fo=1, estimated)        0.000    29.576    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3_n_0
+    SLICE_X32Y64         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.668 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, estimated)        0.000    29.668    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__4_n_0
+    SLICE_X32Y65         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    29.760 r  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, estimated)        0.000    29.760    dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__5_n_0
+    SLICE_X32Y66         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.237    29.997 f  dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__6/O[3]
+                         net (fo=3, estimated)        0.589    30.586    dropSpin/scattererReflector/multiplier1_36/c_tmp10_in__0[47]
+    SLICE_X30Y67         LUT1 (Prop_lut1_I0_O)        0.222    30.808 r  dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_13/O
+                         net (fo=1, routed)           0.000    30.808    dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_13_n_0
+    SLICE_X30Y67         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.286    31.094 r  dropSpin/scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9/CO[3]
+                         net (fo=1, estimated)        0.000    31.094    dropSpin/scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9_n_0
+    SLICE_X30Y68         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    31.186 r  dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.186    dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3_n_0
+    SLICE_X30Y69         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.237    31.423 r  dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[27]_i_3/O[3]
+                         net (fo=1, estimated)        0.644    32.067    dropSpin/scattererReflector/multiplier1_36/c_tmp0__0[56]
+    SLICE_X33Y64         LUT6 (Prop_lut6_I5_O)        0.222    32.289 r  dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted[27]_i_2/O
+                         net (fo=3, estimated)        0.968    33.257    dropSpin/scattererReflector/multiplier1_36/prod1_36[56]
+    SLICE_X26Y58         LUT5 (Prop_lut5_I0_O)        0.097    33.354 r  dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_11/O
+                         net (fo=1, estimated)        0.317    33.671    dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_11_n_0
+    SLICE_X28Y58         LUT6 (Prop_lut6_I1_O)        0.097    33.768 r  dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_6/O
+                         net (fo=31, estimated)       0.475    34.243    dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_6_n_0
+    SLICE_X28Y62         LUT5 (Prop_lut5_I3_O)        0.097    34.340 r  dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[13]_i_1/O
+                         net (fo=1, routed)           0.000    34.340    dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[30]_0[13]
+    SLICE_X28Y62         FDRE                                         r  dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clock (IN)
+                         net (fo=13921, unset)        0.669    10.669    dropSpin/scattererReflector/scatterer_0/pipeReg36/clock
+    SLICE_X28Y62         FDRE                                         r  dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[13]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+    SLICE_X28Y62         FDRE (Setup_fdre_C_D)        0.030    10.663    dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[13]
+  -------------------------------------------------------------------
+                         required time                         10.663    
+                         arrival time                         -34.340    
+  -------------------------------------------------------------------
+                         slack                                -23.677    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.075ns  (arrival time - required time)
+  Source:                 boundaryChecker/r_uy__59_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            dropSpin/photon30/o_uy_reg[6]_srl31___dropSpin_photon1_o_sleftz_reg_r/D
+                            (rising edge-triggered cell SRLC32E clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.280ns  (logic 0.141ns (50.383%)  route 0.139ns (49.617%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=13921, unset)        0.411     0.411    boundaryChecker/clock
+    SLICE_X65Y78         FDRE                                         r  boundaryChecker/r_uy__59_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y78         FDRE (Prop_fdre_C_Q)         0.141     0.552 r  boundaryChecker/r_uy__59_reg[6]/Q
+                         net (fo=3, estimated)        0.139     0.691    dropSpin/photon30/uy_boundaryChecker[6]
+    SLICE_X66Y78         SRLC32E                                      r  dropSpin/photon30/o_uy_reg[6]_srl31___dropSpin_photon1_o_sleftz_reg_r/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=13921, unset)        0.432     0.432    dropSpin/photon30/clock
+    SLICE_X66Y78         SRLC32E                                      r  dropSpin/photon30/o_uy_reg[6]_srl31___dropSpin_photon1_o_sleftz_reg_r/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X66Y78         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.183     0.615    dropSpin/photon30/o_uy_reg[6]_srl31___dropSpin_photon1_o_sleftz_reg_r
+  -------------------------------------------------------------------
+                         required time                         -0.615    
+                         arrival time                           0.691    
+  -------------------------------------------------------------------
+                         slack                                  0.075    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     DSP48E1/CLK  n/a            2.863         10.000      7.137      DSP48_X3Y49    dropSpin/absorb/x2_P_reg__2/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.770         5.000       4.230      SLICE_X112Y87  hopper/weight_hop_reg[0]_srl30___dropSpin_photon32_o_sleftz_reg_r/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         5.000       4.230      SLICE_X112Y87  hopper/weight_hop_reg[0]_srl30___dropSpin_photon32_o_sleftz_reg_r/CLK
+
+
+

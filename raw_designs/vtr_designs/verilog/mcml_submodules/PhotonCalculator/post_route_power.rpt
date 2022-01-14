@@ -1,0 +1,250 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Thu Jan 13 17:10:19 2022
+| Host             : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/PhotonCalculator/post_route_power.rpt
+| Design           : PhotonCalculator
+| Device           : xc7z020clg484-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (mW) | 1611.474     |
+| Design Power Budget (mW) | Unspecified* |
+| Power Budget Margin (mW) | NA           |
+| Dynamic (mW)             | 1480.012     |
+| Device Static (mW)       | 131.462      |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 81.4         |
+| Junction Temperature (C) | 43.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+------------+----------+-----------+-----------------+
+| On-Chip                 | Power (mW) | Used     | Available | Utilization (%) |
++-------------------------+------------+----------+-----------+-----------------+
+| Clocks                  |    81.084  |        3 |       --- |             --- |
+| Slice Logic             |   566.764  |    77045 |       --- |             --- |
+|   LUT as Logic          |   513.259  |    42001 |     53200 |           78.95 |
+|   CARRY4                |    38.612  |     7758 |     13300 |           58.33 |
+|   Register              |     9.182  |    12343 |    106400 |           11.60 |
+|   LUT as Shift Register |     5.657  |     1514 |     17400 |            8.70 |
+|   F7/F8 Muxes           |     0.051  |      129 |     53200 |            0.24 |
+|   Others                |     0.000  |      190 |       --- |             --- |
+| Signals                 |   752.236  |    62964 |       --- |             --- |
+| DSPs                    |    79.930  |      105 |       220 |           47.73 |
+| Static Power            |   131.462  |          |           |                 |
+| Total                   |  1611.476  |          |           |                 |
++-------------------------+------------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     1.494 |       1.480 |      0.014 |
+| Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.029 |       0.000 |      0.029 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clock  |            10.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------+------------+
+| Name                   | Power (mW) |
++------------------------+------------+
+| PhotonCalculator       |  1480.014  |
+|   Roulette             |    10.374  |
+|   boundaryChecker      |   320.400  |
+|     divide_u1          |   269.992  |
+|       div_replace      |   269.992  |
+|     mult_u1            |     9.340  |
+|     mult_u2            |     0.519  |
+|     mult_u3            |     7.338  |
+|   dropSpin             |  1091.873  |
+|     absorb             |   283.251  |
+|       photon1          |     0.352  |
+|       photon12         |     0.019  |
+|       photon13         |     0.019  |
+|       photon14         |     0.229  |
+|       photon15         |     0.272  |
+|       photon15q        |     1.405  |
+|       photon16         |     0.342  |
+|       photon16q        |     0.717  |
+|       photon17         |     0.311  |
+|       photon17q        |     2.292  |
+|       photon18q        |     0.166  |
+|       photon2          |     0.512  |
+|       photon3          |     0.576  |
+|       photon35         |     0.430  |
+|       photon36         |     0.683  |
+|       photon37         |     0.999  |
+|       photon4          |     1.024  |
+|       photon5          |     0.006  |
+|       squareRoot       |   251.812  |
+|     photon1            |     2.762  |
+|     photon10           |     0.006  |
+|     photon11           |     0.006  |
+|     photon12           |     0.148  |
+|     photon13           |     0.176  |
+|     photon14           |     0.298  |
+|     photon15           |     0.006  |
+|     photon16           |     0.006  |
+|     photon17           |     0.006  |
+|     photon18           |     0.006  |
+|     photon19           |     0.006  |
+|     photon2            |     0.757  |
+|     photon20           |     0.006  |
+|     photon21           |     0.006  |
+|     photon22           |     0.006  |
+|     photon23           |     0.006  |
+|     photon24           |     0.006  |
+|     photon25           |     0.006  |
+|     photon26           |     0.006  |
+|     photon27           |     0.006  |
+|     photon28           |     0.006  |
+|     photon29           |     0.025  |
+|     photon3            |     3.259  |
+|     photon30           |     0.574  |
+|     photon31           |     1.296  |
+|     photon32           |     3.486  |
+|     photon33           |     3.827  |
+|     photon34           |     1.047  |
+|     photon35           |     8.228  |
+|     photon36           |     5.251  |
+|     photon37           |     2.368  |
+|     photon4            |     0.692  |
+|     photon5            |     0.006  |
+|     photon6            |     0.006  |
+|     photon7            |     0.006  |
+|     photon8            |     0.006  |
+|     photon9            |     0.006  |
+|     scattererReflector |   774.306  |
+|       divide1_16       |   337.346  |
+|       multiplier1_2    |     5.085  |
+|       multiplier1_33   |     2.211  |
+|       multiplier1_34   |     7.021  |
+|       multiplier1_36   |     9.412  |
+|       multiplier1_4    |     8.070  |
+|       multiplier2_33   |     2.221  |
+|       multiplier2_34   |     7.229  |
+|       multiplier2_36   |     9.328  |
+|       multiplier3_33   |     5.534  |
+|       multiplier3_34   |     8.580  |
+|       multiplier3_36   |     8.540  |
+|       multiplier4_34   |     7.830  |
+|       multiplier4_36   |     5.765  |
+|       multiplier5_36   |     6.002  |
+|       multiplier6_36   |     6.459  |
+|       reflector_0      |     9.365  |
+|       scatterer_0      |    31.477  |
+|       squareRoot1_6    |   296.833  |
+|   hopper               |    20.528  |
+|     u1                 |     5.696  |
+|     u2                 |     5.865  |
+|     u3                 |     5.501  |
+|   log_u1               |     4.255  |
+|   mover                |    19.527  |
+|   rand_u1              |     2.765  |
+|   rand_u2              |     2.087  |
+|   rand_u4              |     1.891  |
+|   rand_u5              |     5.033  |
++------------------------+------------+
+
+

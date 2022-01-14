@@ -1,0 +1,684 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Jan 13 16:27:37 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml/post_synth_timing_summary.rpt
+| Design       : mcml
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 35 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 356 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -23.986   -25361.619                   4243                33188        0.193        0.000                      0                33188        3.950        0.000                       0                 17326  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -23.986   -25361.619                   4243                32815        0.193        0.000                      0                32815        3.950        0.000                       0                 17326  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  clk                clk                      8.837        0.000                      0                  373        0.478        0.000                      0                  373  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         4243  Failing Endpoints,  Worst Slack      -23.986ns,  Total Violation   -25361.620ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.193ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.950ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -23.986ns  (required time - arrival time)
+  Source:                 u_calc/dropSpin/scattererReflector/squareRoot1_6/res__11_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        33.984ns  (logic 19.466ns (57.279%)  route 14.518ns (42.721%))
+  Logic Levels:           100  (CARRY4=75 DSP48E1=2 LUT1=1 LUT2=1 LUT3=5 LUT4=2 LUT5=4 LUT6=10)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.704     0.704    u_calc/dropSpin/scattererReflector/squareRoot1_6/clk
+                         FDRE                                         r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__11_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.393     1.097 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__11_q_reg[3]/Q
+                         net (fo=7, unplaced)         0.760     1.857    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__11_q[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.483     2.340 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0/CO[3]
+                         net (fo=1, unplaced)         0.007     2.347    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_595__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.439 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.439    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_594__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.531 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.531    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_543__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.623 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.623    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_542__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.715 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.715    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_466__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.807 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.807    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_465__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.899 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.899    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_386__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.991 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0/CO[3]
+                         net (fo=1, unplaced)         0.000     2.991    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_385__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.083 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.083    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_316__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.175 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.175    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_315__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.267 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.267    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_252__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.359 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.359    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_251__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.451 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.451    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_188__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.543 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.543    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_187__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     3.635 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_126__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.635    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_126__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250     3.885 f  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_125__0/O[3]
+                         net (fo=2, unplaced)         0.468     4.353    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__122[63]
+                         LUT4 (Prop_lut4_I2_O)        0.229     4.582 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_70__0/O
+                         net (fo=1, unplaced)         0.000     4.582    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_70__0_n_0
+                         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.312     4.894 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_23__0/CO[3]
+                         net (fo=415, unplaced)       0.819     5.713    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__121
+                         LUT3 (Prop_lut3_I2_O)        0.097     5.810 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0/O
+                         net (fo=1, unplaced)         0.000     5.810    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_12__0_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379     6.189 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.007     6.196    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.288 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.288    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.380 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.380    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.472 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.472    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.564 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.564    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.656 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.656    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.748 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_8__0/CO[3]
+                         net (fo=1, unplaced)         0.000     6.748    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_8__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234     6.982 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_8__0/O[1]
+                         net (fo=7, unplaced)         0.523     7.505    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__12[29]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618     8.123 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.123    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_400__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.215 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.215    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_330__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.307 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.307    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_327__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.399 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.399    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_265__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.491 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.491    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_262__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.583 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.583    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_201__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.675 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0/CO[3]
+                         net (fo=1, unplaced)         0.000     8.675    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_198__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250     8.925 f  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_137__0/O[3]
+                         net (fo=2, unplaced)         0.468     9.393    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__132[59]
+                         LUT6 (Prop_lut6_I4_O)        0.222     9.615 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_81__0/O
+                         net (fo=1, unplaced)         0.471    10.086    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_81__0_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.386    10.472 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0/CO[3]
+                         net (fo=198, unplaced)       0.801    11.273    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_24__0_n_0
+                         LUT3 (Prop_lut3_I1_O)        0.097    11.370 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0/O
+                         net (fo=1, unplaced)         0.000    11.370    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_10__0_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    11.749 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.007    11.756    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.848 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    11.848    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.940 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    11.940    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.032 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    12.032    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.124 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    12.124    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.216 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    12.216    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.308 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_5__0/CO[3]
+                         net (fo=1, unplaced)         0.000    12.308    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_5__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234    12.542 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_5__0/O[1]
+                         net (fo=7, unplaced)         0.523    13.065    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__13[29]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618    13.683 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0/CO[3]
+                         net (fo=1, unplaced)         0.000    13.683    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_342__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.775 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0/CO[3]
+                         net (fo=1, unplaced)         0.000    13.775    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_278__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.867 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0/CO[3]
+                         net (fo=1, unplaced)         0.000    13.867    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_277__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    13.959 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0/CO[3]
+                         net (fo=1, unplaced)         0.000    13.959    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_214__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.051 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0/CO[3]
+                         net (fo=1, unplaced)         0.000    14.051    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_213__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.143 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0/CO[3]
+                         net (fo=1, unplaced)         0.000    14.143    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_150__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.235 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0/CO[3]
+                         net (fo=1, unplaced)         0.000    14.235    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_149__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    14.327 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0/CO[3]
+                         net (fo=1, unplaced)         0.000    14.327    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_97__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.167    14.494 f  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_96__0/O[0]
+                         net (fo=2, unplaced)         0.318    14.812    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__142[60]
+                         LUT6 (Prop_lut6_I3_O)        0.209    15.021 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0/O
+                         net (fo=1, unplaced)         0.319    15.340    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q[63]_i_27__0_n_0
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.298    15.638 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0/CO[3]
+                         net (fo=331, unplaced)       0.814    16.452    u_calc/dropSpin/scattererReflector/squareRoot1_6/op__15_q_reg[63]_i_5__0_n_0
+                         LUT3 (Prop_lut3_I1_O)        0.097    16.549 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_7__0/O
+                         net (fo=1, unplaced)         0.000    16.549    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q[3]_i_7__0_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    16.928 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.007    16.935    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[3]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.027 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.027    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[7]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.119 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.119    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[11]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.211 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.211    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[15]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.303 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.303    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[19]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.395 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.395    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[23]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.487 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0/CO[3]
+                         net (fo=1, unplaced)         0.000    17.487    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[27]_i_2__0_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250    17.737 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/res__15_q_reg[31]_i_2__0/O[3]
+                         net (fo=7, unplaced)         0.492    18.229    u_calc/dropSpin/scattererReflector/squareRoot1_6/res__14[31]
+                         LUT6 (Prop_lut6_I0_O)        0.222    18.451 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_62/O
+                         net (fo=1, unplaced)         0.301    18.752    u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_62_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.097    18.849 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_40/O
+                         net (fo=1, unplaced)         0.301    19.150    u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_40_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.097    19.247 f  u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_19/O
+                         net (fo=1, unplaced)         0.301    19.548    u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_19_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.097    19.645 f  u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_6/O
+                         net (fo=1, unplaced)         0.301    19.946    u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_6_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.097    20.043 r  u_calc/dropSpin/scattererReflector/squareRoot1_6/denom0[31]_i_1/O
+                         net (fo=51, unplaced)        0.384    20.427    u_calc/dropSpin/scattererReflector/divide1_16/div_temp/res[31]
+                         LUT3 (Prop_lut3_I1_O)        0.102    20.529 f  u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_260/O
+                         net (fo=1, unplaced)         0.511    21.040    u_calc/dropSpin/scattererReflector/divide1_16/div_temp/quot1_16[59]
+                         LUT6 (Prop_lut6_I3_O)        0.097    21.137 f  u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_244/O
+                         net (fo=1, unplaced)         0.301    21.438    u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_244_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.097    21.535 f  u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_173/O
+                         net (fo=1, unplaced)         0.301    21.836    u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_173_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.097    21.933 f  u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_75/O
+                         net (fo=33, unplaced)        0.373    22.306    u_calc/dropSpin/scattererReflector/divide1_16/div_temp/scatterer_0/div_overflow__14
+                         LUT4 (Prop_lut4_I3_O)        0.097    22.403 f  u_calc/dropSpin/scattererReflector/divide1_16/div_temp/c_tmp1_i_70__4/O
+                         net (fo=4, unplaced)         0.325    22.728    u_calc/dropSpin/photon35/op1_36_2_scatterer[1]
+                         LUT3 (Prop_lut3_I0_O)        0.097    22.825 r  u_calc/dropSpin/photon35/c_tmp1_i_148__0/O
+                         net (fo=1, unplaced)         0.000    22.825    u_calc/dropSpin/photon35/c_tmp1_i_148__0_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.402    23.227 r  u_calc/dropSpin/photon35/c_tmp1_i_65/CO[3]
+                         net (fo=1, unplaced)         0.007    23.234    u_calc/dropSpin/photon35/c_tmp1_i_65_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.326 r  u_calc/dropSpin/photon35/c_tmp1_i_58/CO[3]
+                         net (fo=1, unplaced)         0.000    23.326    u_calc/dropSpin/photon35/c_tmp1_i_58_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    23.418 r  u_calc/dropSpin/photon35/c_tmp1_i_47__1/CO[3]
+                         net (fo=1, unplaced)         0.000    23.418    u_calc/dropSpin/photon35/c_tmp1_i_47__1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250    23.668 r  u_calc/dropSpin/photon35/c_tmp1_i_37__3/O[3]
+                         net (fo=1, unplaced)         0.457    24.125    u_calc/dropSpin/photon35/scattererReflector/b_tmp0[16]
+                         LUT5 (Prop_lut5_I0_O)        0.222    24.347 r  u_calc/dropSpin/photon35/c_tmp1_i_16__1/O
+                         net (fo=2, unplaced)         0.571    24.918    u_calc/dropSpin/scattererReflector/multiplier1_36/b_tmp[15]
+                         DSP48E1 (Prop_dsp48e1_B[16]_PCOUT[47])
+                                                      2.838    27.756 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.055    27.811    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1__1_n_106
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.107    28.918 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1__2/P[0]
+                         net (fo=2, unplaced)         0.571    29.489    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1__2_n_105
+                         LUT2 (Prop_lut2_I0_O)        0.097    29.586 r  u_calc/dropSpin/scattererReflector/multiplier1_36/i__carry_i_3__1/O
+                         net (fo=1, unplaced)         0.000    29.586    u_calc/dropSpin/scattererReflector/multiplier1_36/i__carry_i_3__1_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.402    29.988 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry/CO[3]
+                         net (fo=1, unplaced)         0.007    29.995    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.087 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    30.087    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.179 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    30.179    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.271 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000    30.271    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.363 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000    30.363    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.455 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000    30.455    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    30.547 r  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000    30.547    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__5_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.250    30.797 f  u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp1_inferred__0/i__carry__6/O[3]
+                         net (fo=3, unplaced)         0.475    31.272    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp10_in__0[47]
+                         LUT1 (Prop_lut1_I0_O)        0.222    31.494 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_13/O
+                         net (fo=1, unplaced)         0.000    31.494    u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_13_n_0
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.286    31.780 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9/CO[3]
+                         net (fo=1, unplaced)         0.000    31.780    u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient_reg[30]_i_9_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    31.872 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    31.872    u_calc/dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[23]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.234    32.106 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted_reg[27]_i_3/O[1]
+                         net (fo=1, unplaced)         0.404    32.510    u_calc/dropSpin/scattererReflector/multiplier1_36/c_tmp0__0[54]
+                         LUT6 (Prop_lut6_I5_O)        0.216    32.726 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_ux_transmitted[25]_i_2/O
+                         net (fo=3, unplaced)         0.858    33.584    u_calc/dropSpin/scattererReflector/multiplier1_36/prod1_36[54]
+                         LUT6 (Prop_lut6_I1_O)        0.097    33.681 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_2/O
+                         net (fo=31, unplaced)        0.910    34.591    u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[30]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.097    34.688 r  u_calc/dropSpin/scattererReflector/multiplier1_36/o_uxQuotient[0]_i_1/O
+                         net (fo=1, unplaced)         0.000    34.688    u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[30]_0[0]
+                         FDRE                                         r  u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=17326, unset)        0.669    10.669    u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/clk
+                         FDRE                                         r  u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[0]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+                         FDRE (Setup_fdre_C_D)        0.069    10.702    u_calc/dropSpin/scattererReflector/scatterer_0/pipeReg36/o_uxQuotient_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.702    
+                         arrival time                         -34.688    
+  -------------------------------------------------------------------
+                         slack                                -23.986    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.193ns  (arrival time - required time)
+  Source:                 u_calc/boundaryChecker/r_dead__32_reg_srl32____u_calc_boundaryChecker_r_dead__32_reg_s/CLK
+                            (rising edge-triggered cell SRLC32E clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_calc/boundaryChecker/r_dead__57_reg_srl25____u_calc_boundaryChecker_r_dead__57_reg_s/D
+                            (rising edge-triggered cell SRLC32E clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.332ns  (logic 0.332ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.411     0.411    u_calc/boundaryChecker/clk
+                         SRLC32E                                      r  u_calc/boundaryChecker/r_dead__32_reg_srl32____u_calc_boundaryChecker_r_dead__32_reg_s/CLK
+  -------------------------------------------------------------------    -------------------
+                         SRLC32E (Prop_srlc32e_CLK_Q31)
+                                                      0.332     0.743 r  u_calc/boundaryChecker/r_dead__32_reg_srl32____u_calc_boundaryChecker_r_dead__32_reg_s/Q31
+                         net (fo=1, unplaced)         0.000     0.743    u_calc/boundaryChecker/r_dead__32_reg_srl32____u_calc_boundaryChecker_r_dead__32_reg_s_n_1
+                         SRLC32E                                      r  u_calc/boundaryChecker/r_dead__57_reg_srl25____u_calc_boundaryChecker_r_dead__57_reg_s/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.432     0.432    u_calc/boundaryChecker/clk
+                         SRLC32E                                      r  u_calc/boundaryChecker/r_dead__57_reg_srl25____u_calc_boundaryChecker_r_dead__57_reg_s/CLK
+                         clock pessimism              0.000     0.432    
+                         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     0.549    u_calc/boundaryChecker/r_dead__57_reg_srl25____u_calc_boundaryChecker_r_dead__57_reg_s
+  -------------------------------------------------------------------
+                         required time                         -0.549    
+                         arrival time                           0.743    
+  -------------------------------------------------------------------
+                         slack                                  0.193    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     DSP48E1/CLK  n/a            2.863         10.000      7.137                u_calc/dropSpin/absorb/x2_P_reg__0/CLK
+Low Pulse Width   Slow    RAMD32/CLK   n/a            1.050         5.000       3.950                absorptionMatrix/dpram1/ram_reg_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK   n/a            1.050         5.000       3.950                absorptionMatrix/dpram1/ram_reg_0_15_0_5/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.837ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.478ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.837ns  (required time - arrival time)
+  Source:                 reset_calculator_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_calc/rand_u1/r_s1_reg[10]/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.763ns  (logic 0.393ns (51.507%)  route 0.370ns (48.493%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.704     0.704    clk
+                         FDRE                                         r  reset_calculator_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.393     1.097 f  reset_calculator_reg/Q
+                         net (fo=4673, unplaced)      0.370     1.467    u_calc/rand_u1/r_s1_reg[1]_0
+                         FDCE                                         f  u_calc/rand_u1/r_s1_reg[10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=17326, unset)        0.669    10.669    u_calc/rand_u1/clk
+                         FDCE                                         r  u_calc/rand_u1/r_s1_reg[10]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+                         FDCE (Recov_fdce_C_CLR)     -0.329    10.304    u_calc/rand_u1/r_s1_reg[10]
+  -------------------------------------------------------------------
+                         required time                         10.304    
+                         arrival time                          -1.467    
+  -------------------------------------------------------------------
+                         slack                                  8.837    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.478ns  (arrival time - required time)
+  Source:                 reset_calculator_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_calc/rand_u1/r_s1_reg[10]/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.380ns  (logic 0.164ns (43.173%)  route 0.216ns (56.827%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.411     0.411    clk
+                         FDRE                                         r  reset_calculator_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.164     0.575 f  reset_calculator_reg/Q
+                         net (fo=4673, unplaced)      0.216     0.791    u_calc/rand_u1/r_s1_reg[1]_0
+                         FDCE                                         f  u_calc/rand_u1/r_s1_reg[10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17326, unset)        0.432     0.432    u_calc/rand_u1/clk
+                         FDCE                                         r  u_calc/rand_u1/r_s1_reg[10]/C
+                         clock pessimism              0.000     0.432    
+                         FDCE (Remov_fdce_C_CLR)     -0.120     0.312    u_calc/rand_u1/r_s1_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -0.312    
+                         arrival time                           0.791    
+  -------------------------------------------------------------------
+                         slack                                  0.478    
+
+
+
+
+

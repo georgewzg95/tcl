@@ -1,0 +1,561 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Jan 13 17:04:09 2022
+| Host         : koopa.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_timing_summary -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/mcml_submodules/ScattererReflectorWrapper/post_place_timing_summary.rpt
+| Design       : ScattererReflectorWrapper
+| Device       : 7z020-clg484
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 1550 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 196 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -23.217   -16839.260                   2272                 5069        0.105        0.000                      0                 5069        4.230        0.000                       0                  5290  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -23.217   -16839.260                   2272                 5069        0.105        0.000                      0                 5069        4.230        0.000                       0                  5290  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         2272  Failing Endpoints,  Worst Slack      -23.217ns,  Total Violation   -16839.260ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.105ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.230ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -23.217ns  (required time - arrival time)
+  Source:                 squareRoot1_6/res__7_q_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            scatterer_0/pipeReg36/o_uxQuotient_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        33.176ns  (logic 18.697ns (56.357%)  route 14.479ns (43.643%))
+  Logic Levels:           94  (CARRY4=71 DSP48E1=2 LUT1=1 LUT2=2 LUT3=4 LUT4=2 LUT5=1 LUT6=11)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.669ns = ( 10.669 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.704ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=5289, unset)         0.704     0.704    squareRoot1_6/clock
+    SLICE_X91Y121        FDRE                                         r  squareRoot1_6/res__7_q_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y121        FDRE (Prop_fdre_C_Q)         0.341     1.045 r  squareRoot1_6/res__7_q_reg[4]/Q
+                         net (fo=8, estimated)        0.357     1.402    squareRoot1_6/res__7_q[4]
+    SLICE_X90Y121        LUT2 (Prop_lut2_I0_O)        0.097     1.499 r  squareRoot1_6/op__11_q[63]_i_488/O
+                         net (fo=1, routed)           0.000     1.499    squareRoot1_6/op__11_q[63]_i_488_n_0
+    SLICE_X90Y121        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379     1.878 r  squareRoot1_6/op__11_q_reg[63]_i_477/CO[3]
+                         net (fo=1, estimated)        0.000     1.878    squareRoot1_6/op__11_q_reg[63]_i_477_n_0
+    SLICE_X90Y122        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     1.970 r  squareRoot1_6/op__11_q_reg[63]_i_458/CO[3]
+                         net (fo=1, estimated)        0.000     1.970    squareRoot1_6/op__11_q_reg[63]_i_458_n_0
+    SLICE_X90Y123        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.062 r  squareRoot1_6/op__11_q_reg[63]_i_457/CO[3]
+                         net (fo=1, estimated)        0.000     2.062    squareRoot1_6/op__11_q_reg[63]_i_457_n_0
+    SLICE_X90Y124        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.154 r  squareRoot1_6/op__11_q_reg[63]_i_418/CO[3]
+                         net (fo=1, estimated)        0.007     2.161    squareRoot1_6/op__11_q_reg[63]_i_418_n_0
+    SLICE_X90Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.253 r  squareRoot1_6/op__11_q_reg[63]_i_417/CO[3]
+                         net (fo=1, estimated)        0.000     2.253    squareRoot1_6/op__11_q_reg[63]_i_417_n_0
+    SLICE_X90Y126        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.345 r  squareRoot1_6/op__11_q_reg[63]_i_360/CO[3]
+                         net (fo=1, estimated)        0.000     2.345    squareRoot1_6/op__11_q_reg[63]_i_360_n_0
+    SLICE_X90Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.437 r  squareRoot1_6/op__11_q_reg[63]_i_359/CO[3]
+                         net (fo=1, estimated)        0.000     2.437    squareRoot1_6/op__11_q_reg[63]_i_359_n_0
+    SLICE_X90Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.529 r  squareRoot1_6/op__11_q_reg[63]_i_300/CO[3]
+                         net (fo=1, estimated)        0.000     2.529    squareRoot1_6/op__11_q_reg[63]_i_300_n_0
+    SLICE_X90Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.621 r  squareRoot1_6/op__11_q_reg[63]_i_299/CO[3]
+                         net (fo=1, estimated)        0.000     2.621    squareRoot1_6/op__11_q_reg[63]_i_299_n_0
+    SLICE_X90Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.713 r  squareRoot1_6/op__11_q_reg[63]_i_243/CO[3]
+                         net (fo=1, estimated)        0.000     2.713    squareRoot1_6/op__11_q_reg[63]_i_243_n_0
+    SLICE_X90Y131        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.805 r  squareRoot1_6/op__11_q_reg[63]_i_242/CO[3]
+                         net (fo=1, estimated)        0.000     2.805    squareRoot1_6/op__11_q_reg[63]_i_242_n_0
+    SLICE_X90Y132        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.897 r  squareRoot1_6/op__11_q_reg[63]_i_194/CO[3]
+                         net (fo=1, estimated)        0.000     2.897    squareRoot1_6/op__11_q_reg[63]_i_194_n_0
+    SLICE_X90Y133        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     2.989 r  squareRoot1_6/op__11_q_reg[63]_i_193/CO[3]
+                         net (fo=1, estimated)        0.000     2.989    squareRoot1_6/op__11_q_reg[63]_i_193_n_0
+    SLICE_X90Y134        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.157     3.146 r  squareRoot1_6/op__11_q_reg[63]_i_150/O[0]
+                         net (fo=2, estimated)        0.774     3.920    squareRoot1_6/op__82[56]
+    SLICE_X89Y131        LUT4 (Prop_lut4_I2_O)        0.209     4.129 r  squareRoot1_6/op__11_q[63]_i_100/O
+                         net (fo=1, routed)           0.000     4.129    squareRoot1_6/op__11_q[63]_i_100_n_0
+    SLICE_X89Y131        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395     4.524 r  squareRoot1_6/op__11_q_reg[63]_i_41/CO[3]
+                         net (fo=356, estimated)      0.958     5.482    squareRoot1_6/op__11_q_reg[63]_i_41_n_0
+    SLICE_X100Y122       LUT3 (Prop_lut3_I1_O)        0.097     5.579 r  squareRoot1_6/res__11_q[3]_i_12/O
+                         net (fo=1, routed)           0.000     5.579    squareRoot1_6/res__11_q[3]_i_12_n_0
+    SLICE_X100Y122       CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379     5.958 r  squareRoot1_6/res__11_q_reg[3]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     5.958    squareRoot1_6/res__11_q_reg[3]_i_8_n_0
+    SLICE_X100Y123       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.050 r  squareRoot1_6/res__11_q_reg[7]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.050    squareRoot1_6/res__11_q_reg[7]_i_8_n_0
+    SLICE_X100Y124       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.142 r  squareRoot1_6/res__11_q_reg[11]_i_8/CO[3]
+                         net (fo=1, estimated)        0.007     6.149    squareRoot1_6/res__11_q_reg[11]_i_8_n_0
+    SLICE_X100Y125       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.241 r  squareRoot1_6/res__11_q_reg[15]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.241    squareRoot1_6/res__11_q_reg[15]_i_8_n_0
+    SLICE_X100Y126       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.333 r  squareRoot1_6/res__11_q_reg[19]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.333    squareRoot1_6/res__11_q_reg[19]_i_8_n_0
+    SLICE_X100Y127       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.425 r  squareRoot1_6/res__11_q_reg[23]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.425    squareRoot1_6/res__11_q_reg[23]_i_8_n_0
+    SLICE_X100Y128       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.517 r  squareRoot1_6/res__11_q_reg[27]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.517    squareRoot1_6/res__11_q_reg[27]_i_8_n_0
+    SLICE_X100Y129       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.609 r  squareRoot1_6/denom0_reg[29]_i_13/CO[3]
+                         net (fo=1, estimated)        0.000     6.609    squareRoot1_6/denom0_reg[29]_i_13_n_0
+    SLICE_X100Y130       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.701 r  squareRoot1_6/res__11_q_reg[35]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.701    squareRoot1_6/res__11_q_reg[35]_i_8_n_0
+    SLICE_X100Y131       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.793 r  squareRoot1_6/res__11_q_reg[39]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.793    squareRoot1_6/res__11_q_reg[39]_i_8_n_0
+    SLICE_X100Y132       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.885 r  squareRoot1_6/res__11_q_reg[43]_i_8/CO[3]
+                         net (fo=1, estimated)        0.000     6.885    squareRoot1_6/res__11_q_reg[43]_i_8_n_0
+    SLICE_X100Y133       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     6.977 r  squareRoot1_6/res__11_q_reg[47]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000     6.977    squareRoot1_6/res__11_q_reg[47]_i_5_n_0
+    SLICE_X100Y134       CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.223     7.200 r  squareRoot1_6/res__11_q_reg[51]_i_4/O[1]
+                         net (fo=7, estimated)        0.499     7.699    squareRoot1_6/res__11_q_reg[51]_i_4_n_6
+    SLICE_X96Y129        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.618     8.317 r  squareRoot1_6/op__11_q_reg[63]_i_183/CO[3]
+                         net (fo=1, estimated)        0.000     8.317    squareRoot1_6/op__11_q_reg[63]_i_183_n_0
+    SLICE_X96Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092     8.409 r  squareRoot1_6/op__11_q_reg[63]_i_182/CO[3]
+                         net (fo=1, estimated)        0.000     8.409    squareRoot1_6/op__11_q_reg[63]_i_182_n_0
+    SLICE_X96Y131        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.157     8.566 f  squareRoot1_6/op__11_q_reg[63]_i_135/O[0]
+                         net (fo=2, estimated)        0.737     9.303    squareRoot1_6/op__92[56]
+    SLICE_X94Y141        LUT6 (Prop_lut6_I5_O)        0.209     9.512 r  squareRoot1_6/op__11_q[63]_i_81/O
+                         net (fo=1, estimated)        0.423     9.935    squareRoot1_6/op__11_q[63]_i_81_n_0
+    SLICE_X94Y138        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.411    10.346 r  squareRoot1_6/op__11_q_reg[63]_i_39/CO[3]
+                         net (fo=127, estimated)      0.837    11.183    squareRoot1_6/op__11_q_reg[63]_i_39_n_0
+    SLICE_X98Y122        LUT3 (Prop_lut3_I1_O)        0.097    11.280 r  squareRoot1_6/res__11_q[3]_i_10/O
+                         net (fo=1, routed)           0.000    11.280    squareRoot1_6/res__11_q[3]_i_10_n_0
+    SLICE_X98Y122        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    11.659 r  squareRoot1_6/res__11_q_reg[3]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    11.659    squareRoot1_6/res__11_q_reg[3]_i_5_n_0
+    SLICE_X98Y123        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.751 r  squareRoot1_6/res__11_q_reg[7]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    11.751    squareRoot1_6/res__11_q_reg[7]_i_5_n_0
+    SLICE_X98Y124        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.843 r  squareRoot1_6/res__11_q_reg[11]_i_5/CO[3]
+                         net (fo=1, estimated)        0.007    11.850    squareRoot1_6/res__11_q_reg[11]_i_5_n_0
+    SLICE_X98Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    11.942 r  squareRoot1_6/res__11_q_reg[15]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    11.942    squareRoot1_6/res__11_q_reg[15]_i_5_n_0
+    SLICE_X98Y126        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.034 r  squareRoot1_6/res__11_q_reg[19]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.034    squareRoot1_6/res__11_q_reg[19]_i_5_n_0
+    SLICE_X98Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.126 r  squareRoot1_6/res__11_q_reg[23]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.126    squareRoot1_6/res__11_q_reg[23]_i_5_n_0
+    SLICE_X98Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.218 r  squareRoot1_6/res__11_q_reg[27]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.218    squareRoot1_6/res__11_q_reg[27]_i_5_n_0
+    SLICE_X98Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.310 r  squareRoot1_6/res__11_q_reg[31]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.310    squareRoot1_6/res__11_q_reg[31]_i_5_n_0
+    SLICE_X98Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.402 r  squareRoot1_6/res__11_q_reg[35]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.402    squareRoot1_6/res__11_q_reg[35]_i_5_n_0
+    SLICE_X98Y131        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.494 r  squareRoot1_6/res__11_q_reg[39]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.494    squareRoot1_6/res__11_q_reg[39]_i_5_n_0
+    SLICE_X98Y132        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.586 r  squareRoot1_6/res__11_q_reg[43]_i_5/CO[3]
+                         net (fo=1, estimated)        0.000    12.586    squareRoot1_6/res__11_q_reg[43]_i_5_n_0
+    SLICE_X98Y133        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    12.678 r  squareRoot1_6/res__11_q_reg[47]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    12.678    squareRoot1_6/res__11_q_reg[47]_i_3_n_0
+    SLICE_X98Y134        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.223    12.901 r  squareRoot1_6/res__11_q_reg[51]_i_3/O[1]
+                         net (fo=7, estimated)        0.544    13.445    squareRoot1_6/res__11_q_reg[51]_i_3_n_6
+    SLICE_X93Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.628    14.073 r  squareRoot1_6/op__11_q_reg[63]_i_122/CO[3]
+                         net (fo=1, estimated)        0.000    14.073    squareRoot1_6/op__11_q_reg[63]_i_122_n_0
+    SLICE_X93Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    14.162 r  squareRoot1_6/op__11_q_reg[63]_i_121/CO[3]
+                         net (fo=1, estimated)        0.000    14.162    squareRoot1_6/op__11_q_reg[63]_i_121_n_0
+    SLICE_X93Y137        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.181    14.343 r  squareRoot1_6/op__11_q_reg[63]_i_69/O[2]
+                         net (fo=2, estimated)        0.753    15.096    squareRoot1_6/op__102[58]
+    SLICE_X88Y133        LUT4 (Prop_lut4_I3_O)        0.230    15.326 r  squareRoot1_6/op__11_q[63]_i_36/O
+                         net (fo=1, routed)           0.000    15.326    squareRoot1_6/op__11_q[63]_i_36_n_0
+    SLICE_X88Y133        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.412    15.738 r  squareRoot1_6/op__11_q_reg[63]_i_5/CO[3]
+                         net (fo=317, estimated)      0.707    16.445    squareRoot1_6/op__11_q_reg[63]_i_5_n_0
+    SLICE_X92Y126        LUT3 (Prop_lut3_I1_O)        0.097    16.542 r  squareRoot1_6/res__11_q[3]_i_7/O
+                         net (fo=1, routed)           0.000    16.542    squareRoot1_6/res__11_q[3]_i_7_n_0
+    SLICE_X92Y126        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.379    16.921 r  squareRoot1_6/res__11_q_reg[3]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    16.921    squareRoot1_6/res__11_q_reg[3]_i_2_n_0
+    SLICE_X92Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.013 r  squareRoot1_6/res__11_q_reg[7]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.013    squareRoot1_6/res__11_q_reg[7]_i_2_n_0
+    SLICE_X92Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.105 r  squareRoot1_6/res__11_q_reg[11]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.105    squareRoot1_6/res__11_q_reg[11]_i_2_n_0
+    SLICE_X92Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.197 r  squareRoot1_6/res__11_q_reg[15]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.197    squareRoot1_6/res__11_q_reg[15]_i_2_n_0
+    SLICE_X92Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.289 r  squareRoot1_6/res__11_q_reg[19]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.289    squareRoot1_6/res__11_q_reg[19]_i_2_n_0
+    SLICE_X92Y131        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.381 r  squareRoot1_6/res__11_q_reg[23]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.381    squareRoot1_6/res__11_q_reg[23]_i_2_n_0
+    SLICE_X92Y132        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.092    17.473 r  squareRoot1_6/res__11_q_reg[27]_i_2/CO[3]
+                         net (fo=1, estimated)        0.000    17.473    squareRoot1_6/res__11_q_reg[27]_i_2_n_0
+    SLICE_X92Y133        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.237    17.710 r  squareRoot1_6/res__11_q_reg[31]_i_2/O[3]
+                         net (fo=7, estimated)        0.651    18.361    squareRoot1_6/res__10[31]
+    SLICE_X82Y130        LUT6 (Prop_lut6_I1_O)        0.222    18.583 f  squareRoot1_6/denom0[31]_i_19/O
+                         net (fo=1, estimated)        0.761    19.344    squareRoot1_6/denom0[31]_i_19_n_0
+    SLICE_X59Y121        LUT6 (Prop_lut6_I2_O)        0.097    19.441 f  squareRoot1_6/denom0[31]_i_6/O
+                         net (fo=1, estimated)        0.196    19.637    squareRoot1_6/denom0[31]_i_6_n_0
+    SLICE_X56Y121        LUT6 (Prop_lut6_I5_O)        0.097    19.734 r  squareRoot1_6/denom0[31]_i_1/O
+                         net (fo=51, estimated)       0.593    20.327    divide1_16/div_temp/res[31]
+    SLICE_X49Y119        LUT3 (Prop_lut3_I1_O)        0.097    20.424 f  divide1_16/div_temp/c_tmp1_i_259/O
+                         net (fo=1, estimated)        0.695    21.119    divide1_16/div_temp/quot1_16[59]
+    SLICE_X47Y120        LUT6 (Prop_lut6_I0_O)        0.097    21.216 f  divide1_16/div_temp/c_tmp1_i_172_rewire/O
+                         net (fo=1, estimated)        0.098    21.314    divide1_16/div_temp/c_tmp1_i_172_n_0
+    SLICE_X47Y120        LUT6 (Prop_lut6_I5_O)        0.097    21.411 f  divide1_16/div_temp/c_tmp1_i_75/O
+                         net (fo=36, estimated)       0.375    21.786    divide1_16/div_temp/scatterer_0/div_overflow__14
+    SLICE_X43Y120        LUT6 (Prop_lut6_I3_O)        0.097    21.883 r  divide1_16/div_temp/c_tmp1_i_145__0/O
+                         net (fo=2, estimated)        0.347    22.230    divide1_16/div_temp/c_tmp1_i_145__0_n_0
+    SLICE_X44Y120        CARRY4 (Prop_carry4_CYINIT_O[1])
+                                                      0.421    22.651 r  divide1_16/div_temp/c_tmp1_i_65/O[1]
+                         net (fo=1, estimated)        0.824    23.475    divide1_16/div_temp/b_tmp0[2]
+    SLICE_X38Y119        LUT6 (Prop_lut6_I1_O)        0.225    23.700 r  divide1_16/div_temp/c_tmp1_i_30__0_rewire/O
+                         net (fo=2, estimated)        0.422    24.122    multiplier1_36/b_tmp[1]
+    DSP48_X2Y48          DSP48E1 (Prop_dsp48e1_B[2]_PCOUT[47])
+                                                      2.838    26.960 r  multiplier1_36/c_tmp1__1/PCOUT[47]
+                         net (fo=1, estimated)        0.000    26.960    multiplier1_36/c_tmp1__1_n_106
+    DSP48_X2Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.107    28.067 r  multiplier1_36/c_tmp1__2/P[0]
+                         net (fo=2, estimated)        0.633    28.700    multiplier1_36/c_tmp1__2_n_105
+    SLICE_X33Y119        LUT2 (Prop_lut2_I0_O)        0.097    28.797 r  multiplier1_36/i__carry_i_3__2/O
+                         net (fo=1, routed)           0.000    28.797    multiplier1_36/i__carry_i_3__2_n_0
+    SLICE_X33Y119        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.412    29.209 r  multiplier1_36/c_tmp1_inferred__0/i__carry/CO[3]
+                         net (fo=1, estimated)        0.000    29.209    multiplier1_36/c_tmp1_inferred__0/i__carry_n_0
+    SLICE_X33Y120        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.298 r  multiplier1_36/c_tmp1_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, estimated)        0.000    29.298    multiplier1_36/c_tmp1_inferred__0/i__carry__0_n_0
+    SLICE_X33Y121        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.387 r  multiplier1_36/c_tmp1_inferred__0/i__carry__1/CO[3]
+                         net (fo=1, estimated)        0.000    29.387    multiplier1_36/c_tmp1_inferred__0/i__carry__1_n_0
+    SLICE_X33Y122        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.476 r  multiplier1_36/c_tmp1_inferred__0/i__carry__2/CO[3]
+                         net (fo=1, estimated)        0.000    29.476    multiplier1_36/c_tmp1_inferred__0/i__carry__2_n_0
+    SLICE_X33Y123        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.565 r  multiplier1_36/c_tmp1_inferred__0/i__carry__3/CO[3]
+                         net (fo=1, estimated)        0.000    29.565    multiplier1_36/c_tmp1_inferred__0/i__carry__3_n_0
+    SLICE_X33Y124        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.654 r  multiplier1_36/c_tmp1_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, estimated)        0.007    29.661    multiplier1_36/c_tmp1_inferred__0/i__carry__4_n_0
+    SLICE_X33Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    29.750 r  multiplier1_36/c_tmp1_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, estimated)        0.000    29.750    multiplier1_36/c_tmp1_inferred__0/i__carry__5_n_0
+    SLICE_X33Y126        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230    29.980 f  multiplier1_36/c_tmp1_inferred__0/i__carry__6/O[1]
+                         net (fo=3, estimated)        0.442    30.422    multiplier1_36/c_tmp10_in[45]
+    SLICE_X37Y127        LUT1 (Prop_lut1_I0_O)        0.225    30.647 r  multiplier1_36/o_uxQuotient[30]_i_15/O
+                         net (fo=1, routed)           0.000    30.647    multiplier1_36/o_uxQuotient[30]_i_15_n_0
+    SLICE_X37Y127        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.395    31.042 r  multiplier1_36/o_uxQuotient_reg[30]_i_9/CO[3]
+                         net (fo=1, estimated)        0.000    31.042    multiplier1_36/o_uxQuotient_reg[30]_i_9_n_0
+    SLICE_X37Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.131 r  multiplier1_36/o_ux_transmitted_reg[23]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.131    multiplier1_36/o_ux_transmitted_reg[23]_i_3_n_0
+    SLICE_X37Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.220 r  multiplier1_36/o_ux_transmitted_reg[27]_i_3/CO[3]
+                         net (fo=1, estimated)        0.000    31.220    multiplier1_36/o_ux_transmitted_reg[27]_i_3_n_0
+    SLICE_X37Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.089    31.309 r  multiplier1_36/o_ux_transmitted_reg[30]_i_6/CO[3]
+                         net (fo=1, estimated)        0.000    31.309    multiplier1_36/o_ux_transmitted_reg[30]_i_6_n_0
+    SLICE_X37Y131        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.230    31.539 r  multiplier1_36/o_uxQuotient_reg[31]_i_3/O[1]
+                         net (fo=1, estimated)        0.281    31.820    multiplier1_36/c_tmp0[62]
+    SLICE_X39Y130        LUT6 (Prop_lut6_I5_O)        0.225    32.045 r  multiplier1_36/o_ux_transmitted[30]_i_4/O
+                         net (fo=33, estimated)       0.663    32.708    multiplier1_36/prod1_36[62]
+    SLICE_X43Y127        LUT6 (Prop_lut6_I5_O)        0.097    32.805 r  multiplier1_36/o_uxQuotient[30]_i_10/O
+                         net (fo=1, estimated)        0.382    33.187    multiplier1_36/o_uxQuotient[30]_i_10_n_0
+    SLICE_X47Y127        LUT6 (Prop_lut6_I0_O)        0.097    33.284 r  multiplier1_36/o_uxQuotient[30]_i_6/O
+                         net (fo=31, estimated)       0.499    33.783    multiplier1_36/o_uxQuotient[30]_i_6_n_0
+    SLICE_X47Y124        LUT5 (Prop_lut5_I3_O)        0.097    33.880 r  multiplier1_36/o_uxQuotient[7]_i_1/O
+                         net (fo=1, routed)           0.000    33.880    scatterer_0/pipeReg36/o_uxQuotient_reg[30]_0[7]
+    SLICE_X47Y124        FDRE                                         r  scatterer_0/pipeReg36/o_uxQuotient_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clock (IN)
+                         net (fo=5289, unset)         0.669    10.669    scatterer_0/pipeReg36/clock
+    SLICE_X47Y124        FDRE                                         r  scatterer_0/pipeReg36/o_uxQuotient_reg[7]/C
+                         clock pessimism              0.000    10.669    
+                         clock uncertainty           -0.035    10.633    
+    SLICE_X47Y124        FDRE (Setup_fdre_C_D)        0.030    10.663    scatterer_0/pipeReg36/o_uxQuotient_reg[7]
+  -------------------------------------------------------------------
+                         required time                         10.663    
+                         arrival time                         -33.880    
+  -------------------------------------------------------------------
+                         slack                                -23.217    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.105ns  (arrival time - required time)
+  Source:                 reflector_0/pipeReg2/o_uz_2_reg[58]/C
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            reflector_0/pipeReg3/o_oneMinusUz_2_reg[58]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.248ns  (logic 0.186ns (75.048%)  route 0.062ns (24.952%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.411ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=5289, unset)         0.411     0.411    reflector_0/pipeReg2/clock
+    SLICE_X97Y95         FDSE                                         r  reflector_0/pipeReg2/o_uz_2_reg[58]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X97Y95         FDSE (Prop_fdse_C_Q)         0.141     0.552 f  reflector_0/pipeReg2/o_uz_2_reg[58]/Q
+                         net (fo=1, estimated)        0.062     0.614    reflector_0/oneMinusUz2_sub/Q[27]
+    SLICE_X96Y95         LUT1 (Prop_lut1_I0_O)        0.045     0.659 r  reflector_0/oneMinusUz2_sub/o_oneMinusUz_2[58]_i_1/O
+                         net (fo=1, routed)           0.000     0.659    reflector_0/pipeReg3/D[27]
+    SLICE_X96Y95         FDRE                                         r  reflector_0/pipeReg3/o_oneMinusUz_2_reg[58]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clock (IN)
+                         net (fo=5289, unset)         0.432     0.432    reflector_0/pipeReg3/clock
+    SLICE_X96Y95         FDRE                                         r  reflector_0/pipeReg3/o_oneMinusUz_2_reg[58]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X96Y95         FDRE (Hold_fdre_C_D)         0.121     0.553    reflector_0/pipeReg3/o_oneMinusUz_2_reg[58]
+  -------------------------------------------------------------------
+                         required time                         -0.553    
+                         arrival time                           0.659    
+  -------------------------------------------------------------------
+                         slack                                  0.105    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X96Y125  squareRoot1_6/res__7_q_reg[1]_replica_1/C
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.770         5.000       4.230      SLICE_X50Y115  reflector_0/pipeReg33/o_uz2_reg[31]_srl18___scatterer_0_pipeReg21_o_uxUz_reg_r/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         5.000       4.230      SLICE_X50Y115  reflector_0/pipeReg33/o_uz2_reg[31]_srl18___scatterer_0_pipeReg21_o_uxUz_reg_r/CLK
+
+
+

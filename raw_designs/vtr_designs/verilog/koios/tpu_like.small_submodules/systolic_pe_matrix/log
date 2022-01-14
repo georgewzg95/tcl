@@ -1,0 +1,1737 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/run_tcl.tcl
+# set outputDir /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix
+# file mkdir $outputDir
+# read_verilog -quiet /misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v
+# synth_design -part xc7z020clg484-3 -top systolic_pe_matrix -mode out_of_context
+Command: synth_design -part xc7z020clg484-3 -top systolic_pe_matrix -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 290514 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1501.531 ; gain = 27.895 ; free physical = 247949 ; free virtual = 316181
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'systolic_pe_matrix' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:49]
+INFO: [Synth 8-6157] synthesizing module 'processing_element' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:944]
+INFO: [Synth 8-6157] synthesizing module 'seq_mac' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:984]
+INFO: [Synth 8-6157] synthesizing module 'qmult' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:1045]
+INFO: [Synth 8-6155] done synthesizing module 'qmult' (1#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:1045]
+INFO: [Synth 8-6157] synthesizing module 'qadd' [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:1037]
+INFO: [Synth 8-6155] done synthesizing module 'qadd' (2#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:1037]
+INFO: [Synth 8-6155] done synthesizing module 'seq_mac' (3#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:984]
+INFO: [Synth 8-6155] done synthesizing module 'processing_element' (4#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:944]
+INFO: [Synth 8-6155] done synthesizing module 'systolic_pe_matrix' (5#1) [/misc/scratch/zwei1/raw_data/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix.v:49]
+WARNING: [Synth 8-3331] design seq_mac has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1547.297 ; gain = 73.660 ; free physical = 247936 ; free virtual = 316173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1547.297 ; gain = 73.660 ; free physical = 247865 ; free virtual = 316102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1555.293 ; gain = 81.656 ; free physical = 247864 ; free virtual = 316100
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1571.301 ; gain = 97.664 ; free physical = 247635 ; free virtual = 315875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 256   
++---Registers : 
+	               16 Bit    Registers := 512   
+	                8 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 768   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module qadd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module seq_mac 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module processing_element 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.855 ; gain = 337.219 ; free physical = 245308 ; free virtual = 313560
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1810.859 ; gain = 337.223 ; free physical = 245147 ; free virtual = 313399
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 1842.434 ; gain = 368.797 ; free physical = 244787 ; free virtual = 313040
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244816 ; free virtual = 313069
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244819 ; free virtual = 313072
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244786 ; free virtual = 313039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244780 ; free virtual = 313033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244748 ; free virtual = 313001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244750 ; free virtual = 313003
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |  3584|
+|2     |LUT2   | 10753|
+|3     |LUT3   |   768|
+|4     |LUT4   |  5376|
+|5     |LUT5   |  2560|
+|6     |LUT6   |  9728|
+|7     |FDRE   | 16384|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+-----------------------+------+
+|      |Instance      |Module                 |Cells |
++------+--------------+-----------------------+------+
+|1     |top           |                       | 49153|
+|2     |  pe0_0       |processing_element     |   192|
+|3     |    u_mac     |seq_mac_763            |   176|
+|4     |      mult_u1 |qmult_764              |    70|
+|5     |  pe0_1       |processing_element_0   |   192|
+|6     |    u_mac     |seq_mac_761            |   176|
+|7     |      mult_u1 |qmult_762              |    70|
+|8     |  pe0_10      |processing_element_1   |   192|
+|9     |    u_mac     |seq_mac_759            |   176|
+|10    |      mult_u1 |qmult_760              |    70|
+|11    |  pe0_11      |processing_element_2   |   192|
+|12    |    u_mac     |seq_mac_757            |   176|
+|13    |      mult_u1 |qmult_758              |    70|
+|14    |  pe0_12      |processing_element_3   |   192|
+|15    |    u_mac     |seq_mac_755            |   176|
+|16    |      mult_u1 |qmult_756              |    70|
+|17    |  pe0_13      |processing_element_4   |   192|
+|18    |    u_mac     |seq_mac_753            |   176|
+|19    |      mult_u1 |qmult_754              |    70|
+|20    |  pe0_14      |processing_element_5   |   192|
+|21    |    u_mac     |seq_mac_751            |   176|
+|22    |      mult_u1 |qmult_752              |    70|
+|23    |  pe0_15      |processing_element_6   |   192|
+|24    |    u_mac     |seq_mac_749            |   176|
+|25    |      mult_u1 |qmult_750              |    70|
+|26    |  pe0_2       |processing_element_7   |   192|
+|27    |    u_mac     |seq_mac_747            |   176|
+|28    |      mult_u1 |qmult_748              |    70|
+|29    |  pe0_3       |processing_element_8   |   192|
+|30    |    u_mac     |seq_mac_745            |   176|
+|31    |      mult_u1 |qmult_746              |    70|
+|32    |  pe0_4       |processing_element_9   |   192|
+|33    |    u_mac     |seq_mac_743            |   176|
+|34    |      mult_u1 |qmult_744              |    70|
+|35    |  pe0_5       |processing_element_10  |   192|
+|36    |    u_mac     |seq_mac_741            |   176|
+|37    |      mult_u1 |qmult_742              |    70|
+|38    |  pe0_6       |processing_element_11  |   192|
+|39    |    u_mac     |seq_mac_739            |   176|
+|40    |      mult_u1 |qmult_740              |    70|
+|41    |  pe0_7       |processing_element_12  |   192|
+|42    |    u_mac     |seq_mac_737            |   176|
+|43    |      mult_u1 |qmult_738              |    70|
+|44    |  pe0_8       |processing_element_13  |   192|
+|45    |    u_mac     |seq_mac_735            |   176|
+|46    |      mult_u1 |qmult_736              |    70|
+|47    |  pe0_9       |processing_element_14  |   192|
+|48    |    u_mac     |seq_mac_733            |   176|
+|49    |      mult_u1 |qmult_734              |    70|
+|50    |  pe10_0      |processing_element_15  |   192|
+|51    |    u_mac     |seq_mac_731            |   176|
+|52    |      mult_u1 |qmult_732              |    70|
+|53    |  pe10_1      |processing_element_16  |   192|
+|54    |    u_mac     |seq_mac_729            |   176|
+|55    |      mult_u1 |qmult_730              |    70|
+|56    |  pe10_10     |processing_element_17  |   192|
+|57    |    u_mac     |seq_mac_727            |   176|
+|58    |      mult_u1 |qmult_728              |    70|
+|59    |  pe10_11     |processing_element_18  |   192|
+|60    |    u_mac     |seq_mac_725            |   176|
+|61    |      mult_u1 |qmult_726              |    70|
+|62    |  pe10_12     |processing_element_19  |   192|
+|63    |    u_mac     |seq_mac_723            |   176|
+|64    |      mult_u1 |qmult_724              |    70|
+|65    |  pe10_13     |processing_element_20  |   192|
+|66    |    u_mac     |seq_mac_721            |   176|
+|67    |      mult_u1 |qmult_722              |    70|
+|68    |  pe10_14     |processing_element_21  |   192|
+|69    |    u_mac     |seq_mac_719            |   176|
+|70    |      mult_u1 |qmult_720              |    70|
+|71    |  pe10_15     |processing_element_22  |   192|
+|72    |    u_mac     |seq_mac_717            |   176|
+|73    |      mult_u1 |qmult_718              |    70|
+|74    |  pe10_2      |processing_element_23  |   192|
+|75    |    u_mac     |seq_mac_715            |   176|
+|76    |      mult_u1 |qmult_716              |    70|
+|77    |  pe10_3      |processing_element_24  |   192|
+|78    |    u_mac     |seq_mac_713            |   176|
+|79    |      mult_u1 |qmult_714              |    70|
+|80    |  pe10_4      |processing_element_25  |   192|
+|81    |    u_mac     |seq_mac_711            |   176|
+|82    |      mult_u1 |qmult_712              |    70|
+|83    |  pe10_5      |processing_element_26  |   192|
+|84    |    u_mac     |seq_mac_709            |   176|
+|85    |      mult_u1 |qmult_710              |    70|
+|86    |  pe10_6      |processing_element_27  |   192|
+|87    |    u_mac     |seq_mac_707            |   176|
+|88    |      mult_u1 |qmult_708              |    70|
+|89    |  pe10_7      |processing_element_28  |   192|
+|90    |    u_mac     |seq_mac_705            |   176|
+|91    |      mult_u1 |qmult_706              |    70|
+|92    |  pe10_8      |processing_element_29  |   192|
+|93    |    u_mac     |seq_mac_703            |   176|
+|94    |      mult_u1 |qmult_704              |    70|
+|95    |  pe10_9      |processing_element_30  |   192|
+|96    |    u_mac     |seq_mac_701            |   176|
+|97    |      mult_u1 |qmult_702              |    70|
+|98    |  pe11_0      |processing_element_31  |   192|
+|99    |    u_mac     |seq_mac_699            |   176|
+|100   |      mult_u1 |qmult_700              |    70|
+|101   |  pe11_1      |processing_element_32  |   192|
+|102   |    u_mac     |seq_mac_697            |   176|
+|103   |      mult_u1 |qmult_698              |    70|
+|104   |  pe11_10     |processing_element_33  |   192|
+|105   |    u_mac     |seq_mac_695            |   176|
+|106   |      mult_u1 |qmult_696              |    70|
+|107   |  pe11_11     |processing_element_34  |   192|
+|108   |    u_mac     |seq_mac_693            |   176|
+|109   |      mult_u1 |qmult_694              |    70|
+|110   |  pe11_12     |processing_element_35  |   192|
+|111   |    u_mac     |seq_mac_691            |   176|
+|112   |      mult_u1 |qmult_692              |    70|
+|113   |  pe11_13     |processing_element_36  |   192|
+|114   |    u_mac     |seq_mac_689            |   176|
+|115   |      mult_u1 |qmult_690              |    70|
+|116   |  pe11_14     |processing_element_37  |   192|
+|117   |    u_mac     |seq_mac_687            |   176|
+|118   |      mult_u1 |qmult_688              |    70|
+|119   |  pe11_15     |processing_element_38  |   192|
+|120   |    u_mac     |seq_mac_685            |   176|
+|121   |      mult_u1 |qmult_686              |    70|
+|122   |  pe11_2      |processing_element_39  |   192|
+|123   |    u_mac     |seq_mac_683            |   176|
+|124   |      mult_u1 |qmult_684              |    70|
+|125   |  pe11_3      |processing_element_40  |   192|
+|126   |    u_mac     |seq_mac_681            |   176|
+|127   |      mult_u1 |qmult_682              |    70|
+|128   |  pe11_4      |processing_element_41  |   192|
+|129   |    u_mac     |seq_mac_679            |   176|
+|130   |      mult_u1 |qmult_680              |    70|
+|131   |  pe11_5      |processing_element_42  |   192|
+|132   |    u_mac     |seq_mac_677            |   176|
+|133   |      mult_u1 |qmult_678              |    70|
+|134   |  pe11_6      |processing_element_43  |   192|
+|135   |    u_mac     |seq_mac_675            |   176|
+|136   |      mult_u1 |qmult_676              |    70|
+|137   |  pe11_7      |processing_element_44  |   192|
+|138   |    u_mac     |seq_mac_673            |   176|
+|139   |      mult_u1 |qmult_674              |    70|
+|140   |  pe11_8      |processing_element_45  |   192|
+|141   |    u_mac     |seq_mac_671            |   176|
+|142   |      mult_u1 |qmult_672              |    70|
+|143   |  pe11_9      |processing_element_46  |   192|
+|144   |    u_mac     |seq_mac_669            |   176|
+|145   |      mult_u1 |qmult_670              |    70|
+|146   |  pe12_0      |processing_element_47  |   192|
+|147   |    u_mac     |seq_mac_667            |   176|
+|148   |      mult_u1 |qmult_668              |    70|
+|149   |  pe12_1      |processing_element_48  |   192|
+|150   |    u_mac     |seq_mac_665            |   176|
+|151   |      mult_u1 |qmult_666              |    70|
+|152   |  pe12_10     |processing_element_49  |   192|
+|153   |    u_mac     |seq_mac_663            |   176|
+|154   |      mult_u1 |qmult_664              |    70|
+|155   |  pe12_11     |processing_element_50  |   192|
+|156   |    u_mac     |seq_mac_661            |   176|
+|157   |      mult_u1 |qmult_662              |    70|
+|158   |  pe12_12     |processing_element_51  |   192|
+|159   |    u_mac     |seq_mac_659            |   176|
+|160   |      mult_u1 |qmult_660              |    70|
+|161   |  pe12_13     |processing_element_52  |   192|
+|162   |    u_mac     |seq_mac_657            |   176|
+|163   |      mult_u1 |qmult_658              |    70|
+|164   |  pe12_14     |processing_element_53  |   192|
+|165   |    u_mac     |seq_mac_655            |   176|
+|166   |      mult_u1 |qmult_656              |    70|
+|167   |  pe12_15     |processing_element_54  |   192|
+|168   |    u_mac     |seq_mac_653            |   176|
+|169   |      mult_u1 |qmult_654              |    70|
+|170   |  pe12_2      |processing_element_55  |   192|
+|171   |    u_mac     |seq_mac_651            |   176|
+|172   |      mult_u1 |qmult_652              |    70|
+|173   |  pe12_3      |processing_element_56  |   192|
+|174   |    u_mac     |seq_mac_649            |   176|
+|175   |      mult_u1 |qmult_650              |    70|
+|176   |  pe12_4      |processing_element_57  |   192|
+|177   |    u_mac     |seq_mac_647            |   176|
+|178   |      mult_u1 |qmult_648              |    70|
+|179   |  pe12_5      |processing_element_58  |   192|
+|180   |    u_mac     |seq_mac_645            |   176|
+|181   |      mult_u1 |qmult_646              |    70|
+|182   |  pe12_6      |processing_element_59  |   192|
+|183   |    u_mac     |seq_mac_643            |   176|
+|184   |      mult_u1 |qmult_644              |    70|
+|185   |  pe12_7      |processing_element_60  |   192|
+|186   |    u_mac     |seq_mac_641            |   176|
+|187   |      mult_u1 |qmult_642              |    70|
+|188   |  pe12_8      |processing_element_61  |   192|
+|189   |    u_mac     |seq_mac_639            |   176|
+|190   |      mult_u1 |qmult_640              |    70|
+|191   |  pe12_9      |processing_element_62  |   192|
+|192   |    u_mac     |seq_mac_637            |   176|
+|193   |      mult_u1 |qmult_638              |    70|
+|194   |  pe13_0      |processing_element_63  |   192|
+|195   |    u_mac     |seq_mac_635            |   176|
+|196   |      mult_u1 |qmult_636              |    70|
+|197   |  pe13_1      |processing_element_64  |   192|
+|198   |    u_mac     |seq_mac_633            |   176|
+|199   |      mult_u1 |qmult_634              |    70|
+|200   |  pe13_10     |processing_element_65  |   192|
+|201   |    u_mac     |seq_mac_631            |   176|
+|202   |      mult_u1 |qmult_632              |    70|
+|203   |  pe13_11     |processing_element_66  |   192|
+|204   |    u_mac     |seq_mac_629            |   176|
+|205   |      mult_u1 |qmult_630              |    70|
+|206   |  pe13_12     |processing_element_67  |   192|
+|207   |    u_mac     |seq_mac_627            |   176|
+|208   |      mult_u1 |qmult_628              |    70|
+|209   |  pe13_13     |processing_element_68  |   192|
+|210   |    u_mac     |seq_mac_625            |   176|
+|211   |      mult_u1 |qmult_626              |    70|
+|212   |  pe13_14     |processing_element_69  |   192|
+|213   |    u_mac     |seq_mac_623            |   176|
+|214   |      mult_u1 |qmult_624              |    70|
+|215   |  pe13_15     |processing_element_70  |   192|
+|216   |    u_mac     |seq_mac_621            |   176|
+|217   |      mult_u1 |qmult_622              |    70|
+|218   |  pe13_2      |processing_element_71  |   192|
+|219   |    u_mac     |seq_mac_619            |   176|
+|220   |      mult_u1 |qmult_620              |    70|
+|221   |  pe13_3      |processing_element_72  |   192|
+|222   |    u_mac     |seq_mac_617            |   176|
+|223   |      mult_u1 |qmult_618              |    70|
+|224   |  pe13_4      |processing_element_73  |   192|
+|225   |    u_mac     |seq_mac_615            |   176|
+|226   |      mult_u1 |qmult_616              |    70|
+|227   |  pe13_5      |processing_element_74  |   192|
+|228   |    u_mac     |seq_mac_613            |   176|
+|229   |      mult_u1 |qmult_614              |    70|
+|230   |  pe13_6      |processing_element_75  |   192|
+|231   |    u_mac     |seq_mac_611            |   176|
+|232   |      mult_u1 |qmult_612              |    70|
+|233   |  pe13_7      |processing_element_76  |   192|
+|234   |    u_mac     |seq_mac_609            |   176|
+|235   |      mult_u1 |qmult_610              |    70|
+|236   |  pe13_8      |processing_element_77  |   192|
+|237   |    u_mac     |seq_mac_607            |   176|
+|238   |      mult_u1 |qmult_608              |    70|
+|239   |  pe13_9      |processing_element_78  |   192|
+|240   |    u_mac     |seq_mac_605            |   176|
+|241   |      mult_u1 |qmult_606              |    70|
+|242   |  pe14_0      |processing_element_79  |   192|
+|243   |    u_mac     |seq_mac_603            |   176|
+|244   |      mult_u1 |qmult_604              |    70|
+|245   |  pe14_1      |processing_element_80  |   192|
+|246   |    u_mac     |seq_mac_601            |   176|
+|247   |      mult_u1 |qmult_602              |    70|
+|248   |  pe14_10     |processing_element_81  |   192|
+|249   |    u_mac     |seq_mac_599            |   176|
+|250   |      mult_u1 |qmult_600              |    70|
+|251   |  pe14_11     |processing_element_82  |   192|
+|252   |    u_mac     |seq_mac_597            |   176|
+|253   |      mult_u1 |qmult_598              |    70|
+|254   |  pe14_12     |processing_element_83  |   192|
+|255   |    u_mac     |seq_mac_595            |   176|
+|256   |      mult_u1 |qmult_596              |    70|
+|257   |  pe14_13     |processing_element_84  |   192|
+|258   |    u_mac     |seq_mac_593            |   176|
+|259   |      mult_u1 |qmult_594              |    70|
+|260   |  pe14_14     |processing_element_85  |   192|
+|261   |    u_mac     |seq_mac_591            |   176|
+|262   |      mult_u1 |qmult_592              |    70|
+|263   |  pe14_15     |processing_element_86  |   192|
+|264   |    u_mac     |seq_mac_589            |   176|
+|265   |      mult_u1 |qmult_590              |    70|
+|266   |  pe14_2      |processing_element_87  |   192|
+|267   |    u_mac     |seq_mac_587            |   176|
+|268   |      mult_u1 |qmult_588              |    70|
+|269   |  pe14_3      |processing_element_88  |   192|
+|270   |    u_mac     |seq_mac_585            |   176|
+|271   |      mult_u1 |qmult_586              |    70|
+|272   |  pe14_4      |processing_element_89  |   192|
+|273   |    u_mac     |seq_mac_583            |   176|
+|274   |      mult_u1 |qmult_584              |    70|
+|275   |  pe14_5      |processing_element_90  |   192|
+|276   |    u_mac     |seq_mac_581            |   176|
+|277   |      mult_u1 |qmult_582              |    70|
+|278   |  pe14_6      |processing_element_91  |   192|
+|279   |    u_mac     |seq_mac_579            |   176|
+|280   |      mult_u1 |qmult_580              |    70|
+|281   |  pe14_7      |processing_element_92  |   192|
+|282   |    u_mac     |seq_mac_577            |   176|
+|283   |      mult_u1 |qmult_578              |    70|
+|284   |  pe14_8      |processing_element_93  |   192|
+|285   |    u_mac     |seq_mac_575            |   176|
+|286   |      mult_u1 |qmult_576              |    70|
+|287   |  pe14_9      |processing_element_94  |   192|
+|288   |    u_mac     |seq_mac_573            |   176|
+|289   |      mult_u1 |qmult_574              |    70|
+|290   |  pe15_0      |processing_element_95  |   192|
+|291   |    u_mac     |seq_mac_571            |   176|
+|292   |      mult_u1 |qmult_572              |    70|
+|293   |  pe15_1      |processing_element_96  |   192|
+|294   |    u_mac     |seq_mac_569            |   176|
+|295   |      mult_u1 |qmult_570              |    70|
+|296   |  pe15_10     |processing_element_97  |   192|
+|297   |    u_mac     |seq_mac_567            |   176|
+|298   |      mult_u1 |qmult_568              |    70|
+|299   |  pe15_11     |processing_element_98  |   192|
+|300   |    u_mac     |seq_mac_565            |   176|
+|301   |      mult_u1 |qmult_566              |    70|
+|302   |  pe15_12     |processing_element_99  |   192|
+|303   |    u_mac     |seq_mac_563            |   176|
+|304   |      mult_u1 |qmult_564              |    70|
+|305   |  pe15_13     |processing_element_100 |   192|
+|306   |    u_mac     |seq_mac_561            |   176|
+|307   |      mult_u1 |qmult_562              |    70|
+|308   |  pe15_14     |processing_element_101 |   192|
+|309   |    u_mac     |seq_mac_559            |   176|
+|310   |      mult_u1 |qmult_560              |    70|
+|311   |  pe15_15     |processing_element_102 |   193|
+|312   |    u_mac     |seq_mac_557            |   176|
+|313   |      mult_u1 |qmult_558              |    70|
+|314   |  pe15_2      |processing_element_103 |   192|
+|315   |    u_mac     |seq_mac_555            |   176|
+|316   |      mult_u1 |qmult_556              |    70|
+|317   |  pe15_3      |processing_element_104 |   192|
+|318   |    u_mac     |seq_mac_553            |   176|
+|319   |      mult_u1 |qmult_554              |    70|
+|320   |  pe15_4      |processing_element_105 |   192|
+|321   |    u_mac     |seq_mac_551            |   176|
+|322   |      mult_u1 |qmult_552              |    70|
+|323   |  pe15_5      |processing_element_106 |   192|
+|324   |    u_mac     |seq_mac_549            |   176|
+|325   |      mult_u1 |qmult_550              |    70|
+|326   |  pe15_6      |processing_element_107 |   192|
+|327   |    u_mac     |seq_mac_547            |   176|
+|328   |      mult_u1 |qmult_548              |    70|
+|329   |  pe15_7      |processing_element_108 |   192|
+|330   |    u_mac     |seq_mac_545            |   176|
+|331   |      mult_u1 |qmult_546              |    70|
+|332   |  pe15_8      |processing_element_109 |   192|
+|333   |    u_mac     |seq_mac_543            |   176|
+|334   |      mult_u1 |qmult_544              |    70|
+|335   |  pe15_9      |processing_element_110 |   192|
+|336   |    u_mac     |seq_mac_541            |   176|
+|337   |      mult_u1 |qmult_542              |    70|
+|338   |  pe1_0       |processing_element_111 |   192|
+|339   |    u_mac     |seq_mac_539            |   176|
+|340   |      mult_u1 |qmult_540              |    70|
+|341   |  pe1_1       |processing_element_112 |   192|
+|342   |    u_mac     |seq_mac_537            |   176|
+|343   |      mult_u1 |qmult_538              |    70|
+|344   |  pe1_10      |processing_element_113 |   192|
+|345   |    u_mac     |seq_mac_535            |   176|
+|346   |      mult_u1 |qmult_536              |    70|
+|347   |  pe1_11      |processing_element_114 |   192|
+|348   |    u_mac     |seq_mac_533            |   176|
+|349   |      mult_u1 |qmult_534              |    70|
+|350   |  pe1_12      |processing_element_115 |   192|
+|351   |    u_mac     |seq_mac_531            |   176|
+|352   |      mult_u1 |qmult_532              |    70|
+|353   |  pe1_13      |processing_element_116 |   192|
+|354   |    u_mac     |seq_mac_529            |   176|
+|355   |      mult_u1 |qmult_530              |    70|
+|356   |  pe1_14      |processing_element_117 |   192|
+|357   |    u_mac     |seq_mac_527            |   176|
+|358   |      mult_u1 |qmult_528              |    70|
+|359   |  pe1_15      |processing_element_118 |   192|
+|360   |    u_mac     |seq_mac_525            |   176|
+|361   |      mult_u1 |qmult_526              |    70|
+|362   |  pe1_2       |processing_element_119 |   192|
+|363   |    u_mac     |seq_mac_523            |   176|
+|364   |      mult_u1 |qmult_524              |    70|
+|365   |  pe1_3       |processing_element_120 |   192|
+|366   |    u_mac     |seq_mac_521            |   176|
+|367   |      mult_u1 |qmult_522              |    70|
+|368   |  pe1_4       |processing_element_121 |   192|
+|369   |    u_mac     |seq_mac_519            |   176|
+|370   |      mult_u1 |qmult_520              |    70|
+|371   |  pe1_5       |processing_element_122 |   192|
+|372   |    u_mac     |seq_mac_517            |   176|
+|373   |      mult_u1 |qmult_518              |    70|
+|374   |  pe1_6       |processing_element_123 |   192|
+|375   |    u_mac     |seq_mac_515            |   176|
+|376   |      mult_u1 |qmult_516              |    70|
+|377   |  pe1_7       |processing_element_124 |   192|
+|378   |    u_mac     |seq_mac_513            |   176|
+|379   |      mult_u1 |qmult_514              |    70|
+|380   |  pe1_8       |processing_element_125 |   192|
+|381   |    u_mac     |seq_mac_511            |   176|
+|382   |      mult_u1 |qmult_512              |    70|
+|383   |  pe1_9       |processing_element_126 |   192|
+|384   |    u_mac     |seq_mac_509            |   176|
+|385   |      mult_u1 |qmult_510              |    70|
+|386   |  pe2_0       |processing_element_127 |   192|
+|387   |    u_mac     |seq_mac_507            |   176|
+|388   |      mult_u1 |qmult_508              |    70|
+|389   |  pe2_1       |processing_element_128 |   192|
+|390   |    u_mac     |seq_mac_505            |   176|
+|391   |      mult_u1 |qmult_506              |    70|
+|392   |  pe2_10      |processing_element_129 |   192|
+|393   |    u_mac     |seq_mac_503            |   176|
+|394   |      mult_u1 |qmult_504              |    70|
+|395   |  pe2_11      |processing_element_130 |   192|
+|396   |    u_mac     |seq_mac_501            |   176|
+|397   |      mult_u1 |qmult_502              |    70|
+|398   |  pe2_12      |processing_element_131 |   192|
+|399   |    u_mac     |seq_mac_499            |   176|
+|400   |      mult_u1 |qmult_500              |    70|
+|401   |  pe2_13      |processing_element_132 |   192|
+|402   |    u_mac     |seq_mac_497            |   176|
+|403   |      mult_u1 |qmult_498              |    70|
+|404   |  pe2_14      |processing_element_133 |   192|
+|405   |    u_mac     |seq_mac_495            |   176|
+|406   |      mult_u1 |qmult_496              |    70|
+|407   |  pe2_15      |processing_element_134 |   192|
+|408   |    u_mac     |seq_mac_493            |   176|
+|409   |      mult_u1 |qmult_494              |    70|
+|410   |  pe2_2       |processing_element_135 |   192|
+|411   |    u_mac     |seq_mac_491            |   176|
+|412   |      mult_u1 |qmult_492              |    70|
+|413   |  pe2_3       |processing_element_136 |   192|
+|414   |    u_mac     |seq_mac_489            |   176|
+|415   |      mult_u1 |qmult_490              |    70|
+|416   |  pe2_4       |processing_element_137 |   192|
+|417   |    u_mac     |seq_mac_487            |   176|
+|418   |      mult_u1 |qmult_488              |    70|
+|419   |  pe2_5       |processing_element_138 |   192|
+|420   |    u_mac     |seq_mac_485            |   176|
+|421   |      mult_u1 |qmult_486              |    70|
+|422   |  pe2_6       |processing_element_139 |   192|
+|423   |    u_mac     |seq_mac_483            |   176|
+|424   |      mult_u1 |qmult_484              |    70|
+|425   |  pe2_7       |processing_element_140 |   192|
+|426   |    u_mac     |seq_mac_481            |   176|
+|427   |      mult_u1 |qmult_482              |    70|
+|428   |  pe2_8       |processing_element_141 |   192|
+|429   |    u_mac     |seq_mac_479            |   176|
+|430   |      mult_u1 |qmult_480              |    70|
+|431   |  pe2_9       |processing_element_142 |   192|
+|432   |    u_mac     |seq_mac_477            |   176|
+|433   |      mult_u1 |qmult_478              |    70|
+|434   |  pe3_0       |processing_element_143 |   192|
+|435   |    u_mac     |seq_mac_475            |   176|
+|436   |      mult_u1 |qmult_476              |    70|
+|437   |  pe3_1       |processing_element_144 |   192|
+|438   |    u_mac     |seq_mac_473            |   176|
+|439   |      mult_u1 |qmult_474              |    70|
+|440   |  pe3_10      |processing_element_145 |   192|
+|441   |    u_mac     |seq_mac_471            |   176|
+|442   |      mult_u1 |qmult_472              |    70|
+|443   |  pe3_11      |processing_element_146 |   192|
+|444   |    u_mac     |seq_mac_469            |   176|
+|445   |      mult_u1 |qmult_470              |    70|
+|446   |  pe3_12      |processing_element_147 |   192|
+|447   |    u_mac     |seq_mac_467            |   176|
+|448   |      mult_u1 |qmult_468              |    70|
+|449   |  pe3_13      |processing_element_148 |   192|
+|450   |    u_mac     |seq_mac_465            |   176|
+|451   |      mult_u1 |qmult_466              |    70|
+|452   |  pe3_14      |processing_element_149 |   192|
+|453   |    u_mac     |seq_mac_463            |   176|
+|454   |      mult_u1 |qmult_464              |    70|
+|455   |  pe3_15      |processing_element_150 |   192|
+|456   |    u_mac     |seq_mac_461            |   176|
+|457   |      mult_u1 |qmult_462              |    70|
+|458   |  pe3_2       |processing_element_151 |   192|
+|459   |    u_mac     |seq_mac_459            |   176|
+|460   |      mult_u1 |qmult_460              |    70|
+|461   |  pe3_3       |processing_element_152 |   192|
+|462   |    u_mac     |seq_mac_457            |   176|
+|463   |      mult_u1 |qmult_458              |    70|
+|464   |  pe3_4       |processing_element_153 |   192|
+|465   |    u_mac     |seq_mac_455            |   176|
+|466   |      mult_u1 |qmult_456              |    70|
+|467   |  pe3_5       |processing_element_154 |   192|
+|468   |    u_mac     |seq_mac_453            |   176|
+|469   |      mult_u1 |qmult_454              |    70|
+|470   |  pe3_6       |processing_element_155 |   192|
+|471   |    u_mac     |seq_mac_451            |   176|
+|472   |      mult_u1 |qmult_452              |    70|
+|473   |  pe3_7       |processing_element_156 |   192|
+|474   |    u_mac     |seq_mac_449            |   176|
+|475   |      mult_u1 |qmult_450              |    70|
+|476   |  pe3_8       |processing_element_157 |   192|
+|477   |    u_mac     |seq_mac_447            |   176|
+|478   |      mult_u1 |qmult_448              |    70|
+|479   |  pe3_9       |processing_element_158 |   192|
+|480   |    u_mac     |seq_mac_445            |   176|
+|481   |      mult_u1 |qmult_446              |    70|
+|482   |  pe4_0       |processing_element_159 |   192|
+|483   |    u_mac     |seq_mac_443            |   176|
+|484   |      mult_u1 |qmult_444              |    70|
+|485   |  pe4_1       |processing_element_160 |   192|
+|486   |    u_mac     |seq_mac_441            |   176|
+|487   |      mult_u1 |qmult_442              |    70|
+|488   |  pe4_10      |processing_element_161 |   192|
+|489   |    u_mac     |seq_mac_439            |   176|
+|490   |      mult_u1 |qmult_440              |    70|
+|491   |  pe4_11      |processing_element_162 |   192|
+|492   |    u_mac     |seq_mac_437            |   176|
+|493   |      mult_u1 |qmult_438              |    70|
+|494   |  pe4_12      |processing_element_163 |   192|
+|495   |    u_mac     |seq_mac_435            |   176|
+|496   |      mult_u1 |qmult_436              |    70|
+|497   |  pe4_13      |processing_element_164 |   192|
+|498   |    u_mac     |seq_mac_433            |   176|
+|499   |      mult_u1 |qmult_434              |    70|
+|500   |  pe4_14      |processing_element_165 |   192|
+|501   |    u_mac     |seq_mac_431            |   176|
+|502   |      mult_u1 |qmult_432              |    70|
+|503   |  pe4_15      |processing_element_166 |   192|
+|504   |    u_mac     |seq_mac_429            |   176|
+|505   |      mult_u1 |qmult_430              |    70|
+|506   |  pe4_2       |processing_element_167 |   192|
+|507   |    u_mac     |seq_mac_427            |   176|
+|508   |      mult_u1 |qmult_428              |    70|
+|509   |  pe4_3       |processing_element_168 |   192|
+|510   |    u_mac     |seq_mac_425            |   176|
+|511   |      mult_u1 |qmult_426              |    70|
+|512   |  pe4_4       |processing_element_169 |   192|
+|513   |    u_mac     |seq_mac_423            |   176|
+|514   |      mult_u1 |qmult_424              |    70|
+|515   |  pe4_5       |processing_element_170 |   192|
+|516   |    u_mac     |seq_mac_421            |   176|
+|517   |      mult_u1 |qmult_422              |    70|
+|518   |  pe4_6       |processing_element_171 |   192|
+|519   |    u_mac     |seq_mac_419            |   176|
+|520   |      mult_u1 |qmult_420              |    70|
+|521   |  pe4_7       |processing_element_172 |   192|
+|522   |    u_mac     |seq_mac_417            |   176|
+|523   |      mult_u1 |qmult_418              |    70|
+|524   |  pe4_8       |processing_element_173 |   192|
+|525   |    u_mac     |seq_mac_415            |   176|
+|526   |      mult_u1 |qmult_416              |    70|
+|527   |  pe4_9       |processing_element_174 |   192|
+|528   |    u_mac     |seq_mac_413            |   176|
+|529   |      mult_u1 |qmult_414              |    70|
+|530   |  pe5_0       |processing_element_175 |   192|
+|531   |    u_mac     |seq_mac_411            |   176|
+|532   |      mult_u1 |qmult_412              |    70|
+|533   |  pe5_1       |processing_element_176 |   192|
+|534   |    u_mac     |seq_mac_409            |   176|
+|535   |      mult_u1 |qmult_410              |    70|
+|536   |  pe5_10      |processing_element_177 |   192|
+|537   |    u_mac     |seq_mac_407            |   176|
+|538   |      mult_u1 |qmult_408              |    70|
+|539   |  pe5_11      |processing_element_178 |   192|
+|540   |    u_mac     |seq_mac_405            |   176|
+|541   |      mult_u1 |qmult_406              |    70|
+|542   |  pe5_12      |processing_element_179 |   192|
+|543   |    u_mac     |seq_mac_403            |   176|
+|544   |      mult_u1 |qmult_404              |    70|
+|545   |  pe5_13      |processing_element_180 |   192|
+|546   |    u_mac     |seq_mac_401            |   176|
+|547   |      mult_u1 |qmult_402              |    70|
+|548   |  pe5_14      |processing_element_181 |   192|
+|549   |    u_mac     |seq_mac_399            |   176|
+|550   |      mult_u1 |qmult_400              |    70|
+|551   |  pe5_15      |processing_element_182 |   192|
+|552   |    u_mac     |seq_mac_397            |   176|
+|553   |      mult_u1 |qmult_398              |    70|
+|554   |  pe5_2       |processing_element_183 |   192|
+|555   |    u_mac     |seq_mac_395            |   176|
+|556   |      mult_u1 |qmult_396              |    70|
+|557   |  pe5_3       |processing_element_184 |   192|
+|558   |    u_mac     |seq_mac_393            |   176|
+|559   |      mult_u1 |qmult_394              |    70|
+|560   |  pe5_4       |processing_element_185 |   192|
+|561   |    u_mac     |seq_mac_391            |   176|
+|562   |      mult_u1 |qmult_392              |    70|
+|563   |  pe5_5       |processing_element_186 |   192|
+|564   |    u_mac     |seq_mac_389            |   176|
+|565   |      mult_u1 |qmult_390              |    70|
+|566   |  pe5_6       |processing_element_187 |   192|
+|567   |    u_mac     |seq_mac_387            |   176|
+|568   |      mult_u1 |qmult_388              |    70|
+|569   |  pe5_7       |processing_element_188 |   192|
+|570   |    u_mac     |seq_mac_385            |   176|
+|571   |      mult_u1 |qmult_386              |    70|
+|572   |  pe5_8       |processing_element_189 |   192|
+|573   |    u_mac     |seq_mac_383            |   176|
+|574   |      mult_u1 |qmult_384              |    70|
+|575   |  pe5_9       |processing_element_190 |   192|
+|576   |    u_mac     |seq_mac_381            |   176|
+|577   |      mult_u1 |qmult_382              |    70|
+|578   |  pe6_0       |processing_element_191 |   192|
+|579   |    u_mac     |seq_mac_379            |   176|
+|580   |      mult_u1 |qmult_380              |    70|
+|581   |  pe6_1       |processing_element_192 |   192|
+|582   |    u_mac     |seq_mac_377            |   176|
+|583   |      mult_u1 |qmult_378              |    70|
+|584   |  pe6_10      |processing_element_193 |   192|
+|585   |    u_mac     |seq_mac_375            |   176|
+|586   |      mult_u1 |qmult_376              |    70|
+|587   |  pe6_11      |processing_element_194 |   192|
+|588   |    u_mac     |seq_mac_373            |   176|
+|589   |      mult_u1 |qmult_374              |    70|
+|590   |  pe6_12      |processing_element_195 |   192|
+|591   |    u_mac     |seq_mac_371            |   176|
+|592   |      mult_u1 |qmult_372              |    70|
+|593   |  pe6_13      |processing_element_196 |   192|
+|594   |    u_mac     |seq_mac_369            |   176|
+|595   |      mult_u1 |qmult_370              |    70|
+|596   |  pe6_14      |processing_element_197 |   192|
+|597   |    u_mac     |seq_mac_367            |   176|
+|598   |      mult_u1 |qmult_368              |    70|
+|599   |  pe6_15      |processing_element_198 |   192|
+|600   |    u_mac     |seq_mac_365            |   176|
+|601   |      mult_u1 |qmult_366              |    70|
+|602   |  pe6_2       |processing_element_199 |   192|
+|603   |    u_mac     |seq_mac_363            |   176|
+|604   |      mult_u1 |qmult_364              |    70|
+|605   |  pe6_3       |processing_element_200 |   192|
+|606   |    u_mac     |seq_mac_361            |   176|
+|607   |      mult_u1 |qmult_362              |    70|
+|608   |  pe6_4       |processing_element_201 |   192|
+|609   |    u_mac     |seq_mac_359            |   176|
+|610   |      mult_u1 |qmult_360              |    70|
+|611   |  pe6_5       |processing_element_202 |   192|
+|612   |    u_mac     |seq_mac_357            |   176|
+|613   |      mult_u1 |qmult_358              |    70|
+|614   |  pe6_6       |processing_element_203 |   192|
+|615   |    u_mac     |seq_mac_355            |   176|
+|616   |      mult_u1 |qmult_356              |    70|
+|617   |  pe6_7       |processing_element_204 |   192|
+|618   |    u_mac     |seq_mac_353            |   176|
+|619   |      mult_u1 |qmult_354              |    70|
+|620   |  pe6_8       |processing_element_205 |   192|
+|621   |    u_mac     |seq_mac_351            |   176|
+|622   |      mult_u1 |qmult_352              |    70|
+|623   |  pe6_9       |processing_element_206 |   192|
+|624   |    u_mac     |seq_mac_349            |   176|
+|625   |      mult_u1 |qmult_350              |    70|
+|626   |  pe7_0       |processing_element_207 |   192|
+|627   |    u_mac     |seq_mac_347            |   176|
+|628   |      mult_u1 |qmult_348              |    70|
+|629   |  pe7_1       |processing_element_208 |   192|
+|630   |    u_mac     |seq_mac_345            |   176|
+|631   |      mult_u1 |qmult_346              |    70|
+|632   |  pe7_10      |processing_element_209 |   192|
+|633   |    u_mac     |seq_mac_343            |   176|
+|634   |      mult_u1 |qmult_344              |    70|
+|635   |  pe7_11      |processing_element_210 |   192|
+|636   |    u_mac     |seq_mac_341            |   176|
+|637   |      mult_u1 |qmult_342              |    70|
+|638   |  pe7_12      |processing_element_211 |   192|
+|639   |    u_mac     |seq_mac_339            |   176|
+|640   |      mult_u1 |qmult_340              |    70|
+|641   |  pe7_13      |processing_element_212 |   192|
+|642   |    u_mac     |seq_mac_337            |   176|
+|643   |      mult_u1 |qmult_338              |    70|
+|644   |  pe7_14      |processing_element_213 |   192|
+|645   |    u_mac     |seq_mac_335            |   176|
+|646   |      mult_u1 |qmult_336              |    70|
+|647   |  pe7_15      |processing_element_214 |   192|
+|648   |    u_mac     |seq_mac_333            |   176|
+|649   |      mult_u1 |qmult_334              |    70|
+|650   |  pe7_2       |processing_element_215 |   192|
+|651   |    u_mac     |seq_mac_331            |   176|
+|652   |      mult_u1 |qmult_332              |    70|
+|653   |  pe7_3       |processing_element_216 |   192|
+|654   |    u_mac     |seq_mac_329            |   176|
+|655   |      mult_u1 |qmult_330              |    70|
+|656   |  pe7_4       |processing_element_217 |   192|
+|657   |    u_mac     |seq_mac_327            |   176|
+|658   |      mult_u1 |qmult_328              |    70|
+|659   |  pe7_5       |processing_element_218 |   192|
+|660   |    u_mac     |seq_mac_325            |   176|
+|661   |      mult_u1 |qmult_326              |    70|
+|662   |  pe7_6       |processing_element_219 |   192|
+|663   |    u_mac     |seq_mac_323            |   176|
+|664   |      mult_u1 |qmult_324              |    70|
+|665   |  pe7_7       |processing_element_220 |   192|
+|666   |    u_mac     |seq_mac_321            |   176|
+|667   |      mult_u1 |qmult_322              |    70|
+|668   |  pe7_8       |processing_element_221 |   192|
+|669   |    u_mac     |seq_mac_319            |   176|
+|670   |      mult_u1 |qmult_320              |    70|
+|671   |  pe7_9       |processing_element_222 |   192|
+|672   |    u_mac     |seq_mac_317            |   176|
+|673   |      mult_u1 |qmult_318              |    70|
+|674   |  pe8_0       |processing_element_223 |   192|
+|675   |    u_mac     |seq_mac_315            |   176|
+|676   |      mult_u1 |qmult_316              |    70|
+|677   |  pe8_1       |processing_element_224 |   192|
+|678   |    u_mac     |seq_mac_313            |   176|
+|679   |      mult_u1 |qmult_314              |    70|
+|680   |  pe8_10      |processing_element_225 |   192|
+|681   |    u_mac     |seq_mac_311            |   176|
+|682   |      mult_u1 |qmult_312              |    70|
+|683   |  pe8_11      |processing_element_226 |   192|
+|684   |    u_mac     |seq_mac_309            |   176|
+|685   |      mult_u1 |qmult_310              |    70|
+|686   |  pe8_12      |processing_element_227 |   192|
+|687   |    u_mac     |seq_mac_307            |   176|
+|688   |      mult_u1 |qmult_308              |    70|
+|689   |  pe8_13      |processing_element_228 |   192|
+|690   |    u_mac     |seq_mac_305            |   176|
+|691   |      mult_u1 |qmult_306              |    70|
+|692   |  pe8_14      |processing_element_229 |   192|
+|693   |    u_mac     |seq_mac_303            |   176|
+|694   |      mult_u1 |qmult_304              |    70|
+|695   |  pe8_15      |processing_element_230 |   192|
+|696   |    u_mac     |seq_mac_301            |   176|
+|697   |      mult_u1 |qmult_302              |    70|
+|698   |  pe8_2       |processing_element_231 |   192|
+|699   |    u_mac     |seq_mac_299            |   176|
+|700   |      mult_u1 |qmult_300              |    70|
+|701   |  pe8_3       |processing_element_232 |   192|
+|702   |    u_mac     |seq_mac_297            |   176|
+|703   |      mult_u1 |qmult_298              |    70|
+|704   |  pe8_4       |processing_element_233 |   192|
+|705   |    u_mac     |seq_mac_295            |   176|
+|706   |      mult_u1 |qmult_296              |    70|
+|707   |  pe8_5       |processing_element_234 |   192|
+|708   |    u_mac     |seq_mac_293            |   176|
+|709   |      mult_u1 |qmult_294              |    70|
+|710   |  pe8_6       |processing_element_235 |   192|
+|711   |    u_mac     |seq_mac_291            |   176|
+|712   |      mult_u1 |qmult_292              |    70|
+|713   |  pe8_7       |processing_element_236 |   192|
+|714   |    u_mac     |seq_mac_289            |   176|
+|715   |      mult_u1 |qmult_290              |    70|
+|716   |  pe8_8       |processing_element_237 |   192|
+|717   |    u_mac     |seq_mac_287            |   176|
+|718   |      mult_u1 |qmult_288              |    70|
+|719   |  pe8_9       |processing_element_238 |   192|
+|720   |    u_mac     |seq_mac_285            |   176|
+|721   |      mult_u1 |qmult_286              |    70|
+|722   |  pe9_0       |processing_element_239 |   192|
+|723   |    u_mac     |seq_mac_283            |   176|
+|724   |      mult_u1 |qmult_284              |    70|
+|725   |  pe9_1       |processing_element_240 |   192|
+|726   |    u_mac     |seq_mac_281            |   176|
+|727   |      mult_u1 |qmult_282              |    70|
+|728   |  pe9_10      |processing_element_241 |   192|
+|729   |    u_mac     |seq_mac_279            |   176|
+|730   |      mult_u1 |qmult_280              |    70|
+|731   |  pe9_11      |processing_element_242 |   192|
+|732   |    u_mac     |seq_mac_277            |   176|
+|733   |      mult_u1 |qmult_278              |    70|
+|734   |  pe9_12      |processing_element_243 |   192|
+|735   |    u_mac     |seq_mac_275            |   176|
+|736   |      mult_u1 |qmult_276              |    70|
+|737   |  pe9_13      |processing_element_244 |   192|
+|738   |    u_mac     |seq_mac_273            |   176|
+|739   |      mult_u1 |qmult_274              |    70|
+|740   |  pe9_14      |processing_element_245 |   192|
+|741   |    u_mac     |seq_mac_271            |   176|
+|742   |      mult_u1 |qmult_272              |    70|
+|743   |  pe9_15      |processing_element_246 |   192|
+|744   |    u_mac     |seq_mac_269            |   176|
+|745   |      mult_u1 |qmult_270              |    70|
+|746   |  pe9_2       |processing_element_247 |   192|
+|747   |    u_mac     |seq_mac_267            |   176|
+|748   |      mult_u1 |qmult_268              |    70|
+|749   |  pe9_3       |processing_element_248 |   192|
+|750   |    u_mac     |seq_mac_265            |   176|
+|751   |      mult_u1 |qmult_266              |    70|
+|752   |  pe9_4       |processing_element_249 |   192|
+|753   |    u_mac     |seq_mac_263            |   176|
+|754   |      mult_u1 |qmult_264              |    70|
+|755   |  pe9_5       |processing_element_250 |   192|
+|756   |    u_mac     |seq_mac_261            |   176|
+|757   |      mult_u1 |qmult_262              |    70|
+|758   |  pe9_6       |processing_element_251 |   192|
+|759   |    u_mac     |seq_mac_259            |   176|
+|760   |      mult_u1 |qmult_260              |    70|
+|761   |  pe9_7       |processing_element_252 |   192|
+|762   |    u_mac     |seq_mac_257            |   176|
+|763   |      mult_u1 |qmult_258              |    70|
+|764   |  pe9_8       |processing_element_253 |   192|
+|765   |    u_mac     |seq_mac_255            |   176|
+|766   |      mult_u1 |qmult_256              |    70|
+|767   |  pe9_9       |processing_element_254 |   192|
+|768   |    u_mac     |seq_mac                |   176|
+|769   |      mult_u1 |qmult                  |    70|
++------+--------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244741 ; free virtual = 312994
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1842.438 ; gain = 368.801 ; free physical = 244740 ; free virtual = 312993
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1842.441 ; gain = 368.801 ; free physical = 244749 ; free virtual = 313002
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3584 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1965.605 ; gain = 0.000 ; free physical = 245754 ; free virtual = 314008
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:11 . Memory (MB): peak = 1965.605 ; gain = 492.066 ; free physical = 245839 ; free virtual = 314093
+# set_units -power mW
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+set_units: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2548.262 ; gain = 582.656 ; free physical = 246056 ; free virtual = 314305
+# create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+# write_checkpoint -force $outputDir/post_synth
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2548.262 ; gain = 0.000 ; free physical = 246020 ; free virtual = 314268
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2572.273 ; gain = 0.000 ; free physical = 246039 ; free virtual = 314316
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2572.281 ; gain = 24.020 ; free physical = 246342 ; free virtual = 314616
+# report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_power -file $outputDir/post_synth_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_synth_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2731.043 ; gain = 0.004 ; free physical = 245940 ; free virtual = 314222
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: fdbdaadc
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245948 ; free virtual = 314230
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: fdbdaadc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245907 ; free virtual = 314189
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 6e0cef1e
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245912 ; free virtual = 314194
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: a2ca232a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245780 ; free virtual = 314063
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: a2ca232a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245598 ; free virtual = 313880
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245522 ; free virtual = 313820
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245514 ; free virtual = 313812
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245513 ; free virtual = 313811
+Ending Logic Optimization Task | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245522 ; free virtual = 313820
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245521 ; free virtual = 313819
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245515 ; free virtual = 313813
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245514 ; free virtual = 313812
+Ending Netlist Obfuscation Task | Checksum: 5fb09fd7
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2731.043 ; gain = 0.000 ; free physical = 245522 ; free virtual = 313820
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2731.043 ; gain = 0.004 ; free physical = 245516 ; free virtual = 313815
+# power_opt_design
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 5fb09fd7
+WARNING: [Pwropt 34-141] Param pwropt.runOnPwroptedDesign is set. Skipped checking if power_opt_design has been performed earlier.
+INFO: [Pwropt 34-50] Optimizing power for module systolic_pe_matrix ...
+INFO: [Pwropt 34-207] Design is in pre-place state. Running in pre-place mode.
+Pre-processing: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2763.039 ; gain = 0.000 ; free physical = 245298 ; free virtual = 313581
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.647 | TNS=0.000 |
+PSMgr Creation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:02 . Memory (MB): peak = 2794.035 ; gain = 30.996 ; free physical = 245298 ; free virtual = 313580
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+IDT: Time (s): cpu = 00:00:25 ; elapsed = 00:00:08 . Memory (MB): peak = 3021.129 ; gain = 258.090 ; free physical = 245308 ; free virtual = 313590
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Pwropt 34-215] Skipped ODC enables for 0 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 245283 ; free virtual = 313565
+Power optimization passes: Time (s): cpu = 00:00:32 ; elapsed = 00:00:12 . Memory (MB): peak = 3021.129 ; gain = 258.090 ; free physical = 245134 ; free virtual = 313417
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 245294 ; free virtual = 313577
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design systolic_pe_matrix ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 0 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 3072 accepted clusters 3072
+
+Number of Slice Registers augmented: 0 newly gated: 124 Total: 16384
+Number of SRLs augmented: 0  newly gated: 0 Total: 0
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 0
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 0/3072 RAMS dropped: 0/0 Clusters dropped: 0/3072 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 6e07e170
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244661 ; free virtual = 312946
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 6e07e170
+Power optimization: Time (s): cpu = 00:00:56 ; elapsed = 00:00:29 . Memory (MB): peak = 3021.129 ; gain = 290.086 ; free physical = 244772 ; free virtual = 313058
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 19460984 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244879 ; free virtual = 313165
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244859 ; free virtual = 313145
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244826 ; free virtual = 313111
+INFO: [Opt 31-389] Phase Remap created 0 cells and removed 0 cells
+
+Phase 4 Post Processing Netlist
+Phase 4 Post Processing Netlist | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244830 ; free virtual = 313115
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Retarget                 |               0  |               0  |                                              0  |
+|  BUFG optimization        |               0  |               0  |                                              0  |
+|  Remap                    |               0  |               0  |                                              0  |
+|  Post Processing Netlist  |               0  |               0  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244812 ; free virtual = 313097
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244811 ; free virtual = 313096
+Ending Netlist Obfuscation Task | Checksum: 1e4b8e22
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244821 ; free virtual = 313107
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:01:04 ; elapsed = 00:00:35 . Memory (MB): peak = 3021.129 ; gain = 290.086 ; free physical = 244821 ; free virtual = 313107
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244608 ; free virtual = 312910
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 0e8d8d64
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244608 ; free virtual = 312910
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244543 ; free virtual = 312845
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f846fc2f
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244212 ; free virtual = 312500
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1ade9c637
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244556 ; free virtual = 312843
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1ade9c637
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244547 ; free virtual = 312835
+Phase 1 Placer Initialization | Checksum: 1ade9c637
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 244545 ; free virtual = 312833
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 19637a132
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:20 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243999 ; free virtual = 312287
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243897 ; free virtual = 312188
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1c7c97cf6
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:49 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243905 ; free virtual = 312197
+Phase 2 Global Placement | Checksum: 19f7f727b
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:50 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243920 ; free virtual = 312212
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19f7f727b
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:50 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243923 ; free virtual = 312214
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ec3aecae
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:54 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243766 ; free virtual = 312058
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 235bbfe93
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243767 ; free virtual = 312059
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1b1748940
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:55 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243749 ; free virtual = 312041
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 29ebded5e
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243872 ; free virtual = 312164
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 2bf51a978
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:03 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243864 ; free virtual = 312156
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 233c8345b
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:04 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243870 ; free virtual = 312162
+Phase 3 Detail Placement | Checksum: 233c8345b
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:04 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243869 ; free virtual = 312160
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1b5280aae
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net pe15_15/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-46] BUFG insertion identified 1 candidate nets, 0 success, 0 bufg driver replicated, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1b5280aae
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:09 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243853 ; free virtual = 312145
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.546. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1b60c18d1
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:09 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243841 ; free virtual = 312133
+Phase 4.1 Post Commit Optimization | Checksum: 1b60c18d1
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:09 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243841 ; free virtual = 312133
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1b60c18d1
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:10 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243834 ; free virtual = 312126
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1b60c18d1
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:10 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243817 ; free virtual = 312108
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243817 ; free virtual = 312109
+Phase 4.4 Final Placement Cleanup | Checksum: 1a326f2be
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:10 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243832 ; free virtual = 312123
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1a326f2be
+
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243824 ; free virtual = 312115
+Ending Placer Task | Checksum: 195fe852f
+
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:11 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243859 ; free virtual = 312150
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:08 ; elapsed = 00:01:16 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243864 ; free virtual = 312156
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# write_checkpoint -force $outputDir/post_place
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243819 ; free virtual = 312111
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243814 ; free virtual = 312115
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243717 ; free virtual = 312057
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_place.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243790 ; free virtual = 312082
+# report_timing_summary -file $outputDir/post_place_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: c788bcf4 ConstDB: 0 ShapeSum: ce75c83b RouteDB: 0
+
+Phase 1 Build RT Design
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "a13[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a11[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a11[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a7[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a7[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a8[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a8[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b2[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b2[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a6[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a6[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a11[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a11[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a5[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a5[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a13[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a13[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a4[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a4[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b7[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b7[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b14[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b14[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a2[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a2[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a12[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a12[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a3[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a3[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a1[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a1[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "b0[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "b0[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a14[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a14[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "a15[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "a15[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1 Build RT Design | Checksum: d64b726e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243483 ; free virtual = 311779
+Post Restoration Checksum: NetGraph: 1b5c5d98 NumContArr: baef14d6 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: d64b726e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243476 ; free virtual = 311772
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: d64b726e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243453 ; free virtual = 311749
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: d64b726e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243447 ; free virtual = 311743
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 11502583a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:23 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243425 ; free virtual = 311721
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.629  | TNS=0.000  | WHS=0.069  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 198a918df
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:25 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243373 ; free virtual = 311681
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 2084d086d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:27 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243261 ; free virtual = 311573
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4115
+ Number of Nodes with overlaps = 97
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.730  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 14a9b8037
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:34 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243239 ; free virtual = 311539
+Phase 4 Rip-up And Reroute | Checksum: 14a9b8037
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:34 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243227 ; free virtual = 311527
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 14a9b8037
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:34 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243229 ; free virtual = 311529
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 14a9b8037
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:34 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243227 ; free virtual = 311527
+Phase 5 Delay and Skew Optimization | Checksum: 14a9b8037
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:34 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243224 ; free virtual = 311523
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1157414f1
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:35 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243214 ; free virtual = 311513
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.730  | TNS=0.000  | WHS=0.097  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1157414f1
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:35 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243214 ; free virtual = 311513
+Phase 6 Post Hold Fix | Checksum: 1157414f1
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:35 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243213 ; free virtual = 311513
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.41566 %
+  Global Horizontal Routing Utilization  = 6.10565 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 13bda8653
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:35 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243213 ; free virtual = 311512
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 13bda8653
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:36 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243202 ; free virtual = 311502
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: eeb6084d
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:38 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243124 ; free virtual = 311424
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.730  | TNS=0.000  | WHS=0.097  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: eeb6084d
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:38 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243124 ; free virtual = 311424
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:39 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243169 ; free virtual = 311469
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:20 ; elapsed = 00:00:43 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243169 ; free virtual = 311469
+# write_checkpoint -force $outputDir/post_route
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243169 ; free virtual = 311469
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243144 ; free virtual = 311459
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243044 ; free virtual = 311402
+INFO: [Common 17-1381] The checkpoint '/misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_route.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3021.129 ; gain = 0.000 ; free physical = 243034 ; free virtual = 311349
+# report_timing_summary -file $outputDir/post_route_timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -sort_by group -max_paths 100 -path_type summary -file $outputDir/post_route_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 1 -delay_type max -sort_by group.
+# report_clock_utilization -file $outputDir/clock_util.rpt
+# report_utilization -file $outputDir/post_route_util.rpt
+# report_power -file $outputDir/post_route_power.rpt
+Command: report_power -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_route_power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:19 ; elapsed = 00:00:06 . Memory (MB): peak = 3133.574 ; gain = 112.445 ; free physical = 242999 ; free virtual = 311339
+# report_drc -file $outputDir/post_imp_drc.rpt
+Command: report_drc -file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_imp_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/packages/xilinx_2018/vivado_hl/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /misc/scratch/zwei1/reports_Jan12/raw_designs/vtr_designs/verilog/koios/tpu_like.small_submodules/systolic_pe_matrix/post_imp_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3133.574 ; gain = 0.000 ; free physical = 242960 ; free virtual = 311285
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 13 16:51:48 2022...
